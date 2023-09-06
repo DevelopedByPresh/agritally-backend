@@ -1,7 +1,7 @@
 const User = require('../models/user.model');
 const bcryptHelper = require('../lib/bcrypt');
 
-class AuthService {
+class UserService {
   async register(userDTO) {
     const newUser = new User(userDTO);
     const savedUser = await newUser.save();
@@ -45,4 +45,4 @@ class AuthService {
   }
 }
 
-module.exports = new AuthService();
+module.exports = new UserService();

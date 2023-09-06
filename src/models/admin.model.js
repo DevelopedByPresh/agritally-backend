@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 
-const userSchema = new mongoose.Schema({
+const adminSchema = new mongoose.Schema({
   firstName: {
     type: String,
     required: true,
@@ -35,17 +35,18 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    default: "staff",
+    enum: ["superAdmin", "owner",  "manager"],
+    default: "manager",
   },
 });
 
-userSchema.methods.generateAuthToken = function(){
+adminSchema.methods.generateAuthToken = function(){
   const token = jwt.sign({ _id: this._id, role:this.role }, process.env.JWT_SECRET_KEY || 'MyScureKey', {expiresIn: "15h"});
     return token;
 }
 
-userSchema.methods.comparePasswords = function (password) {
+adminSchema.methods.comparePasswords = function (password) {
   return bcrypt.compareSync(password, this.password);
 };
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Admin", adminSchema);

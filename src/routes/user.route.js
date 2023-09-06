@@ -1,16 +1,18 @@
 const express = require('express');
-const authController = require('../controllers/authController');
+const userController = require('../controllers/user.controller');
 const authMiddleware = require('../middleware/auth.verifiyToken');
 const { verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } = require('../middleware/auth.verifiyToken'); // Adjust the import path
 
-const router = express.Router();
+const userRouter = express.Router();
 
 // Use the verifyStaff middleware
-router.get('/:id', authMiddleware.verifyStaff, authController.getOneUser);
-router.get('/', authMiddleware.verifyManager, authController.getAllUsers);
-router.get('/:id', authMiddleware.verifyManager, authController.getAllUsers);
-router.delete('/:id', authMiddleware.verifyManager, authController.deleteUser);
+userRouter.post('/register', userController.register);
+userRouter.post('/login', userController.login);
+userRouter.get('/get/:id', authMiddleware.verifyStaff, userController.getOneUser);
+userRouter.get('/getAll', authMiddleware.verifyManager, userController.getAllUsers);
+userRouter.patch('/update-profile/:id', authMiddleware.verifyManager, userController.updateProfile);
+userRouter.delete('/delete/:id', authMiddleware.verifyOwner, userController.deleteUser);
 
 
-module.exports = router;
+module.exports = userRouter;
 

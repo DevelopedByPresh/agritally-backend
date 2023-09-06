@@ -2,7 +2,7 @@ const { STATUS_CODE } = require("../utils/constants");
 const handleError = require("../middleware/errorHandler.middleware");
 const UserDto = require("../dtos/userDto/userDTO");
 const bcryptHelper = require('../lib/bcrypt');
-const authService = require('../services/authService');
+const authService = require('../services/user.Service');
 const {
   registerSchema,
   loginSchema,
@@ -10,7 +10,7 @@ const {
 } = require("../validators/validation");
 const {generateJWTToken, decodeToken} = require("../lib/jwt.service")
 
-class AuthController {
+class UserController {
   async register(req, res) {
     try {
       const registerDto = req.body;
@@ -120,19 +120,19 @@ class AuthController {
 
   async deleteUser(req, res) {
     try {
-      const { userId } = req.params;
+      const { id } = req.params;
 
-      const deletedUser = await authService.deleteUser(userId);
+      const deletedUser = await authService.deleteUser(id);
 
       if (!deletedUser) {
         return res.status(STATUS_CODE.NOT_FOUND).json({ error: "User not found" });
       }
 
-      return res.status(STATUS_CODE.OK).json({ message: "User deleted", data: deletedUser });
+      return res.status(STATUS_CODE.OK).json({ message: "User deleted"});
     } catch (error) {
       return handleError(error, res);
     }
   }
 }
 
-module.exports = new AuthController();
+module.exports = new UserController();

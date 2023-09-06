@@ -19,7 +19,7 @@ class UserDTO {
       date_of_birth: userEntity.date_of_birth,
       phone: userEntity.phone,
       password: userEntity.password,
-      // role: userEntity.role,
+      role: userEntity.role,
       token: userEntity.token
     });
   }
