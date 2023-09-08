@@ -33,7 +33,6 @@ class UserService {
     return users;
   }
 
-
   async updateUserProfile(userId, updates) {
     const updatedUser = await User.findByIdAndUpdate(userId, updates, { new: true });
     return updatedUser;

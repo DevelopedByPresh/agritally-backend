@@ -25,6 +25,11 @@ class PoultryService {
 
     return poultryItems;
   }
+ 
+  async updatePoultryItem(itemId, updateDto) {
+    const updatedItem = await Poultry.findByIdAndUpdate(itemId, updateDto, { new: true });
+    return updatedItem;
+  }
 }
 
 module.exports = new PoultryService();

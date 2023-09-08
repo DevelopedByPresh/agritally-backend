@@ -8,8 +8,7 @@ const poultryRouter = express.Router();
 poultryRouter.post('/add', poultryController.addPoultryItem);
 poultryRouter.get('/get/:id',  poultryController.getOne);
 poultryRouter.get('/getAll', authMiddleware.verifyManager, poultryController.getAll);
-// poultryRouter.patch('/update-profile/:id', authMiddleware.verifyManager, poultryController.updateProfile);
-// poultryRouter.delete('/delete/:id', authMiddleware.verifyOwner, poultryController.deleteUser);
+poultryRouter.patch('/update/:id', authMiddleware.verifyManager, poultryController.updatePoultryItem);
 
 
 module.exports = poultryRouter;

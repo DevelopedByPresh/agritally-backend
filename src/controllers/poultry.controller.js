@@ -1,9 +1,7 @@
 const { STATUS_CODE } = require("../utils/constants");
 const handleError = require("../middleware/errorHandler.middleware");
 const PoultryDto = require("../dtos/poultry/poultry.Dto");
-const bcryptHelper = require("../lib/bcrypt");
 const poultryService = require("../services/poultry.service");
-const { registerSchema, validate } = require("../validators/validation");
 
 class PoultryController {
   async addPoultryItem(req, res) {
@@ -51,6 +49,23 @@ class PoultryController {
         .json({ message: "Poultry items found", data: poultryDtos });
     } catch (error) {
       console.log(error);
+      return handleError(error, res);
+    }
+  }
+
+  async updatePoultryItem(req, res) {
+    try {
+      const { id } = req.params;
+      const updateDto = req.body;
+
+      const updatepolutryItem = await poultryService.updatePoultryItem(id, updateDto);
+
+      if (!updatepolutryItem) {
+        return res.status(STATUS_CODE.NOT_FOUND).json({ error: "Item not found" });
+      }
+
+      return res.status(STATUS_CODE.OK).json({ message: "Item updated", data: updatepolutryItem });
+    } catch (error) {
       return handleError(error, res);
     }
   }
