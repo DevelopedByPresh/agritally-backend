@@ -1,0 +1,59 @@
+const { STATUS_CODE } = require("../utils/constants");
+const handleError = require("../middleware/errorHandler.middleware");
+const PoultryDto = require("../dtos/poultry/poultry.Dto");
+const bcryptHelper = require("../lib/bcrypt");
+const poultryService = require("../services/poultry.service");
+const { registerSchema, validate } = require("../validators/validation");
+
+class PoultryController {
+  async addPoultryItem(req, res) {
+    try {
+      const newPoultryItem = req.body;
+      const poultryItem = await poultryService.addPoultryItem(newPoultryItem);
+
+      const poultryDto = PoultryDto.fromPoultry(poultryItem);
+
+      return res
+        .status(STATUS_CODE.CREATED)
+        .json({ message: "Created successfully", data: poultryDto });
+    } catch (error) {
+      console.log(error);
+      return handleError(error, res);
+    }
+  }
+
+  async getOne(req, res) {
+    try {
+      const { id } = req.params;
+      const poultryItem = await poultryService.getOne(id);
+
+      const poultryDto = PoultryDto.fromPoultry(poultryItem);
+
+      return res
+        .status(STATUS_CODE.OK)
+        .json({ message: "Poultry found", data: poultryDto });
+    } catch (error) {
+      console.log(error);
+      return handleError(error, res);
+    }
+  }
+
+  async getAll(req, res) {
+    try {
+      const { section } = req.query;
+      const poultryItems = await poultryService.getAll(section);
+
+      const poultryDtos = poultryItems.map(PoultryDto.fromPoultry);
+
+
+      return res
+        .status(STATUS_CODE.OK)
+        .json({ message: "Poultry items found", data: poultryDtos });
+    } catch (error) {
+      console.log(error);
+      return handleError(error, res);
+    }
+  }
+}
+
+module.exports = new PoultryController();

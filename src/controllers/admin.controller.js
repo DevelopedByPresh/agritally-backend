@@ -1,6 +1,6 @@
 const { STATUS_CODE } = require("../utils/constants");
 const handleError = require("../middleware/errorHandler.middleware");
-const UserDto = require("../dtos/userDto/userDTO");
+const UserDto = require("../dtos/user/user.Dto");
 const bcryptHelper = require('../lib/bcrypt');
 const adminService = require('../services/admin.service');
 const {

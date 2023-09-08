@@ -1,8 +1,8 @@
 const { STATUS_CODE } = require("../utils/constants");
 const handleError = require("../middleware/errorHandler.middleware");
-const UserDto = require("../dtos/userDto/userDTO");
+const UserDto = require("../dtos/user/user.Dto");
 const bcryptHelper = require('../lib/bcrypt');
-const authService = require('../services/user.Service');
+const userService = require('../services/user.Service');
 const {
   registerSchema,
   loginSchema,
@@ -17,7 +17,7 @@ class UserController {
       validate(registerDto, registerSchema);
 
       // Check if the user already exists
-      const existingUser = await authService.getUserByEmail(registerDto.email);
+      const existingUser = await userService.getUserByEmail(registerDto.email);
       if (existingUser) {
         return res
           .status(STATUS_CODE.BAD_REQUEST)
@@ -30,7 +30,7 @@ class UserController {
         password: hashedPassword,
       };
 
-      const createUser = await authService.register(newUser);
+      const createUser = await userService.register(newUser);
 
       const { token, expiresIn} = await generateJWTToken({id:createUser.id, role: createUser.role})
 
@@ -54,7 +54,7 @@ class UserController {
       const { email, password } = req.body;
       validate({ email, password }, loginSchema);
 
-      const user = await authService.login(email, password);
+      const user = await userService.login(email, password);
 
       if (!user) {
         return res
@@ -79,7 +79,7 @@ class UserController {
     try {
       const { id } = req.params;
 
-      const user = await authService.getUserById(id);
+      const user = await userService.getUserById(id);
 
       if (!user) {
         return res.status(STATUS_CODE.NOT_FOUND).json({ error: "User not found" });
@@ -93,7 +93,7 @@ class UserController {
 
   async getAllUsers(req, res) {
     try {
-      const users = await authService.getAllUsers();
+      const users = await userService.getAllUsers();
 
       return res.status(STATUS_CODE.OK).json({ data: users });
     } catch (error) {
@@ -103,10 +103,10 @@ class UserController {
 
   async updateProfile(req, res) {
     try {
-      const { userId } = req.params;
+      const { id } = req.params;
       const updates = req.body;
 
-      const updatedUser = await authService.updateUserProfile(userId, updates);
+      const updatedUser = await userService.updateUserProfile(id, updates);
 
       if (!updatedUser) {
         return res.status(STATUS_CODE.NOT_FOUND).json({ error: "User not found" });
@@ -122,7 +122,7 @@ class UserController {
     try {
       const { id } = req.params;
 
-      const deletedUser = await authService.deleteUser(id);
+      const deletedUser = await userService.deleteUser(id);
 
       if (!deletedUser) {
         return res.status(STATUS_CODE.NOT_FOUND).json({ error: "User not found" });
