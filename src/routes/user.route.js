@@ -5,7 +5,6 @@ const { verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } = require('.
 
 const userRouter = express.Router();
 
-// Use the verifyStaff middleware
 userRouter.post('/register', userController.register);
 userRouter.post('/login', userController.login);
 userRouter.get('/get/:id', authMiddleware.verifyStaff, userController.getOneUser);
