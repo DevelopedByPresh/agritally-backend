@@ -69,6 +69,8 @@ class PoultryController {
       return handleError(error, res);
     }
   }
+
+  //TODO: filter by date, month, yearly, 
 }
 
 module.exports = new PoultryController();

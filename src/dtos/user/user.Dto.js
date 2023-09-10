@@ -39,4 +39,7 @@ class UserDTO {
   }
 }
 
+
+// TODO: Create editable field
+
 module.exports = UserDTO;
