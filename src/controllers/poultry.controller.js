@@ -70,7 +70,7 @@ class PoultryController {
     }
   }
 
-  //TODO: filter by date, month, yearly, 
+  //TODO: filter by date, month, yearly
 }
 
 module.exports = new PoultryController();
