@@ -14,12 +14,7 @@ class PoultryService {
     return poultry;
   }
 
-  async getAll(section) {
-    const filter = {};
-
-    if (section) {
-      filter.section = section;
-    }
+  async getAll(filter) {
 
     const poultryItems = await Poultry.find(filter);
 
@@ -29,6 +24,12 @@ class PoultryService {
   async updatePoultryItem(itemId, updateDto) {
     const updatedItem = await Poultry.findByIdAndUpdate(itemId, updateDto, { new: true });
     return updatedItem;
+  }
+
+  async delete(id) {
+    const poultry = await Poultry.findById(id);
+
+    return poultry;
   }
 }
 
