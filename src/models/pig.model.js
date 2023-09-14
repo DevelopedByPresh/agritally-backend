@@ -1,15 +1,14 @@
 const mongoose = require('mongoose');
 
 const pigSchema = new mongoose.Schema({
-  size: {
+  section: {
     type: String,
     enum: ["Boar", "Dry Sows", "In-pigs", "Growers", "Weaners", "Piglets"],
     required: true,
   },
   date: {
     type: Date,
-    default: Date.now,
-    required: true,
+    default: new Date(),
   },
   quantity: {
     type: Number,
