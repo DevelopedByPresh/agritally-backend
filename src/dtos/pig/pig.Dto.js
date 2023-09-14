@@ -7,7 +7,7 @@ class PigDTO {
     this.weight = weight;
   }
 
-  static fromEntity(pigEntity) {
+  static fromPig(pigEntity) {
     return new PigDTO({
       id: pigEntity._id,
       size: pigEntity.size,
