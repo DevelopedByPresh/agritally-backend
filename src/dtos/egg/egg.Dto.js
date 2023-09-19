@@ -8,7 +8,7 @@ class EggDTO {
     this.updatedAt = updatedAt;
   }
 
-  static fromEgg(eggEntity) {
+  static from(eggEntity) {
     return new EggDTO({
       id: eggEntity.id,
       size: eggEntity.size,
@@ -17,6 +17,9 @@ class EggDTO {
       createdAt: eggEntity.createdAt,
       updatedAt: eggEntity.updatedAt
     });
+  }
+  static fromMany(eggEntities) {
+    return eggEntities.map((eggEntity) => EggDTO.from(eggEntity));
   }
 }
 

@@ -15,14 +15,15 @@ class PoultryService {
   }
 
   async getAll(filter) {
-
     const poultryItems = await Poultry.find(filter);
 
     return poultryItems;
   }
- 
+
   async updatePoultryItem(itemId, updateDto) {
-    const updatedItem = await Poultry.findByIdAndUpdate(itemId, updateDto, { new: true });
+    const updatedItem = await Poultry.findByIdAndUpdate(itemId, updateDto, {
+      new: true,
+    });
     return updatedItem;
   }
 

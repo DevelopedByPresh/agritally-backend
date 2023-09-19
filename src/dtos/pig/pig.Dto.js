@@ -9,7 +9,7 @@ class PigDTO {
     this.updatedAt = updatedAt;
   }
 
-  static fromPig(pigEntity) {
+  static from(pigEntity) {
     return new PigDTO({
       id: pigEntity.id,
       section: pigEntity.section,
@@ -19,6 +19,10 @@ class PigDTO {
       createdAt: pigEntity.createdAt,
       updatedAt: pigEntity.updatedAt
     });
+  }
+
+  static fromMany(pigEntities) {
+    return pigEntities.map((pigEntity) => PigDTO.from(pigEntity));
   }
 }
 

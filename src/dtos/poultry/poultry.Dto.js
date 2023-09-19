@@ -8,7 +8,7 @@ class PoultryDTO {
     this.updatedAt = updatedAt;
   }
 
-  static fromPoultry(poultryEntity) {
+  static from(poultryEntity) {
     return new PoultryDTO({
       id: poultryEntity.id,
       section: poultryEntity.section,
@@ -17,6 +17,10 @@ class PoultryDTO {
       createdAt: poultryEntity.createdAt,
       updatedAt: poultryEntity.updatedAt
     });
+  }
+
+  static fromMany(poultryEntities) {
+    return poultryEntities.map((poultryEntity) => PoultryDTO.from(poultryEntity));
   }
 }
 

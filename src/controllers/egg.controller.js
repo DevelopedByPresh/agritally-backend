@@ -1,7 +1,7 @@
-const { STATUS_CODE } = require('../utils/constants');
-const handleError = require('../middleware/errorHandler.middleware');
-const EggDto = require('../dtos/egg/egg.Dto');
-const eggService = require('../services/egg.service');
+const { STATUS_CODE } = require("../utils/constants");
+const handleError = require("../middleware/errorHandler.middleware");
+const EggDto = require("../dtos/egg/egg.Dto");
+const eggService = require("../services/egg.service");
 
 class EggController {
   async addEggItem(req, res) {
@@ -13,7 +13,7 @@ class EggController {
 
       return res
         .status(STATUS_CODE.CREATED)
-        .json({ message: 'Created successfully', data: eggDto });
+        .json({ message: "Created successfully", data: eggDto });
     } catch (error) {
       console.error(error);
       return handleError(error, res);
@@ -29,7 +29,7 @@ class EggController {
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: 'Egg found', data: eggDto });
+        .json({ message: "Egg found", data: eggDto });
     } catch (error) {
       console.error(error);
       return handleError(error, res);
@@ -65,10 +65,12 @@ class EggController {
 
       const eggItems = await eggService.getAll(query);
 
+      const eggDto = EggDto.fromMany(eggItems)
+
       return res.status(STATUS_CODE.OK).json({
-        message: 'Egg items found',
-        count: eggItems.count,
-        data: eggItems.data,
+        message: "Egg items found",
+        count: eggItems.length,
+        data: eggDto,
       });
     } catch (error) {
       console.error(error);
@@ -85,7 +87,7 @@ class EggController {
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: 'Egg item updated', data: updatedEggItem });
+        .json({ message: "Egg item updated", data: updatedEggItem });
     } catch (error) {
       return handleError(error, res);
     }
@@ -102,9 +104,7 @@ class EggController {
           .json({ error: "Product not found" });
 
       await eggItem.deleteOne();
-      return res
-        .status(STATUS_CODE.OK)
-        .json({ message: "Product Deleted"});
+      return res.status(STATUS_CODE.OK).json({ message: "Product Deleted" });
     } catch (error) {
       console.log(error);
       return handleError(error, res);

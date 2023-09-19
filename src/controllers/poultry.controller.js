@@ -65,7 +65,7 @@ class PoultryController {
 
       const poultryItems = await poultryService.getAll(query);
 
-      const poultryDtos = poultryItems.map(PoultryDto.fromPoultry);
+      const poultryDtos = PoultryDto.fromMany(poultryItems);
 
       return res.status(STATUS_CODE.OK).json({
         message: "Poultry items found",

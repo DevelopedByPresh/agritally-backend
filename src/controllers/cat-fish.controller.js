@@ -9,7 +9,7 @@ class CatFishController {
       const newCatFishItem = req.body;
       const catFishItem = await catFishService.addCatFishItem(newCatFishItem);
 
-      const catFishDto = CatFishDto.fromEntity(catFishItem);
+      const catFishDto = CatFishDto.fromCatFish(catFishItem);
 
       return res
         .status(STATUS_CODE.CREATED)
@@ -64,13 +64,14 @@ class CatFishController {
       }
 
       const catFishItems = await catFishService.getAll(query);
-
-      const catFishDtos = catFishItems.map(CatFishDto.fromCatFish);
+      
+      const catFishDto = CatFishDto.fromMany(catFishItems);
+      console.log(catFishDto)
 
       return res.status(STATUS_CODE.OK).json({
         message: 'CatFish items found',
-        count: catFishDtos.length,
-        data: catFishDtos,
+        // count: catFishDtos.length,
+        data: catFishDto
       });
     } catch (error) {
       console.error(error);

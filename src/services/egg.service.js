@@ -12,42 +12,20 @@ class EggService {
   async getOne(id) {
     const egg = await Egg.findById(id);
 
-    const eggDto = EggDto.fromEgg(egg);
-
-    return {
-      status: STATUS_CODE.OK,
-      message: 'Egg found',
-      data: eggDto,
-    };
+    return egg;
+    
   }
 
-  async getAll(query) {
-    const eggItems = await Egg.find(query);
+  async getAll(filter) {
+    const eggItems = await Egg.find(filter);
 
-    const eggDtos = eggItems.map(EggDto.fromEgg);
-
-    return {
-      status: STATUS_CODE.OK,
-      message: 'Egg items found',
-      count: eggDtos.length,
-      data: eggDtos,
-    };
+    return eggItems;
   }
 
   async updateEggItem(itemId, updateDto) {
     const updatedItem = await Egg.findByIdAndUpdate(itemId, updateDto, { new: true });
-
-    if (!updatedItem) {
-      throw new Error('Egg item not found');
-    }
-
-    const eggDto = EggDto.fromEgg(updatedItem);
-
-    return {
-      status: STATUS_CODE.OK,
-      message: 'Egg item updated',
-      data: eggDto,
-    };
+    return updatedItem;
+    
   }
 
   async delete(id) {

@@ -65,7 +65,7 @@ class PigController {
 
       const pigItems = await pigService.getAll(query);
 
-      const pigDtos = pigItems.map(PigDto.fromPig);
+      const pigDtos = PigDto.fromMany(pigItems);
 
       return res.status(STATUS_CODE.OK).json({
         message: 'Pig items found',
