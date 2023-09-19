@@ -10,6 +10,7 @@ const userRouter = require('./routes/user.route');
 const adminRouter = require('./routes/admin.route');
 const poultryRouter = require('./routes/poultry.route');
 const pigRouter = require('./routes/pig.route');
+const catFishRouter = require('./routes/cat-fish.route');
 
 const app = express();
 app.use(cors({ credentials: true }));
@@ -22,6 +23,7 @@ app.use('/admin', adminRouter);
 app.use('/user', userRouter);
 app.use('/poultry', poultryRouter);
 app.use('/pig', pigRouter);
+app.use('/catFish', catFishRouter);
 
 app.use(handleError);
 

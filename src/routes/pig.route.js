@@ -6,10 +6,10 @@ const { verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } = require('.
 const pigRouter = express.Router();
 
 pigRouter.post('/add', pigController.addPigItem);
-// poultryRouter.get('/get/:id',  pigController.getOne);
-// poultryRouter.get('/getAll', pigController.getAll);
-// poultryRouter.patch('/update/:id', authMiddleware.verifyManager, pigController.updatePoultryItem);
-// poultryRouter.delete('/delete/:id', pigController.delete);
+pigRouter.get('/get/:id',  pigController.getOne);
+pigRouter.get('/getAll', pigController.getAll);
+pigRouter.patch('/update/:id', pigController.updatePigItem);
+pigRouter.delete('/delete/:id', pigController.delete);
 
 
 module.exports = pigRouter;

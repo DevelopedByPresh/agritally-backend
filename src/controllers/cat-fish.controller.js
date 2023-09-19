@@ -1,21 +1,21 @@
 const { STATUS_CODE } = require('../utils/constants');
 const handleError = require('../middleware/errorHandler.middleware');
-const EggDto = require('../dtos/egg/egg.Dto');
-const eggService = require('../services/eggService');
+const CatFishDto = require('../dtos/catFish/cat-fish.Dto');
+const catFishService = require('../services/cat-fish.service');
 
-class EggController {
-  async addEggItem(req, res) {
+class CatFishController {
+  async addCatFishItem(req, res) {
     try {
-      const newEggItem = req.body;
-      const eggItem = await eggService.addEggItem(newEggItem);
+      const newCatFishItem = req.body;
+      const catFishItem = await catFishService.addCatFishItem(newCatFishItem);
 
-      const eggDto = EggDto.fromEgg(eggItem);
+      const catFishDto = CatFishDto.fromEntity(catFishItem);
 
       return res
         .status(STATUS_CODE.CREATED)
-        .json({ message: 'Created successfully', data: eggDto });
+        .json({ message: 'Created successfully', data: catFishDto });
     } catch (error) {
-      console.error(error);
+      console.error(error.message);
       return handleError(error, res);
     }
   }
@@ -23,13 +23,13 @@ class EggController {
   async getOne(req, res) {
     try {
       const { id } = req.params;
-      const eggItem = await eggService.getOne(id);
+      const catFishItem = await catFishService.getOne(id);
 
-      const eggDto = EggDto.fromEgg(eggItem);
+      const catFishDto = CatFishDto.fromCatFish(catFishItem);
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: 'Egg found', data: eggDto });
+        .json({ message: 'CatFish found', data: catFishDto });
     } catch (error) {
       console.error(error);
       return handleError(error, res);
@@ -38,7 +38,7 @@ class EggController {
 
   async getAll(req, res) {
     try {
-      const { date, month, year, size } = req.query;
+      const { date, month, year, section } = req.query;
       let query = {};
 
       if (date && month && year) {
@@ -58,17 +58,19 @@ class EggController {
         query.date = { $gte: startDate, $lte: endDate };
       }
 
-      // Add size filter if provided
-      if (size) {
-        query.size = size;
+      // Add section filter if provided
+      if (section) {
+        query.section = section;
       }
 
-      const eggItems = await eggService.getAll(query);
+      const catFishItems = await catFishService.getAll(query);
+
+      const catFishDtos = catFishItems.map(CatFishDto.fromCatFish);
 
       return res.status(STATUS_CODE.OK).json({
-        message: 'Egg items found',
-        count: eggItems.count,
-        data: eggItems.data,
+        message: 'CatFish items found',
+        count: catFishDtos.length,
+        data: catFishDtos,
       });
     } catch (error) {
       console.error(error);
@@ -76,16 +78,22 @@ class EggController {
     }
   }
 
-  async updateEggItem(req, res) {
+  async updateCatFishItem(req, res) {
     try {
       const { id } = req.params;
       const updateDto = req.body;
 
-      const updatedEggItem = await eggService.updateEggItem(id, updateDto);
+      const updatedCatFishItem = await catFishService.updateCatFishItem(id, updateDto);
+
+      if (!updatedCatFishItem) {
+        return res
+          .status(STATUS_CODE.NOT_FOUND)
+          .json({ error: 'Item not found' });
+      }
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: 'Egg item updated', data: updatedEggItem });
+        .json({ message: 'Item updated', data: updatedCatFishItem });
     } catch (error) {
       return handleError(error, res);
     }
@@ -94,22 +102,23 @@ class EggController {
   async delete(req, res) {
     try {
       const { id } = req.params;
-      const eggItem = await eggService.delete(id);
+      const catFishItem = await catFishService.delete(id);
 
-      if (!eggItem)
+      if (!catFishItem) {
         return res
           .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: "Product not found" });
+          .json({ error: 'CatFish not found' });
+      }
 
-      await eggItem.deleteOne();
+      await catFishItem.deleteOne();
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Product Deleted"});
+        .json({ message: 'CatFish Item Deleted' });
     } catch (error) {
-      console.log(error);
+      console.error(error);
       return handleError(error, res);
     }
   }
 }
 
-module.exports = new EggController();
+module.exports = new CatFishController();
