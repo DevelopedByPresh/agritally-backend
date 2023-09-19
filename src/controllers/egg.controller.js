@@ -1,7 +1,7 @@
 const { STATUS_CODE } = require('../utils/constants');
 const handleError = require('../middleware/errorHandler.middleware');
 const EggDto = require('../dtos/egg/egg.Dto');
-const eggService = require('../services/eggService');
+const eggService = require('../services/egg.service');
 
 class EggController {
   async addEggItem(req, res) {

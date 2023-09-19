@@ -37,7 +37,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: "staff",
   },
-});
+},
+{
+  timestamps: true,
+},
+);
 
 userSchema.methods.generateAuthToken = function(){
   const token = jwt.sign({ _id: this._id, role:this.role }, process.env.JWT_SECRET_KEY || 'MyScureKey', {expiresIn: "15h"});

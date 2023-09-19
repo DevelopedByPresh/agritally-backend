@@ -6,14 +6,7 @@ class EggService {
   async addEggItem(createEggDto) {
     const addEggProduct = new Egg(createEggDto);
     const savedItem = await addEggProduct.save();
-
-    const eggDto = EggDto.fromEgg(savedItem);
-
-    return {
-      status: STATUS_CODE.CREATED,
-      message: 'Created successfully',
-      data: eggDto,
-    };
+    return savedItem
   }
 
   async getOne(id) {

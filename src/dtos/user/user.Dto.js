@@ -1,5 +1,5 @@
 class UserDTO {
-  constructor(id, email, firstName, lastName, password, role, date_of_birth, phone, token) {
+  constructor({ id, email, firstName, lastName, password, role, date_of_birth, phone, createdAt, updatedAt, token}) {
     this.id = id;
     this.email = email;
     this.firstName = firstName;
@@ -8,6 +8,8 @@ class UserDTO {
     this.date_of_birth = date_of_birth;
     this.phone = phone;
     this.role = role;
+    this.createdAt = createdAt;
+    this.updatedAt = updatedAt;
   }
 
   static fromRegister(userEntity) {
@@ -20,7 +22,9 @@ class UserDTO {
       phone: userEntity.phone,
       password: userEntity.password,
       role: userEntity.role,
-      token: userEntity.token
+      token: userEntity.token,
+      createdAt: userEntity.createdAt,
+      updatedAt: userEntity.updatedAt
     });
   }
   

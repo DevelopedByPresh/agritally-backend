@@ -38,7 +38,11 @@ const adminSchema = new mongoose.Schema({
     enum: ["superAdmin", "owner",  "manager"],
     default: "manager",
   },
-});
+},
+{
+  timestamps: true,
+},
+);
 
 adminSchema.methods.generateAuthToken = function(){
   const token = jwt.sign({ _id: this._id, role:this.role }, process.env.JWT_SECRET_KEY || 'MyScureKey', {expiresIn: "15h"});
