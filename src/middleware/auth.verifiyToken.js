@@ -3,17 +3,34 @@ const { STATUS_CODE } = require("../utils/constants");
 const { handleError } = require("../middleware/errorHandler.middleware");
 
 function verifyToken(req, res, next) {
-  const token = req.cookies.access_token || req.header("x-auth-token");
-  if (!token) {
-    return res
+  // const token = req.cookies.access_token || req.header("x-auth-token");
+  try {
+    let token;
+
+    const authHeader =
+        req.header('authorization') || req.header('Authorization');
+    const cookieToken = req.cookies.access_token;
+
+    if (authHeader) {
+        const [scheme, headerToken] = authHeader.split(' ');
+        if (scheme === 'Bearer') {
+            token = headerToken;
+        }
+    } else if (cookieToken) {
+        token = cookieToken;
+    }
+
+    if (!token) {
+      return res
       .status(STATUS_CODE.UNAUTHORIZED)
       .json({ error: "Access denied, No token provided" });
-  }
+    }
 
-  try {
     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     req.user = decoded;
+
     next();
+
   } catch (error) {
     handleError(res, error);
   }
