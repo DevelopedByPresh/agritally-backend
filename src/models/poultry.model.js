@@ -1,24 +1,34 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const poultrySchema = new mongoose.Schema({
-  section: {
-    type: String,
-    enum: ["Layers", "Broilers"],
-    required: true,
-  },
-  date: {
-    type: Date,
-    default: new Date(),
-    required: true,
-  },
-  quantity: {
-    type: Number,
-    default: 1,
-    required: true,
-  },
-}, 
-{
-  timestamps: true,
-});
+const poultrySchema = new mongoose.Schema(
+  {
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
 
-module.exports = mongoose.model('Poultry', poultrySchema);
+    section: {
+      type: String,
+      enum: ["Layers", "Broilers"],
+      required: true,
+    },
+
+    date: {
+      type: Date,
+      default: new Date(),
+      required: true,
+    },
+
+    quantity: {
+      type: Number,
+      default: 1,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+module.exports = mongoose.model("Poultry", poultrySchema);
