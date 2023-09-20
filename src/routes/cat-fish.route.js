@@ -4,10 +4,10 @@ const { verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } = require('.
 
 const catFishRouter = express.Router();
 
-catFishRouter.post('/add', catFishController.addCatFishItem);
-catFishRouter.get('/get/:id', catFishController.getOne);
-catFishRouter.get('/getAll', catFishController.getAll);
-catFishRouter.patch('/update/:id', catFishController.updateCatFishItem);
-catFishRouter.delete('/delete/:id', catFishController.delete);
+catFishRouter.post('/add', verifyStaff, catFishController.addCatFishItem);
+catFishRouter.get('/get/:id', verifyStaff, catFishController.getOne);
+catFishRouter.get('/getAll', verifyManager, catFishController.getAll);
+catFishRouter.patch('/update/:id', verifyManager, catFishController.updateCatFishItem);
+catFishRouter.delete('/delete/:id', verifyOwner, catFishController.delete);
 
 module.exports = catFishRouter;
