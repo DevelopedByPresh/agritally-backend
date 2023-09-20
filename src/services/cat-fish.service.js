@@ -22,7 +22,7 @@ class CatFishService {
     const catFishItems = await CatFish.find(filter).populate({
       path: "user",
       select: ["firstName", "lastName"],
-    }).execPopulate();;
+    });
     return catFishItems;
   }
 
