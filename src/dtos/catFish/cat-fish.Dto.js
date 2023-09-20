@@ -1,6 +1,7 @@
 class CatFishDTO{
-  constructor({id, size, date, quantity, weight, createdAt, updatedAt}) {
+  constructor({id, user, size, date, quantity, weight, createdAt, updatedAt}) {
     this.id = id;
+    this.user = user;
     this.size = size;
     this.date = date;
     this.quantity = quantity;
@@ -11,7 +12,8 @@ class CatFishDTO{
 
   static from(catFishEntity) {
     return new CatFishDTO({
-      id: catFishEntity._id,
+      id: catFishEntity.id,
+      user: catFishEntity.user,
       size: catFishEntity.size,
       date: catFishEntity.date,
       quantity: catFishEntity.quantity,

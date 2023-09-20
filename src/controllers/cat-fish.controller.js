@@ -9,7 +9,7 @@ class CatFishController {
       const newCatFishItem = req.body;
       const catFishItem = await catFishService.addCatFishItem(newCatFishItem);
 
-      const catFishDto = CatFishDto.fromCatFish(catFishItem);
+      const catFishDto = CatFishDto.from(catFishItem);
 
       return res
         .status(STATUS_CODE.CREATED)
@@ -25,7 +25,7 @@ class CatFishController {
       const { id } = req.params;
       const catFishItem = await catFishService.getOne(id);
 
-      const catFishDto = CatFishDto.fromCatFish(catFishItem);
+      const catFishDto = CatFishDto.from(catFishItem);
 
       return res
         .status(STATUS_CODE.OK)

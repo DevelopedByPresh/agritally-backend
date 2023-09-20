@@ -1,4 +1,5 @@
-const Pig = require('../models/pig.model');
+const Pig = require("../models/pig.model");
+const User = require("../models/user.model");
 
 class PigService {
   async addPigItem(pigDTO) {
@@ -8,17 +9,25 @@ class PigService {
   }
 
   async getOne(id) {
-    const pig = await Pig.findById(id);
+    const pig = await Pig.findById(id).populate({
+      path: "user",
+      select: ["firstName", "lastName"],
+    });
     return pig;
   }
 
   async getAll(filter) {
-    const pigItems = await Pig.find(filter);
+    const pigItems = await Pig.find(filter).populate({
+      path: "user",
+      select: ["firstName", "lastName"],
+    });
     return pigItems;
   }
 
   async updatePigItem(itemId, updateDto) {
-    const updatedItem = await Pig.findByIdAndUpdate(itemId, updateDto, { new: true });
+    const updatedItem = await Pig.findByIdAndUpdate(itemId, updateDto, {
+      new: true,
+    });
     return updatedItem;
   }
 

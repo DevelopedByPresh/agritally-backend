@@ -1,4 +1,5 @@
 const CatFish = require("../models/cat-fish.model");
+const User = require("../models/user.model");
 
 class CatFishService {
   async addCatFishItem(catFishDTO) {
@@ -8,12 +9,20 @@ class CatFishService {
   }
 
   async getOne(id) {
-    const catFish = await CatFish.findById(id);
+    const catFish = await CatFish.findById(id)
+    .populate({
+      path: "user",
+      select: ["firstName", "lastName"],
+    });
+    console.log(catFish)
     return catFish;
   }
 
   async getAll(filter) {
-    const catFishItems = await CatFish.find(filter);
+    const catFishItems = await CatFish.find(filter).populate({
+      path: "user",
+      select: ["firstName", "lastName"],
+    }).execPopulate();;
     return catFishItems;
   }
 

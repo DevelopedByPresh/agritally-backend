@@ -9,7 +9,7 @@ class PigController {
       const newPigItem = req.body;
       const pigItem = await pigService.addPigItem(newPigItem);
 
-      const pigDto = PigDto.fromPig(pigItem);
+      const pigDto = PigDto.from(pigItem);
 
       return res
         .status(STATUS_CODE.CREATED)
@@ -25,7 +25,7 @@ class PigController {
       const { id } = req.params;
       const pigItem = await pigService.getOne(id);
 
-      const pigDto = PigDto.fromPig(pigItem);
+      const pigDto = PigDto.from(pigItem);
 
       return res
         .status(STATUS_CODE.OK)
@@ -65,7 +65,7 @@ class PigController {
 
       const pigItems = await pigService.getAll(query);
 
-      const pigDtos = PigDto.fromMany(pigItems);
+      const pigDtos = PigDto.from(pigItems);
 
       return res.status(STATUS_CODE.OK).json({
         message: 'Pig items found',

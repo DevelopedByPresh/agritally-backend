@@ -1,6 +1,7 @@
 class PoultryDTO {
-  constructor({id, section, date, quantity, createdAt, updatedAt}) {
+  constructor({ id, user, section, date, quantity, createdAt, updatedAt }) {
     this.id = id;
+    this.user = user;
     this.section = section;
     this.date = date;
     this.quantity = quantity;
@@ -11,16 +12,19 @@ class PoultryDTO {
   static from(poultryEntity) {
     return new PoultryDTO({
       id: poultryEntity.id,
+      user: poultryEntity.user,
       section: poultryEntity.section,
       date: poultryEntity.date,
       quantity: poultryEntity.quantity,
       createdAt: poultryEntity.createdAt,
-      updatedAt: poultryEntity.updatedAt
+      updatedAt: poultryEntity.updatedAt,
     });
   }
 
   static fromMany(poultryEntities) {
-    return poultryEntities.map((poultryEntity) => PoultryDTO.from(poultryEntity));
+    return poultryEntities.map((poultryEntity) =>
+      PoultryDTO.from(poultryEntity)
+    );
   }
 }
 

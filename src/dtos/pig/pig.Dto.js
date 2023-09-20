@@ -1,6 +1,7 @@
 class PigDTO {
-  constructor({id, section, date, quantity, weight, createdAt, updatedAt}) {
+  constructor({id, user, section, date, quantity, weight, createdAt, updatedAt}) {
     this.id = id;
+    this.user = user;
     this.section = section;
     this.date = date;
     this.quantity = quantity;
@@ -12,6 +13,7 @@ class PigDTO {
   static from(pigEntity) {
     return new PigDTO({
       id: pigEntity.id,
+      user: pigEntity.user,
       section: pigEntity.section,
       date: pigEntity.date,
       quantity: pigEntity.quantity,

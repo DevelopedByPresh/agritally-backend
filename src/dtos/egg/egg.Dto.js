@@ -1,6 +1,7 @@
 class EggDTO {
-  constructor({ id, size, date, quantity, createdAt, updatedAt}) {
+  constructor({ id, user, size, date, quantity, createdAt, updatedAt}) {
     this.id = id;
+    this.user = user;
     this.size = size;
     this.date = date;
     this.quantity = quantity;
@@ -11,6 +12,7 @@ class EggDTO {
   static from(eggEntity) {
     return new EggDTO({
       id: eggEntity.id,
+      user: eggEntity.user,
       size: eggEntity.size,
       date: eggEntity.date,
       quantity: eggEntity.quantity,

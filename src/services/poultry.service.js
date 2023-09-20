@@ -1,21 +1,28 @@
 const Poultry = require("../models/poultry.model");
-const bcryptHelper = require("../lib/bcrypt");
+const User = require("../models/user.model");
 
 class PoultryService {
   async addPoultryItem(poultryDTO) {
     const newPoultry = new Poultry(poultryDTO);
+
     const savedPoultry = await newPoultry.save();
     return savedPoultry;
   }
 
   async getOne(id) {
-    const poultry = await Poultry.findById(id);
+    const poultry = await Poultry.findById(id).populate({
+      path: "user",
+      select: ["firstName", "lastName"],
+    });
 
     return poultry;
   }
 
   async getAll(filter) {
-    const poultryItems = await Poultry.find(filter);
+    const poultryItems = await Poultry.find(filter).populate({
+      path: "user",
+      select: ["firstName", "lastName"],
+    });
 
     return poultryItems;
   }

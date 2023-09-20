@@ -9,7 +9,7 @@ class EggController {
       const newEggItem = req.body;
       const eggItem = await eggService.addEggItem(newEggItem);
 
-      const eggDto = EggDto.fromEgg(eggItem);
+      const eggDto = EggDto.from(eggItem);
 
       return res
         .status(STATUS_CODE.CREATED)
@@ -25,7 +25,7 @@ class EggController {
       const { id } = req.params;
       const eggItem = await eggService.getOne(id);
 
-      const eggDto = EggDto.fromEgg(eggItem);
+      const eggDto = EggDto.from(eggItem);
 
       return res
         .status(STATUS_CODE.OK)

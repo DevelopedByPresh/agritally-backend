@@ -7,9 +7,9 @@ class PoultryController {
   async addPoultryItem(req, res) {
     try {
       const newPoultryItem = req.body;
-      const poultryItem = await poultryService.addPoultryItem(newPoultryItem);
+      const poultryItem = await poultryService.addPoultryItem(newPoultryItem)
 
-      const poultryDto = PoultryDto.fromPoultry(poultryItem);
+      const poultryDto = PoultryDto.from(poultryItem);
 
       return res
         .status(STATUS_CODE.CREATED)
@@ -25,7 +25,7 @@ class PoultryController {
       const { id } = req.params;
       const poultryItem = await poultryService.getOne(id);
 
-      const poultryDto = PoultryDto.fromPoultry(poultryItem);
+      const poultryDto = PoultryDto.from(poultryItem);
 
       return res
         .status(STATUS_CODE.OK)
