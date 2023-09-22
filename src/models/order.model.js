@@ -14,37 +14,6 @@ const orderSchema = new mongoose.Schema(
       required: true,
     },
 
-    category: {
-      type: String,
-      enum: ["Cat-fish", "Egg", "Pig", "Poultry"],
-      required: true,
-    },
-
-    section: {
-      type: String,
-      enum: [
-        "Layers",
-        "Broilers",
-        "Fingerlings",
-        "Mature",
-        "Big",
-        "Small",
-        "Boar",
-        "Dry Sows",
-        "In-pigs",
-        "Growers",
-        "Weaners",
-        "Piglets",
-      ],
-      required: true,
-    },
-
-    date: {
-      type: Date,
-      default: new Date(),
-      required: true,
-    },
-
     quantity: {
       type: Number,
       default: 0,
@@ -68,4 +37,4 @@ const orderSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("order", orderSchema);
+module.exports = mongoose.model("Order", orderSchema);

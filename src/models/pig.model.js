@@ -22,6 +22,7 @@ const pigSchema = new mongoose.Schema(
     quantity: {
       type: Number,
       default: 1,
+      required: true
     },
 
     weight: {
@@ -34,7 +35,7 @@ const pigSchema = new mongoose.Schema(
       enum: ["Approved", "Pending"],
       default: "Pending"
     },
-    
+
   },
   {
     timestamps: true,
