@@ -1,11 +1,12 @@
 class PigDTO {
-  constructor({id, user, section, date, quantity, weight, createdAt, updatedAt}) {
+  constructor({id, user, section, date, quantity, weight, status, createdAt, updatedAt}) {
     this.id = id;
     this.user = user;
     this.section = section;
     this.date = date;
     this.quantity = quantity;
     this.weight = weight;
+    this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
   }
@@ -18,6 +19,7 @@ class PigDTO {
       date: pigEntity.date,
       quantity: pigEntity.quantity,
       weight: pigEntity.weight,
+      status: pigEntity.status,
       createdAt: pigEntity.createdAt,
       updatedAt: pigEntity.updatedAt
     });

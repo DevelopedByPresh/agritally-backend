@@ -8,9 +8,9 @@ const catFishSchema = new mongoose.Schema(
       required: true,
     },
 
-    size: {
+    section: {
       type: String,
-      enum: ["Fingerings", "Mature"],
+      enum: ["Fingerlings", "Mature"],
       required: true,
     },
 
@@ -28,6 +28,12 @@ const catFishSchema = new mongoose.Schema(
     weight: {
       type: String,
       default: "0 kg",
+    },
+  
+    status: {
+      type: String,
+      enum: ["Approved", "Pending"],
+      default: "Pending"
     },
   },
   {

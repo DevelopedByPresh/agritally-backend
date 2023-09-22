@@ -25,6 +25,12 @@ const poultrySchema = new mongoose.Schema(
       default: 1,
       required: true,
     },
+
+    status: {
+      type: String,
+      enum: ["Approved", "Pending"],
+      default: "Pending"
+    },
   },
   {
     timestamps: true,

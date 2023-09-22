@@ -8,7 +8,7 @@ const eggSchema = new mongoose.Schema(
       required: true,
     },
 
-    size: {
+    section: {
       type: String,
       enum: ["Big", "Small"],
       required: true,
@@ -25,6 +25,13 @@ const eggSchema = new mongoose.Schema(
       default: 1,
       required: true,
     },
+
+    status: {
+      type: String,
+      enum: ["Approved", "Pending"],
+      default: "Pending"
+    },
+    
   },
   {
     timestamps: true,

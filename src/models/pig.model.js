@@ -28,6 +28,13 @@ const pigSchema = new mongoose.Schema(
       type: String,
       default: "0 kg",
     },
+
+    status: {
+      type: String,
+      enum: ["Approved", "Pending"],
+      default: "Pending"
+    },
+    
   },
   {
     timestamps: true,

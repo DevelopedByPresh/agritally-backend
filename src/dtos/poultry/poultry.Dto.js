@@ -1,10 +1,11 @@
 class PoultryDTO {
-  constructor({ id, user, section, date, quantity, createdAt, updatedAt }) {
+  constructor({ id, user, section, date, quantity, status, createdAt, updatedAt }) {
     this.id = id;
     this.user = user;
     this.section = section;
     this.date = date;
     this.quantity = quantity;
+    this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
   }
@@ -16,6 +17,7 @@ class PoultryDTO {
       section: poultryEntity.section,
       date: poultryEntity.date,
       quantity: poultryEntity.quantity,
+      status: poultryEntity.status,
       createdAt: poultryEntity.createdAt,
       updatedAt: poultryEntity.updatedAt,
     });
