@@ -25,6 +25,10 @@ const poultrySchema = new mongoose.Schema(
       default: 1,
       required: true,
     },
+    price: {
+      type: Number,
+      required: true,
+    },
 
     status: {
       type: String,

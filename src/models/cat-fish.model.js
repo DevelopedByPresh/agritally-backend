@@ -26,6 +26,11 @@ const catFishSchema = new mongoose.Schema(
       required: true
     },
 
+    price: {
+      type: Number,
+      required: true,
+    },
+
     weight: {
       type: String,
       default: "0 kg",

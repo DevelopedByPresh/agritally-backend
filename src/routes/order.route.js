@@ -2,14 +2,14 @@ const express = require('express');
 const orderController = require('../controllers/order.controller');
 const { verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } = require('../middleware/auth.verifiyToken'); // Adjust the import path
 
-const poultryRouter = express.Router();
+const orderRouter = express.Router();
 
-poultryRouter.post('/add', verifyStaff, orderController.addPoultryItem);
-poultryRouter.get('/get/:id', verifyStaff,  orderController.getOne);
-poultryRouter.get('/getAll', verifyManager, orderController.getAll);
-poultryRouter.patch('/update/:id', verifyManager, orderController.updatePoultryItem);
-poultryRouter.delete('/delete/:id', verifyOwner, orderController.delete);
+orderRouter.post('/add', verifyStaff, orderController.addOrderItem);
+orderRouter.get('/get/:id', verifyStaff,  orderController.getOne);
+orderRouter.get('/getAll', verifyManager, orderController.getAll);
+orderRouter.patch('/update/:id', verifyManager, orderController.updateOrderItem);
+orderRouter.delete('/delete/:id', verifyOwner, orderController.delete);
 
 
-module.exports = poultryRouter;
+module.exports = orderRouter;
 
