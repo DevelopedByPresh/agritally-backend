@@ -1,21 +1,18 @@
 const { STATUS_CODE } = require("../utils/constants");
-const handleError = require("../middleware/errorHandler.middleware");
-const OrderDto = require("../dtos/order/order.Dto");
-const orderService = require("../services/order.service");
-const cartService = require("../services/cart.service");
+const {handleError} = require("../middleware/errorHandler.middleware");
+const ProductDto = require("../dtos/product/product.Dto");
+const productService = require("../services/product.service");
 
-class orderController {
-  async addOrderItem(req, res) {
+class ProductController {
+  async createProduct(req, res) {
     try {
-      const newOrderItem = req.body;
-      const foundCartItem = await cartService.getOnem(newOrderItem)
-      const orderItem = await orderService.addOrderItem(newOrderItem)
+      const product = await productService.createProduct(req.body);
 
-      const orderDto = OrderDto.from(orderItem);
+      // const ProductDto = ProductDto.from(ProductItem);
 
       return res
         .status(STATUS_CODE.CREATED)
-c        .json({ message: "Created successfully", data: orderDto });
+        .json({ message: "Created successfully", data: product });
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -25,13 +22,13 @@ c        .json({ message: "Created successfully", data: orderDto });
   async getOne(req, res) {
     try {
       const { id } = req.params;
-      const OrderItem = await orderService.getOne(id);
+      const ProductItem = await productService.getOne(id);
 
-      const orderDto = OrderDto.from(OrderItem);
+      const productDto = ProductDto.from(ProductItem);
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Order found", data: orderDto });
+        .json({ message: "Product found", data: productDto });
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -40,7 +37,7 @@ c        .json({ message: "Created successfully", data: orderDto });
 
   async getAll(req, res) {
     try {
-      const { date, month, year, section } = req.query;
+      const { section, year, month, date, category  } = req.query;
       let query = {};
 
       if (date && month && year) {
@@ -64,15 +61,19 @@ c        .json({ message: "Created successfully", data: orderDto });
       if (section) {
         query.section = section;
       }
+  
+      if (category) {
+        query.category = category;
+      }
 
-      const OrderItems = await orderService.getAll(query);
+      const productItems = await productService.getAll(query);
 
-      const OrderDtos = OrderDto.fromMany(OrderItems);
+      const productDtos = ProductDto.fromMany(productItems);
 
       return res.status(STATUS_CODE.OK).json({
-        message: "order items found",
-        count: OrderDtos.length,
-        data: OrderDtos,
+        message: "Product items found",
+        count: productDtos.length,
+        data: productDtos,
       });
     } catch (error) {
       console.error(error);
@@ -80,17 +81,17 @@ c        .json({ message: "Created successfully", data: orderDto });
     }
   }
 
-  async updateOrderItem(req, res) {
+  async updateProductItem(req, res) {
     try {
       const { id } = req.params;
       const updateDto = req.body;
 
-      const updatepolutryItem = await orderService.updateOrderItem(
+      const updateproductItem = await productService.updateProductItem(
         id,
         updateDto
       );
 
-      if (!updatepolutryItem) {
+      if (!updateproductItem) {
         return res
           .status(STATUS_CODE.NOT_FOUND)
           .json({ error: "Item not found" });
@@ -98,7 +99,7 @@ c        .json({ message: "Created successfully", data: orderDto });
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Item updated", data: updatepolutryItem });
+        .json({ message: "Item updated", data: updateproductItem });
     } catch (error) {
       return handleError(error, res);
     }
@@ -107,17 +108,17 @@ c        .json({ message: "Created successfully", data: orderDto });
   async delete(req, res) {
     try {
       const { id } = req.params;
-      const orderItem = await orderService.delete(id);
+      const productItem = await productService.delete(id);
 
-      if (!orderItem)
+      if (!productItem)
         return res
           .status(STATUS_CODE.NOT_FOUND)
           .json({ error: "Product not found" });
 
-      await orderItem.deleteOne();
+      await productItem.deleteOne();
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Order Item Deleted"});
+        .json({ message: "Product Item Deleted" });
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -125,4 +126,4 @@ c        .json({ message: "Created successfully", data: orderDto });
   }
 }
 
-module.exports = new orderController();
+module.exports = new ProductController();

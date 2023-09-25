@@ -25,10 +25,16 @@ function handleError(error, res) {
     return res.status(STATUS_CODE.BAD_REQUEST).json({ error: message });
   }
 
+  if (error.name === 'TokenExpiredError') {
+    // Token expired error
+    const message = 'Token has expired';
+    return res.status(STATUS_CODE.UNAUTHORIZED).json({ error: message });
+  }
+
   const statusCode = error.statusCode || STATUS_CODE.INTERNAL_SERVER_ERROR;
   const message = error.message || 'An unexpected error occurred';
 
   res.status(statusCode).json({ error: message });
 }
 
-module.exports = handleError;
+module.exports = { handleError };

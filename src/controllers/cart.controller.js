@@ -1,21 +1,26 @@
 const { STATUS_CODE } = require("../utils/constants");
 const handleError = require("../middleware/errorHandler.middleware");
-const OrderDto = require("../dtos/order/order.Dto");
-const orderService = require("../services/order.service");
+const PoultryDto = require("../dtos/poultry/poultry.Dto");
 const cartService = require("../services/cart.service");
+const pigService = require("../services/pig.service");
+const poultryService = require("../services/product.service");
+const eggService = require("../services/product.service");
 
-class orderController {
-  async addOrderItem(req, res) {
+class PoultryController {
+  async addPoultryItem(req, res) {
     try {
-      const newOrderItem = req.body;
-      const foundCartItem = await cartService.getOnem(newOrderItem)
-      const orderItem = await orderService.addOrderItem(newOrderItem)
+    const { productId, cartId, user, quantity } = req.body;
 
-      const orderDto = OrderDto.from(orderItem);
+    const foundProduct = await productService.
+
+
+      const poultryItem = await cartService.addPoultryItem(newPoultryItem)
+
+      const poultryDto = PoultryDto.from(poultryItem);
 
       return res
         .status(STATUS_CODE.CREATED)
-c        .json({ message: "Created successfully", data: orderDto });
+        .json({ message: "Created successfully", data: poultryDto });
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -25,13 +30,13 @@ c        .json({ message: "Created successfully", data: orderDto });
   async getOne(req, res) {
     try {
       const { id } = req.params;
-      const OrderItem = await orderService.getOne(id);
+      const poultryItem = await cartService.getOne(id);
 
-      const orderDto = OrderDto.from(OrderItem);
+      const poultryDto = PoultryDto.from(poultryItem);
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Order found", data: orderDto });
+        .json({ message: "Poultry found", data: poultryDto });
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -65,14 +70,14 @@ c        .json({ message: "Created successfully", data: orderDto });
         query.section = section;
       }
 
-      const OrderItems = await orderService.getAll(query);
+      const poultryItems = await cartService.getAll(query);
 
-      const OrderDtos = OrderDto.fromMany(OrderItems);
+      const poultryDtos = PoultryDto.fromMany(poultryItems);
 
       return res.status(STATUS_CODE.OK).json({
-        message: "order items found",
-        count: OrderDtos.length,
-        data: OrderDtos,
+        message: "Poultry items found",
+        count: poultryDtos.length,
+        data: poultryDtos,
       });
     } catch (error) {
       console.error(error);
@@ -80,12 +85,12 @@ c        .json({ message: "Created successfully", data: orderDto });
     }
   }
 
-  async updateOrderItem(req, res) {
+  async updatePoultryItem(req, res) {
     try {
       const { id } = req.params;
       const updateDto = req.body;
 
-      const updatepolutryItem = await orderService.updateOrderItem(
+      const updatepolutryItem = await poultryService.updatePoultryItem(
         id,
         updateDto
       );
@@ -107,17 +112,17 @@ c        .json({ message: "Created successfully", data: orderDto });
   async delete(req, res) {
     try {
       const { id } = req.params;
-      const orderItem = await orderService.delete(id);
+      const poultryItem = await poultryService.delete(id);
 
-      if (!orderItem)
+      if (!poultryItem)
         return res
           .status(STATUS_CODE.NOT_FOUND)
           .json({ error: "Product not found" });
 
-      await orderItem.deleteOne();
+      await poultryItem.deleteOne();
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Order Item Deleted"});
+        .json({ message: "Poultry Item Deleted"});
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -125,4 +130,4 @@ c        .json({ message: "Created successfully", data: orderDto });
   }
 }
 
-module.exports = new orderController();
+module.exports = new PoultryController();

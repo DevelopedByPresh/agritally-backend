@@ -7,55 +7,34 @@ const productSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-
     category: {
       type: String,
       enum: ["Cat-fish", "Egg", "Pig", "Poultry"],
       required: true,
     },
-
     section: {
       type: String,
-      enum: [
-        "Layers",
-        "Broilers",
-        "Fingerlings",
-        "Mature",
-        "Big",
-        "Small",
-        "Boar",
-        "Dry Sows",
-        "In-pigs",
-        "Growers",
-        "Weaners",
-        "Piglets",
-      ],
       required: true,
     },
-
     date: {
       type: Date,
       default: new Date(),
       required: true,
     },
-
     quantity: {
       type: Number,
       default: 1,
       required: true,
     },
-
     weight: {
       type: String,
-      default: "0 kg",
+      // default: "0 kg",
     },
-
     price: {
       type: Number,
       default: 0,
       required: true,
     },
-
     status: {
       type: String,
       enum: ["Approved", "Pending"],
@@ -67,4 +46,24 @@ const productSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Poultry", productSchema);
+// Add pre-save middleware to validate the 'section' field based on the 'category' field
+productSchema.pre("save", function (next) {
+  const allowedSections = {
+    "Cat-fish": ["Fingerlings", "Mature"],
+    Egg: ["Big", "Small"],
+    Pig: ["Boar", "Dry Sows", "In-pigs", "Growers", "Weaners", "Piglets"],
+    Poultry: ["Broilers", "Layers"],
+  };
+
+  const selectedCategory = this.category;
+  const selectedSection = this.section;
+
+  if (!allowedSections[selectedCategory].includes(selectedSection)) {
+    const error = new Error("Invalid section for the selected category");
+    return next(error);
+  }
+
+  next();
+});
+
+module.exports = mongoose.model("Product", productSchema);

@@ -8,31 +8,30 @@ function verifyToken(req, res, next) {
     let token;
 
     const authHeader =
-        req.header('authorization') || req.header('Authorization');
+      req.header("authorization") || req.header("Authorization");
     const cookieToken = req.cookies.access_token;
 
     if (authHeader) {
-        const [scheme, headerToken] = authHeader.split(' ');
-        if (scheme === 'Bearer') {
-            token = headerToken;
-        }
+      const [scheme, headerToken] = authHeader.split(" ");
+      if (scheme === "Bearer") {
+        token = headerToken;
+      }
     } else if (cookieToken) {
-        token = cookieToken;
+      token = cookieToken;
     }
 
     if (!token) {
       return res
-      .status(STATUS_CODE.UNAUTHORIZED)
-      .json({ error: "Access denied, No token provided" });
+        .status(STATUS_CODE.UNAUTHORIZED)
+        .json({ error: "Access denied, No token provided" });
     }
 
     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     req.user = decoded;
 
     next();
-
   } catch (error) {
-    handleError(res, error);
+    handleError(error, res);
   }
 }
 
@@ -102,5 +101,5 @@ module.exports = {
   verifyStaff,
   verifyManager,
   verifyOwner,
-  verifySuperAdmin
+  verifySuperAdmin,
 };
