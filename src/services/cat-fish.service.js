@@ -1,5 +1,5 @@
-const CatFish = require("../models/cat-fish.model");
-const User = require("../models/user.model");
+const CatFish = require("../data/models/cat-fish.model");
+const User = require("../data/models/user.model");
 
 class CatFishService {
   async addCatFishItem(catFishDTO) {
@@ -9,12 +9,11 @@ class CatFishService {
   }
 
   async getOne(id) {
-    const catFish = await CatFish.findById(id)
-    .populate({
+    const catFish = await CatFish.findById(id).populate({
       path: "user",
       select: ["firstName", "lastName"],
     });
-    console.log(catFish)
+    console.log(catFish);
     return catFish;
   }
 

@@ -1,5 +1,5 @@
-const User = require('../models/user.model');
-const bcryptHelper = require('../lib/bcrypt');
+const User = require("../data/models/user.model");
+const bcryptHelper = require("../lib/bcrypt");
 
 class UserService {
   async register(userDTO) {
@@ -11,7 +11,7 @@ class UserService {
   async login(email, password) {
     const user = await User.findOne({ email });
 
-    if (!user || !await bcryptHelper.compare(password, user.password)) {
+    if (!user || !(await bcryptHelper.compare(password, user.password))) {
       return null;
     }
 
@@ -34,7 +34,9 @@ class UserService {
   }
 
   async updateUserProfile(userId, updates) {
-    const updatedUser = await User.findByIdAndUpdate(userId, updates, { new: true });
+    const updatedUser = await User.findByIdAndUpdate(userId, updates, {
+      new: true,
+    });
     return updatedUser;
   }
 

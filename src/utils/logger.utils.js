@@ -23,44 +23,29 @@ class Logger {
       debug: 4,
     };
 
-    this.otherTransport = [
+    this.transports = [
       new transports.File({
         filename: 'logs/dev/combined.log',
-        silent: false, // Set it to false for development
       }),
 
       new transports.Console({
-        silent: false, // Set it to false for development
         format: format.combine(
           format.colorize(),
           format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
           format.errors({ stack: true }),
           format.splat(),
-          format.printf(({ timestamp, level, message, meta }) =>
-            `${timestamp} [${level}]: ${message} ${formatMeta(meta)}`
-          ),
-        ),
-      }),
-    ];
-
-    this.prodTransport = [
-      new transports.File({
-        filename: 'logs/prod/error.log',
-        level: 'error',
-        format: format.combine(
-          format.align(),
-          format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
-          format.printf(({ level, timestamp, message, meta }) =>
-            `${timestamp} [${level}]: ${message} ${formatMeta(meta)}`
+          format.printf(
+            ({ timestamp, level, message, meta }) =>
+              `${timestamp} [${level}]: ${message} ${formatMeta(meta)}`,
           ),
         ),
       }),
     ];
 
     this.logger = createLogger({
-      level: 'debug', // Adjust the level as needed
+      level: 'debug', // You can set your desired default log level here
       levels: this.levels,
-      transports: this.otherTransport, // Use otherTransport for both development and production
+      transports: this.transports,
     });
 
     addColors(this.colors);
@@ -87,6 +72,6 @@ class Logger {
   }
 }
 
-const logger = new Logger();
-
-module.exports = logger;
+module.exports = {
+  logger: new Logger(),
+};

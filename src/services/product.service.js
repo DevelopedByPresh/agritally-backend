@@ -1,43 +1,100 @@
-const Product = require("../models/product.model");
-const User = require("../models/user.model");
+const ProductRepository = require("../data/repository/product.repository");
+const {
+  NotFoundException,
+} = require("../utils/exceptions/not-found.exception");
+const { productValidator } = require("../validators/product.validation");
+const ProductDto = require("../dtos/product/product.Dto");
 
 class ProductService {
   async createProduct(productDTO) {
-    const newProduct = new Product(productDTO);
+    productValidator.validateProduct(productDTO);
 
-    const savedProduct = await newProduct.save();
-    return savedProduct;
+    const newProduct = await ProductRepository.save(productDTO);
+
+    const product = ProductDto.from(newProduct);
+    return {
+      message: "Product created",
+      data: product,
+    };
   }
 
   async getOne(id) {
-    const product = await Product.findById(id).populate({
-      path: "user",
-      select: ["firstName", "lastName"],
-    });
+    const product = await ProductRepository.findById(id);
 
-    return product;
+    if (!product) {
+      throw new NotFoundException("Product not found");
+    }
+
+    const productDto = ProductDto.from(product);
+
+    return {
+      message: "Product items found",
+      data: productDto,
+    };
   }
 
   async getAll(filter) {
-    const productItems = await Product.find(filter).populate({
-      path: "user",
-      select: ["firstName", "lastName"],
-    });
+    const { section, year, month, date, category } = filter;
 
-    return productItems;
+    let query = {};
+
+    if (date && month && year) {
+      const startDate = new Date(year, month - 1, date);
+      const endDate = new Date(year, month - 1, date + 1);
+      query.date = { $gte: startDate, $lt: endDate };
+    } else if (month && year) {
+      const startDate = new Date(year, month - 1, 1);
+      const endDate = new Date(year, month, 0);
+      query.date = { $gte: startDate, $lte: endDate };
+    } else if (year) {
+      const startDate = new Date(year, 0, 1);
+      const endDate = new Date(year, 11, 31);
+      query.date = { $gte: startDate, $lte: endDate };
+    }
+
+    if (section) {
+      query.section = section;
+    }
+
+    if (category) {
+      query.category = category;
+    }
+    const productItems = await ProductRepository.getAll(query);
+
+    const productDtos = ProductDto.fromMany(productItems);
+
+    return {
+      message: "Product items found",
+      count: productDtos.length,
+      data: productDtos,
+    };
   }
 
   async updateProductItem(itemId, updateDto) {
-    const updatedItem = await Product.findByIdAndUpdate(itemId, updateDto, {
-      new: true,
-    });
-    return updatedItem;
+    const { id } = itemId;
+    const updatedProduct = await ProductRepository.updateOne(id, updateDto);
+    if (!updatedProduct) {
+      throw new NotFoundException("Product not found");
+    }
+    const productDto = ProductDto.from(updatedProduct);
+
+    return {
+      message: "Product Updated",
+      data: productDto,
+    };
   }
 
   async delete(id) {
-    const product = await Product.findById(id);
+    const product = await ProductRepository.findById(id);
 
-    return product;
+    if (!product) {
+        throw new NotFoundException("Product not found");
+      }
+
+    await product.deleteOne();
+    return {
+        message: "Product items deleted",
+      };
   }
 }
 

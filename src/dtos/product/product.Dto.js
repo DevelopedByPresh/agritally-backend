@@ -1,11 +1,12 @@
 class ProductDTO {
-  constructor({ id, user, category, section, date, quantity, status, createdAt, updatedAt }) {
+  constructor({ id, user, category, section, date, quantity, price, status, createdAt, updatedAt }) {
     this.id = id;
     this.user = user;
     this.category = category;
     this.section = section;
     this.date = date;
     this.quantity = quantity;
+    this.price = price;
     this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
@@ -19,6 +20,7 @@ class ProductDTO {
       section: productEntity.section,
       date: productEntity.date,
       quantity: productEntity.quantity,
+      price: productEntity.price,
       status: productEntity.status,
       createdAt: productEntity.createdAt,
       updatedAt: productEntity.updatedAt,

@@ -1,4 +1,4 @@
-const Cart = require("../models/cart.model");
+const Cart = require("../data/models/cart.model");
 
 class CartService {
   async createCart(cartDTO) {
@@ -8,36 +8,36 @@ class CartService {
     return savedCart;
   }
 
-//   async getOne(id) {
-//     const poultry = await Poultry.findById(id).populate({
-//       path: "user",
-//       select: ["firstName", "lastName"],
-//     });
+  //   async getOne(id) {
+  //     const poultry = await Poultry.findById(id).populate({
+  //       path: "user",
+  //       select: ["firstName", "lastName"],
+  //     });
 
-//     return poultry;
-//   }
+  //     return poultry;
+  //   }
 
-//   async getAll(filter) {
-//     const poultryItems = await Poultry.find(filter).populate({
-//       path: "user",
-//       select: ["firstName", "lastName"],
-//     });
+  //   async getAll(filter) {
+  //     const poultryItems = await Poultry.find(filter).populate({
+  //       path: "user",
+  //       select: ["firstName", "lastName"],
+  //     });
 
-//     return poultryItems;
-//   }
+  //     return poultryItems;
+  //   }
 
-//   async updatePoultryItem(itemId, updateDto) {
-//     const updatedItem = await Poultry.findByIdAndUpdate(itemId, updateDto, {
-//       new: true,
-//     });
-//     return updatedItem;
-//   }
+  //   async updatePoultryItem(itemId, updateDto) {
+  //     const updatedItem = await Poultry.findByIdAndUpdate(itemId, updateDto, {
+  //       new: true,
+  //     });
+  //     return updatedItem;
+  //   }
 
-//   async delete(id) {
-//     const poultry = await Poultry.findById(id);
+  //   async delete(id) {
+  //     const poultry = await Poultry.findById(id);
 
-//     return poultry;
-//   }
+  //     return poultry;
+  //   }
 }
 
 module.exports = new CartService();

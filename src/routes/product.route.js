@@ -7,8 +7,8 @@ const productRouter = express.Router();
 productRouter.post('/add', verifyStaff, productController.createProduct);
 productRouter.get('/get/:id', verifyStaff,  productController.getOne);
 productRouter.get('/getAll', verifyManager, productController.getAll);
-// productRouter.patch('/update/:id', verifyManager, productController.updatePoultryItem);
-// productRouter.delete('/delete/:id', verifyOwner, productController.delete);
+productRouter.patch('/update/:id', verifyManager, productController.updateProductItem);
+productRouter.delete('/delete/:id', verifyOwner, productController.delete);
 
 
 module.exports = productRouter;

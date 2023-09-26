@@ -1,4 +1,4 @@
-const Pig = require("../models/pig.model");
+const Pig = require("../data/models/pig.model");
 const { STATUS_CODE } = require("../utils/constants");
 const PigDto = require("../dtos/pig/pig.Dto");
 

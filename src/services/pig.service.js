@@ -1,5 +1,5 @@
-const Pig = require("../models/pig.model");
-const User = require("../models/user.model");
+const Pig = require("../data/models/pig.model");
+const User = require("../data/models/user.model");
 
 class PigService {
   async addPigItem(pigDTO) {

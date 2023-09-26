@@ -1,5 +1,4 @@
-
-const Order = require("../models/Order.model");
+const Order = require("../data/models/Order.model");
 
 class OrderService {
   async addOrderItem(orderDTO) {

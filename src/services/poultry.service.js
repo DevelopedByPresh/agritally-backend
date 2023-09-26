@@ -1,5 +1,5 @@
-const Poultry = require("../models/poultry.model");
-const User = require("../models/user.model");
+const Poultry = require("../data/models/poultry.model");
+const User = require("../data/models/user.model");
 
 class PoultryService {
   async addPoultryItem(poultryDTO) {

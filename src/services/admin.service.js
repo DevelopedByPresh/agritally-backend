@@ -1,5 +1,5 @@
-const Admin = require('../models/admin.model');
-const bcryptHelper = require('../lib/bcrypt');
+const Admin = require("../data/models/admin.model");
+const bcryptHelper = require("../lib/bcrypt");
 
 class AdminService {
   async register(adminDTO) {
@@ -11,7 +11,7 @@ class AdminService {
   async login(email, password) {
     const admin = await Admin.findOne({ email });
 
-    if (!admin || !await bcryptHelper.compare(password, admin.password)) {
+    if (!admin || !(await bcryptHelper.compare(password, admin.password))) {
       return null;
     }
 
@@ -24,7 +24,7 @@ class AdminService {
   }
 
   async getAdminById(adminId) {
-    console.log("service")
+    console.log("service");
     const admin = await Admin.findById(adminId);
     return admin;
   }
@@ -34,9 +34,10 @@ class AdminService {
     return admins;
   }
 
-
   async updateAdminProfile(adminId, updates) {
-    const updatedadmin = await Admin.findByIdAndUpdate(adminId, updates, { new: true });
+    const updatedadmin = await Admin.findByIdAndUpdate(adminId, updates, {
+      new: true,
+    });
     return updatedadmin;
   }
 
