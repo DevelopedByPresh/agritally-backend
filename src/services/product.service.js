@@ -88,13 +88,13 @@ class ProductService {
     const product = await ProductRepository.findById(id);
 
     if (!product) {
-        throw new NotFoundException("Product not found");
-      }
+      throw new NotFoundException("Product not found");
+    }
 
     await product.deleteOne();
     return {
-        message: "Product items deleted",
-      };
+      message: "Product items deleted",
+    };
   }
 }
 

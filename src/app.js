@@ -12,6 +12,7 @@ const catFishRouter = require("./routes/cat-fish.route");
 const eggRouter = require("./routes/egg.route");
 const orderRouter = require("./routes/order.route");
 const productRouter = require("./routes/product.route");
+const cartRouter = require("./routes/cart.route");
 // const { errorHandlingMiddleware, resourceNotFoundHandler } = require("./middleware/index"); 
 
 
@@ -29,6 +30,7 @@ app.use("/egg", eggRouter);
 app.use("/catFish", catFishRouter);
 app.use("/order", orderRouter);
 app.use("/product", productRouter);
+app.use("/cart", cartRouter);
 
 // app.use(resourceNotFoundHandler);
 // app.use(errorHandlingMiddleware);

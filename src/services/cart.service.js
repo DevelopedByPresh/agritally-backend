@@ -1,43 +1,165 @@
-const Cart = require("../data/models/cart.model");
+const cartRepository = require("../data/repository/cart.repository");
+const productRepository = require("../data/repository/product.repository");
+const {
+  NotFoundException,
+} = require("../utils/exceptions/not-found.exception");
 
 class CartService {
-  async createCart(cartDTO) {
-    const newCart = new Cart(cartDTO);
+  async createCart(newItems) {
+    const { productId, cartId, user, quantity } = newItems;
 
-    const savedCart = await newCart.save();
-    return savedCart;
+    const foundProduct = await productRepository.findById(productId);
+
+    if (!foundProduct) {
+      throw new NotFoundException("Product not found.");
+    }
+
+    // Check if a cart already exists for the user
+    let cart = await cartRepository.findOne({ user: user, active: true });
+
+    if (!cart) {
+      // If no cart exists, create a new one
+      cart = await cartRepository.create({
+        user: user,
+        cartItems: [],
+        active: true,
+      });
+    }
+
+    const existingItemIndex = cart.cartItems.findIndex((item) =>
+      item.productId.equals(foundProduct._id)
+    );
+
+    if (existingItemIndex !== -1) {
+      // Updating existing item
+      const existingItem = cart.cartItems[existingItemIndex];
+      existingItem.quantity += quantity;
+      existingItem.subtotal += existingItem.quantity * existingItem.price;
+    } else {
+      // Add new item to cart
+      const newItemData = {
+        productId: foundProduct._id,
+        name: foundProduct.name,
+        price: foundProduct.price,
+        quantity,
+        subtotal: foundProduct.price * quantity,
+      };
+      cart.cartItems.push(newItemData);
+    }
+
+    // Calculate subtotal
+    cart.total = cart.cartItems.reduce(
+      (total, item) => total + item.subtotal,
+      0
+    );
+    await cart.save();
+
+    return {
+      message: "Item added to cart",
+      data: cart,
+    };
   }
 
-  //   async getOne(id) {
-  //     const poultry = await Poultry.findById(id).populate({
-  //       path: "user",
-  //       select: ["firstName", "lastName"],
-  //     });
+  async getOne(id) {
+    const cart = await cartRepository.findById(id);
 
-  //     return poultry;
-  //   }
+    if (!cart) {
+      throw new NotFoundException("Cart not found");
+    }
 
-  //   async getAll(filter) {
-  //     const poultryItems = await Poultry.find(filter).populate({
-  //       path: "user",
-  //       select: ["firstName", "lastName"],
-  //     });
+    return {
+      message: "Success",
+      data: cart,
+    };
+  }
 
-  //     return poultryItems;
-  //   }
+  async getAll() {
+    const carts = await cartRepository.getAll();
 
-  //   async updatePoultryItem(itemId, updateDto) {
-  //     const updatedItem = await Poultry.findByIdAndUpdate(itemId, updateDto, {
-  //       new: true,
-  //     });
-  //     return updatedItem;
-  //   }
+    return {
+      message: "Success",
+      count: carts.length,
+      data: carts,
+    };
+  }
 
-  //   async delete(id) {
-  //     const poultry = await Poultry.findById(id);
+  async updateCartItem(cartId, updateCartDto) {
+    const { productId, quantity } = updateCartDto;
 
-  //     return poultry;
-  //   }
+    const cart = await cartRepository.findById(cartId);
+
+    if (!cart) {
+      throw new NotFoundException("Cart not found");
+    }
+
+    const cartItem = cart.cartItems.find((item) =>
+      item.productId.equals(productId)
+    );
+
+    if (!cartItem) {
+      throw new NotFoundException("Product not found in the cart");
+    }
+
+    cartItem.quantity = quantity;
+    cartItem.subtotal = cartItem.price * quantity;
+
+    cart.total = cart.cartItems.reduce(
+      (total, item) => total + item.subtotal,
+      0
+    );
+
+    await cart.save();
+    return {
+      message: "Cart Items updated",
+      data: cart,
+    };
+  }
+
+  async removeCartItem(cartId, updateCartDto) {
+    const { productId, quantity } = updateCartDto;
+
+    const cart = await cartRepository.findById(cartId);
+
+    if (!cart) {
+      throw new NotFoundException("Cart not found");
+    }
+
+    // Find the cart item corresponding to the given productId
+    const cartItem = cart.cartItems.find((item) =>
+      item.productId.equals(productId)
+    );
+
+    if (!cartItem) {
+      throw new NotFoundException("Product not found in the cart");
+    }
+
+    await cartItem.deleteOne();
+
+    // Update the quantity and subtotal for the cart item
+    cartItem.quantity = quantity;
+    cartItem.subtotal = cartItem.price * quantity;
+
+    // Recalculate the cart's total
+    cart.total = cart.cartItems.reduce(
+      (total, item) => total + item.subtotal,
+      0
+    );
+
+    await cart.save();
+    return {
+      message: "Product removed from cart",
+      data: cart,
+    };
+  }
+
+  async delete(id) {
+    const deletedCart = await cartRepository.deleteOne(id);
+
+    return {
+      message: "Cart deleted",
+      data: deletedCart,
+    };
+  }
 }
 
 module.exports = new CartService();
