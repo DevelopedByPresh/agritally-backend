@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const crypto = require("crypto");
 
 const orderSchema = new mongoose.Schema(
   {
@@ -10,10 +11,20 @@ const orderSchema = new mongoose.Schema(
 
     cartId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Product",
+      ref: "Cart",
       required: true,
     },
 
+    total: {
+      type: Number,
+    },
+
+    trackingNo: {
+      type: String,
+      default: function () {
+        return crypto.randomBytes(6).toString("hex");
+      },
+    },
   },
   {
     timestamps: true,

@@ -27,7 +27,7 @@ const cartSchema = new mongoose.Schema(
   {
       user: {
           type: mongoose.Schema.Types.ObjectId,
-          default: null,
+          ref: "User"
       },
 
       active: {

@@ -1,6 +1,5 @@
 const { STATUS_CODE } = require("../utils/constants");
 const { handleError } = require("../middleware/errorHandler.middleware");
-const ProductDto = require("../dtos/product/product.Dto");
 const productService = require("../services/product.service");
 
 class ProductController {

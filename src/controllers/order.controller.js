@@ -1,21 +1,13 @@
 const { STATUS_CODE } = require("../utils/constants");
-const handleError = require("../middleware/errorHandler.middleware");
-const OrderDto = require("../dtos/order/order.Dto");
+const { handleError } = require("../middleware/errorHandler.middleware");
 const orderService = require("../services/order.service");
-const cartService = require("../services/cart.service");
 
 class orderController {
-  async addOrderItem(req, res) {
+  async createOrder(req, res) {
     try {
-      const newOrderItem = req.body;
-      const foundCartItem = await cartService.getOnem(newOrderItem)
-      const orderItem = await orderService.addOrderItem(newOrderItem)
+      const order = await orderService.createOrder(req.body);
 
-      const orderDto = OrderDto.from(orderItem);
-
-      return res
-        .status(STATUS_CODE.CREATED)
-c        .json({ message: "Created successfully", data: orderDto });
+      res.json(order);
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -25,13 +17,9 @@ c        .json({ message: "Created successfully", data: orderDto });
   async getOne(req, res) {
     try {
       const { id } = req.params;
-      const OrderItem = await orderService.getOne(id);
+      const orderItem = await orderService.getOne(id);
 
-      const orderDto = OrderDto.from(OrderItem);
-
-      return res
-        .status(STATUS_CODE.OK)
-        .json({ message: "Order found", data: orderDto });
+      res.json(orderItem);
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -40,40 +28,10 @@ c        .json({ message: "Created successfully", data: orderDto });
 
   async getAll(req, res) {
     try {
-      const { date, month, year, section } = req.query;
-      let query = {};
 
-      if (date && month && year) {
-        // If all three parameters are provided, filter by the entire day
-        const startDate = new Date(year, month - 1, date);
-        const endDate = new Date(year, month - 1, date + 1);
-        query.date = { $gte: startDate, $lt: endDate };
-      } else if (month && year) {
-        // If only year and month are provided, filter by the entire month
-        const startDate = new Date(year, month - 1, 1);
-        const endDate = new Date(year, month, 0);
-        query.date = { $gte: startDate, $lte: endDate };
-      } else if (year) {
-        // If only the year is provided, filter by the entire year
-        const startDate = new Date(year, 0, 1);
-        const endDate = new Date(year, 11, 31);
-        query.date = { $gte: startDate, $lte: endDate };
-      }
+      const orderItems = await orderService.getAll(req.query);
 
-      // Add section filter if provided
-      if (section) {
-        query.section = section;
-      }
-
-      const OrderItems = await orderService.getAll(query);
-
-      const OrderDtos = OrderDto.fromMany(OrderItems);
-
-      return res.status(STATUS_CODE.OK).json({
-        message: "order items found",
-        count: OrderDtos.length,
-        data: OrderDtos,
-      });
+      res.json(orderItems);
     } catch (error) {
       console.error(error);
       return handleError(error, res);
@@ -115,9 +73,7 @@ c        .json({ message: "Created successfully", data: orderDto });
           .json({ error: "Product not found" });
 
       await orderItem.deleteOne();
-      return res
-        .status(STATUS_CODE.OK)
-        .json({ message: "Order Item Deleted"});
+      return res.status(STATUS_CODE.OK).json({ message: "Order Item Deleted" });
     } catch (error) {
       console.log(error);
       return handleError(error, res);

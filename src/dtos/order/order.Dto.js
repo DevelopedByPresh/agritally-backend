@@ -1,11 +1,10 @@
 class OrderDTO {
-  constructor({ id, user, product, price, quantity, status, createdAt, updatedAt }) {
+  constructor({ id, user, cartId, total, trackingNo, createdAt, updatedAt }) {
     this.id = id;
     this.user = user;
-    this.product = product;
-    this.quantity = quantity;
-    this.price = price;
-    this.status = status;
+    this.cartId = cartId;
+    this.total = total;
+    this.trackingNo = trackingNo;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
   }
@@ -14,10 +13,9 @@ class OrderDTO {
     return new OrderDTO({
       id: orderEntity.id,
       user: orderEntity.user,
-      product: orderEntity.product,
-      price: orderEntity.price,
-      quantity: orderEntity.quantity,
-      status: orderEntity.status,
+      cartId: orderEntity.cartId,
+      total: orderEntity.total,
+      trackingNo: orderEntity.trackingNo,
       createdAt: orderEntity.createdAt,
       updatedAt: orderEntity.updatedAt,
     });

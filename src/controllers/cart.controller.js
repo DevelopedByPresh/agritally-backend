@@ -17,7 +17,8 @@ class PoultryController {
   async getOne(req, res) {
     try {
       const { id } = req.params;
-      const cart = await cartService.getOne(id);
+      const cart = await cartService.getOne(id)
+      
 
       res.json(cart);
     } catch (error) {

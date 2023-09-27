@@ -13,7 +13,7 @@ class CartRepository {
         path: "user",
         select: ["firstName", "lastName"],
       })
-      .populate("cartItems.productId"); 
+      // .populate("cartItems.productId"); 
     return cart;
   }
 
@@ -41,13 +41,13 @@ class CartRepository {
     return deletedCart;
   }
 
-  async getAll(query) {
-    const carts = await Cart.find(query)
+  async getAll() {
+    const carts = await Cart.find()
       .populate({
         path: "user",
         select: ["firstName", "lastName"],
       })
-      .populate("cartItems.productId"); 
+      // .populate("cartItems.productId"); 
     return carts;
   }
 }
