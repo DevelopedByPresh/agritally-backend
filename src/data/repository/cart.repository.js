@@ -23,7 +23,7 @@ class CartRepository {
         path: "user",
         select: ["firstName", "lastName"],
       })
-      .populate("cartItems.productId");
+      // .populate("cartItems.productId");
     return cart;
   }
 

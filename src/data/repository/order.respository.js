@@ -9,15 +9,22 @@ class OrderRepository {
 
   async findById(orderId) {
     const order = await Order.findById(orderId)
-      .populate("user", ["firstName", "lastName"])
-      .populate("cartId");
+    .populate({
+      path: "cartId",
+      select: ["cartItems", "total"],
+    })
     return order;
   }
 
+
+  //autopupolate
+
   async findOne(query) {
     const order = await Order.findOne(query)
-      .populate("user", ["firstName", "lastName"])
-      .populate("cartId");
+    .populate({
+      path: "cartId",
+      select: ["cartItems", "total"],
+    })
     return order;
   }
 
@@ -37,8 +44,10 @@ class OrderRepository {
 
   async getAll(query) {
     const orders = await Order.find(query)
-      .populate("user", ["firstName", "lastName"])
-      .populate("cartId");
+    .populate({
+      path: "cartId",
+      select: ["cartItems", "total"],
+    })
     return orders;
   }
 }

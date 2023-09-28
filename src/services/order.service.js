@@ -1,15 +1,45 @@
+const ProductRepository = require("../data/repository/product.repository");
 const OrderRepository = require("../data/repository/order.respository");
 const {
   NotFoundException,
 } = require("../utils/exceptions/not-found.exception");
 const { orderValidator } = require("../validators/order.validation");
+const ProductDto = require("../dtos/product/product.Dto");
 const OrderDto = require("../dtos/order/order.Dto");
+const cartRepository = require("../data/repository/cart.repository");
 
 class OrderService {
   async createOrder(orderDTO) {
     orderValidator.validateOrder(orderDTO);
 
-    const newOrder = await OrderRepository.create(orderDTO);
+    // Fetch the cart from the database
+    const { cartId, total } = orderDTO;
+    const cart = await cartRepository.findById(cartId);
+    // const cart = await OrderRepository.findById(cartId);
+
+    if (!cart) {
+      throw new NotFoundException("Cart not found");
+    }
+
+    // Calculate the updated quantity for each product and update them
+    for (const { productId, quantity } of cart.cartItems) {
+      const product = await ProductRepository.findById(productId);
+
+      if (!product) {
+        throw new NotFoundException("Product not found");
+      }
+
+      // Calculate the updated quantity
+      const updatedQuantity = product.quantity - quantity;
+
+      // Update the quantity in the database
+      await ProductRepository.updateOne(productId, {
+        quantity: updatedQuantity,
+      });
+    }
+
+    // Create the order
+    const newOrder = await OrderRepository.create({ cartId, total: cart.total });
 
     const order = OrderDto.from(newOrder);
     return {
@@ -83,10 +113,10 @@ class OrderService {
       data: productDto,
     };
   }
-//create update cart - finish cart
-//notifies amdin when a cart is finish
-//check if the cart status is completed if yes create another cart else add items to cart
-//
+  //create update cart - finish cart
+  //notifies amdin when a cart is finish
+  //check if the cart status is completed if yes create another cart else add items to cart
+  //
   async delete(id) {
     const product = await OrderRepository.findById(id);
 
