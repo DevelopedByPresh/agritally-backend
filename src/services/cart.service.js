@@ -1,6 +1,6 @@
-import cartRepository from "../data/repository/cart.repository.js"; 
-import productRepository from "../data/repository/product.repository.js"; 
-import { NotFoundException } from "../utils/exceptions/not-found.exception.js"; 
+import cartRepository from "../data/repository/cart.repository.js";
+import productRepository from "../data/repository/product.repository.js";
+import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 
 class CartService {
   async createCart(newItems) {
@@ -16,7 +16,14 @@ class CartService {
     let cart = await cartRepository.findOne({ user: user, active: true });
 
     if (!cart) {
-      // If no cart exists, create a new one
+      // If no active cart exists, create a new one
+      cart = await cartRepository.create({
+        user: user,
+        cartItems: [],
+        active: true,
+      });
+    } else if (!cart.active) {
+      // If cart exists but is not active, create a new one
       cart = await cartRepository.create({
         user: user,
         cartItems: [],
