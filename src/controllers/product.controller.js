@@ -1,12 +1,10 @@
-const { STATUS_CODE } = require("../utils/constants");
-const { handleError } = require("../middleware/errorHandler.middleware");
-const productService = require("../services/product.service");
+import { handleError } from "../middleware/errorHandler.middleware.js";
+import productService from "../services/product.service.js";
 
 class ProductController {
   async createProduct(req, res) {
     try {
       const product = await productService.createProduct(req.body);
-
       res.json(product);
     } catch (error) {
       console.log(error);
@@ -18,7 +16,6 @@ class ProductController {
     try {
       const { id } = req.params;
       const product = await productService.getOne(id);
-
       res.json(product);
     } catch (error) {
       console.log(error);
@@ -42,7 +39,6 @@ class ProductController {
         req.params,
         req.body
       );
-
       res.json(updateProductItem);
     } catch (error) {
       return handleError(error, res);
@@ -61,4 +57,4 @@ class ProductController {
   }
 }
 
-module.exports = new ProductController();
+export default new ProductController();

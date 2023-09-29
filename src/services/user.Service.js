@@ -1,11 +1,25 @@
-const User = require("../data/models/user.model");
-const bcryptHelper = require("../lib/bcrypt");
+import User from "../data/models/user.model.js";
+import { STATUS_CODE } from "../utils/constants.js";
+import UserRepository from "../data/repository/user.repository.js";
+import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
+import { userValidator } from "../validators/user.validation.js";
+import UserDto from "../dtos/user/user.Dto.js";
+import bcryptHelper from "../lib/bcrypt.js";
 
 class UserService {
   async register(userDTO) {
-    const newUser = new User(userDTO);
-    const savedUser = await newUser.save();
-    return savedUser;
+    userValidator.validateUser(userDTO);
+    const existingUser = await UserRepository.findByEmail(userDTO.email);
+    if (existingUser) return { message: "User already exists" };
+
+    const createUser = await UserRepository.save(userDTO);
+
+    const newUser = UserDto.fromRegister(createUser);
+
+    return {
+      message: "User created",
+      data: newUser,
+    };
   }
 
   async login(email, password) {
@@ -46,4 +60,4 @@ class UserService {
   }
 }
 
-module.exports = new UserService();
+export default new UserService();

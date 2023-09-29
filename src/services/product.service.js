@@ -1,9 +1,7 @@
-const ProductRepository = require("../data/repository/product.repository");
-const {
-  NotFoundException,
-} = require("../utils/exceptions/not-found.exception");
-const { productValidator } = require("../validators/product.validation");
-const ProductDto = require("../dtos/product/product.Dto");
+import ProductRepository from "../data/repository/product.repository.js";
+import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
+import { productValidator } from "../validators/product.validation.js";
+import ProductDto from "../dtos/product/product.Dto.js";
 
 class ProductService {
   async createProduct(productDTO) {
@@ -98,4 +96,4 @@ class ProductService {
   }
 }
 
-module.exports = new ProductService();
+export default new ProductService();

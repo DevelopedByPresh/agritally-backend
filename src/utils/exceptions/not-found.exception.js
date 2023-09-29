@@ -1,4 +1,10 @@
-const BaseException = require('./base-exception');
+class BaseException {
+  constructor(statusCode, message, errors) {
+    this.statusCode = statusCode;
+    this.message = message;
+    this.errors = errors;
+  }
+}
 
 class NotFoundException extends BaseException {
   constructor(message, errors) {
@@ -6,4 +12,4 @@ class NotFoundException extends BaseException {
   }
 }
 
-module.exports = { NotFoundException };
+export { NotFoundException };

@@ -1,40 +1,47 @@
-function validateRequestMiddleware(DtoClass, withParams = false) {
-    return function (req, res, next) {
-      if (withParams) {
-        req.body = Object.assign({}, req.body, req.params);
-      }
-  
-      req.body = DtoClass.from(req.body);
-  
-      next();
-    };
+const { ValidationException } = require('../../utils/exceptions/validation.exception.js');
+const { messages } = require('../../utils/messages.utils.js');
+const { refineError } = require('../../utils/refine-validation-error.utils.js');
+
+class ValidateRequest {
+  /**
+   *
+   * @param {import('joi').ObjectSchema} schema
+   */
+  constructor(validator) {
+    this.execute = this.execute.bind(this);
+    this.validator = validator;
   }
-  
-  class ValidateRequestsMiddleware {
-    constructor(DtoClass, options) {
-      this.execute = this.execute.bind(this);
-  
-      this.DtoClass = DtoClass;
-      this.options = options;
+
+  execute(req, res, next) {
+    const { value, error } = this.validator.validate(
+      {
+        body: req.body,
+        params: req.params,
+        query: req.query,
+      },
+      { abortEarly: false, stripUnknown: true },
+    );
+
+    if (error) {
+      const errors = refineError(error);
+      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, errors);
     }
-  
-    execute(req, res, next) {
-      if (this.options.withParams) {
-        req.body = Object.assign({}, req.body);
-      }
-  
-      req.body = this.DtoClass.from(req.body);
-  
-      next();
-    }
-  
-    static with(DtoClass, options = { withParams: false, withQuery: false }) {
-      return new ValidateRequestsMiddleware(DtoClass, options).execute;
-    }
+
+    req.body = value.body || req.body;
+    req.params = value.params || req.params;
+    req.query = value.query || req.query;
+
+    next();
   }
-  
-  module.exports = {
-    validateRequestMiddleware,
-    ValidateRequestsMiddleware,
-  };
-  
+
+  /**
+   *
+   * @param {import('joi').ObjectSchema} schema
+   * @returns {(req, res, next) => void}
+   */
+  static with(schema) {
+    return new ValidateRequest(schema).execute;
+  }
+}
+
+module.exports = { ValidateRequest };

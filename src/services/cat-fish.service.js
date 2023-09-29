@@ -1,5 +1,5 @@
-const CatFish = require("../data/models/cat-fish.model");
-const User = require("../data/models/user.model");
+import CatFish from "../data/models/cat-fish.model.js";
+import User from "../data/models/user.model.js";
 
 class CatFishService {
   async addCatFishItem(catFishDTO) {
@@ -38,4 +38,4 @@ class CatFishService {
   }
 }
 
-module.exports = new CatFishService();
+export default new CatFishService();

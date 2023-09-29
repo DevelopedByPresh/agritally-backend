@@ -1,8 +1,6 @@
-const cartRepository = require("../data/repository/cart.repository");
-const productRepository = require("../data/repository/product.repository");
-const {
-  NotFoundException,
-} = require("../utils/exceptions/not-found.exception");
+import cartRepository from "../data/repository/cart.repository.js"; 
+import productRepository from "../data/repository/product.repository.js"; 
+import { NotFoundException } from "../utils/exceptions/not-found.exception.js"; 
 
 class CartService {
   async createCart(newItems) {
@@ -25,6 +23,7 @@ class CartService {
         active: true,
       });
     }
+    // TODO: Check when active is false and create a new cart
 
     const existingItemIndex = cart.cartItems.findIndex((item) =>
       item.productId.equals(foundProduct._id)
@@ -61,7 +60,7 @@ class CartService {
   }
 
   async getOne(id) {
-    const cart = await cartRepository.findById(id)
+    const cart = await cartRepository.findById(id);
 
     if (!cart) {
       throw new NotFoundException("Cart not found");
@@ -73,7 +72,7 @@ class CartService {
     };
   }
 
-  //Add get all cart created by a user
+  // Add get all cart created by a user
   async getAll() {
     const carts = await cartRepository.getAll();
 
@@ -163,4 +162,4 @@ class CartService {
   }
 }
 
-module.exports = new CartService();
+export default new CartService();

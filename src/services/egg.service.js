@@ -1,6 +1,6 @@
-const Egg = require("../data/models/egg.model");
-const { STATUS_CODE } = require("../utils/constants");
-const EggDto = require("../dtos/egg/egg.Dto");
+import Egg from "../data/models/egg.model.js";
+import { STATUS_CODE } from "../utils/constants.js";
+import EggDto from "../dtos/egg/egg.Dto.js";
 
 class EggService {
   async addEggItem(createEggDto) {
@@ -41,4 +41,4 @@ class EggService {
   }
 }
 
-module.exports = new EggService();
+export default new EggService();

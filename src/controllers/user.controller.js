@@ -1,50 +1,18 @@
-const { STATUS_CODE } = require("../utils/constants");
-const handleError = require("../middleware/errorHandler.middleware");
-const UserDto = require("../dtos/user/user.Dto");
-const bcryptHelper = require('../lib/bcrypt');
-const userService = require('../services/user.Service');
-const {
-  registerSchema,
-  loginSchema,
-  validate,
-} = require("../validators/validation");
-const {generateJWTToken, decodeToken} = require("../lib/jwt.service")
+import { STATUS_CODE } from "../utils/constants.js";
+import { handleError } from "../middleware/errorHandler.middleware.js";
+import userService from "../services/user.Service.js";
+import UserDto from "../dtos/user/user.Dto.js";
+import bcryptHelper from "../lib/bcrypt.js";
+import { registerSchema, loginSchema, validate } from "../validators/validation.js";
+import { generateJWTToken } from "../lib/jwt.service.js";
 
 class UserController {
   async register(req, res) {
     try {
-      const registerDto = req.body;
-      validate(registerDto, registerSchema);
-
-      // Check if the user already exists
-      const existingUser = await userService.getUserByEmail(registerDto.email);
-      if (existingUser) {
-        return res
-          .status(STATUS_CODE.BAD_REQUEST)
-          .json({ error: "User already exists" });
-      }
-
-      const hashedPassword = await bcryptHelper.hash(registerDto.password);
-      const newUser = {
-        ...registerDto,
-        password: hashedPassword,
-      };
-
-      const createUser = await userService.register(newUser);
-
-      const { token, expiresIn} = await generateJWTToken({id:createUser.id, role: createUser.role})
-
-      const userDto = UserDto.fromRegister(createUser);
-
-      return res
-        .status(STATUS_CODE.CREATED)
-        .cookie('access_token', token, {
-          httpOnly: true,
-          expires: new Date(expiresIn),
-        })
-        .json({ message: "Created successfully", data: userDto, token, expiresIn });
+      const user = await userService.register(req.body);
+      res.json(user);
     } catch (error) {
-      console.log(error)
+      console.log(error);
       return handleError(error, res);
     }
   }
@@ -62,14 +30,17 @@ class UserController {
           .json({ error: "Incorrect email or password" });
       }
 
-      const { token, expiresIn} = await generateJWTToken({id:user.id, role: user.role})
+      const { token, expiresIn } = await generateJWTToken({
+        id: user.id,
+        role: user.role,
+      });
       return res
         .status(STATUS_CODE.OK)
-        .cookie('access_token', token, {
+        .cookie("access_token", token, {
           httpOnly: true,
           expires: new Date(expiresIn),
         })
-        .json({ message: "Login Success", data: user, token, expiresIn  });
+        .json({ message: "Login Success", data: user, token, expiresIn });
     } catch (error) {
       return handleError(error, res);
     }
@@ -82,7 +53,9 @@ class UserController {
       const user = await userService.getUserById(id);
 
       if (!user) {
-        return res.status(STATUS_CODE.NOT_FOUND).json({ error: "User not found" });
+        return res
+          .status(STATUS_CODE.NOT_FOUND)
+          .json({ error: "User not found" });
       }
 
       return res.status(STATUS_CODE.OK).json({ data: user });
@@ -109,10 +82,14 @@ class UserController {
       const updatedUser = await userService.updateUserProfile(id, updates);
 
       if (!updatedUser) {
-        return res.status(STATUS_CODE.NOT_FOUND).json({ error: "User not found" });
+        return res
+          .status(STATUS_CODE.NOT_FOUND)
+          .json({ error: "User not found" });
       }
 
-      return res.status(STATUS_CODE.OK).json({ message: "Profile updated", data: updatedUser });
+      return res
+        .status(STATUS_CODE.OK)
+        .json({ message: "Profile updated", data: updatedUser });
     } catch (error) {
       return handleError(error, res);
     }
@@ -125,14 +102,16 @@ class UserController {
       const deletedUser = await userService.deleteUser(id);
 
       if (!deletedUser) {
-        return res.status(STATUS_CODE.NOT_FOUND).json({ error: "User not found" });
+        return res
+          .status(STATUS_CODE.NOT_FOUND)
+          .json({ error: "User not found" });
       }
 
-      return res.status(STATUS_CODE.OK).json({ message: "User deleted"});
+      return res.status(STATUS_CODE.OK).json({ message: "User deleted" });
     } catch (error) {
       return handleError(error, res);
     }
   }
 }
 
-module.exports = new UserController();
+export default new UserController();

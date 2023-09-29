@@ -26,5 +26,4 @@ class EggDTO {
     return eggEntities.map((eggEntity) => EggDTO.from(eggEntity));
   }
 }
-
-module.exports = EggDTO;
+export default EggDTO;

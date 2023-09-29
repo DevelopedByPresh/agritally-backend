@@ -1,7 +1,7 @@
-const express = require('express');
-const adminController = require('../controllers/admin.controller');
-const { verifyToken, verifyManager, verifyOwner, verifySuperAdmin } = require('../middleware/auth.verifiyToken');
-
+// admin.route.mjs
+import express from 'express';
+import adminController from '../controllers/admin.controller.js';
+import { verifyToken, verifyManager, verifyOwner } from '../middleware/auth.verifiyToken.js';
 
 const adminRouter = express.Router();
 
@@ -12,5 +12,4 @@ adminRouter.get('/getAll', verifyManager, adminController.getAllAdmins);
 adminRouter.patch('/update-profile/:id', verifyManager, adminController.updateProfile);
 adminRouter.delete('/delete/:id', verifyOwner, adminController.deleteAdmin);
 
-module.exports = adminRouter;
-
+export default adminRouter;

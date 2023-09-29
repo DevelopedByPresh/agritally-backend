@@ -1,4 +1,4 @@
-const { STATUS_CODE } = require('../utils/constants');
+import { STATUS_CODE } from '../utils/constants.js';
 
 function handleError(error, res) {
   if (!error) {
@@ -37,4 +37,4 @@ function handleError(error, res) {
   res.status(statusCode).json({ error: message });
 }
 
-module.exports = { handleError };
+export { handleError };

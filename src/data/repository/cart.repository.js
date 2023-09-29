@@ -1,4 +1,4 @@
-const Cart = require("../models/cart.model");
+import Cart from "../models/cart.model.js";
 
 class CartRepository {
   async create(cartDTO) {
@@ -52,4 +52,4 @@ class CartRepository {
   }
 }
 
-module.exports = new CartRepository();
+export default new CartRepository();

@@ -1,9 +1,8 @@
-const jwt = require("jsonwebtoken");
-const { STATUS_CODE } = require("../utils/constants");
-const { handleError } = require("../middleware/errorHandler.middleware");
+import jwt from "jsonwebtoken";
+import { STATUS_CODE } from "../utils/constants.js";
+import { handleError } from "../middleware/errorHandler.middleware.js";
 
 function verifyToken(req, res, next) {
-  // const token = req.cookies.access_token || req.header("x-auth-token");
   try {
     let token;
 
@@ -69,6 +68,7 @@ function verifyManager(req, res, next) {
     }
   });
 }
+
 function verifyOwner(req, res, next) {
   verifyToken(req, res, () => {
     if (
@@ -96,7 +96,7 @@ function verifySuperAdmin(req, res, next) {
   });
 }
 
-module.exports = {
+export {
   verifyToken,
   verifyStaff,
   verifyManager,

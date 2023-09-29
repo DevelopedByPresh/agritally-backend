@@ -30,5 +30,5 @@ class CatFishDTO{
   }
 }
 
-module.exports = CatFishDTO;
+export default CatFishDTO;
 

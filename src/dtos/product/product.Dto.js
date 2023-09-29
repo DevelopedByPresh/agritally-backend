@@ -36,4 +36,4 @@ class ProductDTO {
   }
 }
 
-module.exports = ProductDTO;
+export default ProductDTO;

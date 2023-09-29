@@ -1,6 +1,6 @@
-const { STATUS_CODE } = require("../utils/constants");
-const { handleError } = require("../middleware/errorHandler.middleware");
-const cartService = require("../services/cart.service");
+import { STATUS_CODE } from "../utils/constants.js";
+import { handleError } from "../middleware/errorHandler.middleware.js";
+import cartService from "../services/cart.service.js";
 
 class PoultryController {
   async addToCart(req, res) {
@@ -17,8 +17,7 @@ class PoultryController {
   async getOne(req, res) {
     try {
       const { id } = req.params;
-      const cart = await cartService.getOne(id)
-      
+      const cart = await cartService.getOne(id);
 
       res.json(cart);
     } catch (error) {
@@ -73,4 +72,4 @@ class PoultryController {
   }
 }
 
-module.exports = new PoultryController();
+export default new PoultryController();

@@ -1,4 +1,4 @@
-const Order = require("../models/order.model");
+import Order from"../models/order.model.js"
 
 class OrderRepository {
   async create(orderDTO) {
@@ -52,4 +52,4 @@ class OrderRepository {
   }
 }
 
-module.exports = new OrderRepository();
+export default new OrderRepository();

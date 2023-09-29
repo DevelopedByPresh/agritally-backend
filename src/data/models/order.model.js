@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const crypto = require("crypto");
+import mongoose from 'mongoose';
+import crypto from 'crypto';
 
 const orderSchema = new mongoose.Schema(
   {
@@ -11,7 +11,7 @@ const orderSchema = new mongoose.Schema(
 
     cartId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Cart",
+      ref: 'Cart',
       required: true,
     },
 
@@ -22,7 +22,7 @@ const orderSchema = new mongoose.Schema(
     trackingNo: {
       type: String,
       default: function () {
-        return crypto.randomBytes(6).toString("hex");
+        return crypto.randomBytes(6).toString('hex');
       },
     },
   },
@@ -31,4 +31,4 @@ const orderSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Order", orderSchema);
+export default mongoose.model('Order', orderSchema);

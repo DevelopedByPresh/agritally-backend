@@ -1,8 +1,8 @@
-const { STATUS_CODE } = require("../utils/constants");
-const { handleError } = require("../middleware/errorHandler.middleware");
-const orderService = require("../services/order.service");
+import { STATUS_CODE } from '../utils/constants.js';
+import { handleError } from '../middleware/errorHandler.middleware.js';
+import orderService from '../services/order.service.js';
 
-class orderController {
+class OrderController {
   async createOrder(req, res) {
     try {
       const order = await orderService.createOrder(req.body);
@@ -28,7 +28,6 @@ class orderController {
 
   async getAll(req, res) {
     try {
-
       const orderItems = await orderService.getAll(req.query);
 
       res.json(orderItems);
@@ -43,20 +42,17 @@ class orderController {
       const { id } = req.params;
       const updateDto = req.body;
 
-      const updatepolutryItem = await orderService.updateOrderItem(
-        id,
-        updateDto
-      );
+      const updatedOrderItem = await orderService.updateOrderItem(id, updateDto);
 
-      if (!updatepolutryItem) {
+      if (!updatedOrderItem) {
         return res
           .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: "Item not found" });
+          .json({ error: 'Item not found' });
       }
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Item updated", data: updatepolutryItem });
+        .json({ message: 'Item updated', data: updatedOrderItem });
     } catch (error) {
       return handleError(error, res);
     }
@@ -70,10 +66,10 @@ class orderController {
       if (!orderItem)
         return res
           .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: "Product not found" });
+          .json({ error: 'Product not found' });
 
       await orderItem.deleteOne();
-      return res.status(STATUS_CODE.OK).json({ message: "Order Item Deleted" });
+      return res.status(STATUS_CODE.OK).json({ message: 'Order Item Deleted' });
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -81,4 +77,4 @@ class orderController {
   }
 }
 
-module.exports = new orderController();
+export default new OrderController();

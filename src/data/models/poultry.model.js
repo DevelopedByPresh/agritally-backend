@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const poultrySchema = new mongoose.Schema(
   {
@@ -25,11 +25,12 @@ const poultrySchema = new mongoose.Schema(
       default: 1,
       required: true,
     },
+
     price: {
       type: Number,
       required: true,
     },
-
+    
     status: {
       type: String,
       enum: ["Approved", "Pending"],
@@ -41,4 +42,4 @@ const poultrySchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("Poultry", poultrySchema);
+export default mongoose.model("Poultry", poultrySchema);

@@ -1,7 +1,7 @@
-const Admin = require("../data/models/admin.model");
-const bcryptHelper = require("../lib/bcrypt");
+import Admin from "../data/models/admin.model.js";
+import bcryptHelper from "../lib/bcrypt.js";
 
-class AdminService {
+export default class AdminService {
   async register(adminDTO) {
     const newAdmin = new Admin(adminDTO);
     const savedAdmin = await newAdmin.save();
@@ -46,5 +46,3 @@ class AdminService {
     return deletedadmin;
   }
 }
-
-module.exports = new AdminService();

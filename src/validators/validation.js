@@ -1,4 +1,4 @@
-const Joi = require('joi');
+import Joi from 'joi';
 
 const registerSchema = Joi.object({
   firstName: Joi.string().required(),
@@ -24,9 +24,8 @@ function validate(data, schema) {
   return value;
 }
 
-module.exports = {
+export {
   registerSchema,
   loginSchema,
   validate,
 };
-

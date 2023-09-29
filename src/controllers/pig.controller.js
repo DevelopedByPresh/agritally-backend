@@ -1,7 +1,7 @@
-const { STATUS_CODE } = require('../utils/constants');
-const handleError = require('../middleware/errorHandler.middleware');
-const PigDto = require('../dtos/pig/pig.Dto');
-const pigService = require('../services/pig.service');
+import { STATUS_CODE } from "../utils/constants.js";
+import { handleError } from "../middleware/errorHandler.middleware.js";
+import PigDto from "../dtos/pig/pig.Dto.js";
+import pigService from "../services/pig.service.js";
 
 class PigController {
   async addPigItem(req, res) {
@@ -13,7 +13,7 @@ class PigController {
 
       return res
         .status(STATUS_CODE.CREATED)
-        .json({ message: 'Created successfully', data: pigDto });
+        .json({ message: "Created successfully", data: pigDto });
     } catch (error) {
       console.error(error);
       return handleError(error, res);
@@ -29,7 +29,7 @@ class PigController {
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: 'Pig found', data: pigDto });
+        .json({ message: "Pig found", data: pigDto });
     } catch (error) {
       console.error(error);
       return handleError(error, res);
@@ -68,7 +68,7 @@ class PigController {
       const pigDtos = PigDto.fromMany(pigItems);
 
       return res.status(STATUS_CODE.OK).json({
-        message: 'Pig items found',
+        message: "Pig items found",
         count: pigDtos.length,
         data: pigDtos,
       });
@@ -88,12 +88,12 @@ class PigController {
       if (!updatedPigItem) {
         return res
           .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: 'Item not found' });
+          .json({ error: "Item not found" });
       }
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: 'Item updated', data: updatedPigItem });
+        .json({ message: "Item updated", data: updatedPigItem });
     } catch (error) {
       return handleError(error, res);
     }
@@ -107,12 +107,10 @@ class PigController {
       if (!pigItem)
         return res
           .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: 'Pig not found' });
+          .json({ error: "Pig not found" });
 
       await pigItem.deleteOne();
-      return res
-        .status(STATUS_CODE.OK)
-        .json({ message: 'Pig Item Deleted' });
+      return res.status(STATUS_CODE.OK).json({ message: "Pig Item Deleted" });
     } catch (error) {
       console.error(error);
       return handleError(error, res);
@@ -120,4 +118,4 @@ class PigController {
   }
 }
 
-module.exports = new PigController();
+export default new PigController();

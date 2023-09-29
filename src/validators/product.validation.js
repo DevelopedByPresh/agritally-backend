@@ -1,5 +1,5 @@
-const Joi = require("joi");
-const { ValidationException } = require("../utils/exceptions/index");
+import Joi from "joi";
+import { ValidationException } from "../utils/exceptions/index.js";
 
 class ProductValidator {
   constructor() {
@@ -66,4 +66,4 @@ class ProductValidator {
   }
 }
 
-module.exports = { productValidator: new ProductValidator() };
+export const productValidator = new ProductValidator();

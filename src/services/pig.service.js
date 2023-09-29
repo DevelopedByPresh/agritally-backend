@@ -1,5 +1,4 @@
-const Pig = require("../data/models/pig.model");
-const User = require("../data/models/user.model");
+import Pig from '../data/models/pig.model.js';
 
 class PigService {
   async addPigItem(pigDTO) {
@@ -10,16 +9,16 @@ class PigService {
 
   async getOne(id) {
     const pig = await Pig.findById(id).populate({
-      path: "user",
-      select: ["firstName", "lastName"],
+      path: 'user',
+      select: ['firstName', 'lastName'],
     });
     return pig;
   }
 
   async getAll(filter) {
     const pigItems = await Pig.find(filter).populate({
-      path: "user",
-      select: ["firstName", "lastName"],
+      path: 'user',
+      select: ['firstName', 'lastName'],
     });
     return pigItems;
   }
@@ -37,4 +36,4 @@ class PigService {
   }
 }
 
-module.exports = new PigService();
+export default new PigService();

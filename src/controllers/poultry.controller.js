@@ -1,13 +1,13 @@
-const { STATUS_CODE } = require("../utils/constants");
-const handleError = require("../middleware/errorHandler.middleware");
-const PoultryDto = require("../dtos/poultry/poultry.Dto");
-const poultryService = require("../services/poultry.service");
+import { STATUS_CODE } from "../utils/constants.js";
+import { handleError } from "../middleware/errorHandler.middleware.js";
+import PoultryDto from "../dtos/poultry/poultry.Dto.js";
+import poultryService from "../services/poultry.service.js";
 
 class PoultryController {
   async addPoultryItem(req, res) {
     try {
       const newPoultryItem = req.body;
-      const poultryItem = await poultryService.addPoultryItem(newPoultryItem)
+      const poultryItem = await poultryService.addPoultryItem(newPoultryItem);
 
       const poultryDto = PoultryDto.from(poultryItem);
 
@@ -83,12 +83,12 @@ class PoultryController {
       const { id } = req.params;
       const updateDto = req.body;
 
-      const updatepolutryItem = await poultryService.updatePoultryItem(
+      const updatePoultryItem = await poultryService.updatePoultryItem(
         id,
         updateDto
       );
 
-      if (!updatepolutryItem) {
+      if (!updatePoultryItem) {
         return res
           .status(STATUS_CODE.NOT_FOUND)
           .json({ error: "Item not found" });
@@ -96,7 +96,7 @@ class PoultryController {
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Item updated", data: updatepolutryItem });
+        .json({ message: "Item updated", data: updatePoultryItem });
     } catch (error) {
       return handleError(error, res);
     }
@@ -115,7 +115,7 @@ class PoultryController {
       await poultryItem.deleteOne();
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: "Poultry Item Deleted"});
+        .json({ message: "Poultry Item Deleted" });
     } catch (error) {
       console.log(error);
       return handleError(error, res);
@@ -123,4 +123,4 @@ class PoultryController {
   }
 }
 
-module.exports = new PoultryController();
+export default new PoultryController();

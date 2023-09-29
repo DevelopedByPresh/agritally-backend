@@ -30,4 +30,4 @@ class PigDTO {
   }
 }
 
-module.exports = PigDTO;
+export default PigDTO;

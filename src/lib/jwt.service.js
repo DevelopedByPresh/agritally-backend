@@ -1,6 +1,6 @@
-const ms = require('ms');
-const dotenv = require('dotenv');
-const jwt = require('jsonwebtoken');
+import ms from 'ms';
+import dotenv from 'dotenv';
+import jwt from 'jsonwebtoken';
 
 dotenv.config();
 
@@ -13,7 +13,6 @@ function generateJWTToken(payload, options = {}) {
   options.expiresIn = options.expiresIn || accessTokenTTL;
   const expirationTimestamp = Date.now() + ms(accessTokenTTL);
 
-  
   return {
     token: jwt.sign(payload, accessTokenSecret, options),
     expiresIn: Number(expirationTimestamp),
@@ -26,4 +25,4 @@ function decodeToken(token, options = {}) {
   return jwt.verify(token, accessTokenSecret, options);
 }
 
-module.exports = { generateJWTToken, decodeToken };
+export { generateJWTToken, decodeToken };

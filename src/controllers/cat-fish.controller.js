@@ -1,7 +1,7 @@
-const { STATUS_CODE } = require('../utils/constants');
-const handleError = require('../middleware/errorHandler.middleware');
-const CatFishDto = require('../dtos/catFish/cat-fish.Dto');
-const catFishService = require('../services/cat-fish.service');
+import { STATUS_CODE } from '../utils/constants.js';
+import { handleError } from '../middleware/errorHandler.middleware.js';
+import CatFishDto from '../dtos/catFish/cat-fish.Dto.js';
+import catFishService from '../services/cat-fish.service.js';
 
 class CatFishController {
   async addCatFishItem(req, res) {
@@ -64,13 +64,11 @@ class CatFishController {
       }
 
       const catFishItems = await catFishService.getAll(query);
-      
+
       const catFishDto = CatFishDto.fromMany(catFishItems);
-      console.log(catFishDto)
 
       return res.status(STATUS_CODE.OK).json({
         message: 'CatFish items found',
-        // count: catFishDtos.length,
         data: catFishDto
       });
     } catch (error) {
@@ -122,4 +120,4 @@ class CatFishController {
   }
 }
 
-module.exports = new CatFishController();
+export default new CatFishController();

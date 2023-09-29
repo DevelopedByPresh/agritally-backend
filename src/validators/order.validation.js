@@ -1,5 +1,5 @@
-const Joi = require("joi");
-const { ValidationException } = require("../utils/exceptions/index");
+import Joi from "joi";
+import { ValidationException } from "../utils/exceptions/index.js";
 
 class OrderValidator {
   #objectIdSchema;
@@ -18,9 +18,9 @@ class OrderValidator {
 
   validateOrder(order) {
     const schema = Joi.object({
-    //   user: this.#objectIdSchema.required().messages({
-    //     "any.required": "User is required",
-    //   }),
+      // user: this.#objectIdSchema.required().messages({
+      //   "any.required": "User is required",
+      // }),
       cartId: this.#objectIdSchema.required().messages({
         "any.required": "Cart ID is required",
       }),
@@ -31,9 +31,9 @@ class OrderValidator {
     const { error } = schema.validate(order);
 
     if (error) {
-      throw new ValidationException( error.message);
+      throw new ValidationException(error.message);
     }
   }
 }
 
-module.exports = { orderValidator: new OrderValidator() };
+export const orderValidator = new OrderValidator();

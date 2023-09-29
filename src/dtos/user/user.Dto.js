@@ -1,4 +1,4 @@
-class UserDTO {
+ class UserDTO {
   constructor({ id, email, firstName, lastName, password, role, date_of_birth, phone, createdAt, updatedAt, token}) {
     this.id = id;
     this.email = email;
@@ -20,7 +20,6 @@ class UserDTO {
       lastName: userEntity.lastName,
       date_of_birth: userEntity.date_of_birth,
       phone: userEntity.phone,
-      password: userEntity.password,
       role: userEntity.role,
       token: userEntity.token,
       createdAt: userEntity.createdAt,
@@ -46,4 +45,4 @@ class UserDTO {
 
 // TODO: Create editable field
 
-module.exports = UserDTO;
+export default UserDTO;

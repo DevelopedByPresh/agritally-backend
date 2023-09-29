@@ -1,4 +1,4 @@
-class BaseException extends Error {
+export class BaseException extends Error {
     constructor(statusCode, message, errors = {}, isOperational = true) {
       super(message);
       this.name = this.constructor.name;
@@ -9,5 +9,5 @@ class BaseException extends Error {
     }
   }
   
-  module.exports = BaseException;
+  export default BaseException;
   

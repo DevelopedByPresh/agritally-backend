@@ -1,14 +1,15 @@
-const { STATUS_CODE } = require("../utils/constants");
-const handleError = require("../middleware/errorHandler.middleware");
-const UserDto = require("../dtos/user/user.Dto");
-const bcryptHelper = require('../lib/bcrypt');
-const adminService = require('../services/admin.service');
-const {
+// AdminController.mjs
+import { STATUS_CODE } from "../utils/constants.js";
+import {handleError} from "../middleware/errorHandler.middleware.js";
+import UserDto from "../dtos/user/user.Dto.js";
+import bcryptHelper from '../lib/bcrypt.js';
+import adminService from '../services/admin.service.js';
+import {
   registerSchema,
   loginSchema,
   validate,
-} = require("../validators/validation");
-const {generateJWTToken, decodeToken} = require("../lib/jwt.service")
+} from "../validators/validation.js";
+import { generateJWTToken, decodeToken } from "../lib/jwt.service.js";
 
 class AdminController {
   async register(req, res) {
@@ -32,7 +33,7 @@ class AdminController {
 
       const createAdmin = await adminService.register(newAdmin);
 
-      const { token, expiresIn} = await generateJWTToken({id:createAdmin.id, role: createAdmin.role})
+      const { token, expiresIn } = await generateJWTToken({ id: createAdmin.id, role: createAdmin.role })
 
       const adminDto = UserDto.fromRegister(createAdmin);
 
@@ -62,14 +63,14 @@ class AdminController {
           .json({ error: "Incorrect email or password" });
       }
 
-      const { token, expiresIn} = await generateJWTToken({id:admin.id, role: admin.role})
+      const { token, expiresIn } = await generateJWTToken({ id: admin.id, role: admin.role })
       return res
         .status(STATUS_CODE.OK)
         .cookie('access_token', token, {
           httpOnly: true,
           expires: new Date(expiresIn),
         })
-        .json({ message: "Login Success", data: admin, token, expiresIn  });
+        .json({ message: "Login Success", data: admin, token, expiresIn });
     } catch (error) {
       return handleError(error, res);
     }
@@ -130,11 +131,11 @@ class AdminController {
         return res.status(STATUS_CODE.NOT_FOUND).json({ error: "Admin not found" });
       }
 
-      return res.status(STATUS_CODE.OK).json({ message: "Admin deleted"});
+      return res.status(STATUS_CODE.OK).json({ message: "Admin deleted" });
     } catch (error) {
       return handleError(error, res);
     }
   }
 }
 
-module.exports = new AdminController();
+export default new AdminController();

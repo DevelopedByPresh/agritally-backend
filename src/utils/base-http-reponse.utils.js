@@ -1,22 +1,22 @@
-// class BaseHttpResponse {
-//     constructor(message, data, errors) {
-//       this.message = message;
-//       this.data = data;
-//       this.errors = errors;
-//     }
+export class BaseHttpResponse {
+    constructor(message, data, errors) {
+      this.message = message;
+      this.data = data;
+      this.errors = errors;
+    }
   
-//     static success(message, data) {
-//       return new BaseHttpResponse(message, data);
-//     }
+    static success(message, data) {
+      return new BaseHttpResponse(message, data);
+    }
   
-//     static error(message, error) {
-//       return new BaseHttpResponse(message, error);
-//     }
+    static error(message, error) {
+      return new BaseHttpResponse(message, error);
+    }
   
-//     static failed(message, errors) {
-//       return new BaseHttpResponse(message, undefined, errors);
-//     }
-//   }
+    static failed(message, errors) {
+      return new BaseHttpResponse(message, undefined, errors);
+    }
+  }
   
-//   module.exports = { BaseHttpResponse };
+  export default { BaseHttpResponse };
   

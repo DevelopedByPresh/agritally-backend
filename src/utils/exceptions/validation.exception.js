@@ -1,9 +1,9 @@
-const BaseException = require('./base-exception.js');
+import BaseException from './base-exception.js';
 
-class ValidationException extends BaseException {
+export class ValidationException extends BaseException {
   constructor(message, errors = {}) {
     super(400, message, errors);
   }
 }
 
-module.exports = ValidationException;
+export default ValidationException;

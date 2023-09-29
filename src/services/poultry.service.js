@@ -1,5 +1,5 @@
-const Poultry = require("../data/models/poultry.model");
-const User = require("../data/models/user.model");
+import Poultry from "../data/models/poultry.model.js";
+import User from "../data/models/user.model.js";
 
 class PoultryService {
   async addPoultryItem(poultryDTO) {
@@ -41,4 +41,4 @@ class PoultryService {
   }
 }
 
-module.exports = new PoultryService();
+export default new PoultryService();

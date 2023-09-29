@@ -30,4 +30,4 @@ class PoultryDTO {
   }
 }
 
-module.exports = PoultryDTO;
+export default PoultryDTO;

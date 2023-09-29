@@ -1,7 +1,7 @@
-const { STATUS_CODE } = require("../utils/constants");
-const handleError = require("../middleware/errorHandler.middleware");
-const EggDto = require("../dtos/egg/egg.Dto");
-const eggService = require("../services/egg.service");
+import { STATUS_CODE } from "../utils/constants.js";
+import { handleError } from "../middleware/errorHandler.middleware.js";
+import EggDto from "../dtos/egg/egg.Dto.js";
+import eggService from "../services/egg.service.js";
 
 class EggController {
   async addEggItem(req, res) {
@@ -65,7 +65,7 @@ class EggController {
 
       const eggItems = await eggService.getAll(query);
 
-      const eggDto = EggDto.fromMany(eggItems)
+      const eggDto = EggDto.fromMany(eggItems);
 
       return res.status(STATUS_CODE.OK).json({
         message: "Egg items found",
@@ -112,4 +112,4 @@ class EggController {
   }
 }
 
-module.exports = new EggController();
+export default new EggController();

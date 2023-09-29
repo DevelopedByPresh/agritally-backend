@@ -1,7 +1,6 @@
-const express = require('express');
-const userController = require('../controllers/user.controller');
-const authMiddleware = require('../middleware/auth.verifiyToken');
-const { verifyToken, verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } = require('../middleware/auth.verifiyToken');
+import express from 'express';
+import userController from '../controllers/user.controller.js';
+import { verifyToken, verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } from '../middleware/auth.verifiyToken.js';
 
 const userRouter = express.Router();
 
@@ -12,6 +11,4 @@ userRouter.get('/getAll', verifyManager, userController.getAllUsers);
 userRouter.patch('/update-profile/:id', verifyManager, userController.updateProfile);
 userRouter.delete('/delete/:id', verifyOwner, userController.deleteUser);
 
-
-module.exports = userRouter;
-
+export default userRouter;

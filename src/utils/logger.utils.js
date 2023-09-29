@@ -1,4 +1,4 @@
-const { addColors, createLogger, format, transports } = require('winston');
+import { addColors, createLogger, format, transports } from 'winston';
 
 function formatMeta(metadata) {
   if (!metadata) return '';
@@ -72,6 +72,4 @@ class Logger {
   }
 }
 
-module.exports = {
-  logger: new Logger(),
-};
+export const logger = new Logger();

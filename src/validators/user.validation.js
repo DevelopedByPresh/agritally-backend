@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { ValidationException } from '../../utils/exceptions/index.js';
+import { ValidationException } from '../utils/exceptions/index.js';
 
 export class UserValidator {
   #nameSchema;
@@ -46,7 +46,7 @@ export class UserValidator {
     const { error } = schema.validate(user);
 
     if (error) {
-      throw new ValidationException('User Validation Error', error.message);
+      throw new ValidationException( error.message);
     }
   }
 }

@@ -1,6 +1,6 @@
-// models/User.js
-const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
+import mongoose from "mongoose";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 const adminSchema = new mongoose.Schema({
   firstName: {
@@ -35,22 +35,20 @@ const adminSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ["superAdmin", "owner",  "manager"],
+    enum: ["superAdmin", "owner", "manager"],
     default: "manager",
   },
-},
-{
+}, {
   timestamps: true,
-},
-);
+});
 
-adminSchema.methods.generateAuthToken = function(){
-  const token = jwt.sign({ _id: this._id, role:this.role }, process.env.JWT_SECRET_KEY || 'MyScureKey', {expiresIn: "15h"});
-    return token;
-}
+adminSchema.methods.generateAuthToken = function () {
+  const token = jwt.sign({ _id: this._id, role: this.role }, process.env.JWT_SECRET_KEY || 'MyScureKey', { expiresIn: "15h" });
+  return token;
+};
 
 adminSchema.methods.comparePasswords = function (password) {
   return bcrypt.compareSync(password, this.password);
 };
 
-module.exports = mongoose.model("Admin", adminSchema);
+export default mongoose.model("Admin", adminSchema);
