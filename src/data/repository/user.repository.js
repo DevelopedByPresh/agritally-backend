@@ -3,7 +3,6 @@ import bcryptHelper from '../../lib/bcrypt.js';
 
 class UserRepository {
   async save(userDTO) {
-    // Hash the password before saving it to the database
     const hashedPassword = await bcryptHelper.hash(userDTO.password);
     userDTO.password = hashedPassword;
 
@@ -23,11 +22,6 @@ class UserRepository {
   }
 
   async updateOne(userId, updateDto) {
-    // Hash the updated password if it's included in the update
-    if (updateDto.password) {
-      updateDto.password = await bcryptHelper.hash(updateDto.password);
-    }
-
     const updatedUser = await User.findByIdAndUpdate(userId, updateDto, {
       new: true,
     });

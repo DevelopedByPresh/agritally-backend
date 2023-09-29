@@ -1,104 +1,42 @@
-// AdminController.mjs
 import { STATUS_CODE } from "../utils/constants.js";
-import {handleError} from "../middleware/errorHandler.middleware.js";
-import UserDto from "../dtos/user/user.Dto.js";
-import bcryptHelper from '../lib/bcrypt.js';
-import adminService from '../services/admin.service.js';
-import {
-  registerSchema,
-  loginSchema,
-  validate,
-} from "../validators/validation.js";
-import { generateJWTToken, decodeToken } from "../lib/jwt.service.js";
+import { handleError } from "../middleware/errorHandler.middleware.js";
+import adminService from "../services/admin.service.js"; 
 
 class AdminController {
   async register(req, res) {
     try {
-      const registerDto = req.body;
-      validate(registerDto, registerSchema);
-
-      // Check if the Admin already exists
-      const existingAdmin = await adminService.getAdminByEmail(registerDto.email);
-      if (existingAdmin) {
-        return res
-          .status(STATUS_CODE.BAD_REQUEST)
-          .json({ error: "Admin already exists" });
-      }
-
-      const hashedPassword = await bcryptHelper.hash(registerDto.password);
-      const newAdmin = {
-        ...registerDto,
-        password: hashedPassword,
-      };
-
-      const createAdmin = await adminService.register(newAdmin);
-
-      const { token, expiresIn } = await generateJWTToken({ id: createAdmin.id, role: createAdmin.role })
-
-      const adminDto = UserDto.fromRegister(createAdmin);
-
-      return res
-        .status(STATUS_CODE.CREATED)
-        .cookie('access_token', token, {
-          httpOnly: true,
-          expires: new Date(expiresIn),
-        })
-        .json({ message: "Created successfully", data: adminDto, token, expiresIn });
+      const admin = await adminService.register(req.body); 
+      res.json(admin);
     } catch (error) {
-      console.log(error)
+      console.log(error);
       return handleError(error, res);
     }
   }
 
   async login(req, res) {
     try {
-      const { email, password } = req.body;
-      validate({ email, password }, loginSchema);
-
-      const admin = await adminService.login(email, password);
-
-      if (!admin) {
-        return res
-          .status(STATUS_CODE.UNAUTHORIZED)
-          .json({ error: "Incorrect email or password" });
-      }
-
-      const { token, expiresIn } = await generateJWTToken({ id: admin.id, role: admin.role })
-      return res
-        .status(STATUS_CODE.OK)
-        .cookie('access_token', token, {
-          httpOnly: true,
-          expires: new Date(expiresIn),
-        })
-        .json({ message: "Login Success", data: admin, token, expiresIn });
+      const admin = await adminService.login(req.body); 
+      res.json(admin);
     } catch (error) {
+      console.log(error);
       return handleError(error, res);
     }
   }
 
-  async getOneAdmin(req, res) {
+  async getOne(req, res) {
     try {
-      const { id } = req.params;
-
-      const admin = await adminService.getAdminById(id);
-      console.log("controler")
-
-      if (!admin) {
-        return res.status(STATUS_CODE.NOT_FOUND).json({ error: "Admin not found" });
-      }
-
-      return res.status(STATUS_CODE.OK).json({ data: admin });
+      const admin = await adminService.getOne(req.params.id); 
+      res.json(admin);
     } catch (error) {
+      console.log(error);
       return handleError(error, res);
     }
   }
 
-  async getAllAdmins(req, res) {
+  async getAll(req, res) {
     try {
-      const allAdmin = await adminService.getAllAdmins();
-
-
-      return res.status(STATUS_CODE.OK).json({ count: allAdmin.length, data: allAdmin });
+      const admins = await adminService.getAll(); 
+      res.json(admins);
     } catch (error) {
       return handleError(error, res);
     }
@@ -106,16 +44,8 @@ class AdminController {
 
   async updateProfile(req, res) {
     try {
-      const { id } = req.params;
-      const updates = req.body;
-
-      const updatedAdmin = await adminService.updateAdminProfile(id, updates);
-
-      if (!updatedAdmin) {
-        return res.status(STATUS_CODE.NOT_FOUND).json({ error: "Admin not found" });
-      }
-
-      return res.status(STATUS_CODE.OK).json({ message: "Profile updated", data: updatedAdmin });
+      const admin = await adminService.updateOne(req.params, req.body); 
+      res.json(admin);
     } catch (error) {
       return handleError(error, res);
     }
@@ -123,15 +53,8 @@ class AdminController {
 
   async deleteAdmin(req, res) {
     try {
-      const { id } = req.params;
-
-      const deletedAdmin = await adminService.deleteAdmin(id);
-
-      if (!deletedAdmin) {
-        return res.status(STATUS_CODE.NOT_FOUND).json({ error: "Admin not found" });
-      }
-
-      return res.status(STATUS_CODE.OK).json({ message: "Admin deleted" });
+      const admin = await adminService.deleteAdmin(req.params.id); 
+      res.json(admin);
     } catch (error) {
       return handleError(error, res);
     }

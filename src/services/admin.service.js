@@ -1,48 +1,104 @@
 import Admin from "../data/models/admin.model.js";
+import AdminRepository from "../data/repository/admin.repository.js";
+import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
+import { adminValidator } from "../validators/admin.validation.js";
+import AdminDto from "../dtos/admin/admin.Dto.js";
 import bcryptHelper from "../lib/bcrypt.js";
+import { generateJWTToken, decodeToken } from "../lib/jwt.service.js";
 
-export default class AdminService {
+class AdminService {
   async register(adminDTO) {
-    const newAdmin = new Admin(adminDTO);
-    const savedAdmin = await newAdmin.save();
-    return savedAdmin;
+    adminValidator.validateAdmin(adminDTO); 
+    const existingAdmin = await AdminRepository.findByEmail(adminDTO.email);
+    if (existingAdmin) return { message: "Admin already exists" };
+
+    const createAdmin = await AdminRepository.save(adminDTO);
+
+    const { token, expiresIn } = await generateJWTToken({
+      id: createAdmin.id,
+      role: createAdmin.role,
+    });
+
+    const newAdmin = AdminDto.from(createAdmin);
+
+    return {
+      message: "Admin created",
+      data: newAdmin,
+      token,
+      expiresIn,
+    };
   }
 
-  async login(email, password) {
-    const admin = await Admin.findOne({ email });
+  async login(loginDto) {
+    const { email, password } = loginDto;
 
-    if (!admin || !(await bcryptHelper.compare(password, admin.password))) {
-      return null;
+    const admin = await AdminRepository.findByEmail(email);
+
+    if (!admin) {
+      throw new NotFoundException("Admin not found");
     }
 
-    return admin;
-  }
-
-  async getAdminByEmail(email) {
-    const admin = await Admin.findOne({ email });
-    return admin;
-  }
-
-  async getAdminById(adminId) {
-    console.log("service");
-    const admin = await Admin.findById(adminId);
-    return admin;
-  }
-
-  async getAllAdmins() {
-    const admins = await Admin.find();
-    return admins;
-  }
-
-  async updateAdminProfile(adminId, updates) {
-    const updatedadmin = await Admin.findByIdAndUpdate(adminId, updates, {
-      new: true,
+    const isMatch = bcryptHelper.compare(password, admin.password);
+    if (!isMatch) {
+      throw new NotFoundException("Email or password is incorrect");
+    }
+    const { token, expiresIn } = await generateJWTToken({
+      id: admin.id,
+      role: admin.role,
     });
-    return updatedadmin;
+
+    const adminDto = AdminDto.from(admin);
+
+    return {
+      message: "Admin Login",
+      data: adminDto,
+      token,
+      expiresIn,
+    };
   }
 
-  async deleteAdmin(adminId) {
-    const deletedadmin = await Admin.findByIdAndDelete(adminId);
-    return deletedadmin;
+  async getOne(id) {
+    const admin = await AdminRepository.findById(id);
+
+    const adminDto = AdminDto.from(admin);
+
+    return {
+      message: "Fetched admin",
+      data: adminDto,
+    };
+  }
+
+  async getAll() {
+    const admins = await AdminRepository.getAll();
+
+    return {
+      message: "Fetched admins",
+      count: admins.length,
+      data: admins,
+    };
+  }
+
+  async updateOne(adminId, changes) {
+    const { id } = adminId;
+    const updatedAdmin = await AdminRepository.updateOne(id, changes);
+    if (!updatedAdmin) {
+      throw new NotFoundException("Admin not found");
+    }
+    const adminDto = AdminDto.from(updatedAdmin);
+
+    return {
+      message: "Admin Updated",
+      data: adminDto,
+    };
+  }
+
+  async deleteAdmin(id) {
+    const admin = await AdminRepository.deleteOne(id);
+
+    return {
+      message: "Admin deleted",
+    };
   }
 }
+
+export default new AdminService();

@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { ValidationException } from '../../utils/exceptions/index.js';
+import { ValidationException } from '../utils/exceptions/index.js';
 
 export class AdminValidator {
   #nameSchema;
