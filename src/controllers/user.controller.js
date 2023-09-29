@@ -45,20 +45,9 @@ class UserController {
 
   async updateProfile(req, res) {
     try {
-      const { id } = req.params;
-      const updates = req.body;
+      const user = await userService.updateOne(req.params, req.body);
 
-      const updatedUser = await userService.updateUserProfile(id, updates);
-
-      if (!updatedUser) {
-        return res
-          .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: "User not found" });
-      }
-
-      return res
-        .status(STATUS_CODE.OK)
-        .json({ message: "Profile updated", data: updatedUser });
+      res.json(user);
     } catch (error) {
       return handleError(error, res);
     }
@@ -66,17 +55,9 @@ class UserController {
 
   async deleteUser(req, res) {
     try {
-      const { id } = req.params;
+      const user = await userService.deleteUser(req.params.id);
 
-      const deletedUser = await userService.deleteUser(id);
-
-      if (!deletedUser) {
-        return res
-          .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: "User not found" });
-      }
-
-      return res.status(STATUS_CODE.OK).json({ message: "User deleted" });
+      res.json(user);
     } catch (error) {
       return handleError(error, res);
     }

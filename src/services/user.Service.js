@@ -71,8 +71,6 @@ class UserService {
   async getAll() {
     const user = await UserRepository.getAll();
 
-    // const User = UserDto.from(user);
-
     return {
       message: "Fetched user",
       count: user.length,
@@ -80,16 +78,26 @@ class UserService {
     };
   }
 
-  async updateUserProfile(userId, updates) {
-    const updatedUser = await User.findByIdAndUpdate(userId, updates, {
-      new: true,
-    });
-    return updatedUser;
+  async updateOne(userId, changes) {
+    const { id } = userId;
+    const updatedUser = await UserRepository.updateOne(id, changes);
+    if (!updatedUser) {
+      throw new NotFoundException("User not found");
+    }
+    const userDto = UserDto.from(updatedUser);
+
+    return {
+      message: "User Updated",
+      data: userDto,
+    };
   }
 
-  async deleteUser(userId) {
-    const deletedUser = await User.findByIdAndDelete(userId);
-    return deletedUser;
+  async deleteUser(id) {
+    const user = await UserRepository.deleteOne(id);
+
+    return {
+      message: "User deleted",
+    };
   }
 }
 
