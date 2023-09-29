@@ -50,7 +50,7 @@ export class AdminValidator {
     const { error } = schema.validate(admin);
 
     if (error) {
-      throw new ValidationException('Admin Validation Error', error.message);
+      throw new ValidationException( error.message);
     }
   }
 }
