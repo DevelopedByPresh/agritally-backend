@@ -12,7 +12,7 @@
     this.updatedAt = updatedAt;
   }
 
-  static fromRegister(userEntity) {
+  static from(userEntity) {
     return new UserDTO({
       id: userEntity.id,
       email: userEntity.email,

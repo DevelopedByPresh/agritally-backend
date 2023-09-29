@@ -6,8 +6,8 @@ const userRouter = express.Router();
 
 userRouter.post('/register', userController.register);
 userRouter.post('/login', userController.login);
-userRouter.get('/get/:id', verifyStaff, userController.getOneUser);
-userRouter.get('/getAll', verifyManager, userController.getAllUsers);
+userRouter.get('/get/:id', userController.getOne);
+userRouter.get('/getAll', verifyManager, userController.getAll);
 userRouter.patch('/update-profile/:id', verifyManager, userController.updateProfile);
 userRouter.delete('/delete/:id', verifyOwner, userController.deleteUser);
 

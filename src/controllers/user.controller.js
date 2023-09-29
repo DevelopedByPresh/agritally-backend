@@ -1,10 +1,6 @@
 import { STATUS_CODE } from "../utils/constants.js";
 import { handleError } from "../middleware/errorHandler.middleware.js";
 import userService from "../services/user.Service.js";
-import UserDto from "../dtos/user/user.Dto.js";
-import bcryptHelper from "../lib/bcrypt.js";
-import { registerSchema, loginSchema, validate } from "../validators/validation.js";
-import { generateJWTToken } from "../lib/jwt.service.js";
 
 class UserController {
   async register(req, res) {
@@ -19,56 +15,29 @@ class UserController {
 
   async login(req, res) {
     try {
-      const { email, password } = req.body;
-      validate({ email, password }, loginSchema);
-
-      const user = await userService.login(email, password);
-
-      if (!user) {
-        return res
-          .status(STATUS_CODE.UNAUTHORIZED)
-          .json({ error: "Incorrect email or password" });
-      }
-
-      const { token, expiresIn } = await generateJWTToken({
-        id: user.id,
-        role: user.role,
-      });
-      return res
-        .status(STATUS_CODE.OK)
-        .cookie("access_token", token, {
-          httpOnly: true,
-          expires: new Date(expiresIn),
-        })
-        .json({ message: "Login Success", data: user, token, expiresIn });
+      const user = await userService.login(req.body);
+      res.json(user);
     } catch (error) {
+      console.log(error);
       return handleError(error, res);
     }
   }
 
-  async getOneUser(req, res) {
+  async getOne(req, res) {
     try {
-      const { id } = req.params;
-
-      const user = await userService.getUserById(id);
-
-      if (!user) {
-        return res
-          .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: "User not found" });
-      }
-
-      return res.status(STATUS_CODE.OK).json({ data: user });
+      const user = await userService.getOne(req.params.id);
+      res.json(user);
     } catch (error) {
+      console.log(error);
       return handleError(error, res);
     }
   }
 
-  async getAllUsers(req, res) {
+  async getAll(req, res) {
     try {
-      const users = await userService.getAllUsers();
+      const users = await userService.getAll();
 
-      return res.status(STATUS_CODE.OK).json({ data: users });
+      res.json(users);
     } catch (error) {
       return handleError(error, res);
     }
