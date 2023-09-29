@@ -95,6 +95,10 @@ class AdminService {
   async deleteAdmin(id) {
     const admin = await AdminRepository.deleteOne(id);
 
+    if (!admin) {
+      throw new NotFoundException("User not found");
+    }
+
     return {
       message: "Admin deleted",
     };

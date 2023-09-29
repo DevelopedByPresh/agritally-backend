@@ -59,6 +59,9 @@ class UserService {
 
   async getOne(id) {
     const user = await UserRepository.findById(id);
+    if (!user) {
+      throw new NotFoundException("User not found");
+    }
 
     const User = UserDto.from(user);
 
@@ -94,6 +97,10 @@ class UserService {
 
   async deleteUser(id) {
     const user = await UserRepository.deleteOne(id);
+
+    if (!user) {
+      throw new NotFoundException("User not found");
+    }
 
     return {
       message: "User deleted",
