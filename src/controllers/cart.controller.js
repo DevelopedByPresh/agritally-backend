@@ -50,8 +50,8 @@ class PoultryController {
 
   async removeCartItem(req, res) {
     try {
-      const { id } = req.params;
-      const removeCartItem = await cartService.removeCartItem(id, req.body);
+      const { cartId, productId } = req.query;
+      const removeCartItem = await cartService.removeCartItem(req.query);
 
       res.json(removeCartItem);
     } catch (error) {

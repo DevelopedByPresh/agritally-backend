@@ -124,10 +124,13 @@ class CartService {
     };
   }
 
-  async removeCartItem(cartId, updateCartDto) {
-    const { productId, quantity } = updateCartDto;
+  async removeCartItem(cartDto) {
+    const { cartId, productId } = cartDto;
 
     const cart = await cartRepository.findById(cartId);
+    console.log(cart, 'nbgbldfklbkldgj')
+
+
 
     if (!cart) {
       throw new NotFoundException("Cart not found");
@@ -143,10 +146,6 @@ class CartService {
     }
 
     await cartItem.deleteOne();
-
-    // Update the quantity and subtotal for the cart item
-    cartItem.quantity = quantity;
-    cartItem.subtotal = cartItem.price * quantity;
 
     // Recalculate the cart's total
     cart.total = cart.cartItems.reduce(
