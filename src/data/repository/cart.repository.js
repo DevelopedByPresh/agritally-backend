@@ -13,7 +13,10 @@ class CartRepository {
         path: "user",
         select: ["firstName", "lastName"],
       })
-      // .populate("cartItems.productId"); 
+      .populate({
+        path: "cartItems.productId",
+        select: ["category", "section"],
+      });
     return cart;
   }
 
@@ -23,16 +26,18 @@ class CartRepository {
         path: "user",
         select: ["firstName", "lastName"],
       })
-      // .populate("cartItems.productId");
+      .populate({
+        path: "cartItems.productId",
+        model: "Product", // Use the name of the model you want to populate
+        select: ["category", "section"],
+      });
     return cart;
   }
 
   async updateOne(cartId, updateDto) {
-    const updatedCart = await Cart.findByIdAndUpdate(
-      cartId,
-      updateDto,
-      { new: true }
-    );
+    const updatedCart = await Cart.findByIdAndUpdate(cartId, updateDto, {
+      new: true,
+    });
     return updatedCart;
   }
 
@@ -42,12 +47,11 @@ class CartRepository {
   }
 
   async getAll() {
-    const carts = await Cart.find()
-      .populate({
-        path: "user",
-        select: ["firstName", "lastName"],
-      })
-      // .populate("cartItems.productId"); 
+    const carts = await Cart.find().populate({
+      path: "user",
+      select: ["firstName", "lastName"],
+    });
+    // .populate("cartItems.productId");
     return carts;
   }
 }

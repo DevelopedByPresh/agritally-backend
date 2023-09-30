@@ -66,6 +66,8 @@ class CartService {
     };
   }
 
+// TODO: add category and section to get cart
+
   async getOne(id) {
     const cart = await cartRepository.findById(id);
 
