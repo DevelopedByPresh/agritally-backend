@@ -8,7 +8,6 @@ const cartItemSchema = {
 
   price: {
     type: Number,
-    required: true,
   },
 
   quantity: {
@@ -18,7 +17,6 @@ const cartItemSchema = {
 
   subtotal: {
     type: Number,
-    required: true,
   },
 };
 
