@@ -1,9 +1,8 @@
-import { STATUS_CODE } from "../utils/constants.js";
 import { handleError } from "../middleware/errorHandler.middleware.js";
 import userService from "../services/user.Service.js";
 
 class UserController {
-  async register(req, res) {
+  register = async (req, res) => {
     try {
       const user = await userService.register(req.body);
       res.json(user);
@@ -11,9 +10,9 @@ class UserController {
       console.log(error);
       return handleError(error, res);
     }
-  }
+  };
 
-  async login(req, res) {
+  login = async (req, res) => {
     try {
       const user = await userService.login(req.body);
       res.json(user);
@@ -21,9 +20,9 @@ class UserController {
       console.log(error);
       return handleError(error, res);
     }
-  }
+  };
 
-  async getOne(req, res) {
+  getOne = async (req, res) => {
     try {
       const user = await userService.getOne(req.params.id);
       res.json(user);
@@ -31,9 +30,9 @@ class UserController {
       console.log(error);
       return handleError(error, res);
     }
-  }
+  };
 
-  async getAll(req, res) {
+  getAll = async (req, res) => {
     try {
       const users = await userService.getAll();
 
@@ -41,7 +40,7 @@ class UserController {
     } catch (error) {
       return handleError(error, res);
     }
-  }
+  };
 
   async updateProfile(req, res) {
     try {
@@ -53,7 +52,7 @@ class UserController {
     }
   }
 
-  async deleteUser(req, res) {
+  deleteUser = async (req, res) => {
     try {
       const user = await userService.deleteUser(req.params.id);
 
@@ -61,7 +60,7 @@ class UserController {
     } catch (error) {
       return handleError(error, res);
     }
-  }
+  };
 }
 
-export default new UserController();
+export const userController = new UserController();

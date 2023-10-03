@@ -1,41 +1,41 @@
 import { STATUS_CODE } from "../utils/constants.js";
 import { handleError } from "../middleware/errorHandler.middleware.js";
-import adminService from "../services/admin.service.js"; 
+import adminService from "../services/admin.service.js";
 
 class AdminController {
-  async register(req, res) {
+  register = async (req, res) => {
     try {
-      const admin = await adminService.register(req.body); 
+      const admin = await adminService.register(req.body);
       res.json(admin);
     } catch (error) {
       console.log(error);
       return handleError(error, res);
     }
-  }
+  };
 
-  async login(req, res) {
+  login = async (req, res) => {
     try {
-      const admin = await adminService.login(req.body); 
+      const admin = await adminService.login(req.body);
       res.json(admin);
     } catch (error) {
       console.log(error);
       return handleError(error, res);
     }
-  }
+  };
 
-  async getOne(req, res) {
+  getOne = async (req, res) => {
     try {
-      const admin = await adminService.getOne(req.params.id); 
+      const admin = await adminService.getOne(req.params.id);
       res.json(admin);
     } catch (error) {
       console.log(error);
       return handleError(error, res);
     }
-  }
+  };
 
-  async getAll(req, res) {
+  getAll = async (req, res) => {
     try {
-      const admins = await adminService.getAll(); 
+      const admins = await adminService.getAll();
       res.json(admins);
     } catch (error) {
       return handleError(error, res);
@@ -44,16 +44,16 @@ class AdminController {
 
   async updateProfile(req, res) {
     try {
-      const admin = await adminService.updateOne(req.params, req.body); 
+      const admin = await adminService.updateOne(req.params, req.body);
       res.json(admin);
     } catch (error) {
       return handleError(error, res);
     }
   }
 
-  async deleteAdmin(req, res) {
+   deleteAdmin = async (req, res) => {
     try {
-      const admin = await adminService.deleteAdmin(req.params.id); 
+      const admin = await adminService.deleteAdmin(req.params.id);
       res.json(admin);
     } catch (error) {
       return handleError(error, res);
@@ -61,4 +61,4 @@ class AdminController {
   }
 }
 
-export default new AdminController();
+export const adminController = new AdminController()

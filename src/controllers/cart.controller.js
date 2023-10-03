@@ -59,6 +59,17 @@ class PoultryController {
     }
   }
 
+  async updateCart(req, res) {
+    try {
+      const { id } = req.params;
+      const updateCartItem = await cartService.updateCart(id, req.body);
+
+      res.json(updateCartItem);
+    } catch (error) {
+      return handleError(error, res);
+    }
+  }
+
   async delete(req, res) {
     try {
       const { id } = req.params;

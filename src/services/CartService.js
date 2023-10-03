@@ -2,7 +2,7 @@ import cartRepository from "../data/repository/cart.repository.js";
 import productRepository from "../data/repository/product.repository.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 
-class CartService {
+export class CartService {
   async createCart(newItems) {
     const { productId, cartId, user, quantity } = newItems;
 
@@ -31,7 +31,6 @@ class CartService {
       });
     }
     // TODO: Check when active is false and create a new cart
-
     const existingItemIndex = cart.cartItems.findIndex((item) =>
       item.productId.equals(foundProduct._id)
     );
@@ -66,11 +65,9 @@ class CartService {
     };
   }
 
-// TODO: add category and section to get cart
-// TODO: create update cart to turn 
-// TODO: move get all
-
-
+  // TODO: add category and section to get cart
+  // TODO: create update cart to turn
+  // TODO: move get all
   async getOne(id) {
     const cart = await cartRepository.findById(id);
 
@@ -132,8 +129,6 @@ class CartService {
 
     const cart = await cartRepository.findById(cartId);
 
-
-
     if (!cart) {
       throw new NotFoundException("Cart not found");
     }
@@ -162,9 +157,8 @@ class CartService {
     };
   }
 
-  async updateCart(id, changes) {
-    const cart = await cartRepository.updateOne(id, changes);
-    console.log(cart)
+  async updateCart(cartId, updateCartDto) {
+    const cart = await cartRepository.updateOne(cartId, updateCartDto);
 
     if (!cart) {
       throw new NotFoundException("Cart not found");
@@ -185,5 +179,3 @@ class CartService {
     };
   }
 }
-
-export default new CartService();

@@ -97,7 +97,7 @@ class OrderService {
     };
   }
 
-  async updateProductItem(itemId, updateDto) {
+  async updateProduct(itemId, updateDto) {
     const { id } = itemId;
     const updatedProduct = await OrderRepository.updateOne(id, updateDto);
     if (!updatedProduct) {
