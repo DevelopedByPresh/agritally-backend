@@ -85,7 +85,7 @@ class CartService {
   }
 
   // Add get all cart created by a user
-  async getAll() {
+  async getAll(filter) {
     const carts = await cartRepository.getAll();
 
     return {
@@ -164,7 +164,6 @@ class CartService {
 
   async updateCart(id, changes) {
     const cart = await cartRepository.updateOne(id, changes);
-    console.log(cart)
 
     if (!cart) {
       throw new NotFoundException("Cart not found");

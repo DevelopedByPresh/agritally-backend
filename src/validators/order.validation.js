@@ -18,9 +18,9 @@ class OrderValidator {
 
   validateOrder(order) {
     const schema = Joi.object({
-      // user: this.#objectIdSchema.required().messages({
-      //   "any.required": "User is required",
-      // }),
+      user: this.#objectIdSchema.required().messages({
+        "any.required": "User is required",
+      }),
       cartId: this.#objectIdSchema.required().messages({
         "any.required": "Cart ID is required",
       }),

@@ -2,6 +2,8 @@ import ProductRepository from "../data/repository/product.repository.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { productValidator } from "../validators/product.validation.js";
 import ProductDto from "../dtos/product/product.Dto.js";
+import filterSelection from "../utils/queryFilter.js";
+
 
 class ProductService {
   async createProduct(productDTO) {
@@ -32,31 +34,8 @@ class ProductService {
   }
 
   async getAll(filter) {
-    const { section, year, month, date, category } = filter;
-
-    let query = {};
-
-    if (date && month && year) {
-      const startDate = new Date(year, month - 1, date);
-      const endDate = new Date(year, month - 1, date + 1);
-      query.date = { $gte: startDate, $lt: endDate };
-    } else if (month && year) {
-      const startDate = new Date(year, month - 1, 1);
-      const endDate = new Date(year, month, 0);
-      query.date = { $gte: startDate, $lte: endDate };
-    } else if (year) {
-      const startDate = new Date(year, 0, 1);
-      const endDate = new Date(year, 11, 31);
-      query.date = { $gte: startDate, $lte: endDate };
-    }
-
-    if (section) {
-      query.section = section;
-    }
-
-    if (category) {
-      query.category = category;
-    }
+    const query = filterSelection(filter)
+ 
     const productItems = await ProductRepository.getAll(query);
 
     const productDtos = ProductDto.fromMany(productItems);

@@ -5,6 +5,7 @@ import orderService from '../services/order.service.js';
 class OrderController {
   async createOrder(req, res) {
     try {
+      const { user, cartId } = req.body;
       const order = await orderService.createOrder(req.body);
 
       res.json(order);
@@ -29,6 +30,17 @@ class OrderController {
   async getAll(req, res) {
     try {
       const orderItems = await orderService.getAll(req.query);
+
+      res.json(orderItems);
+    } catch (error) {
+      console.error(error);
+      return handleError(error, res);
+    }
+  }
+
+  async getAllUserOrder(req, res) {
+    try {
+      const orderItems = await orderService.getAllByUser(req.query.id);
 
       res.json(orderItems);
     } catch (error) {

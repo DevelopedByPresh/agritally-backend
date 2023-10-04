@@ -44,12 +44,17 @@ class OrderRepository {
 
   async getAll(query) {
     const orders = await Order.find(query)
-    .populate({
-      path: "cartId",
-      select: ["cartItems", "total"],
-    })
+      .populate({
+        path: "cartId",
+        select: ["cartItems"],
+      })
+      .populate({
+        path: "cartId.cartItems.productId",
+        select: ["category", "section"],
+      });
     return orders;
   }
+  
 }
 
 export default new OrderRepository();

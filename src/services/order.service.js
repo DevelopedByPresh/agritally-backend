@@ -1,21 +1,24 @@
-import ProductRepository from '../data/repository/product.repository.js';
-import OrderRepository from '../data/repository/order.respository.js';
-import { NotFoundException } from '../utils/exceptions/not-found.exception.js';
-import { orderValidator } from '../validators/order.validation.js';
-import ProductDto from '../dtos/product/product.Dto.js';
-import OrderDto from '../dtos/order/order.Dto.js';
-import cartRepository from '../data/repository/cart.repository.js';
+import ProductRepository from "../data/repository/product.repository.js";
+import OrderRepository from "../data/repository/order.respository.js";
+import { NotFoundException, ValidationException } from "../utils/exceptions/index.js";
+import OrderDto from "../dtos/order/order.Dto.js";
+import cartRepository from "../data/repository/cart.repository.js";
 
 class OrderService {
   async createOrder(orderDTO) {
-    orderValidator.validateOrder(orderDTO);
+    // orderValidator.validateOrder(orderDTO);
 
     // Fetch the cart from the database
-    const { cartId, total } = orderDTO;
+    const { cartId, user, total } = orderDTO;
+    const cartOrder = await OrderRepository.findOne({ cartId: cartId });
+    if (cartOrder) {
+      throw new ValidationException("Order with this cart Id already created");
+    }
+
     const cart = await cartRepository.findById(cartId);
 
     if (!cart) {
-      throw new NotFoundException('Cart not found');
+      throw new NotFoundException("Cart not found");
     }
 
     // Calculate the updated quantity for each product and update them
@@ -23,7 +26,7 @@ class OrderService {
       const product = await ProductRepository.findById(productId);
 
       if (!product) {
-        throw new NotFoundException('Product not found');
+        throw new NotFoundException("Product not found");
       }
 
       // Calculate the updated quantity
@@ -36,11 +39,15 @@ class OrderService {
     }
 
     // Create the order
-    const newOrder = await OrderRepository.create({ cartId, total: cart.total });
+    const newOrder = await OrderRepository.create({
+      user,
+      cartId,
+      total: cart.total,
+    });
 
     const order = OrderDto.from(newOrder);
     return {
-      message: 'Order created',
+      message: "Order created",
       data: newOrder,
     };
   }
@@ -49,17 +56,29 @@ class OrderService {
     const order = await OrderRepository.findById(id);
 
     if (!order) {
-      throw new NotFoundException('Order not found');
+      throw new NotFoundException("Order not found");
     }
 
     const orderDto = OrderDto.from(order);
 
     return {
-      message: 'Order items found',
+      message: "Order items found",
       data: orderDto,
     };
   }
 
+  async getAllByUser(userId) {
+    // const {id} = userId
+    const orders = await OrderRepository.getAll({ user: userId });
+
+    const orderDtos = OrderDto.fromMany(orders);
+
+    return {
+      message: "Orders found for the user",
+      count: orderDtos.length,
+      data: orderDtos,
+    };
+  }
   async getAll(filter) {
     const { section, year, month, date, category } = filter;
 
@@ -91,7 +110,7 @@ class OrderService {
     const productDtos = OrderDto.fromMany(productItems);
 
     return {
-      message: 'Product items found',
+      message: "Product items found",
       count: productDtos.length,
       data: productDtos,
     };
@@ -101,12 +120,12 @@ class OrderService {
     const { id } = itemId;
     const updatedProduct = await OrderRepository.updateOne(id, updateDto);
     if (!updatedProduct) {
-      throw new NotFoundException('Product not found');
+      throw new NotFoundException("Product not found");
     }
     const productDto = ProductDto.from(updatedProduct);
 
     return {
-      message: 'Product Updated',
+      message: "Product Updated",
       data: productDto,
     };
   }
@@ -115,12 +134,12 @@ class OrderService {
     const product = await OrderRepository.findById(id);
 
     if (!product) {
-      throw new NotFoundException('Product not found');
+      throw new NotFoundException("Product not found");
     }
 
     await product.deleteOne();
     return {
-      message: 'Product items deleted',
+      message: "Product items deleted",
     };
   }
 }

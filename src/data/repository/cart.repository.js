@@ -28,7 +28,7 @@ class CartRepository {
       })
       .populate({
         path: "cartItems.productId",
-        model: "Product", // Use the name of the model you want to populate
+        model: "Product", 
         select: ["category", "section"],
       });
     return cart;

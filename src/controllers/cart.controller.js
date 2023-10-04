@@ -28,7 +28,7 @@ class PoultryController {
 
   async getAll(req, res) {
     try {
-      const carts = await cartService.getAll();
+      const carts = await cartService.getAll(req.query);
 
       res.json(carts);
     } catch (error) {
