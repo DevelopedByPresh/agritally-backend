@@ -84,6 +84,21 @@ class CartService {
     };
   }
 
+  async getUserCart(userId, active) {
+    console.log(userId, 'dfghfdghdfg')
+    const filter = { user: userId, active };
+    const userCart = await cartRepository.findOne({ user: userId, active });
+
+    if (!userCart) {
+      throw new NotFoundException("User's cart not found");
+    }
+
+    return {
+      message: "User's cart retrieved",
+      data: userCart,
+    };
+  }
+
   // Add get all cart created by a user
   async getAll(filter) {
     const carts = await cartRepository.getAll();

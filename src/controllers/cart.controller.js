@@ -2,7 +2,7 @@ import { STATUS_CODE } from "../utils/constants.js";
 import { handleError } from "../middleware/errorHandler.middleware.js";
 import cartService from "../services/cart.service.js";
 
-class PoultryController {
+class CartController {
   async addToCart(req, res) {
     try {
       const cart = await cartService.createCart(req.body);
@@ -22,6 +22,19 @@ class PoultryController {
       res.json(cart);
     } catch (error) {
       console.log(error);
+      return handleError(error, res);
+    }
+  }
+
+  async fetchUserCart(req, res) {
+    try {
+      const { userId } = req.params
+      const { active } = req.query
+      const carts = await cartService.getUserCart(userId, active);
+
+      res.json(carts);
+    } catch (error) {
+      console.error(error);
       return handleError(error, res);
     }
   }
@@ -83,4 +96,4 @@ class PoultryController {
   }
 }
 
-export default new PoultryController();
+export default new CartController();
