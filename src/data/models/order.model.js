@@ -11,7 +11,7 @@ const orderSchema = new mongoose.Schema(
 
     cartId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Cart',
+      ref: "Cart",
       required: true,
     },
 
@@ -19,11 +19,10 @@ const orderSchema = new mongoose.Schema(
       type: Number,
     },
 
-    trackingNo: {
+    status: {
       type: String,
-      default: function () {
-        return crypto.randomBytes(6).toString('hex');
-      },
+      enum: ["Approved", "Pending"],
+      default: "Pending",
     },
   },
   {
