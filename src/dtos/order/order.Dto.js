@@ -1,10 +1,10 @@
 class OrderDTO {
-  constructor({ id, user, cartId, total, trackingNo, createdAt, updatedAt }) {
+  constructor({ id, user, cartId, total, status, createdAt, updatedAt }) {
     this.id = id;
     this.user = user;
     this.cartId = cartId;
     this.total = total;
-    this.trackingNo = trackingNo;
+    this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
   }
@@ -15,7 +15,7 @@ class OrderDTO {
       user: orderEntity.user,
       cartId: orderEntity.cartId,
       total: orderEntity.total,
-      trackingNo: orderEntity.trackingNo,
+      status: orderEntity.status,
       createdAt: orderEntity.createdAt,
       updatedAt: orderEntity.updatedAt,
     });

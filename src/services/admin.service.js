@@ -105,4 +105,4 @@ class AdminService {
   }
 }
 
-export default new AdminService();
+export const adminService = new AdminService();

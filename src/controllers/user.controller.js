@@ -1,5 +1,5 @@
 import { handleError } from "../middleware/errorHandler.middleware.js";
-import userService from "../services/user.Service.js";
+import {userService} from "../services/index.js";
 
 class UserController {
   register = async (req, res) => {

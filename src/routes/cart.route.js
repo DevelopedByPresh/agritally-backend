@@ -16,9 +16,9 @@ cartRouter.get("/get/:id", verifyStaff, cartController.getOne);
 
 cartRouter.get("/:userId", verifyStaff, cartController.fetchUserCart);
 
-cartRouter.post("/active/:id", verifyManager, cartController.updateCart);
+cartRouter.post("/active/:id", verifyStaff, cartController.updateCart);
 
-cartRouter.patch("/update/:id", verifyManager, cartController.updateCartItem);
+cartRouter.patch("/update/:id", verifyStaff, cartController.updateCartItem);
 
 cartRouter.delete("/remove/:id", verifyStaff, cartController.removeCartItem);
 
