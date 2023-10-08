@@ -1,4 +1,3 @@
-// admin.route.mjs
 import express from "express";
 import { adminController, userController } from "../controllers/index.js";
 import {
@@ -20,6 +19,6 @@ adminRouter.patch(
 );
 adminRouter.delete("/delete/:id", verifyOwner, adminController.deleteAdmin);
 
-adminRouter.get("/getAll", verifyManager, userController.getAll);
+adminRouter.get("/users/getAll", verifyManager, userController.getAll);
 
 export default adminRouter;

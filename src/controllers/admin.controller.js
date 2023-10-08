@@ -51,9 +51,9 @@ class AdminController {
     }
   }
 
-  async userRole(req, res) {
+  async changeUserRole(req, res) {
     try {
-      const admin = await adminService.updateOne(req.params, req.body);
+      const admin = await adminService.changeUserRole(req.params, req.body);
       res.json(admin);
     } catch (error) {
       return handleError(error, res);

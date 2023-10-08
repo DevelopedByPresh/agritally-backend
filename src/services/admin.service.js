@@ -78,6 +78,19 @@ class AdminService {
     };
   }
 
+  async changeUserRole(adminId, changes) {
+    const { id } = adminId;
+    const updatedAdmin = await AdminRepository.updateOne(id, changes);
+    if (!updatedAdmin) {
+      throw new NotFoundException("Admin not found");
+    }
+    const adminDto = AdminDto.from(updatedAdmin);
+
+    return {
+      message: "Admin Updated",
+      data: adminDto,
+    };
+  }
   async updateOne(adminId, changes) {
     const { id } = adminId;
     const updatedAdmin = await AdminRepository.updateOne(id, changes);
