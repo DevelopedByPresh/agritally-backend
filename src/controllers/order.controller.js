@@ -73,15 +73,9 @@ class OrderController {
   async delete(req, res) {
     try {
       const { id } = req.params;
-      const orderItem = await orderService.delete(id);
+      const order = await orderService.delete(id);
 
-      if (!orderItem)
-        return res
-          .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: 'Product not found' });
-
-      await orderItem.deleteOne();
-      return res.status(STATUS_CODE.OK).json({ message: 'Order Item Deleted' });
+      res.json(order);
     } catch (error) {
       console.log(error);
       return handleError(error, res);

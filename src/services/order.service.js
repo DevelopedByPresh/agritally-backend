@@ -79,6 +79,7 @@ class OrderService {
       data: orderDtos,
     };
   }
+  
   async getAll(filter) {
     const { section, year, month, date, category } = filter;
 

@@ -1,39 +1,27 @@
-import Joi from "joi";
-import { ValidationException } from "../utils/exceptions/index.js";
+import Joi from 'joi';
 
-class OrderValidator {
-  #objectIdSchema;
-  #numberSchema;
+// Define schemas for subfields if needed
+const objectIdSchema = Joi.string().regex(/^[0-9a-fA-F]{24}$/);
+const statusSchema = Joi.string().valid('Approved', 'Pending');
 
-  constructor() {
-    this.#objectIdSchema = Joi.string().hex().messages({
-      "string.hex": "Invalid object ID format",
-    });
+export const createOrderValidator = Joi.object({
+  body: Joi.object({
+    user: objectIdSchema.label('User ID').required(),
+    cartId: objectIdSchema.label('Cart ID').required(),
+    total: Joi.number().label('Total'),
+    status: statusSchema.label('Status').default('Pending'),
+  }),
+});
 
-    this.#numberSchema = Joi.number().min(0).messages({
-      "number.min": "Value should be at least 0",
-      "any.required": "Value is required",
-    });
-  }
+export const updateOrderValidator = Joi.object({
+  body: Joi.object({
+    user: objectIdSchema.label('User ID'),
+    cartId: objectIdSchema.label('Cart ID'),
+    total: Joi.number().label('Total'),
+    status: statusSchema.label('Status'),
+  }),
+  params: Joi.object({
+    id: objectIdSchema.label('Product ID').required(),
+  }),
+});
 
-  validateOrder(order) {
-    const schema = Joi.object({
-      user: this.#objectIdSchema.required().messages({
-        "any.required": "User is required",
-      }),
-      cartId: this.#objectIdSchema.required().messages({
-        "any.required": "Cart ID is required",
-      }),
-      total: this.#numberSchema,
-      trackingNo: Joi.string(),
-    });
-
-    const { error } = schema.validate(order);
-
-    if (error) {
-      throw new ValidationException(error.message);
-    }
-  }
-}
-
-export const orderValidator = new OrderValidator();
