@@ -49,14 +49,14 @@ class OrderController {
     }
   }
 
-  async updateOrderItem(req, res) {
+  async updateOrder(req, res) {
     try {
       const { id } = req.params;
       const updateDto = req.body;
 
-      const updatedOrderItem = await orderService.updateOrderItem(id, updateDto);
+      const updatedOrder = await orderService.updateOrder(req.params, updateDto);
 
-      if (!updatedOrderItem) {
+      if (!updatedOrder) {
         return res
           .status(STATUS_CODE.NOT_FOUND)
           .json({ error: 'Item not found' });
@@ -64,7 +64,7 @@ class OrderController {
 
       return res
         .status(STATUS_CODE.OK)
-        .json({ message: 'Item updated', data: updatedOrderItem });
+        .json({ message: 'Item updated', data: updatedOrder });
     } catch (error) {
       return handleError(error, res);
     }

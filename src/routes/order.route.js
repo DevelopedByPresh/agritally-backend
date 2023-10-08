@@ -8,7 +8,7 @@ orderRouter.post('/add', verifyStaff, orderController.createOrder);
 orderRouter.get('/get/:id', verifyStaff,  orderController.getOne);
 orderRouter.get('/user', verifyStaff, orderController.getAllUserOrder);
 orderRouter.get('/getAll', verifyManager, orderController.getAll);
-orderRouter.patch('/update/:id', verifyManager, orderController.updateOrderItem);
+orderRouter.patch('/update/:id', verifyManager, orderController.updateOrder);
 orderRouter.delete('/delete/:id', verifyOwner, orderController.delete);
 
 export default orderRouter;

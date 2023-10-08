@@ -116,17 +116,18 @@ class OrderService {
     };
   }
 
-  async updateProduct(itemId, updateDto) {
+  async updateOrder(itemId, updateDto) {
     const { id } = itemId;
-    const updatedProduct = await OrderRepository.updateOne(id, updateDto);
-    if (!updatedProduct) {
-      throw new NotFoundException("Product not found");
+    const updatedOrder = await OrderRepository.updateOne(id, updateDto);
+    console.log(updatedOrder)
+    if (!updatedOrder) {
+      throw new NotFoundException("Order not found");
     }
-    const productDto = ProductDto.from(updatedProduct);
+    const orderDto = OrderDto.from(updatedOrder);
 
     return {
-      message: "Product Updated",
-      data: productDto,
+      message: "Order Updated",
+      data: orderDto,
     };
   }
 
