@@ -16,9 +16,6 @@ class OrderRepository {
     return order;
   }
 
-
-  //autopupolate
-
   async findOne(query) {
     const order = await Order.findOne(query)
     .populate({

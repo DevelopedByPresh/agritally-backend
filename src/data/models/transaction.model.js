@@ -1,38 +1,24 @@
 import mongoose from "mongoose";
 
-const transactionSchema = new mongoose.Schema(
+const TransactionSchema = new mongoose.Schema(
   {
-    order: {
+    productId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Order",
+      ref: "Product",
       required: true,
     },
-
-    reference: {
+    type: {
       type: String,
-      unique: true,
+      enum: ["Purchase", "Sale", "Mortality"],
+      required: true,
     },
-
-    description: {
-      type: String,
-      default: null,
-    },
-
-    status: {
-      type: String,
-      enum: ["pending", "completed"],
-      default: null,
-    },
-
     amount: {
       type: Number,
       required: true,
     },
-
-    channel: {
-      type: String,
-      enum: ["cash", "card", "transfer"],
-      default: null,
+    date: {
+      type: Date,
+      default: Date.now,
     },
   },
   {
@@ -40,4 +26,4 @@ const transactionSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("Order", transactionSchema);
+export default mongoose.model("Transaction", TransactionSchema);
