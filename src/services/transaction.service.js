@@ -28,7 +28,6 @@ export class TransactionService {
 
     return {
       message: "Transactions fetched",
-      count: allTransaction.length,
       data: allTransaction,
     };
   }
@@ -72,7 +71,6 @@ export class TransactionService {
 
     return {
       message: "Transaction deleted",
-      data: transaction,
     };
   }
 }

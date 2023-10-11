@@ -3814,3 +3814,112 @@
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"E11000 duplicate key error collection: AgriTally.transactions index: name_1 dup key: { name: \"Sale\" }","meta":"MongoServerError: E11000 duplicate key error collection: AgriTally.transactions index: name_1 dup key: { name: \"Sale\" }\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\operations\\insert.js:50:33\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection_pool.js:331:21\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\sdam\\server.js:209:17\n    at handleOperationResult (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\sdam\\server.js:337:20)\n    at Connection.onMessage (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:206:9)\n    at MessageStream.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Transaction validation failed: name: Path `name` is required.","meta":"ValidationError: Transaction validation failed: name: Path `name` is required.\n    at Document.invalidate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\document.js:2955:17\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cast to ObjectId failed for value \"{}\" (type Object) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"{}\" (type Object) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:298:34)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOne (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2510:8)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:11:20)"}
+{"level":"error","message":"Cast to ObjectId failed for value \"{}\" (type Object) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"{}\" (type Object) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:298:34)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOne (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2510:8)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:11:20)"}
+{"level":"error","message":"Cast to ObjectId failed for value \"{}\" (type Object) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"{}\" (type Object) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:298:34)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOne (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2510:8)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:11:20)"}
+{"level":"error","message":"Cast to ObjectId failed for value \"{}\" (type Object) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"{}\" (type Object) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:298:34)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOne (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2510:8)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:11:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cast to ObjectId failed for value \"{ id: '65267b62fc6c5d8e581f2d4c' }\" (type Object) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"{ id: '65267b62fc6c5d8e581f2d4c' }\" (type Object) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:298:34)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOne (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2510:8)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:11:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cast to ObjectId failed for value \"65267b62fc6c5d8e581f2d4\" (type string) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"65267b62fc6c5d8e581f2d4\" (type string) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:356:32)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOne (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2510:8)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:11:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'section' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'section' of 'filter' as it is undefined.\n    at buildQuery (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/utils/queryFilter.js:2:13)\n    at TransactionService.all (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/services/transaction.service.js:24:19)\n    at showAll (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/controllers/transaction.controller.js:14:59)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"count is not defined","meta":"ReferenceError: count is not defined\n    at TransactionService.all (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/services/transaction.service.js:29:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async showAll (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/controllers/transaction.controller.js:14:34)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"count is not defined","meta":"ReferenceError: count is not defined\n    at TransactionService.all (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/services/transaction.service.js:32:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async showAll (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/controllers/transaction.controller.js:14:34)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cast to ObjectId failed for value \"{ id: '65267bbed1cab49f3232be3c' }\" (type Object) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"{ id: '65267bbed1cab49f3232be3c' }\" (type Object) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:298:34)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOneAndDelete (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:3491:8)\n    at model.Query._findOneAndRemove (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:3714:15)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cast to ObjectId failed for value \"{ id: '65267b62fc6c5d8e581f2d4c' }\" (type Object) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"{ id: '65267b62fc6c5d8e581f2d4c' }\" (type Object) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:298:34)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOneAndUpdate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:3291:8)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TransactionRepository.updateOne (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:26:27)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}

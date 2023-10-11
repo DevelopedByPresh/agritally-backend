@@ -17,6 +17,11 @@ export class TransactionRepository {
     return record;
   }
 
+  static async getAll(query) {
+    const records = await Transaction.find(query);
+    return records;
+  }
+
   static async updateOne(recordId, updateDto) {
     const updatedRecord = await Transaction.findByIdAndUpdate(
       recordId,
@@ -31,10 +36,7 @@ export class TransactionRepository {
     return deletedRecord;
   }
 
-  static async getAll(query) {
-    const records = await Transaction.find(query);
-    return records;
-  }
+
 }
 
 export default TransactionRepository;

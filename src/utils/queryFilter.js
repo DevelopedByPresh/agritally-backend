@@ -1,5 +1,5 @@
  function buildQuery(filter) {
-    const { section, year, month, date, category } = filter;
+    const { section, year, month, date, category, type } = filter;
   
     const query = {};
   
@@ -23,6 +23,9 @@
   
     if (category) {
       query.category = category;
+    }
+    if (type) {
+      query.type = type;
     }
   
     return query;

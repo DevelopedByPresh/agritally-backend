@@ -11,28 +11,28 @@ export class TransactionController {
     }
 
     static showAll = async (req, res) => {
-        const { message, data} = await TransactionService.all(req.body);
+        const { message, data} = await TransactionService.all(req.query);
         const response = BaseHttpResponse.success(message, data);
         
         res.status(201).json(response);
     }
 
     static one = async (req, res) => {
-        const { message, data} = await TransactionService.one(req.body);
+        const { message, data} = await TransactionService.one(req.params.id);
         const response = BaseHttpResponse.success(message, data);
         
         res.status(201).json(response);
     }
 
     static modify = async (req, res) => {
-        const { message, data} = await TransactionService.update(req.params, req.body);
+        const { message, data} = await TransactionService.update(req.params.id, req.body);
         const response = BaseHttpResponse.success(message, data);
         
         res.status(201).json(response);
     }
 
     static destroy = async (req, res) => {
-        const { message, data} = await TransactionService.delete(req.params);
+        const { message, data} = await TransactionService.delete(req.params.id);
         const response = BaseHttpResponse.success(message, data);
         
         res.status(201).json(response);
