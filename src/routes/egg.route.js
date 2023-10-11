@@ -1,6 +1,10 @@
 import express from 'express';
 import eggController from '../controllers/egg.controller.js'; 
-import { verifyStaff, verifyManager, verifyOwner } from '../middleware/auth.verifiyToken.js'; 
+import {
+  verifyStaff,
+  verifyManager,
+  verifyOwner,
+} from "../middleware/auth.verifyToken.js"; 
 
 const eggRouter = express.Router();
 

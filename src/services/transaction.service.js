@@ -7,8 +7,8 @@ import {
 import TransactionDTO from "../dtos/transaction/transaction.dto.js";
 import filterSelection from "../utils/queryFilter.js";
 
-class TransactionService {
-  async create(transactionDTO) {
+export class TransactionService {
+  static async create(transactionDTO) {
     validateTransaction(transactionDTO);
     const newTransaction = await TransactionRepository.save(transactionDTO);
 
@@ -20,7 +20,7 @@ class TransactionService {
     };
   }
 
-  async all(filter) {
+  static async all(filter) {
     const query = filterSelection(filter);
     const transactions = await TransactionRepository.getAll(query);
 
@@ -33,22 +33,22 @@ class TransactionService {
     };
   }
 
-  async one(id) {
+  static async one(id) {
     const transaction = await TransactionRepository.findById(id);
 
     if (!transaction) {
-      throw new NotFoundException("Transaction ot found");
+      throw new NotFoundException("Transaction not found");
     }
 
     const transactionDto = TransactionDTO.from(transaction);
 
     return {
-      message: "Transactions fetched",
+      message: "Transaction fetched",
       data: transactionDto,
     };
   }
 
-  async update(id, updateDto) {
+  static async update(id, updateDto) {
     const transaction = await TransactionRepository.updateOne(id, updateDto);
 
     if (!transaction) {
@@ -58,21 +58,21 @@ class TransactionService {
     const transactionDto = TransactionDTO.from(transaction);
 
     return {
-      message: "Transactions updated",
+      message: "Transaction updated",
       data: transactionDto,
     };
   }
 
-  async delete(id) {
+  static async delete(id) {
     const transaction = await TransactionRepository.deleteOne(id);
 
     if (!transaction) {
-        throw new NotFoundException("Transaction not found");
-      }
+      throw new NotFoundException("Transaction not found");
+    }
 
-      return {
-        message: "Transactions deleted",
-        data: transaction,
-      };
+    return {
+      message: "Transaction deleted",
+      data: transaction,
+    };
   }
 }

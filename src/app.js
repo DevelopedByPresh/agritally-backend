@@ -8,7 +8,7 @@ import { logger } from "./utils/logger.utils.js";
 import { resourceNotFoundHandler } from "./middleware/resource-not-found-handler.js";
 import { errorHandlingMiddleware } from "./middleware/error-handling.middleware.js";
 import connectDB from "./config/db.js";
-import routes from "./routes/index.js";
+import {router} from "./routes/index.js";
 
 const app = express();
 
@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
 
-app.use("/", routes);
+app.use("/", router);
 
 app.use(resourceNotFoundHandler);
 app.use(errorHandlingMiddleware);

@@ -1,6 +1,10 @@
 import express from 'express';
 import orderController from '../controllers/order.controller.js';
-import { verifyStaff, verifyManager, verifyOwner } from '../middleware/auth.verifiyToken.js'; 
+import {
+  verifyStaff,
+  verifyManager,
+  verifyOwner,
+} from "../middleware/auth.verifyToken.js"; 
 
 const orderRouter = express.Router();
 

@@ -1,4 +1,4 @@
-import { BaseHttpResponse } from '../utils/base-http-reponse.utils.js';
+import { BaseHttpResponse } from '../utils/base-http-response.utils.js';
 import { BaseException } from '../utils/exceptions/index.js';
 import { logger } from '../utils/logger.utils.js';
 

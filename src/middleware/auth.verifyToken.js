@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import { STATUS_CODE } from "../utils/constants.js";
-import { handleError } from "../middleware/errorHandler.middleware.js";
+import { handleError } from "./errorHandler.middleware.js";
 
 function verifyToken(req, res, next) {
   try {

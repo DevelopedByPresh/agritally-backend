@@ -4,7 +4,7 @@ import {
   verifyStaff,
   verifyManager,
   verifyOwner,
-  } from '../middleware/auth.verifiyToken.js';
+} from "../middleware/auth.verifyToken.js";
 
 const cartRouter = express.Router();
 

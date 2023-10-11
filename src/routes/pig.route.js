@@ -1,6 +1,11 @@
 import express from 'express';
 import pigController from '../controllers/pig.controller.js'; 
-import { verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } from '../middleware/auth.verifiyToken.js'; 
+import {
+  verifyStaff,
+  verifyManager,
+  verifyOwner,
+  verifySuperAdmin,
+} from "../middleware/auth.verifyToken.js"; 
 
 const pigRouter = express.Router();
 

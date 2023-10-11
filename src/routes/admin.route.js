@@ -4,7 +4,7 @@ import {
   verifyToken,
   verifyManager,
   verifyOwner,
-} from "../middleware/auth.verifiyToken.js";
+} from "../middleware/auth.verifyToken.js";
 
 const adminRouter = express.Router();
 

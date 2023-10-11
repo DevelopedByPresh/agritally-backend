@@ -1,6 +1,11 @@
 import express from 'express';
 import poultryController from '../controllers/poultry.controller.js';
-import { verifyStaff, verifyManager, verifyOwner, verifySuperAdmin } from '../middleware/auth.verifiyToken.js';
+import {
+  verifyStaff,
+  verifyManager,
+  verifyOwner,
+  verifySuperAdmin,
+} from "../middleware/auth.verifyToken.js";
 
 const poultryRouter = express.Router();
 
