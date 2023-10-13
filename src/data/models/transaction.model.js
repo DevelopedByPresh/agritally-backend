@@ -1,17 +1,28 @@
 import mongoose from "mongoose";
+import autopopulate from "mongoose-autopopulate";
 
 const TransactionSchema = new mongoose.Schema(
   {
-    productId: {
+    orderId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Product",
+      ref: "Order",
+      autopopulate: {
+        path: "orderId",
+        populate: {
+          path: "cartId",
+          select: "cartItems productId",
+        },
+        select: "total status",
+      },
       required: true,
     },
+
     type: {
       type: String,
       enum: ["Purchase", "Sale", "Mortality"],
       required: true,
     },
+
     amount: {
       type: Number,
       required: true,
@@ -25,5 +36,7 @@ const TransactionSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+TransactionSchema.plugin(autopopulate);
 
 export default mongoose.model("Transaction", TransactionSchema);

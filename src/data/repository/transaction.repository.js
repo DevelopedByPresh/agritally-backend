@@ -8,7 +8,13 @@ export class TransactionRepository {
   }
 
   static async findById(recordId) {
-    const record = await Transaction.findById(recordId);
+    const record = await Transaction.findById(recordId)
+    // .populate({
+    //   path: "orderId",
+    //   populate: {
+    //     path: "cartId",
+    //   }
+    // })
     return record;
   }
 
@@ -35,8 +41,6 @@ export class TransactionRepository {
     const deletedRecord = await Transaction.findByIdAndRemove(recordId);
     return deletedRecord;
   }
-
-
 }
 
 export default TransactionRepository;

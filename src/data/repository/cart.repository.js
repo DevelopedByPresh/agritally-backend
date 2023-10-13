@@ -22,15 +22,6 @@ class CartRepository {
 
   async findOne(query) {
     const cart = await Cart.findOne(query)
-      .populate({
-        path: "user",
-        select: ["firstName", "lastName"],
-      })
-      .populate({
-        path: "cartItems.productId",
-        model: "Product", 
-        select: ["category", "section"],
-      });
     return cart;
   }
 
@@ -47,11 +38,7 @@ class CartRepository {
   }
 
   async getAll() {
-    const carts = await Cart.find().populate({
-      path: "user",
-      select: ["firstName", "lastName"],
-    });
-    // .populate("cartItems.productId");
+    const carts = await Cart.find();
     return carts;
   }
 }

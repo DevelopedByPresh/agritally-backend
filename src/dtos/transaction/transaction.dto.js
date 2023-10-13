@@ -1,7 +1,7 @@
 class TransactionDTO {
-  constructor({ id, productId, type, amount, date, createdAt, updatedAt }) {
+  constructor({ id, orderId, type, amount, date, createdAt, updatedAt }) {
     this.id = id;
-    this.productId = productId;
+    this.orderId = orderId;
     this.type = type;
     this.amount = amount;
     this.date = date;
@@ -12,7 +12,7 @@ class TransactionDTO {
   static from(transactionEntity) {
     return new TransactionDTO({
       id: transactionEntity.id,
-      productId: transactionEntity.productId,
+      orderId: transactionEntity.orderId,
       type: transactionEntity.type,
       amount: transactionEntity.amount,
       date: transactionEntity.date,

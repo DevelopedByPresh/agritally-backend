@@ -20,8 +20,8 @@ const amountSchema = Joi.number().min(0).required().messages({
 
 export function validateTransaction(transaction) {
   const schema = Joi.object({
-    productId: objectIdSchema.required().messages({
-      "any.required": "Product ID is required",
+    orderId: objectIdSchema.required().messages({
+      "any.required": "Order ID is required",
     }),
     type: transactionTypeSchema,
     amount: amountSchema,
@@ -36,7 +36,7 @@ export function validateTransaction(transaction) {
 
 export function updateTransactionValidator(transaction) {
   const schema = Joi.object({
-    productId: objectIdSchema,
+    orderId: objectIdSchema,
     type: transactionTypeSchema,
     amount: amountSchema,
   });

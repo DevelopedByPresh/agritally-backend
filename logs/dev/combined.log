@@ -3923,3 +3923,477 @@
 {"level":"error","message":"Cast to ObjectId failed for value \"{ id: '65267b62fc6c5d8e581f2d4c' }\" (type Object) at path \"_id\" for model \"Transaction\"","meta":"CastError: Cast to ObjectId failed for value \"{ id: '65267b62fc6c5d8e581f2d4c' }\" (type Object) at path \"_id\" for model \"Transaction\"\n    at ObjectId.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schema\\objectid.js:250:11)\n    at SchemaType.applySetters (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1220:12)\n    at SchemaType.castForQuery (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1632:15)\n    at cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\cast.js:298:34)\n    at Query.cast (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4900:12)\n    at Query._castConditions (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2223:10)\n    at model.Query._findOneAndUpdate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:3291:8)\n    at model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:28)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async TransactionRepository.updateOne (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:26:27)"}
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.","meta":"StrictPopulateError: Cannot populate path `user` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:49:12)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4325:21)\n    at _populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4285:5)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4257:5\n    at new Promise (<anonymous>)\n    at Function.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4256:10)\n    at model.Query._find (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2307:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:11)\n    at async TransactionRepository.getAll (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:21:21)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Transaction validation failed: productId: Path `productId` is required.","meta":"ValidationError: Transaction validation failed: productId: Path `productId` is required.\n    at Document.invalidate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\document.js:2955:17\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"error","message":"Transaction validation failed: productId: Path `productId` is required.","meta":"ValidationError: Transaction validation failed: productId: Path `productId` is required.\n    at Document.invalidate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\document.js:2955:17\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Path collision at cartId.productId remaining portion productId","meta":"MongoServerError: Path collision at cartId.productId remaining portion productId\n    at Connection.onMessage (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at Socket.ondata (node:internal/streams/readable:766:22)\n    at Socket.emit (node:events:514:28)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Path collision at cartId.cartItems.productId remaining portion cartItems.productId","meta":"MongoServerError: Path collision at cartId.cartItems.productId remaining portion cartItems.productId\n    at Connection.onMessage (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at Socket.ondata (node:internal/streams/readable:766:22)\n    at Socket.emit (node:events:514:28)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot populate path `orderId.orderId` because it is not in your schema. Set the `strictPopulate` option to false to override.","meta":"StrictPopulateError: Cannot populate path `orderId.orderId` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:49:12)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4325:21)\n    at _populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4285:5)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4257:5\n    at new Promise (<anonymous>)\n    at Function.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4256:10)\n    at model.Query._find (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2307:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:11)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot populate path `orderId.cartId.` because it is not in your schema. Set the `strictPopulate` option to false to override.","meta":"StrictPopulateError: Cannot populate path `orderId.cartId.` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:49:12)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4325:21)\n    at _populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4285:5)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4257:5\n    at new Promise (<anonymous>)\n    at Function.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4256:10)\n    at model.Query._find (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2307:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:11)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot populate path `orderId.cartId.productId` because it is not in your schema. Set the `strictPopulate` option to false to override.","meta":"StrictPopulateError: Cannot populate path `orderId.cartId.productId` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:49:12)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4325:21)\n    at _populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4285:5)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4257:5\n    at new Promise (<anonymous>)\n    at Function.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4256:10)\n    at model.Query._find (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2307:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:11)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"utils.populate: invalid path. Expected string. Got typeof `object`","meta":"TypeError: utils.populate: invalid path. Expected string. Got typeof `object`\n    at Object.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\utils.js:564:11)\n    at _populateObj (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\utils.js:608:28)\n    at Object.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\utils.js:567:10)\n    at _populateObj (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\utils.js:608:28)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\utils.js:567:10)\n    at Query.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4766:30)\n    at TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:12:6)\n    at TransactionService.one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/services/transaction.service.js:36:53)\n    at one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/controllers/transaction.controller.js:21:59)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"utils.populate: invalid path. Expected string. Got typeof `object`","meta":"TypeError: utils.populate: invalid path. Expected string. Got typeof `object`\n    at Object.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\utils.js:564:11)\n    at _populateObj (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\utils.js:608:28)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\utils.js:567:10)\n    at Query.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4766:30)\n    at model.Query.autopopulateHandler (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose-autopopulate\\index.js:62:16)\n    at model.Query.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose-autopopulate\\index.js:77:67)\n    at next (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\kareem\\index.js:97:35)\n    at Kareem.execPre (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\kareem\\index.js:122:8)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4505:28\n    at new Promise (<anonymous>)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Path collision at cartId","meta":"MongoServerError: Path collision at cartId\n    at Connection.onMessage (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at Socket.ondata (node:internal/streams/readable:766:22)\n    at Socket.emit (node:events:514:28)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Path collision at cartId.cartItems remaining portion cartItems","meta":"MongoServerError: Path collision at cartId.cartItems remaining portion cartItems\n    at Connection.onMessage (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at Socket.ondata (node:internal/streams/readable:766:22)\n    at Socket.emit (node:events:514:28)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Transaction.findById(...).populate(...).execPopulate is not a function","meta":"TypeError: Transaction.findById(...).populate(...).execPopulate is not a function\n    at TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:22:8)\n    at TransactionService.one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/services/transaction.service.js:36:53)\n    at one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/controllers/transaction.controller.js:21:59)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Transaction.findById(...).populate(...).execPopulate is not a function","meta":"TypeError: Transaction.findById(...).populate(...).execPopulate is not a function\n    at TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:22:8)\n    at TransactionService.one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/services/transaction.service.js:36:53)\n    at one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/controllers/transaction.controller.js:21:59)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"{(intermediate value)}.select is not a function","meta":"TypeError: {(intermediate value)}.select is not a function\n    at TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:17:8)\n    at TransactionService.one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/services/transaction.service.js:36:53)\n    at one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/controllers/transaction.controller.js:21:59)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"{(intermediate value)}.select is not a function","meta":"TypeError: {(intermediate value)}.select is not a function\n    at TransactionRepository.findById (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/data/repository/transaction.repository.js:17:8)\n    at TransactionService.one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/services/transaction.service.js:36:53)\n    at one (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/controllers/transaction.controller.js:21:59)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Admin/PROJECT/agriTally-backend/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Path collision at cartId.cartItems remaining portion cartItems","meta":"MongoServerError: Path collision at cartId.cartItems remaining portion cartItems\n    at Connection.onMessage (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:514:28)\n    at processIncomingData (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at Socket.ondata (node:internal/streams/readable:766:22)\n    at Socket.emit (node:events:514:28)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot populate path `cartId` because it is not in your schema. Set the `strictPopulate` option to false to override.","meta":"StrictPopulateError: Cannot populate path `cartId` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:49:12)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4325:21)\n    at _populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4285:5)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4257:5\n    at new Promise (<anonymous>)\n    at Function.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4256:10)\n    at model.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\document.js:4434:24)\n    at model.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose-autopopulate\\index.js:112:19)\n    at next (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\kareem\\index.js:268:35)\n    at Kareem.execPost (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\kareem\\index.js:296:3)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot populate path `cartId` because it is not in your schema. Set the `strictPopulate` option to false to override.","meta":"StrictPopulateError: Cannot populate path `cartId` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:49:12)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4325:21)\n    at _populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4285:5)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4257:5\n    at new Promise (<anonymous>)\n    at Function.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4256:10)\n    at model.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\document.js:4434:24)\n    at model.<anonymous> (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose-autopopulate\\index.js:112:19)\n    at next (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\kareem\\index.js:268:35)\n    at Kareem.execPost (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\kareem\\index.js:296:3)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot populate path `orderId.-user` because it is not in your schema. Set the `strictPopulate` option to false to override.","meta":"StrictPopulateError: Cannot populate path `orderId.-user` because it is not in your schema. Set the `strictPopulate` option to false to override.\n    at getModelsMapForPopulate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\helpers\\populate\\getModelsMapForPopulate.js:49:12)\n    at populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4325:21)\n    at _populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4285:5)\n    at C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4257:5\n    at new Promise (<anonymous>)\n    at Function.populate (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\model.js:4256:10)\n    at model.Query._find (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:2307:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async model.Query.exec (C:\\Users\\Admin\\PROJECT\\agriTally-backend\\node_modules\\mongoose\\lib\\query.js:4419:11)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}

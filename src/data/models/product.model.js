@@ -1,11 +1,14 @@
 import mongoose from "mongoose";
+import autopopulate from "mongoose-autopopulate"; 
 
 const productSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: true,
+      autopopulate: {
+        select: "firstName lastName",
+      }
     },
     category: {
       type: String,
@@ -64,5 +67,7 @@ productSchema.pre("save", function (next) {
 
   next();
 });
+
+productSchema.plugin(autopopulate);
 
 export default mongoose.model("Product", productSchema);
