@@ -1,12 +1,13 @@
-import ProductRepository from "../data/repository/product.repository.js";
-import OrderRepository from "../data/repository/order.respository.js";
-import { NotFoundException, ValidationException } from "../utils/exceptions/index.js";
+import { CartRepository, ProductRepository, OrderRepository } from "../data/repository/index.js";
+import {
+  NotFoundException,
+  ValidationException,
+} from "../utils/exceptions/index.js";
 import OrderDto from "../dtos/order/order.Dto.js";
-import cartRepository from "../data/repository/cart.repository.js";
 
-class OrderService {
-  async createOrder(orderDTO) {
-    // orderValidator.validateOrder(orderDTO);
+export class OrderService {
+  static async createOrder(orderDTO) {
+    orderValidator.validateOrder(orderDTO);
 
     // Fetch the cart from the database
     const { cartId, user, total } = orderDTO;
@@ -15,7 +16,7 @@ class OrderService {
       throw new ValidationException("Order with this cart Id already created");
     }
 
-    const cart = await cartRepository.findById(cartId);
+    const cart = await CartRepository.findById(cartId);
 
     if (!cart) {
       throw new NotFoundException("Cart not found");
@@ -52,7 +53,7 @@ class OrderService {
     };
   }
 
-  async getOne(id) {
+  static async getOne(id) {
     const order = await OrderRepository.findById(id);
 
     if (!order) {
@@ -67,7 +68,7 @@ class OrderService {
     };
   }
 
-  async getAllByUser(userId) {
+  static async getAllByUser(userId) {
     // const {id} = userId
     const orders = await OrderRepository.getAll({ user: userId });
 
@@ -79,8 +80,8 @@ class OrderService {
       data: orderDtos,
     };
   }
-  
-  async getAll(filter) {
+
+  static async getAll(filter) {
     const { section, year, month, date, category } = filter;
 
     let query = {};
@@ -117,10 +118,10 @@ class OrderService {
     };
   }
 
-  async updateOrder(itemId, updateDto) {
+  static async updateOrder(itemId, updateDto) {
     const { id } = itemId;
     const updatedOrder = await OrderRepository.updateOne(id, updateDto);
-    console.log(updatedOrder)
+    console.log(updatedOrder);
     if (!updatedOrder) {
       throw new NotFoundException("Order not found");
     }
@@ -132,11 +133,11 @@ class OrderService {
     };
   }
 
-  async delete(id) {
+  static async delete(id) {
     const product = await OrderRepository.findById(id);
 
     if (!product) {
-      throw new NotFoundException("Product not found");
+      throw aNotFoundException("Product not found");
     }
 
     await product.deleteOne();
@@ -145,5 +146,3 @@ class OrderService {
     };
   }
 }
-
-export default new OrderService();

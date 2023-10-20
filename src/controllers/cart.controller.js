@@ -1,99 +1,59 @@
-import { STATUS_CODE } from "../utils/constants.js";
-import { handleError } from "../middleware/errorHandler.middleware.js";
-import cartService from "../services/cart.service.js";
+import { CartService } from "../services/index.js";
+import { BaseHttpResponse } from "../utils/base-http-response.utils.js";
 
-class CartController {
-  async addToCart(req, res) {
-    try {
-      const cart = await cartService.createCart(req.body);
+export class CartController {
+  static addToCart = async (req, res) => {
+    const { message, data } = await CartService.addToCart(req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(201).json(response);
+  };
 
-      res.json(cart);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
-  }
+  static getOne = async (req, res) => {
+    const { id } = req.params;
+    const { message, data } = await CartService.getOne(id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-  async getOne(req, res) {
-    try {
-      const { id } = req.params;
-      const cart = await cartService.getOne(id);
+  static fetchUserCart = async (req, res) => {
+    const { userId } = req.params;
+    const { active } = req.query;
+    const { message, data } = await CartService.getUserCart(userId, active);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-      res.json(cart);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
-  }
+  static getAll = async (req, res) => {
+    const { message, data } = await CartService.getAll(req.query);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-  async fetchUserCart(req, res) {
-    try {
-      const { userId } = req.params
-      const { active } = req.query
-      const carts = await cartService.getUserCart(userId, active);
+  static updateCartItem = async (req, res) => {
+    const { id } = req.params;
+    const { message, data } = await CartService.updateCartItem(id, req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-      res.json(carts);
-    } catch (error) {
-      console.error(error);
-      return handleError(error, res);
-    }
-  }
+  static removeCartItem = async (req, res) => {
+    const { cartId, productId } = req.query;
+    const { message, data } = await CartService.removeCartItem(req.query);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-  async getAll(req, res) {
-    try {
-      const carts = await cartService.getAll(req.query);
+  static updateCart = async (req, res) => {
+    const { id } = req.params;
+    const { message, data } = await CartService.updateCart(id, req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-      res.json(carts);
-    } catch (error) {
-      console.error(error);
-      return handleError(error, res);
-    }
-  }
-
-  async updateCartItem(req, res) {
-    try {
-      const { id } = req.params;
-      const updateCartItem = await cartService.updateCartItem(id, req.body);
-
-      res.json(updateCartItem);
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
-
-  async removeCartItem(req, res) {
-    try {
-      const { cartId, productId } = req.query;
-      const removeCartItem = await cartService.removeCartItem(req.query);
-
-      res.json(removeCartItem);
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
-
-  async updateCart(req, res) {
-    try {
-      const { id } = req.params;
-      const updateCartItem = await cartService.updateCart(id, req.body);
-
-      res.json(updateCartItem);
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
-
-  async delete(req, res) {
-    try {
-      const { id } = req.params;
-      const deletedCart = await cartService.delete(id);
-
-      res.json(deletedCart);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
-  }
+  static delete = async (req, res) => {
+    const { id } = req.params;
+    const { message, data } = await CartService.delete(id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(204).json(response);
+  };
 }
-
-export default new CartController();

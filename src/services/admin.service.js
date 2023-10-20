@@ -1,14 +1,14 @@
-import Admin from "../data/models/admin.model.js";
-import AdminRepository from "../data/repository/admin.repository.js";
+import { Admin } from "../data/models/index.js";
+import { AdminRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { adminValidator } from "../validators/admin.validation.js";
 import AdminDto from "../dtos/admin/admin.Dto.js";
 import bcryptHelper from "../lib/bcrypt.js";
 import { generateJWTToken, decodeToken } from "../lib/jwt.service.js";
 
-class AdminService {
-  async register(adminDTO) {
-    adminValidator.validateAdmin(adminDTO); 
+export class AdminService {
+  static async register(adminDTO) {
+    adminValidator.validateAdmin(adminDTO);
     const existingAdmin = await AdminRepository.findByEmail(adminDTO.email);
     if (existingAdmin) return { message: "Admin already exists" };
 
@@ -29,7 +29,7 @@ class AdminService {
     };
   }
 
-  async login(loginDto) {
+  static async login(loginDto) {
     const { email, password } = loginDto;
 
     const admin = await AdminRepository.findByEmail(email);
@@ -57,7 +57,7 @@ class AdminService {
     };
   }
 
-  async getOne(id) {
+  static async getOne(id) {
     const admin = await AdminRepository.findById(id);
 
     const adminDto = AdminDto.from(admin);
@@ -68,7 +68,7 @@ class AdminService {
     };
   }
 
-  async getAll() {
+  static async getAll() {
     const admins = await AdminRepository.getAll();
 
     return {
@@ -78,20 +78,7 @@ class AdminService {
     };
   }
 
-  async changeUserRole(adminId, changes) {
-    const { id } = adminId;
-    const updatedAdmin = await AdminRepository.updateOne(id, changes);
-    if (!updatedAdmin) {
-      throw new NotFoundException("Admin not found");
-    }
-    const adminDto = AdminDto.from(updatedAdmin);
-
-    return {
-      message: "Admin Updated",
-      data: adminDto,
-    };
-  }
-  async updateOne(adminId, changes) {
+  static async changeUserRole(adminId, changes) {
     const { id } = adminId;
     const updatedAdmin = await AdminRepository.updateOne(id, changes);
     if (!updatedAdmin) {
@@ -105,7 +92,21 @@ class AdminService {
     };
   }
 
-  async deleteAdmin(id) {
+  static async updateOne(adminId, changes) {
+    const { id } = adminId;
+    const updatedAdmin = await AdminRepository.updateOne(id, changes);
+    if (!updatedAdmin) {
+      throw aNotFoundException("Admin not found");
+    }
+    const adminDto = AdminDto.from(updatedAdmin);
+
+    return {
+      message: "Admin Updated",
+      data: adminDto,
+    };
+  }
+
+  static async deleteAdmin(id) {
     const admin = await AdminRepository.deleteOne(id);
 
     if (!admin) {
@@ -117,5 +118,3 @@ class AdminService {
     };
   }
 }
-
-export const adminService = new AdminService();

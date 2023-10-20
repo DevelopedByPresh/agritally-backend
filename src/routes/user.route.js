@@ -1,5 +1,5 @@
 import express from "express";
-import { userController } from "../controllers/index.js";
+import { UserController } from "../controllers/index.js";
 import {
   verifyToken,
   verifyStaff,
@@ -10,14 +10,14 @@ import {
 
 const userRouter = express.Router();
 
-userRouter.post("/register", userController.register);
-userRouter.post("/login", userController.login);
-userRouter.get("/get/:id", verifyStaff, userController.getOne);
+userRouter.post("/register", UserController.register);
+userRouter.post("/login", UserController.login);
+userRouter.get("/get/:id", verifyStaff, UserController.getOne);
 userRouter.patch(
   "/update-profile/:id",
   verifyManager,
-  userController.updateProfile
+  UserController.updateProfile
 );
-userRouter.delete("/delete/:id", verifyOwner, userController.deleteUser);
+userRouter.delete("/delete/:id", verifyOwner, UserController.deleteUser);
 
 export default userRouter;

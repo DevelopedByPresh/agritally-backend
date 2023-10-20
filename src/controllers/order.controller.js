@@ -1,86 +1,48 @@
-import { STATUS_CODE } from '../utils/constants.js';
-import { handleError } from '../middleware/errorHandler.middleware.js';
-import orderService from '../services/order.service.js';
+import { OrderService } from "../services/index.js";
+import { BaseHttpResponse } from '../utils/base-http-response.utils.js';
 
-class OrderController {
-  async createOrder(req, res) {
-    try {
-      const { user, cartId } = req.body;
-      const order = await orderService.createOrder(req.body);
+export class OrderController {
+  static createOrder = async (req, res) => {
+    const { user, cartId } = req.body;
+    const { message, data } = await OrderService.createOrder(req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(201).json(response);
+  };
 
-      res.json(order);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
+  static getOne = async (req, res) => {
+    const { id } = req.params;
+    const { message, data } = await OrderService.getOne(id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
+
+  static getAll = async (req, res) => {
+    const { message, data } = await OrderService.getAll(req.query);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
+
+  static getAllUserOrder = async (req, res) => {
+    const { id } = req.query;
+    const { message, data } = await OrderService.getAllByUser(id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
+
+  static updateOrder = async (req, res) => {
+    const { id } = req.params;
+    const updateDto = req.body;
+    const updatedOrder = await OrderService.updateOrder(req.params, updateDto);
+    if (!updatedOrder) {
+      res.status(STATUS_CODE.NOT_FOUND).json({ error: 'Item not found' });
     }
-  }
+    res.status(STATUS_CODE.OK).json({ message: 'Item updated', data: updatedOrder });
+  };
 
-  async getOne(req, res) {
-    try {
-      const { id } = req.params;
-      const orderItem = await orderService.getOne(id);
-
-      res.json(orderItem);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
-  }
-
-  async getAll(req, res) {
-    try {
-      const orderItems = await orderService.getAll(req.query);
-
-      res.json(orderItems);
-    } catch (error) {
-      console.error(error);
-      return handleError(error, res);
-    }
-  }
-
-  async getAllUserOrder(req, res) {
-    try {
-      const orderItems = await orderService.getAllByUser(req.query.id);
-
-      res.json(orderItems);
-    } catch (error) {
-      console.error(error);
-      return handleError(error, res);
-    }
-  }
-
-  async updateOrder(req, res) {
-    try {
-      const { id } = req.params;
-      const updateDto = req.body;
-
-      const updatedOrder = await orderService.updateOrder(req.params, updateDto);
-
-      if (!updatedOrder) {
-        return res
-          .status(STATUS_CODE.NOT_FOUND)
-          .json({ error: 'Item not found' });
-      }
-
-      return res
-        .status(STATUS_CODE.OK)
-        .json({ message: 'Item updated', data: updatedOrder });
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
-
-  async delete(req, res) {
-    try {
-      const { id } = req.params;
-      const order = await orderService.delete(id);
-
-      res.json(order);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
-  }
+  static delete = async (req, res) => {
+    const { id } = req.params;
+    const { message, data } = await OrderService.delete(id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 }
-
-export default new OrderController();

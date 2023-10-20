@@ -1,9 +1,8 @@
+import { Admin } from "../models/admin.model.js";
+import bcryptHelper from "../../lib/bcrypt.js";
 
-import Admin from "../models/admin.model.js";
-import bcryptHelper from '../../lib/bcrypt.js';
-
-class AdminRepository {
-  async save(adminDTO) {
+export class AdminRepository {
+  static async save(adminDTO) {
     const hashedPassword = await bcryptHelper.hash(adminDTO.password);
     adminDTO.password = hashedPassword;
 
@@ -12,32 +11,30 @@ class AdminRepository {
     return savedAdmin;
   }
 
-  async findById(adminId) {
+  static async findById(adminId) {
     const admin = await Admin.findById(adminId);
     return admin;
   }
 
-  async findByEmail(email) {
+  static async findByEmail(email) {
     const admin = await Admin.findOne({ email });
     return admin;
   }
 
-  async updateOne(adminId, updateDto) {
+  static async updateOne(adminId, updateDto) {
     const updatedAdmin = await Admin.findByIdAndUpdate(adminId, updateDto, {
       new: true,
     });
     return updatedAdmin;
   }
 
-  async deleteOne(id) {
+  static async deleteOne(id) {
     const deletedAdmin = await Admin.findByIdAndDelete(id);
     return deletedAdmin;
   }
 
-  async getAll() {
+  static async getAll() {
     const admins = await Admin.find();
     return admins;
   }
 }
-
-export default new AdminRepository();

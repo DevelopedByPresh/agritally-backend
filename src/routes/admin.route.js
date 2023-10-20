@@ -1,5 +1,5 @@
 import express from "express";
-import { adminController, userController } from "../controllers/index.js";
+import { AdminController, UserController } from "../controllers/index.js";
 import {
   verifyToken,
   verifyManager,
@@ -8,17 +8,17 @@ import {
 
 const adminRouter = express.Router();
 
-adminRouter.post("/register", adminController.register);
-adminRouter.post("/login", adminController.login);
-adminRouter.get("/get/:id", verifyToken, adminController.getOne);
-adminRouter.get("/getAll", verifyManager, adminController.getAll);
+adminRouter.post("/register", AdminController.register);
+adminRouter.post("/login", AdminController.login);
+adminRouter.get("/get/:id", verifyToken, AdminController.getOne);
+adminRouter.get("/getAll", verifyManager, AdminController.getAll);
 adminRouter.patch(
   "/update-profile/:id",
   verifyManager,
-  adminController.updateProfile
+  AdminController.updateProfile
 );
-adminRouter.delete("/delete/:id", verifyOwner, adminController.deleteAdmin);
+adminRouter.delete("/delete/:id", verifyOwner, AdminController.deleteAdmin);
 
-adminRouter.get("/users/getAll", verifyManager, userController.getAll);
+adminRouter.get("/users/getAll", verifyManager, UserController.getAll);
 
 export default adminRouter;

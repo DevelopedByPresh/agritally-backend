@@ -1,12 +1,11 @@
-import ProductRepository from "../data/repository/product.repository.js";
+import { ProductRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { productValidator } from "../validators/product.validation.js";
 import ProductDto from "../dtos/product/product.Dto.js";
 import filterSelection from "../utils/queryFilter.js";
 
-
-class ProductService {
-  async createProduct(productDTO) {
+export class ProductService {
+  static async createProduct(productDTO) {
     productValidator.validateProduct(productDTO);
 
     const newProduct = await ProductRepository.save(productDTO);
@@ -18,7 +17,7 @@ class ProductService {
     };
   }
 
-  async getOne(id) {
+  static async getOne(id) {
     const product = await ProductRepository.findById(id);
 
     if (!product) {
@@ -33,9 +32,9 @@ class ProductService {
     };
   }
 
-  async getAll(filter) {
-    const query = filterSelection(filter)
- 
+  static async getAll(filter) {
+    const query = filterSelection(filter);
+
     const productItems = await ProductRepository.getAll(query);
 
     const productDtos = ProductDto.fromMany(productItems);
@@ -47,7 +46,7 @@ class ProductService {
     };
   }
 
-  async updateProductItem(itemId, updateDto) {
+  static async updateProductItem(itemId, updateDto) {
     const { id } = itemId;
     const updatedProduct = await ProductRepository.updateOne(id, updateDto);
     if (!updatedProduct) {
@@ -61,7 +60,7 @@ class ProductService {
     };
   }
 
-  async delete(id) {
+  static async delete(id) {
     const product = await ProductRepository.findById(id);
 
     if (!product) {
@@ -74,5 +73,3 @@ class ProductService {
     };
   }
 }
-
-export default new ProductService();

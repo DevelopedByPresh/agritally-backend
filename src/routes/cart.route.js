@@ -1,5 +1,5 @@
 import express from 'express';
-import cartController from '../controllers/cart.controller.js';
+import { CartController} from '../controllers/index.js';
 import {
   verifyStaff,
   verifyManager,
@@ -8,21 +8,21 @@ import {
 
 const cartRouter = express.Router();
 
-cartRouter.post('/add', verifyStaff, cartController.addToCart);
+cartRouter.post('/add', verifyStaff, CartController.addToCart);
 
-cartRouter.get("/getAll", verifyManager, cartController.getAll);
+cartRouter.get("/getAll", verifyManager, CartController.getAll);
 
-cartRouter.get("/get/:id", verifyStaff, cartController.getOne);
+cartRouter.get("/get/:id", verifyStaff, CartController.getOne);
 
-cartRouter.get("/:userId", verifyStaff, cartController.fetchUserCart);
+cartRouter.get("/:userId", verifyStaff, CartController.fetchUserCart);
 
-cartRouter.post("/active/:id", verifyStaff, cartController.updateCart);
+cartRouter.post("/active/:id", verifyStaff, CartController.updateCart);
 
-cartRouter.patch("/update/:id", verifyStaff, cartController.updateCartItem);
+cartRouter.patch("/update/:id", verifyStaff, CartController.updateCartItem);
 
-cartRouter.delete("/remove/:id", verifyStaff, cartController.removeCartItem);
+cartRouter.delete("/remove/:id", verifyStaff, CartController.removeCartItem);
 
-cartRouter.delete('/delete/:id', verifyOwner, cartController.delete);
+cartRouter.delete('/delete/:id', verifyOwner, CartController.delete);
 
 export default cartRouter;
 

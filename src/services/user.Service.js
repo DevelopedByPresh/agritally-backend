@@ -1,13 +1,13 @@
-import User from "../data/models/user.model.js";
-import UserRepository from "../data/repository/user.repository.js";
+import { User } from "../data/models/index.js";
+import { UserRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { userValidator } from "../validators/user.validation.js";
 import UserDto from "../dtos/user/user.Dto.js";
 import bcryptHelper from "../lib/bcrypt.js";
 import { generateJWTToken, decodeToken } from "../lib/jwt.service.js";
 
-class UserService {
-  async register(userDTO) {
+export class UserService {
+  static async register(userDTO) {
     userValidator.validateUser(userDTO);
     const existingUser = await UserRepository.findByEmail(userDTO.email);
     if (existingUser) return { message: "User already exists" };
@@ -29,7 +29,7 @@ class UserService {
     };
   }
 
-  async login(loginDto) {
+  static async login(loginDto) {
     const { email, password } = loginDto;
 
     const user = await UserRepository.findByEmail(email);
@@ -57,7 +57,7 @@ class UserService {
     };
   }
 
-  async getOne(id) {
+  static async getOne(id) {
     const user = await UserRepository.findById(id);
     if (!user) {
       throw new NotFoundException("User not found");
@@ -71,7 +71,7 @@ class UserService {
     };
   }
 
-  async getAll() {
+  static async getAll() {
     const user = await UserRepository.getAll();
 
     return {
@@ -81,7 +81,7 @@ class UserService {
     };
   }
 
-  async updateOne(userId, changes) {
+  static async updateOne(userId, changes) {
     const { id } = userId;
     const updatedUser = await UserRepository.updateOne(id, changes);
     if (!updatedUser) {
@@ -95,7 +95,7 @@ class UserService {
     };
   }
 
-  async deleteUser(id) {
+  static async deleteUser(id) {
     const user = await UserRepository.deleteOne(id);
 
     if (!user) {
@@ -107,5 +107,3 @@ class UserService {
     };
   }
 }
-
-export const userService = new UserService();

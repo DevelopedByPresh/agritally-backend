@@ -1,66 +1,41 @@
 import { handleError } from "../middleware/errorHandler.middleware.js";
-import {userService} from "../services/index.js";
+import { UserService } from "../services/index.js";
+import { BaseHttpResponse } from '../utils/base-http-response.utils.js';
 
-class UserController {
-  register = async (req, res) => {
-    try {
-      const user = await userService.register(req.body);
-      res.json(user);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
+export class UserController {
+  static register = async (req, res) => {
+    const { message, data } = await UserService.register(req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(201).json(response);
   };
 
-  login = async (req, res) => {
-    try {
-      const user = await userService.login(req.body);
-      res.json(user);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
+  static login = async (req, res) => {
+    const { message, data } = await UserService.login(req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
   };
 
-  getOne = async (req, res) => {
-    try {
-      const user = await userService.getOne(req.params.id);
-      res.json(user);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
+  static getOne = async (req, res) => {
+    const { message, data } = await UserService.getOne(req.params.id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
   };
 
-  getAll = async (req, res) => {
-    try {
-      const users = await userService.getAll();
-
-      res.json(users);
-    } catch (error) {
-      return handleError(error, res);
-    }
+  static getAll = async (req, res) => {
+    const { message, data } = await UserService.getAll();
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
   };
 
-  async updateProfile(req, res) {
-    try {
-      const user = await userService.updateOne(req.params, req.body);
-
-      res.json(user);
-    } catch (error) {
-      return handleError(error, res);
-    }
+  static updateProfile = async (req, res) => {
+    const { message, data } = await UserService.updateOne(req.params, req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
   }
 
-  deleteUser = async (req, res) => {
-    try {
-      const user = await userService.deleteUser(req.params.id);
-
-      res.json(user);
-    } catch (error) {
-      return handleError(error, res);
-    }
+  static deleteUser = async (req, res) => {
+    const { message, data } = await UserService.deleteUser(req.params.id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(204).json(response);
   };
 }
-
-export const userController = new UserController();

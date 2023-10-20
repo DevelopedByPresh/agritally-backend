@@ -1,8 +1,8 @@
-import User from "../models/user.model.js";
-import bcryptHelper from '../../lib/bcrypt.js';
+import { User } from "../models/index.js";
+import bcryptHelper from "../../lib/bcrypt.js";
 
-class UserRepository {
-  async save(userDTO) {
+export class UserRepository {
+  static async save(userDTO) {
     const hashedPassword = await bcryptHelper.hash(userDTO.password);
     userDTO.password = hashedPassword;
 
@@ -11,32 +11,29 @@ class UserRepository {
     return savedUser;
   }
 
-  async findById(userId) {
+  static async getAll() {
+    return User.find();
+  }
+
+  static async findById(userId) {
     const user = await User.findById(userId);
     return user;
   }
 
-  async findByEmail(email) {
+  static async findByEmail(email) {
     const user = await User.findOne({ email });
     return user;
   }
 
-  async updateOne(userId, updateDto) {
+  static async updateOne(userId, updateDto) {
     const updatedUser = await User.findByIdAndUpdate(userId, updateDto, {
       new: true,
     });
     return updatedUser;
   }
 
-  async deleteOne(id) {
+  static async deleteOne(id) {
     const deletedUser = await User.findByIdAndDelete(id);
     return deletedUser;
   }
-
-  async getAll() {
-    const users = await User.find();
-    return users;
-  }
 }
-
-export default new UserRepository();

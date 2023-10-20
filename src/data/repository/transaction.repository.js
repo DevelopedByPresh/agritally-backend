@@ -8,13 +8,7 @@ export class TransactionRepository {
   }
 
   static async findById(recordId) {
-    const record = await Transaction.findById(recordId)
-    // .populate({
-    //   path: "orderId",
-    //   populate: {
-    //     path: "cartId",
-    //   }
-    // })
+    const record = await Transaction.findById(recordId);
     return record;
   }
 
@@ -29,11 +23,9 @@ export class TransactionRepository {
   }
 
   static async updateOne(recordId, updateDto) {
-    const updatedRecord = await Transaction.findByIdAndUpdate(
-      recordId,
-      updateDto,
-      { new: true }
-    );
+    const updatedRecord = await Transaction.findByIdAndUpdate(recordId, updateDto, {
+      new: true,
+    });
     return updatedRecord;
   }
 
@@ -42,5 +34,3 @@ export class TransactionRepository {
     return deletedRecord;
   }
 }
-
-export default TransactionRepository;

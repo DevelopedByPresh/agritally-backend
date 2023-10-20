@@ -1,60 +1,36 @@
-import { handleError } from "../middleware/errorHandler.middleware.js";
-import productService from "../services/product.service.js";
+import { ProductService } from "../services/index.js";
+import { BaseHttpResponse } from '../utils/base-http-response.utils.js';
 
-class ProductController {
-  async createProduct(req, res) {
-    try {
-      const product = await productService.createProduct(req.body);
-      res.json(product);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
-  }
+export class ProductController {
+  static createProduct = async (req, res) => {
+    const { message, data } = await ProductService.createProduct(req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(201).json(response);
+  };
 
-  async getOne(req, res) {
-    try {
-      const { id } = req.params;
-      const product = await productService.getOne(id);
-      res.json(product);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
-  }
+  static getOne = async (req, res) => {
+    const { id } = req.params;
+    const { message, data } = await ProductService.getOne(id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-  async getAll(req, res) {
-    try {
-      const products = await productService.getAll(req.query);
-      res.json(products);
-    } catch (error) {
-      console.error(error);
-      return handleError(error, res);
-    }
-  }
+  static getAll = async (req, res) => {
+    const { message, data } = await ProductService.getAll(req.query);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-  async updateProductItem(req, res) {
-    try {
-      const updateProductItem = await productService.updateProductItem(
-        req.params,
-        req.body
-      );
-      res.json(updateProductItem);
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
+  static updateProductItem = async (req, res) => {
+    const { message, data } = await ProductService.updateProductItem(req.params, req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-  async delete(req, res) {
-    try {
-      const { id } = req.params;
-      const productItem = await productService.delete(id);
-      res.json(productItem);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
-  }
+  static delete = async (req, res) => {
+    const { id } = req.params;
+    const { message, data } = await ProductService.delete(id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 }
-
-export default new ProductController();

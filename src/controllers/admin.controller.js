@@ -1,73 +1,46 @@
-import { STATUS_CODE } from "../utils/constants.js";
-import { handleError } from "../middleware/errorHandler.middleware.js";
-import {adminService, userService} from "../services/index.js";
+import { AdminService } from "../services/index.js";
+import { BaseHttpResponse } from '../utils/base-http-response.utils.js';
 
-class AdminController {
-  register = async (req, res) => {
-    try {
-      const admin = await adminService.register(req.body);
-      res.json(admin);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
+export class AdminController {
+  static register = async (req, res) => {
+    const { message, data } = await AdminService.register(req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(201).json(response);
   };
 
-  login = async (req, res) => {
-    try {
-      const admin = await adminService.login(req.body);
-      res.json(admin);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
+  static login = async (req, res) => {
+    const { message, data } = await AdminService.login(req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
   };
 
-  getOne = async (req, res) => {
-    try {
-      const admin = await adminService.getOne(req.params.id);
-      res.json(admin);
-    } catch (error) {
-      console.log(error);
-      return handleError(error, res);
-    }
+  static getOne = async (req, res) => {
+    const { message, data } = await AdminService.getOne(req.params.id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
   };
 
-  getAll = async (req, res) => {
-    try {
-      const admins = await adminService.getAll();
-      res.json(admins);
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
+  static getAll = async (req, res) => {
+    const { message, data } = await AdminService.getAll();
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-  async updateProfile(req, res) {
-    try {
-      const admin = await adminService.updateOne(req.params, req.body);
-      res.json(admin);
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
+  static updateProfile = async (req, res) => {
+    const { message, data } = await AdminService.updateOne(req.params, req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-  async changeUserRole(req, res) {
-    try {
-      const admin = await adminService.changeUserRole(req.params, req.body);
-      res.json(admin);
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
+  static changeUserRole = async (req, res) => {
+    const { message, data } = await AdminService.changeUserRole(req.params, req.body);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(200).json(response);
+  };
 
-   deleteAdmin = async (req, res) => {
-    try {
-      const admin = await adminService.deleteAdmin(req.params.id);
-      res.json(admin);
-    } catch (error) {
-      return handleError(error, res);
-    }
-  }
+  static deleteAdmin = async (req, res) => {
+    const { message, data } = await AdminService.deleteAdmin(req.params.id);
+    const response = BaseHttpResponse.success(message, data);
+    res.status(204).json(response);
+  };
 }
-
-export const adminController = new AdminController()
