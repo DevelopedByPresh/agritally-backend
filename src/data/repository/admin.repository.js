@@ -3,7 +3,7 @@ import { BcryptHelper } from "../../lib/index.js";
 
 export class AdminRepository {
   static async save(adminDTO) {
-    const hashedPassword = await bcryptHelper.hash(adminDTO.password);
+    const hashedPassword = await BcryptHelper.hash(adminDTO.password);
     adminDTO.password = hashedPassword;
 
     const newAdmin = new Admin(adminDTO);

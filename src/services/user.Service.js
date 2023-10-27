@@ -4,7 +4,7 @@ import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { userValidator } from "../validators/user.validation.js";
 import UserDto from "../dtos/user/user.Dto.js";
 import {BcryptHelper} from "../lib/index.js";
-import { generateJWTToken, decodeToken } from "../lib/jwt.service.js";
+import { jwtService } from "../lib/jwt.service.js";
 
 export class UserService {
   static async register(userDTO) {
@@ -14,7 +14,7 @@ export class UserService {
 
     const createUser = await UserRepository.save(userDTO);
 
-    const { token, expiresIn } = await generateJWTToken({
+    const { token, expiresIn } = await jwtService({
       id: createUser.id,
       role: createUser.role,
     });
@@ -42,7 +42,7 @@ export class UserService {
     if (!isMatch) {
       throw new NotFoundException("Email or password is incorrect");
     }
-    const { token, expiresIn } = await generateJWTToken({
+    const { token, expiresIn } = await jwtService({
       id: user.id,
       role: user.role,
     });

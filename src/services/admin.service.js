@@ -2,7 +2,7 @@ import { AdminRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { adminValidator } from "../validators/admin.validation.js";
 import AdminDto from "../dtos/admin/admin.Dto.js";
-import {BcryptHelper, generateJWTToken} from "../lib/index.js";
+import {jwtService} from "../lib/index.js";
 
 export class AdminService {
   static async register(adminDTO) {
@@ -12,18 +12,19 @@ export class AdminService {
 
     const createAdmin = await AdminRepository.save(adminDTO);
 
-    const { token, expiresIn } = await generateJWTToken({
+    const token = await generateJWTToken({
       id: createAdmin.id,
-      role: createAdmin.role,
+      // role: createAdmin.role,
     });
+
+    console.log(token)
 
     const newAdmin = AdminDto.from(createAdmin);
 
     return {
       message: "Admin created",
-      data: newAdmin,
       token,
-      expiresIn,
+      data: newAdmin,
     };
   }
 
@@ -36,7 +37,7 @@ export class AdminService {
       throw new NotFoundException("Admin not found");
     }
 
-    const isMatch = BcryptHelper.compare(password, admin.password);
+    const isMatch = jwtService.compa(password, admin.password);
     if (!isMatch) {
       throw new NotFoundException("Email or password is incorrect");
     }

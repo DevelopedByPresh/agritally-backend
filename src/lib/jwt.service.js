@@ -1,6 +1,6 @@
-import ms from 'ms';
 import dotenv from 'dotenv';
 import jwt from 'jsonwebtoken';
+import ms from 'ms'; // Don't forget to import the 'ms' library for token expiration.
 
 dotenv.config();
 
@@ -8,21 +8,22 @@ const accessTokenSecret = process.env.ACCESS_TOKEN_SECRET;
 const accessTokenTTL = process.env.ACCESS_TOKEN_TTL;
 const issuer = process.env.ISSUER;
 
-function generateJWTToken(payload, options = {}) {
-  options.issuer = options.issuer || issuer;
-  options.expiresIn = options.expiresIn || accessTokenTTL;
-  const expirationTimestamp = Date.now() + ms(accessTokenTTL);
+export class jwtService {
+  static TokenError = jwt.JsonWebTokenError;
+  
+  static generateAccessToken(payload, options = {}) {
+    options.issuer =  issuer;
+    options.expiresIn = accessTokenTTL;
+    const expirationTimestamp = Date.now() + ms(accessTokenTTL);
 
-  return {
-    token: jwt.sign(payload, accessTokenSecret, options),
-    expiresIn: Number(expirationTimestamp),
-  };
+    return {
+      token: jwt.sign(payload, accessTokenSecret, options),
+      expiresIn: Number(expirationTimestamp),
+    };
+  }
+
+  static decodeToken(token) {
+    return jwt.verify(token, accessTokenSecret, {issuer: issuer});
+  }
 }
 
-function decodeToken(token, options = {}) {
-  options.issuer = options.issuer || issuer;
-
-  return jwt.verify(token, accessTokenSecret, options);
-}
-
-export { generateJWTToken, decodeToken };
