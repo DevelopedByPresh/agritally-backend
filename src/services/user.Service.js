@@ -3,7 +3,7 @@ import { UserRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { userValidator } from "../validators/user.validation.js";
 import UserDto from "../dtos/user/user.Dto.js";
-import bcryptHelper from "../lib/bcrypt.js";
+import {BcryptHelper} from "../lib/index.js";
 import { generateJWTToken, decodeToken } from "../lib/jwt.service.js";
 
 export class UserService {
@@ -38,7 +38,7 @@ export class UserService {
       throw new NotFoundException("User not found");
     }
 
-    const isMatch = bcryptHelper.compare(user.password, password);
+    const isMatch = BcryptHelper.compare(user.password, password);
     if (!isMatch) {
       throw new NotFoundException("Email or password is incorrect");
     }

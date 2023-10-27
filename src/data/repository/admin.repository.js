@@ -1,5 +1,5 @@
 import { Admin } from "../models/admin.model.js";
-import bcryptHelper from "../../lib/bcrypt.js";
+import { BcryptHelper } from "../../lib/index.js";
 
 export class AdminRepository {
   static async save(adminDTO) {

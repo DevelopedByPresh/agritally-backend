@@ -1,5 +1,5 @@
 import { User } from "../models/index.js";
-import bcryptHelper from "../../lib/bcrypt.js";
+import { BcryptHelper } from "../../lib/index.js";
 
 export class UserRepository {
   static async save(userDTO) {
