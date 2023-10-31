@@ -1,31 +1,32 @@
 import { User } from "../data/models/index.js";
 import { UserRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
-import { userValidator } from "../validators/user.validation.js";
+// import { userValidator } from "../validators/user.validation.js";
 import UserDto from "../dtos/user/user.Dto.js";
-import {BcryptHelper} from "../lib/index.js";
+import { BcryptHelper } from "../lib/index.js";
 import { jwtService } from "../lib/jwt.service.js";
 
 export class UserService {
   static async register(userDTO) {
-    userValidator.validateUser(userDTO);
+    // userValidator.validateUser(userDTO);
     const existingUser = await UserRepository.findByEmail(userDTO.email);
     if (existingUser) return { message: "User already exists" };
 
-    const createUser = await UserRepository.save(userDTO);
+    const user = await UserRepository.save(userDTO);
 
-    const { token, expiresIn } = await jwtService({
-      id: createUser.id,
-      role: createUser.role,
+    const accessToken = jwtService.generateAccessToken({
+      id: user.id,
+      role: user.role,
     });
 
-    const newUser = UserDto.from(createUser);
+    const newUser = UserDto.from(user);
 
     return {
       message: "User created",
-      data: newUser,
-      token,
-      expiresIn,
+      data: {
+        ...newUser,
+        accessToken,
+      },
     };
   }
 
@@ -42,18 +43,18 @@ export class UserService {
     if (!isMatch) {
       throw new NotFoundException("Email or password is incorrect");
     }
-    const { token, expiresIn } = await jwtService({
+    const accessToken = jwtService.generateAccessToken({
       id: user.id,
       role: user.role,
     });
+
 
     const User = UserDto.from(user);
 
     return {
       message: "User Login ",
-      data: User,
-      token,
-      expiresIn,
+      ...User,
+      accessToken
     };
   }
 

@@ -4690,3 +4690,297 @@
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"generateJWTToken is not defined","meta":"ReferenceError: generateJWTToken is not defined\n    at AdminService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/admin.service.js:15:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/admin.controller.js:6:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"bcryptHelper is not defined","meta":"ReferenceError: bcryptHelper is not defined\n    at UserRepository.save (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/user.repository.js:6:28)\n    at UserService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/user.Service.js:15:45)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/user.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"expiresIn is not defined","meta":"ReferenceError: expiresIn is not defined\n    at UserService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/user.Service.js:30:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/user.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"message":"Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{},"setName":"atlas-12917n-shard-0","stale":false,"type":"ReplicaSetNoPrimary"}}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"ok":0}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":8000,"codeName":"AtlasError","connectionGeneration":0,"ok":0}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"\"expiresIn\" should be a number of seconds or string representing a timespan","meta":"Error: \"expiresIn\" should be a number of seconds or string representing a timespan\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:50:15\n    at Array.forEach (<anonymous>)\n    at validate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:41:6)\n    at validateOptions (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:56:10)\n    at module.exports [as sign] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:165:5)\n    at jwtService.generateAccessToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/lib/jwt.service.js:19:16)\n    at UserService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/user.Service.js:17:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/user.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"\"expiresIn\" should be a number of seconds or string representing a timespan","meta":"Error: \"expiresIn\" should be a number of seconds or string representing a timespan\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:50:15\n    at Array.forEach (<anonymous>)\n    at validate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:41:6)\n    at validateOptions (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:56:10)\n    at module.exports [as sign] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:165:5)\n    at jwtService.generateAccessToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/lib/jwt.service.js:19:16)\n    at UserService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/user.Service.js:17:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/user.controller.js:7:31)"}
+{"level":"error","message":"\"expiresIn\" should be a number of seconds or string representing a timespan","meta":"Error: \"expiresIn\" should be a number of seconds or string representing a timespan\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:50:15\n    at Array.forEach (<anonymous>)\n    at validate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:41:6)\n    at validateOptions (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:56:10)\n    at module.exports [as sign] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:165:5)\n    at jwtService.generateAccessToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/lib/jwt.service.js:19:16)\n    at UserService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/user.Service.js:17:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/user.controller.js:7:31)"}
+{"level":"error","message":"\"expiresIn\" should be a number of seconds or string representing a timespan","meta":"Error: \"expiresIn\" should be a number of seconds or string representing a timespan\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:50:15\n    at Array.forEach (<anonymous>)\n    at validate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:41:6)\n    at validateOptions (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:56:10)\n    at module.exports [as sign] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\sign.js:165:5)\n    at jwtService.generateAccessToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/lib/jwt.service.js:19:16)\n    at UserService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/user.Service.js:17:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/user.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"token is not defined","meta":"ReferenceError: token is not defined\n    at AdminService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/admin.service.js:20:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/admin.controller.js:6:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"createAdminRequestValidator is not a function","meta":"TypeError: createAdminRequestValidator is not a function\n    at AdminService.register (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/admin.service.js:9:5)\n    at register (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/admin.controller.js:6:50)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\index.js:284:15\n    at Function.process_params (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\index.js:346:12)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Admin validation failed: email: Path `email` is required.","meta":"ValidationError: Admin validation failed: email: Path `email` is required.\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:2955:17\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}

@@ -28,7 +28,6 @@ const adminSchema = new mongoose.Schema(
     phone: {
       type: String,
       required: true,
-      minlength: 10,
     },
     date_of_birth: {
       type: String,

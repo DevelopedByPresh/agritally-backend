@@ -2,7 +2,7 @@ import { AdminRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { adminValidator } from "../validators/admin.validation.js";
 import AdminDto from "../dtos/admin/admin.Dto.js";
-import {jwtService} from "../lib/index.js";
+import { jwtService } from "../lib/index.js";
 
 export class AdminService {
   static async register(adminDTO) {
@@ -10,21 +10,21 @@ export class AdminService {
     const existingAdmin = await AdminRepository.findByEmail(adminDTO.email);
     if (existingAdmin) return { message: "Admin already exists" };
 
-    const createAdmin = await AdminRepository.save(adminDTO);
+    const admin = await AdminRepository.save(adminDTO);
 
-    const token = await generateJWTToken({
-      id: createAdmin.id,
-      // role: createAdmin.role,
+    const accessToken = jwtService.generateAccessToken({
+      id: admin.id,
+      role: admin.role,
     });
 
-    console.log(token)
-
-    const newAdmin = AdminDto.from(createAdmin);
+    const newAdmin = AdminDto.from(admin);
 
     return {
-      message: "Admin created",
-      token,
-      data: newAdmin,
+      message: "Admin Created",
+      data: {
+        ...newAdmin,
+        accessToken,
+      }
     };
   }
 
@@ -41,7 +41,7 @@ export class AdminService {
     if (!isMatch) {
       throw new NotFoundException("Email or password is incorrect");
     }
-    const { token, expiresIn } = await generateJWTToken({
+    const accessToken = jwtService.generateAccessToken({
       id: admin.id,
       role: admin.role,
     });
@@ -49,10 +49,9 @@ export class AdminService {
     const adminDto = AdminDto.from(admin);
 
     return {
-      message: "Admin Login",
-      data: adminDto,
-      token,
-      expiresIn,
+      message: "Admin Logged in",
+      ...adminDto,
+      accessToken,
     };
   }
 
