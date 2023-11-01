@@ -3,7 +3,7 @@ import { BaseHttpResponse } from "../utils/base-http-response.utils.js";
 
 export class CartController {
   static addToCart = async (req, res) => {
-    const { message, data } = await CartService.addToCart(req.body);
+    const { message, data } = await CartService.createCart(req.body);
     const response = BaseHttpResponse.success(message, data);
     res.status(201).json(response);
   };

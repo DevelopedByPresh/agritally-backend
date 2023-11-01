@@ -64,7 +64,28 @@ export class CartService {
     };
   }
 
-  // Other methods here...
+  static async getAll() {
+    const carts = await CartRepository.getAll();
+
+    return {
+      message: "Success",
+      count: carts.length,
+      data: carts,
+    };
+  }
+
+  static async getOne(id) {
+    const cart = await CartRepository.findById(id);
+
+    if (!cart) {
+      throw new NotFoundException("Cart not found");
+    }
+
+    return {
+      message: "Success",
+      data: cart,
+    };
+  }
 
   static async updateCartItem(cartId, updateCartDto) {
     const { productId, quantity } = updateCartDto;
@@ -130,8 +151,6 @@ export class CartService {
       data: cart,
     };
   }
-
-  // Other methods here...
 
   static async delete(id) {
     const deletedCart = await CartRepository.deleteOne(id);

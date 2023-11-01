@@ -1,6 +1,5 @@
 import dotenv from "dotenv";
 import jwt from "jsonwebtoken";
-import ms from "ms"; // Don't forget to import the 'ms' library for token expiration.
 
 dotenv.config();
 

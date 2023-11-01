@@ -4984,3 +4984,192 @@
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":"ECONNREFUSED","hostname":"_mongodb._tcp.clusteragbe01.7nzef0r.mongodb.net","syscall":"querySrv"}}
+{"level":"error","message":"Operation `admins.findOne()` buffering timed out after 10000ms","meta":"MongooseError: Operation `admins.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"}
+{"level":"error","message":"Operation `admins.findOne()` buffering timed out after 10000ms","meta":"MongooseError: Operation `admins.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"User validation failed: email: Path `email` is required.","meta":"ValidationError: User validation failed: email: Path `email` is required.\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:2955:17\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"jwtService.compa is not a function","meta":"TypeError: jwtService.compa is not a function\n    at AdminService.login (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/admin.service.js:40:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/admin.controller.js:13:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"jwt malformed","meta":"JsonWebTokenError: jwt malformed\n    at module.exports [as verify] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\jsonwebtoken\\verify.js:70:17)\n    at jwtService.decodeToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/lib/jwt.service.js:22:16)\n    at AdminService.login (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/admin.service.js:40:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/admin.controller.js:13:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"jwtService is not defined","meta":"ReferenceError: jwtService is not defined\n    at AdminService.login (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/admin.service.js:44:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/admin.controller.js:13:31)"}
+{"level":"error","message":"jwtService is not defined","meta":"ReferenceError: jwtService is not defined\n    at AdminService.login (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/admin.service.js:44:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async login (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/admin.controller.js:13:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"orderValidator is not defined","meta":"ReferenceError: orderValidator is not defined\n    at OrderService.createOrder (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/order.service.js:10:5)\n    at createOrder (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/order.controller.js:7:50)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"orderValidator is not defined","meta":"ReferenceError: orderValidator is not defined\n    at OrderService.createOrder (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/order.service.js:10:5)\n    at createOrder (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/order.controller.js:7:50)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"error","message":"orderValidator is not defined","meta":"ReferenceError: orderValidator is not defined\n    at OrderService.createOrder (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/order.service.js:10:5)\n    at createOrder (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/order.controller.js:7:50)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"CartService.getAll is not a function","meta":"TypeError: CartService.getAll is not a function\n    at getAll (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:27:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:63:7\n    at verifyToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:31:5)\n    at verifyManager (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:56:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"error","message":"CartService.addToCart is not a function","meta":"TypeError: CartService.addToCart is not a function\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:6:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:46:7\n    at verifyToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:31:5)\n    at verifyStaff (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:38:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"User validation failed: email: Path `email` is required.","meta":"ValidationError: User validation failed: email: Path `email` is required.\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:2955:17\n    at C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\schematype.js:1368:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"}
+{"level":"error","message":"CartService.getAll is not a function","meta":"TypeError: CartService.getAll is not a function\n    at getAll (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:27:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:63:7\n    at verifyToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:31:5)\n    at verifyManager (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:56:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"cartRepository is not defined","meta":"ReferenceError: cartRepository is not defined\n    at CartService.getAll (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:68:19)\n    at getAll (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:27:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:63:7\n    at verifyToken (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:31:5)\n    at verifyManager (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/auth.verifyToken.js:56:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of null (reading 'length')","meta":"TypeError: Cannot read properties of null (reading 'length')\n    at CartService.getOne (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:82:20)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getOne (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:13:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"carts is not defined","meta":"ReferenceError: carts is not defined\n    at CartService.getOne (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:86:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async getOne (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:13:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}

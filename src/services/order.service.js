@@ -4,6 +4,7 @@ import {
   ValidationException,
 } from "../utils/exceptions/index.js";
 import OrderDto from "../dtos/order/order.Dto.js";
+import { orderValidator } from "../validators/order.validation.js";
 
 export class OrderService {
   static async createOrder(orderDTO) {
@@ -17,7 +18,6 @@ export class OrderService {
     }
 
     const cart = await CartRepository.findById(cartId);
-
     if (!cart) {
       throw new NotFoundException("Cart not found");
     }

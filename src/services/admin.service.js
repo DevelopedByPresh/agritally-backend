@@ -2,7 +2,7 @@ import { AdminRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { adminValidator } from "../validators/admin.validation.js";
 import AdminDto from "../dtos/admin/admin.Dto.js";
-import { jwtService } from "../lib/index.js";
+import { BcryptHelper, jwtService } from "../lib/index.js";
 
 export class AdminService {
   static async register(adminDTO) {
@@ -37,7 +37,7 @@ export class AdminService {
       throw new NotFoundException("Admin not found");
     }
 
-    const isMatch = jwtService.compa(password, admin.password);
+    const isMatch = BcryptHelper.compare(password, admin.password);
     if (!isMatch) {
       throw new NotFoundException("Email or password is incorrect");
     }
@@ -49,9 +49,11 @@ export class AdminService {
     const adminDto = AdminDto.from(admin);
 
     return {
-      message: "Admin Logged in",
-      ...adminDto,
-      accessToken,
+      data: {
+        message: "Admin Logged in",
+        ...adminDto,
+        accessToken,
+      }
     };
   }
 

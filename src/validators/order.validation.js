@@ -1,27 +1,38 @@
 import Joi from 'joi';
+import {
+  objectIdSchema,
+} from "./lib/common-schema.js";
+import { ValidationException } from '../utils/exceptions/validation.exception.js';
 
-// Define schemas for subfields if needed
-const objectIdSchema = Joi.string().regex(/^[0-9a-fA-F]{24}$/);
-const statusSchema = Joi.string().valid('Approved', 'Pending');
+export class OrderValidator {
+  validateOrder(order) {
+    const schema = Joi.object({
+      user: objectIdSchema.required(),
+      cartId: objectIdSchema.required(),
+      total: Joi.number(),
+      status: Joi.string().valid('Approved', 'Pending').default('Pending'),
+    });
 
-export const createOrderValidator = Joi.object({
-  body: Joi.object({
-    user: objectIdSchema.label('User ID').required(),
-    cartId: objectIdSchema.label('Cart ID').required(),
-    total: Joi.number().label('Total'),
-    status: statusSchema.label('Status').default('Pending'),
-  }),
-});
+    const { error } = schema.validate(order);
 
-export const updateOrderValidator = Joi.object({
-  body: Joi.object({
-    user: objectIdSchema.label('User ID'),
-    cartId: objectIdSchema.label('Cart ID'),
-    total: Joi.number().label('Total'),
-    status: statusSchema.label('Status'),
-  }),
-  params: Joi.object({
-    id: objectIdSchema.label('Product ID').required(),
-  }),
-});
+    if (error) {
+      throw new ValidationException(error.message);
+    }
+  }
 
+  validateUpdateOrder(order) {
+    const schema = Joi.object({
+      user: objectIdSchema.required(),
+      total: Joi.number(), 
+      status: Joi.string().valid('Approved', 'Pending'),
+    });
+
+    const { error } = schema.validate(order);
+
+    if (error) {
+      throw new ValidationException(error.message);
+    }
+  }
+}
+
+export const orderValidator = new OrderValidator();
