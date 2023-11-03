@@ -2,41 +2,28 @@ import Joi from "joi";
 import {
   nameSchema,
   emailSchema,
-  objectIdSchema,
   phoneSchema,
 } from "./lib/common-schema.js";
 
-export class UserValidator {
-  validateUser(user) {
-    const schema = Joi.object({
-      firstName: nameSchema.required(),
-      lastName: nameSchema.required(),
-      email: emailSchema.required(),
-      password: passwordSchema.required(),
-      phone: phoneSchema.required(),
-      date_of_birth: dateOfBirthSchema.required(),
-    });
+export const createUserRequestValidator = Joi.object({
+  body: Joi.object({
+    firstName: nameSchema.required(),
+    lastName: nameSchema.required(),
+    email: emailSchema.required(),
+    password: Joi.string().min(6).required(),
+    phone: phoneSchema.required(),
+    date_of_birth: Joi.string().required(),
+  }),
+});
 
-    const { error } = schema.validate(user);
-
-    if (error) {
-      throw new ValidationException(error.message);
-    }
-  }
-
-  validateUpdateUser(user) {
-    const schema = Joi.object({
-      firstName: nameSchema,
-      lastName: nameSchema,
-      phone: phoneSchema,
-    });
-
-    const { error } = schema.validate(user);
-
-    if (error) {
-      throw new ValidationException(error.message);
-    }
-  }
-}
-
-export const userValidator = new UserValidator();
+export const updateUserRequestValidator = Joi.object({
+  body: Joi.object({
+    firstName: nameSchema.required(),
+    lastName: nameSchema.required(),
+    phone: phoneSchema.required(),
+    date_of_birth: Joi.string().required(),
+  }),
+  params: Joi.object({
+    id: objectIdSchema.label("User ID").required(),
+  }),
+});

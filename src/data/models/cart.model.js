@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
-import autopopulate from "mongoose-autopopulate"; 
+import { Schema, model } from "mongoose";
+import autopopulate from "mongoose-autopopulate";
 const cartItemSchema = {
   productId: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: [Schema.Types.ObjectId],
     required: true,
     ref: "Product",
     autopopulate: {
@@ -21,14 +21,14 @@ const cartItemSchema = {
   },
 };
 
-const cartSchema = new mongoose.Schema(
+const cartSchema = new Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
       autopopulate: {
         select: "firstName lastName",
-      }
+      },
     },
     cartItems: [cartItemSchema],
     active: {
@@ -47,4 +47,4 @@ const cartSchema = new mongoose.Schema(
 
 cartSchema.plugin(autopopulate);
 
-export default mongoose.model("Cart", cartSchema);
+export const Cart = model("Cart", cartSchema);

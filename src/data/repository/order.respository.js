@@ -1,4 +1,4 @@
-import Order from "../models/order.model.js";
+import { Order } from "../models/index.js";
 export class OrderRepository {
   static async create(orderDTO) {
     const newOrder = new Order(orderDTO);
@@ -7,20 +7,18 @@ export class OrderRepository {
   }
 
   static async findById(orderId) {
-    const order = await Order.findById(orderId)
-      .populate({
-        path: "cartId",
-        select: ["cartItems", "total"],
-      });
+    const order = await Order.findById(orderId).populate({
+      path: "cartId",
+      select: ["cartItems", "total"],
+    });
     return order;
   }
 
   static async findOne(query) {
-    const order = await Order.findOne(query)
-      .populate({
-        path: "cartId",
-        select: ["cartItems", "total"],
-      });
+    const order = await Order.findOne(query).populate({
+      path: "cartId",
+      select: ["cartItems", "total"],
+    });
     return order;
   }
 

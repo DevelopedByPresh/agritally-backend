@@ -1,49 +1,48 @@
-import Joi from "joi";
-import { ValidationException } from "../utils/exceptions/index.js";
+import Joi from 'joi';
+import { objectIdSchema } from './lib/common-schema.js';
 
-const objectIdSchema = Joi.string().hex().messages({
-  "string.hex": "Invalid object ID format",
+const categoryEnum = ['Cat-fish', 'Egg', 'Pig', 'Poultry'];
+const sectionEnum = {
+  'Cat-fish': ['Fingerlings', 'Mature'],
+  'Egg': ['Big', 'Small'],
+  'Pig': ['Boar', 'Dry Sows', 'In-pigs', 'Growers', 'Weaners', 'Piglets'],
+  'Poultry': ['Broilers', 'Layers'],
+};
+
+export const createProductRequestValidator = Joi.object({
+  body: Joi.object({
+    user: objectIdSchema.required(),
+    category: Joi.string()
+      .valid(...categoryEnum)
+      .required(),
+    section: Joi.string()
+      .valid(...sectionEnum[Joi.ref('category')]) // Use category as reference
+      .required(),
+    date: Joi.date().iso().required(),
+    quantity: Joi.number().integer().min(1).required(),
+    weight: Joi.string(),
+    price: Joi.number().min(0.01).required(),
+    status: Joi.string()
+      .valid('Approved', 'Pending')
+      .default('Pending'),
+  }),
 });
 
-const transactionTypeSchema = Joi.string()
-  .valid("Purchase", "Sale", "Mortality")
-  .required()
-  .messages({
-    "any.only": "Transaction type must be 'Purchase', 'Sale', or 'Mortality'",
-    "any.required": "Transaction type is required",
-  });
-
-const amountSchema = Joi.number().min(0).required().messages({
-  "number.min": "Amount should be at least 0",
-  "any.required": "Amount is required",
+export const updateProductRequestValidator = Joi.object({
+  body: Joi.object({
+    user: objectIdSchema,
+    category: Joi.string()
+      .valid(...categoryEnum),
+    section: Joi.string()
+      .valid(...sectionEnum[Joi.ref('category')]),
+    date: Joi.date(),
+    quantity: Joi.number().integer().min(1),
+    weight: Joi.string(),
+    price: Joi.number().min(0.01),
+    status: Joi.string()
+      .valid('Approved', 'Pending'),
+  }),
+  params: Joi.object({
+    id: objectIdSchema.label('Product ID').required(),
+  }),
 });
-
-export function validateTransaction(transaction) {
-  const schema = Joi.object({
-    orderId: objectIdSchema.required().messages({
-      "any.required": "Order ID is required",
-    }),
-    type: transactionTypeSchema,
-    amount: amountSchema,
-  });
-
-  const { error } = schema.validate(transaction);
-
-  if (error) {
-    throw new ValidationException(error.message);
-  }
-}
-
-export function updateTransactionValidator(transaction) {
-  const schema = Joi.object({
-    orderId: objectIdSchema,
-    type: transactionTypeSchema,
-    amount: amountSchema,
-  });
-
-  const { error } = schema.validate(transaction);
-
-  if (error) {
-    throw new ValidationException(error.message);
-  }
-}

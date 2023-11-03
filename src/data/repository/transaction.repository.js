@@ -1,4 +1,4 @@
-import Transaction from "../models/transaction.model.js";
+import { Transaction } from "../models/index.js";
 
 export class TransactionRepository {
   static async save(recordDTO) {
@@ -23,9 +23,13 @@ export class TransactionRepository {
   }
 
   static async updateOne(recordId, updateDto) {
-    const updatedRecord = await Transaction.findByIdAndUpdate(recordId, updateDto, {
-      new: true,
-    });
+    const updatedRecord = await Transaction.findByIdAndUpdate(
+      recordId,
+      updateDto,
+      {
+        new: true,
+      }
+    );
     return updatedRecord;
   }
 

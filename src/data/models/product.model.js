@@ -1,10 +1,10 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 import autopopulate from "mongoose-autopopulate"; 
 
-const productSchema = new mongoose.Schema(
+const productSchema = new Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
       autopopulate: {
         select: "firstName lastName",
@@ -70,4 +70,4 @@ productSchema.pre("save", function (next) {
 
 productSchema.plugin(autopopulate);
 
-export const Product = mongoose.model("Product", productSchema);
+export const Product = model("Product", productSchema);

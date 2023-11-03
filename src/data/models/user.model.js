@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
-const userSchema = new mongoose.Schema(
+const userSchema = new Schema(
   {
     firstName: {
       type: String,
@@ -57,4 +57,4 @@ userSchema.methods.comparePasswords = function (password) {
   return bcrypt.compareSync(password, this.password);
 };
 
-export const User = mongoose.model("User", userSchema);
+export const User = model("User", userSchema);

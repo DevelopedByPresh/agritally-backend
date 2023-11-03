@@ -1,15 +1,15 @@
-import mongoose from 'mongoose';
+import { Schema, model } from "mongoose";
 
-const orderSchema = new mongoose.Schema(
+const orderSchema = new Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
 
     cartId: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "Cart",
       required: true,
     },
@@ -29,4 +29,4 @@ const orderSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model('Order', orderSchema);
+export const Order = model('Order', orderSchema);

@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
-const adminSchema = new mongoose.Schema(
+const adminSchema = new Schema(
   {
     firstName: {
       type: String,
@@ -57,4 +57,4 @@ adminSchema.methods.comparePasswords = function (password) {
   return bcrypt.compareSync(password, this.password);
 };
 
-export const Admin = mongoose.model("Admin", adminSchema);
+export const Admin = model("Admin", adminSchema);

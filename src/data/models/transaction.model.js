@@ -1,10 +1,10 @@
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
 import autopopulate from "mongoose-autopopulate";
 
-const TransactionSchema = new mongoose.Schema(
+const TransactionSchema = new Schema(
   {
     orderId: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "Order",
       autopopulate: {
         path: "orderId",
@@ -39,4 +39,4 @@ const TransactionSchema = new mongoose.Schema(
 
 TransactionSchema.plugin(autopopulate);
 
-export default mongoose.model("Transaction", TransactionSchema);
+export const Transaction = model("Transaction", TransactionSchema);

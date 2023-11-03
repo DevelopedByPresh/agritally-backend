@@ -1,15 +1,10 @@
 import { TransactionRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
-import {
-  validateTransaction,
-  updateTransactionValidator,
-} from "../validators/index.js";
 import TransactionDTO from "../dtos/transaction/transaction.dto.js";
 import filterSelection from "../utils/queryFilter.js";
 
 export class TransactionService {
   static async create(transactionDTO) {
-    validateTransaction(transactionDTO);
     const newTransaction = await TransactionRepository.save(transactionDTO);
 
     const transaction = TransactionDTO.from(newTransaction);
