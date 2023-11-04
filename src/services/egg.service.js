@@ -54,7 +54,7 @@ export class EggService {
 
     return {
       message: messages.COMMON.fn.FETCHED("Business"),
-      data: EggResponseDto.from(egg),
+      data: EggResponseDto.from(updateEgg),
     };
   }
 
