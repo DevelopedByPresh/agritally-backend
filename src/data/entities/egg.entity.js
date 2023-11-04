@@ -1,6 +1,6 @@
-import Id from "../../lib/id";
-import { ValidationException } from "../../utils/exceptions";
-import { messages } from "../../utils/messages.utils";
+import Id from "../../lib/id.js";
+import { ValidationException } from "../../utils/exceptions/index.js";
+import { messages } from "../../utils/messages.utils.js";
 
 export class EggEntity {
   constructor({

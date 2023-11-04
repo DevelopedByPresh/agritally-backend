@@ -1,5 +1,6 @@
 export * from './admin.service.js'
 export * from './cart.service.js'
+export * from './egg.service.js'
 export * from './order.service.js'
 export * from './product.service.js'
 export * from './transaction.service.js'
