@@ -3,6 +3,7 @@ import {
   nameSchema,
   emailSchema,
   phoneSchema,
+  objectIdSchema
 } from "./lib/common-schema.js";
 
 export const createUserRequestValidator = Joi.object({

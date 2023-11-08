@@ -1,3 +1,3 @@
-export * from './create-egg-request'
-export * from './egg-response.dto'
-export * from './update-egg-request'
+export * from './create-egg-request.js'
+export * from './egg-response.dto.js'
+export * from './update-egg-request.js'

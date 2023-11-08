@@ -35,6 +35,10 @@ export const nameSchema = Joi.string()
     "string.max": `{#label} is too long`,
   });
 
+export const numberSchema = Joi.number().label("Number").integer().messages({
+  "number.base": "{#label} must be a number",
+});
+
 export const objectIdSchema = Joi.alternatives(
   Joi.string()
     .regex(/^[0-9a-fA-F]{24}$/)

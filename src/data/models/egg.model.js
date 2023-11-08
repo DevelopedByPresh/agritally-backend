@@ -12,11 +12,9 @@ const eggSchema = new Schema(
     },
     totalBirdHoused: {
       type: Number,
-      require: true,
     },
     ageHoused: {
-      type: String,
-      require: true,
+      type: Number,
     },
     date: {
       type: Date,
@@ -24,7 +22,6 @@ const eggSchema = new Schema(
     },
     openingBalance: {
       type: Number,
-      require: true,
     },
     mortality: {
       type: Number,
@@ -32,11 +29,9 @@ const eggSchema = new Schema(
     },
     culls: {
       type: Number,
-      require: true,
     },
     closingBalance: {
       type: Number,
-      require: true,
     },
     waterConsumption: {
       type: Number,
@@ -65,16 +60,13 @@ const eggSchema = new Schema(
       },
       total: {
         type: Number,
-        require: true,
       },
       production: {
         type: Number,
-        require: true,
       },
     },
     remark: {
       type: String,
-      require: true,
     },
   },
   {

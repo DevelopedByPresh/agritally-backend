@@ -10,38 +10,38 @@ const sectionEnum = {
 };
 
 export const createProductRequestValidator = Joi.object({
-  body: Joi.object({
-    user: objectIdSchema.required(),
-    category: Joi.string()
-      .valid(...categoryEnum)
-      .required(),
-    section: Joi.string()
-      .valid(...sectionEnum[Joi.ref('category')]) // Use category as reference
-      .required(),
-    date: Joi.date().iso().required(),
-    quantity: Joi.number().integer().min(1).required(),
-    weight: Joi.string(),
-    price: Joi.number().min(0.01).required(),
-    status: Joi.string()
-      .valid('Approved', 'Pending')
-      .default('Pending'),
-  }),
+  // body: Joi.object({
+  //   user: objectIdSchema.required(),
+  //   category: Joi.string()
+  //     .valid(...categoryEnum)
+  //     .required(),
+  //   section: Joi.string()
+  //     .valid(...sectionEnum[Joi.ref('category')]) 
+  //     .required(),
+  //   date: Joi.date().iso().required(),
+  //   quantity: Joi.number().integer().min(1).required(),
+  //   weight: Joi.string(),
+  //   price: Joi.number().min(0.01).required(),
+  //   status: Joi.string()
+  //     .valid('Approved', 'Pending')
+  //     .default('Pending'),
+  // }),
 });
 
 export const updateProductRequestValidator = Joi.object({
-  body: Joi.object({
-    user: objectIdSchema,
-    category: Joi.string()
-      .valid(...categoryEnum),
-    section: Joi.string()
-      .valid(...sectionEnum[Joi.ref('category')]),
-    date: Joi.date(),
-    quantity: Joi.number().integer().min(1),
-    weight: Joi.string(),
-    price: Joi.number().min(0.01),
-    status: Joi.string()
-      .valid('Approved', 'Pending'),
-  }),
+  // body: Joi.object({
+  //   user: objectIdSchema,
+  //   category: Joi.string()
+  //     .valid(...categoryEnum),
+  //   section: Joi.string()
+  //     .valid(...sectionEnum[Joi.ref('category')]),
+  //   date: Joi.date(),
+  //   quantity: Joi.number().integer().min(1),
+  //   weight: Joi.string(),
+  //   price: Joi.number().min(0.01),
+  //   status: Joi.string()
+  //     .valid('Approved', 'Pending'),
+  // }),
   params: Joi.object({
     id: objectIdSchema.label('Product ID').required(),
   }),

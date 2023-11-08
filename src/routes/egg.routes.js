@@ -1,16 +1,23 @@
-import express from 'express'
-import { EggController } from '../controllers'
+import { Router } from "express";
 
-const eggRouter= express.Router();
+import { EggController } from "../controllers/index.js";
+import {
+  createEggRequestValidator,
+  updateEggRequestValidator,
+} from "../validators/index.js";
+import { CreateEggRequestDto, UpdateEggRequestDto } from "../dtos/index.js";
+import { ValidateRequest } from "../middleware/validate-request.middleware.js";
 
-eggRouter.post('/', EggController.create);
+const eggRouter = Router();
 
-eggRouter.post('/', EggController.showAll);
+eggRouter.post("/",ValidateRequest.with(createEggRequestValidator, CreateEggRequestDto), EggController.create);
 
-eggRouter.post('/', EggController.get);
+eggRouter.get("/", EggController.showAll);
 
-eggRouter.post('/', EggController.update);
+eggRouter.get("/:id", EggController.get);
 
-eggRouter.post('/', EggController.delete);
+eggRouter.patch("/", EggController.update);
+
+eggRouter.delete("/", EggController.delete);
 
 export default eggRouter;

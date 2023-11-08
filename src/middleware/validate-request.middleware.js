@@ -1,8 +1,8 @@
 import _ from 'lodash';
 
-import { ValidationException } from '../../utils/exceptions/validation.exception.js';
-import { messages } from '../../utils/messages.utils.js';
-import { refineError } from '../../utils/refine-validation-error.utils.js';
+import { ValidationException } from '../utils/exceptions/validation.exception.js';
+import { messages } from '../utils/messages.utils.js';
+import { refineError } from '../utils/refine-validation-error.utils.js';
 
 export class ValidateRequest {
   /** @type {import('joi').ObjectSchema} */

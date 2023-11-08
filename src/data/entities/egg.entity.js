@@ -81,41 +81,35 @@ export class EggEntity {
       });
     }
 
-    if (!date) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        date: 'Egg must have a date',
-      });
-    }
-
     if (!openingBalance) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         openingBalance: 'Egg must specify the opening balance',
       });
     }
 
-    if (!culls) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        culls: 'Egg must specify the number of culls',
-      });
-    }
+    // if (!culls) {
+    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+    //     culls: 'Egg must specify the number of culls',
+    //   });
+    // }
 
-    if (!closingBalance) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        closingBalance: 'Egg must specify the closing balance',
-      });
-    }
+    // if (!closingBalance) {
+    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+    //     closingBalance: 'Egg must specify the closing balance',
+    //   });
+    // }
 
-    if (!waterConsumption) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        waterConsumption: 'Egg must specify water consumption',
-      });
-    }
+    // if (!waterConsumption) {
+    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+    //     waterConsumption: 'Egg must specify water consumption',
+    //   });
+    // }
 
-    if (!feedConsumption) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        feedConsumption: 'Egg must specify feed consumption',
-      });
-    }
+    // if (!feedConsumption) {
+    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+    //     feedConsumption: 'Egg must specify feed consumption',
+    //   });
+    // }
 
     if (!eggCollection) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
@@ -123,11 +117,11 @@ export class EggEntity {
       });
     }
 
-    if (!remark) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        remark: 'Egg must have a remark',
-      });
-    }
+    // if (!remark) {
+    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+    //     remark: 'Egg must have a remark',
+    //   });
+    // }
 
     return this.#create({
       id: _id,

@@ -1,5 +1,6 @@
 export * from './admin/admin.Dto.js'
 export * from './cart/cart.Dto.js'
+export * from './egg/index.js'
 export * from './order/order.Dto.js'
 export * from './product/product.Dto.js'
 export * from './transaction/index.js'
