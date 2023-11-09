@@ -1,9 +1,13 @@
-import { CartRepository, ProductRepository, OrderRepository } from "../data/repository/index.js";
+import {
+  CartRepository,
+  ProductRepository,
+  OrderRepository,
+} from "../data/repository/index.js";
 import {
   NotFoundException,
   ValidationException,
 } from "../utils/exceptions/index.js";
-import OrderDto from "../dtos/order/order.Dto.js";
+import OrderDto from "../dtos/order/order-response.dto.js";
 import { orderValidator } from "../validators/order.validation.js";
 
 export class OrderService {

@@ -1,7 +1,7 @@
 import { ProductRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { productValidator } from "../validators/product.validation.js";
-import ProductDto from "../dtos/product/product.Dto.js";
+import ProductDto from "../dtos/product/product-response.dto.js";
 import filterSelection from "../utils/queryFilter.js";
 
 export class ProductService {
