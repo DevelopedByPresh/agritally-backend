@@ -7,12 +7,9 @@ import {
   NotFoundException,
   ValidationException,
 } from "../utils/exceptions/index.js";
-import OrderDto from "../dtos/order/order-response.dto.js";
-import { orderValidator } from "../validators/order.validation.js";
 
 export class OrderService {
   static async createOrder(orderDTO) {
-    orderValidator.validateOrder(orderDTO);
 
     // Fetch the cart from the database
     const { cartId, user, total } = orderDTO;

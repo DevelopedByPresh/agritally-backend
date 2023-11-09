@@ -1,11 +1,11 @@
 import express from "express";
-import adminRouter from "./admin.route.js";
-import cartRouter from "./cart.route.js";
+import adminRouter from "./admin.routes.js";
+import cartRouter from "./cart.routes.js";
 import eggRouter from "./egg.routes.js";
-import orderRouter from "./order.route.js";
-import productRouter from "./product.route.js";
-import transactionRouter from "./transaction.route.js";
-import userRouter from "./user.route.js";
+import orderRouter from "./order.routes.js";
+import productRouter from "./product.routes.js";
+import transactionRouter from "./transaction.routes.js";
+import userRouter from "./user.routes.js";
 
 export const router = express.Router();
 

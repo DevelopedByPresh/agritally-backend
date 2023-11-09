@@ -1,69 +1,38 @@
-import Joi from "joi";
-import { ValidationException } from "../utils/exceptions/index.js";
+import Joi from 'joi';
+import { objectIdSchema } from './lib/common-schema.js';
 
-class ProductValidator {
-  constructor() {
-    this.objectIdSchema = Joi.string().hex().messages({
-      "string.hex": "Invalid object ID format",
-    });
+const allowedSections = {
+  "Cat-fish": ["Fingerlings", "Mature"],
+  Egg: ["Big", "Small"],
+  Pig: ["Boar", "Dry Sows", "In-pigs", "Growers", "Weaners", "Piglets"],
+  Poultry: ["Broilers", "Layers"],
+};
 
-    this.sectionSchema = Joi.string()
-      .valid(
-        "Fingerlings",
-        "Mature",
-        "Big",
-        "Small",
-        "Boar",
-        "Dry Sows",
-        "In-pigs",
-        "Growers",
-        "Weaners",
-        "Piglets",
-        "Layers",
-        "Broilers"
-      )
-      .required()
-      .messages({
-        "any.only": "Section must be a valid option for the selected category",
-        "any.required": "Section is required",
-      });
+export const createProductRequestValidator = Joi.object({
+  body: Joi.object({
+    user: objectIdSchema.required().label('User ID'),
+    category: Joi.string().valid('Cat-fish', 'Egg', 'Pig', 'Poultry').required().label('Category'),
+    section: Joi.string().valid(...allowedSections['Cat-fish'], ...allowedSections['Egg'], ...allowedSections['Pig'], ...allowedSections['Poultry']).required().label('Section'),
+    date: Joi.date().default(new Date()).label('Date'),
+    quantity: Joi.number().default(1).label('Quantity'),
+    weight: Joi.string().label('Weight'),
+    price: Joi.number().default(0).label('Price'),
+    status: Joi.string().valid('Approved', 'Pending').default('Pending').label('Status'),
+  }),
+});
 
-    this.quantitySchema = Joi.number().integer().min(1).required().messages({
-      "number.integer": "Quantity should be a whole number",
-      "number.min": "Quantity should be at least 1",
-      "any.required": "Quantity is required",
-    });
-  }
-
-  validateProduct(product) {
-    const schema = Joi.object({
-      user: this.objectIdSchema.required().messages({
-        "any.required": "User is required",
-      }),
-      category: Joi.string()
-        .valid("Cat-fish", "Egg", "Pig", "Poultry")
-        .required()
-        .messages({
-          "any.only": "Category must be a valid option",
-          "any.required": "Category is required",
-        }),
-      section: this.sectionSchema,
-      date: Joi.date().default(() => new Date()),
-      quantity: this.quantitySchema,
-      weight: Joi.string(),
-      price: Joi.number().min(0).required().messages({
-        "number.min": "Price should be at least 0",
-        "any.required": "Price is required",
-      }),
-      status: Joi.string().valid("Approved", "Pending").default("Pending"),
-    });
-
-    const { error } = schema.validate(product);
-
-    if (error) {
-      throw new ValidationException(error.message);
-    }
-  }
-}
-
-export const productValidator = new ProductValidator();
+export const updateProductRequestValidator = Joi.object({
+  body: Joi.object({
+    user: objectIdSchema.label('User ID'),
+    category: Joi.string().valid('Cat-fish', 'Egg', 'Pig', 'Poultry').label('Category'),
+    section: Joi.string().valid(...allowedSections['Cat-fish'], ...allowedSections['Egg'], ...allowedSections['Pig'], ...allowedSections['Poultry']).label('Section'),
+    date: Joi.date().label('Date'),
+    quantity: Joi.number().label('Quantity'),
+    weight: Joi.string().label('Weight'),
+    price: Joi.number().label('Price'),
+    status: Joi.string().valid('Approved', 'Pending').label('Status'),
+  }),
+  params: Joi.object({
+    id: objectIdSchema.required().label('Product ID'),
+  }),
+});

@@ -1,4 +1,4 @@
-export class UpdateAdminRequestDTO {
+export class UpdateAdminRequestDto {
   constructor({
     email,
     firstName,
@@ -27,7 +27,7 @@ export class UpdateAdminRequestDTO {
     date_of_birth,
     phone,
   }) {
-    return new UpdateAdminRequestDTO({
+    return new UpdateAdminRequestDto({
       email,
       firstName,
       lastName,

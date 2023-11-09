@@ -17,6 +17,7 @@ export class UpdateProductRequestDTO {
     this.weight = weight;
     this.price = price;
     this.status = status;
+    this.updatedAt = new Date();
   }
 
   static from({

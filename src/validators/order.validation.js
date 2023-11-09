@@ -1,38 +1,23 @@
 import Joi from 'joi';
-import {
-  objectIdSchema,
-} from "./lib/common-schema.js";
-import { ValidationException } from '../utils/exceptions/validation.exception.js';
+import { objectIdSchema } from './lib/common-schema.js';
 
-export class OrderValidator {
-  validateOrder(order) {
-    const schema = Joi.object({
-      user: objectIdSchema.required(),
-      cartId: objectIdSchema.required(),
-      total: Joi.number(),
-      status: Joi.string().valid('Approved', 'Pending').default('Pending'),
-    });
+export const createOrderRequestValidator = Joi.object({
+  body: Joi.object({
+    user: objectIdSchema.required().label('User ID'),
+    cartId: objectIdSchema.required().label('Cart ID'),
+    total: Joi.number().label('Total'),
+    status: Joi.string().valid('Approved', 'Pending').default('Pending').label('Status'),
+  }),
+});
 
-    const { error } = schema.validate(order);
-
-    if (error) {
-      throw new ValidationException(error.message);
-    }
-  }
-
-  validateUpdateOrder(order) {
-    const schema = Joi.object({
-      user: objectIdSchema.required(),
-      total: Joi.number(), 
-      status: Joi.string().valid('Approved', 'Pending'),
-    });
-
-    const { error } = schema.validate(order);
-
-    if (error) {
-      throw new ValidationException(error.message);
-    }
-  }
-}
-
-export const orderValidator = new OrderValidator();
+export const updateOrderRequestValidator = Joi.object({
+  body: Joi.object({
+    user: objectIdSchema.label('User ID'),
+    cartId: objectIdSchema.label('Cart ID'),
+    total: Joi.number().label('Total'),
+    status: Joi.string().valid('Approved', 'Pending').label('Status'),
+  }),
+  params: Joi.object({
+    id: objectIdSchema.required().label('Order ID'),
+  }),
+});

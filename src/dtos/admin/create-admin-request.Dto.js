@@ -1,4 +1,4 @@
-export class CreateAdminRequestDTO {
+export class CreateAdminRequestDto {
   constructor({
     email,
     firstName,
@@ -26,7 +26,7 @@ export class CreateAdminRequestDTO {
     date_of_birth,
     phone,
   }) {
-    return new CreateAdminRequestDTO({
+    return new CreateAdminRequestDto({
       email,
       firstName,
       lastName,

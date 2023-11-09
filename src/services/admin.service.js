@@ -1,12 +1,10 @@
 import { AdminRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 // import { adminValidator } from "../validators/admin.validation.js";
-import AdminDto from "../dtos/admin/create-admin-request.Dto.js";
 import { BcryptHelper, jwtService } from "../lib/index.js";
 
 export class AdminService {
   static async register(adminDTO) {
-    // adminValidator.validateAdmin(adminDTO);
     const existingAdmin = await AdminRepository.findByEmail(adminDTO.email);
     if (existingAdmin) return { message: "Admin already exists" };
 

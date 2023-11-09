@@ -6,18 +6,22 @@ import {
   updateEggRequestValidator,
 } from "../validators/index.js";
 import { CreateEggRequestDto, UpdateEggRequestDto } from "../dtos/index.js";
-import { ValidateRequest } from "../middleware/validate-request.middleware.js";
+import { ADMIN_ROLE } from "../utils/helpers/admin.helpers.js";
+import { authorizeRoles, auth, ValidateRequest } from "../middleware/index.js";
+import {idValidator} from '../validators/lib/common-validators.js'
+
 
 const eggRouter = Router();
+const { MANAGER, OWNER, SUPERADMIN } = ADMIN_ROLE;
 
-eggRouter.post("/",ValidateRequest.with(createEggRequestValidator, CreateEggRequestDto), EggController.create);
+eggRouter.post("/", auth, ValidateRequest.with(createEggRequestValidator, CreateEggRequestDto), EggController.create);
 
-eggRouter.get("/", EggController.showAll);
+eggRouter.get("/", auth, EggController.showAll);
 
-eggRouter.get("/:id", EggController.get);
+eggRouter.get("/:id", auth, ValidateRequest.with(idValidator), EggController.get);
 
-eggRouter.patch("/", EggController.update);
+eggRouter.patch("/", auth, authorizeRoles(MANAGER, OWNER, SUPERADMIN), ValidateRequest.with(updateEggRequestValidator, UpdateEggRequestDto), EggController.update);
 
-eggRouter.delete("/", EggController.delete);
+eggRouter.delete("/", auth, authorizeRoles(MANAGER, OWNER, SUPERADMIN), EggController.delete);
 
 export default eggRouter;

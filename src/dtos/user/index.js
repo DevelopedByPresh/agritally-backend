@@ -1,3 +1,3 @@
-export * from './create-user-request-dto'
-export * from './update-user-request.dto'
-export * from './user-response.dto'
+export * from './create-user-request-dto.js'
+export * from './update-user-request.dto.js'
+export * from './user-response.dto.js'
