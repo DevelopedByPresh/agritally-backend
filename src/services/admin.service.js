@@ -7,7 +7,9 @@ import { messages } from "../utils/messages.utils.js";
 
 export class AdminService {
   static async register(createAdminDto) {
-    const existingAdmin = await AdminRepository.findByEmail(createAdminDto.email);
+    const existingAdmin = await AdminRepository.findByEmail(
+      createAdminDto.email
+    );
     if (existingAdmin) {
       return { message: messages.AUTH.SIGNUP_ALREADY_EXISTS };
     }
@@ -21,8 +23,8 @@ export class AdminService {
     });
 
     return {
-      message: messages.COMMON.fn.CREATED,
       data: {
+        message: messages.COMMON.fn.CREATED('Admin'),
         accessToken,
         ...AdminResponseDTO.from(admin),
       },
@@ -48,8 +50,11 @@ export class AdminService {
     });
 
     return {
-      message: messages.AUTH.LOGIN_SUCCESS,
-      data: { accessToken, ...AdminResponseDTO.from(admin) },
+      data: {
+        message: messages.AUTH.LOGIN_SUCCESS,
+        accessToken,
+        ...AdminResponseDTO.from(admin),
+      },
     };
   }
 

@@ -19,7 +19,7 @@ export class UserService {
     });
 
     return {
-      message: messages.COMMON.fn.CREATED,
+      message: messages.COMMON.fn.CREATED('User'),
       data: {
         accessToken,
         ...UserResponseDTO.from(user),
