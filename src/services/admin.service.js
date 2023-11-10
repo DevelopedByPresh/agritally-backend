@@ -1,7 +1,7 @@
 import { AdminRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
-// import { adminValidator } from "../validators/admin.validation.js";
 import { BcryptHelper, jwtService } from "../lib/index.js";
+import { AdminResponseDTO } from "../dtos/admin/index.js";
 
 export class AdminService {
   static async register(adminDTO) {
@@ -15,12 +15,11 @@ export class AdminService {
       role: admin.role,
     });
 
-    const newAdmin = AdminDto.from(admin);
 
     return {
       message: "Admin Created",
       data: {
-        ...newAdmin,
+        ...AdminResponseDTO.from(user),
         accessToken,
       },
     };
@@ -44,13 +43,12 @@ export class AdminService {
       role: admin.role,
     });
 
-    const adminDto = AdminDto.from(admin);
 
     return {
       data: {
         message: "Admin Logged in",
-        ...adminDto,
         accessToken,
+        ...AdminResponseDTO.from(admin),
       },
     };
   }

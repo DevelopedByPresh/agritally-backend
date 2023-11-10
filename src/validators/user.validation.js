@@ -19,10 +19,10 @@ export const createUserRequestValidator = Joi.object({
 
 export const updateUserRequestValidator = Joi.object({
   body: Joi.object({
-    firstName: nameSchema.required(),
-    lastName: nameSchema.required(),
-    phone: phoneSchema.required(),
-    date_of_birth: Joi.string().required(),
+    firstName: nameSchema,
+    lastName: nameSchema,
+    phone: phoneSchema,
+    date_of_birth: Joi.string(),
   }),
   params: Joi.object({
     id: objectIdSchema.label("User ID").required(),
