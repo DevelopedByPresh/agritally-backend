@@ -1,6 +1,6 @@
 export class CreateEggRequestDto {
   constructor({
-    Breed,
+    breed,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -14,11 +14,11 @@ export class CreateEggRequestDto {
     eggCollection,
     remark,
   }) {
-    this.Breed = Breed;
+    this.breed = breed;
     this.penNumber = penNumber;
     this.totalBirdHoused = totalBirdHoused;
     this.ageHoused = ageHoused;
-    this.date =  Date.now();
+    this.date = Date.now();
     this.openingBalance = openingBalance;
     this.mortality = mortality;
     this.culls = culls;
@@ -30,7 +30,7 @@ export class CreateEggRequestDto {
   }
 
   static from({
-    Breed,
+    breed,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -45,7 +45,7 @@ export class CreateEggRequestDto {
     remark,
   }) {
     return new CreateEggRequestDto({
-      Breed,
+      breed,
       penNumber,
       totalBirdHoused,
       ageHoused,

@@ -1,7 +1,7 @@
 import { TransactionRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import TransactionDTO from "../dtos/transaction/transaction.dto.js";
-import filterSelection from "../utils/queryFilter.js";
+import { queryFilter } from "../utils/index.js";
 
 export class TransactionService {
   static async create(transactionDTO) {

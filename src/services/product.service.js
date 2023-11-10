@@ -1,72 +1,70 @@
+import { ProductEntity } from "../data/entities/index.js";
 import { ProductRepository } from "../data/repository/index.js";
-import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
-import filterSelection from "../utils/queryFilter.js";
+import { ProductResponseDto } from "../dtos/product/index.js";
+import { NotFoundException } from "../utils/exceptions/index.js";
+import { queryFilter } from "../utils/index.js";
+import { messages } from "../utils/messages.utils.js";
 
 export class ProductService {
-  static async createProduct(productDTO) {
+  static async create(createProductDto) {
+    const productEntity = ProductEntity.make(createProductDto);
+    const product = await ProductRepository.save(productEntity);
 
-    const newProduct = await ProductRepository.save(productDTO);
-
-    const product = ProductDto.from(newProduct);
     return {
-      message: "Product created",
-      data: product,
+      message: messages.COMMON.fn.CREATED("Product"),
+      data: ProductResponseDto.from(product),
     };
   }
 
-  static async getOne(id) {
+  static async showAll(filter) {
+    const query = queryFilter(filter);
+    const foundProducts = await ProductRepository.getAll(query);
+    if (foundProducts.length === 0) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Products"));
+    }
+
+    return {
+      message: messages.COMMON.fn.FETCHED("Products"),
+      data: ProductResponseDto.fromMany(foundProducts),
+    };
+  }
+
+  static async get(id) {
     const product = await ProductRepository.findById(id);
-
     if (!product) {
-      throw new NotFoundException("Product not found");
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Product"));
     }
 
-    const productDto = ProductDto.from(product);
-
     return {
-      message: "Product items found",
-      data: productDto,
+      message: messages.COMMON.fn.FETCHED("Product"),
+      data: ProductResponseDto.from(product),
     };
   }
 
-  static async getAll(filter) {
-    const query = filterSelection(filter);
-
-    const productItems = await ProductRepository.getAll(query);
-
-    const productDtos = ProductDto.fromMany(productItems);
-
-    return {
-      message: "Product items found",
-      count: productDtos.length,
-      data: productDtos,
-    };
-  }
-
-  static async updateProductItem(itemId, updateDto) {
-    const { id } = itemId;
-    const updatedProduct = await ProductRepository.updateOne(id, updateDto);
-    if (!updatedProduct) {
-      throw new NotFoundException("Product not found");
+  static async update(id, updateProductDto) {
+    const product = await ProductRepository.findById(id);
+    if (!product) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Product"));
     }
-    const productDto = ProductDto.from(updatedProduct);
+
+    const productEntity = ProductEntity.make({
+      ...product._doc,
+      ...updateProductDto,
+    });
+
+    const updatedProduct = await ProductRepository.updateOne(id, productEntity);
 
     return {
-      message: "Product Updated",
-      data: productDto,
+      message: messages.COMMON.fn.UPDATED("Product"),
+      data: ProductResponseDto.from(updatedProduct),
     };
   }
 
   static async delete(id) {
-    const product = await ProductRepository.findById(id);
+    await ProductRepository.deleteOne(id);
 
-    if (!product) {
-      throw new NotFoundException("Product not found");
-    }
-
-    await product.deleteOne();
     return {
-      message: "Product items deleted",
+      message: messages.COMMON.fn.DELETED("Product"),
     };
   }
 }

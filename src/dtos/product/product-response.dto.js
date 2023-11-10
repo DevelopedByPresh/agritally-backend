@@ -1,4 +1,4 @@
-export class ProductResponseDTO {
+export class ProductResponseDto {
   constructor({
     id,
     user,
@@ -38,7 +38,7 @@ export class ProductResponseDTO {
     createdAt,
     updatedAt,
   }) {
-    return new ProductResponseDTO({
+    return new ProductResponseDto({
       id,
       user,
       category,
@@ -54,6 +54,6 @@ export class ProductResponseDTO {
   }
 
   static fromMany(products) {
-    return products.map((product) => ProductResponseDTO.from(product));
+    return products.map((product) => ProductResponseDto.from(product));
   }
 }

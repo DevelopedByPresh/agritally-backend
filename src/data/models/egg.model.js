@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 
 const eggSchema = new Schema(
   {
-    Breed: {
+    breed: {
       type: String,
       require: true,
     },
@@ -18,7 +18,7 @@ const eggSchema = new Schema(
     },
     date: {
       type: Date,
-      default: Date.now,
+      default: new Date(),
     },
     openingBalance: {
       type: Number,

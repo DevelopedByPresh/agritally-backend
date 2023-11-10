@@ -1,7 +1,6 @@
 import { UserRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
-import { BcryptHelper } from "../lib/index.js";
-import { jwtService } from "../lib/jwt.service.js";
+import { BcryptHelper, jwtService } from "../lib/index.js";
 import { UserResponseDTO } from "../dtos/user/index.js";
 import { UserEntity } from "../data/entities/index.js";
 import { messages } from "../utils/messages.utils.js";
@@ -96,12 +95,8 @@ export class UserService {
   static async deleteUser(id) {
     const user = await UserRepository.deleteOne(id);
 
-    if (!user) {
-      throw new NotFoundException("User not found");
-    }
-
     return {
-      message: "User deleted",
+      message: messages.COMMON.fn.DELETED("User"),
     };
   }
 }

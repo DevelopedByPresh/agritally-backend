@@ -7,8 +7,8 @@ export class EggRepository {
     return savedEgg;
   }
 
-  static async getAll() {
-    return Egg.find();
+  static async getAll(query) {
+    return Egg.find(query);
   }
 
   static async findById(eggId) {
@@ -21,6 +21,41 @@ export class EggRepository {
       new: true,
     });
     return updatedEgg;
+  }
+
+  static async getStatistics(query) {
+    const statistics = await Egg.aggregate([
+      {
+        $match: query,
+      },
+      {
+        $group: {
+          _id: null,
+          totalMortality: { $sum: "$mortality" },
+          totalCulls: { $sum: "$culls" },
+          totalEggCollection: {
+            $sum: {
+              $add: [
+                "$eggCollection.firstTray",
+                "$eggCollection.secondTray",
+                "$eggCollection.thirdTray",
+              ],
+            },
+          },
+          totalCracks: { $sum: "$eggCollection.cracks" },
+        },
+      },
+    ]);
+
+    const stats = statistics[0];
+
+    return {
+      totalMortality: stats.totalMortality,
+      totalCulls: stats.totalCulls,
+      totalEggCollection: stats.totalEggCollection,
+      totalCracks: stats.totalCracks,
+      totalProduction: stats.totalEggCollection - stats.totalCracks,
+    };
   }
 
   static async deleteOne(eggId) {

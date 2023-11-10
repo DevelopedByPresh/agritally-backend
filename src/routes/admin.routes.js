@@ -8,13 +8,14 @@ import {
 import { CreateAdminRequestDto, UpdateAdminRequestDto } from "../dtos/index.js";
 import { ADMIN_ROLE } from "../utils/helpers/admin.helpers.js";
 import { authorizeRoles, auth, ValidateRequest } from "../middleware/index.js";
+import { idValidator } from "../validators/lib/common-validators.js";
+
 
 const adminRouter = Router();
 const { OWNER, SUPERADMIN } = ADMIN_ROLE;
 
 adminRouter.post(
   "/register",
-  auth,
   ValidateRequest.with(createAdminRequestValidator, CreateAdminRequestDto),
   AdminController.register
 );
@@ -43,12 +44,14 @@ adminRouter.patch(
 adminRouter.patch(
   "/change-role/:id",
   auth,
+  ValidateRequest.with(idValidator),
   AdminController.changeUserRole
 );
 
 adminRouter.delete(
-  "/delete:id",
+  "/delete/:id",
   auth,
+  ValidateRequest.with(idValidator),
   authorizeRoles(OWNER, SUPERADMIN),
   AdminController.deleteAdmin
 );
@@ -56,6 +59,7 @@ adminRouter.delete(
 adminRouter.get(
   "/users/getAll",
   auth,
+  ValidateRequest.with(idValidator),
   UserController.getAll
 );
 

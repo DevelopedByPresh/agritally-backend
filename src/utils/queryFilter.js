@@ -1,4 +1,4 @@
- function buildQuery(filter) {
+ export function queryFilter(filter) {
     const { section, year, month, date, category, type } = filter;
   
     const query = {};
@@ -31,4 +31,3 @@
     return query;
   }
   
-  export default buildQuery;

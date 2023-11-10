@@ -2,6 +2,7 @@ import { EggEntity } from "../data/entities/index.js";
 import { EggRepository } from "../data/repository/index.js";
 import { EggResponseDto } from "../dtos/egg/egg-response.dto.js";
 import { NotFoundException } from "../utils/exceptions/index.js";
+import { eggQuery } from "../utils/index.js";
 import { messages } from "../utils/messages.utils.js";
 
 export class EggService {
@@ -15,12 +16,14 @@ export class EggService {
     };
   }
 
-  static async showAll() {
-    const foundEgg = await EggRepository.getAll();
+  static async showAll(filter) {
+    const query = eggQuery(filter);
+    const foundEgg = await EggRepository.getAll(query);
     if (foundEgg.length === 0) {
       throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Eggs"));
     }
 
+    console.log(foundEgg)
     return {
       message: messages.COMMON.fn.FETCHED("Business"),
       data: EggResponseDto.fromMany(foundEgg),
@@ -55,6 +58,17 @@ export class EggService {
     return {
       message: messages.COMMON.fn.FETCHED("Business"),
       data: EggResponseDto.from(updateEgg),
+    };
+  }
+
+  static async getStatistics(filter) {
+    const query = eggQuery(filter);
+
+    const statistics = await EggRepository.getStatistics(query);
+    console.log(statistics);
+    return {
+      message: messages.COMMON.fn.FETCHED("Egg"),
+      data:  statistics,
     };
   }
 

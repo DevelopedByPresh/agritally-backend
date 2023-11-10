@@ -5,7 +5,7 @@ import { messages } from "../../utils/messages.utils.js";
 export class EggEntity {
   constructor({
     id,
-    Breed,
+    breed,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -20,7 +20,7 @@ export class EggEntity {
     remark,
   }) {
     this.id = id;
-    this.Breed = Breed;
+    this.breed = breed;
     this.penNumber = penNumber;
     this.totalBirdHoused = totalBirdHoused;
     this.ageHoused = ageHoused;
@@ -37,7 +37,7 @@ export class EggEntity {
 
   static make({
     _id,
-    Breed,
+    breed,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -53,37 +53,37 @@ export class EggEntity {
   }) {
     if (_id && !Id.isValidId(_id)) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        id: 'Egg must have a valid id',
+        id: "Egg must have a valid id",
       });
     }
 
-    if (!Breed) {
+    if (!breed) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        Breed: 'Egg must have a breed',
+        breed: "Egg must have a breed",
       });
     }
 
     if (!penNumber) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        penNumber: 'Egg must have a pen number',
+        penNumber: "Egg must have a pen number",
       });
     }
 
     if (!totalBirdHoused) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        totalBirdHoused: 'Egg must specify the total birds housed',
+        totalBirdHoused: "Egg must specify the total birds housed",
       });
     }
 
     if (!ageHoused) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        ageHoused: 'Egg must specify the age of birds housed',
+        ageHoused: "Egg must specify the age of birds housed",
       });
     }
 
     if (!openingBalance) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        openingBalance: 'Egg must specify the opening balance',
+        openingBalance: "Egg must specify the opening balance",
       });
     }
 
@@ -113,7 +113,7 @@ export class EggEntity {
 
     if (!eggCollection) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        eggCollection: 'Egg must specify egg collection details',
+        eggCollection: "Egg must specify egg collection details",
       });
     }
 
@@ -125,7 +125,7 @@ export class EggEntity {
 
     return this.#create({
       id: _id,
-      Breed,
+      breed,
       penNumber,
       totalBirdHoused,
       ageHoused,
@@ -142,7 +142,7 @@ export class EggEntity {
   }
 
   static #create({
-    Breed,
+    breed,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -159,7 +159,7 @@ export class EggEntity {
   }) {
     return new EggEntity({
       id,
-      Breed,
+      breed,
       penNumber,
       totalBirdHoused,
       ageHoused,

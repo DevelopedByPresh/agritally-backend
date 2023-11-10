@@ -19,24 +19,24 @@ productRouter.post(
   "/add",
   auth,
   ValidateRequest.with(createProductRequestValidator, CreateProductRequestDTO),
-  ProductController.createProduct
+  ProductController.create
 );
 
 productRouter.get(
   "/get/:id",
   auth,
   ValidateRequest.with(idValidator),
-  ProductController.getOne
+  ProductController.get
 );
 
-productRouter.get("/getAll", auth, ProductController.getAll);
+productRouter.get("/getAll", auth, ProductController.showAll);
 
 productRouter.patch(
   "/update/:id",
   auth,
   authorizeRoles(MANAGER, OWNER, SUPERADMIN),
   ValidateRequest.with(updateProductRequestValidator, UpdateProductRequestDTO),
-  ProductController.updateProductItem
+  ProductController.update
 );
 
 productRouter.delete(

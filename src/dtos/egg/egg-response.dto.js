@@ -1,7 +1,7 @@
 export class EggResponseDto {
   constructor({
     id,
-    Breed,
+    breed,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -13,12 +13,16 @@ export class EggResponseDto {
     waterConsumption,
     feedConsumption,
     eggCollection,
+    firstTray,
+    secondTray,
+    thirdTray,
+    cracks,
     remark,
     createdAt,
     updatedAt,
   }) {
     this.id = id;
-    this.Breed = Breed;
+    this.breed = breed;
     this.penNumber = penNumber;
     this.totalBirdHoused = totalBirdHoused;
     this.ageHoused = ageHoused;
@@ -30,6 +34,10 @@ export class EggResponseDto {
     this.waterConsumption = waterConsumption;
     this.feedConsumption = feedConsumption;
     this.eggCollection = eggCollection;
+    this.firstTray = firstTray;
+    this.secondTray = secondTray;
+    this.thirdTray = thirdTray;
+    this.cracks = cracks;
     this.remark = remark;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
@@ -37,7 +45,7 @@ export class EggResponseDto {
 
   static from({
     id,
-    Breed,
+    breed,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -49,13 +57,17 @@ export class EggResponseDto {
     waterConsumption,
     feedConsumption,
     eggCollection,
+    firstTray,
+    secondTray,
+    thirdTray,
+    cracks,
     remark,
     createdAt,
     updatedAt,
   }) {
     return new EggResponseDto({
       id,
-      Breed,
+      breed,
       penNumber,
       totalBirdHoused,
       ageHoused,
@@ -67,6 +79,10 @@ export class EggResponseDto {
       waterConsumption,
       feedConsumption,
       eggCollection,
+      firstTray,
+      secondTray,
+      thirdTray,
+      cracks,
       remark,
       createdAt,
       updatedAt,

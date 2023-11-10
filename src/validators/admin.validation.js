@@ -24,10 +24,10 @@ export const createAdminRequestValidator = Joi.object({
 
 export const updateAdminRequestValidator = Joi.object({
   body: Joi.object({
-    firstName: nameSchema.required(),
-    lastName: nameSchema.required(),
-    phone: phoneSchema.required(),
-    date_of_birth: Joi.string().required(),
+    firstName: nameSchema,
+    lastName: nameSchema,
+    phone: phoneSchema,
+    date_of_birth: Joi.string(),
   }),
   params: Joi.object({
     id: objectIdSchema.label("Admin ID").required(),
