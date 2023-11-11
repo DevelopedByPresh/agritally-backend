@@ -7641,3 +7641,46 @@
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"error","message":"Cannot read properties of undefined (reading 'totalEggCollection')","meta":"TypeError: Cannot read properties of undefined (reading 'totalEggCollection')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Assignment to constant variable.","meta":"TypeError: Assignment to constant variable.\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Assignment to constant variable.","meta":"TypeError: Assignment to constant variable.\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Assignment to constant variable.","meta":"TypeError: Assignment to constant variable.\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}

@@ -49,12 +49,11 @@ export class EggRepository {
 
     const stats = statistics[0] || {};
 
-    const totalProduction =
-      (stats.totalEggCollection ) - (stats.totalCracks );
+    const totalProduction = stats.totalEggCollection - stats.totalCracks || 0;
 
     return {
       stats,
-      totalProduction
+      totalProduction,
     };
   }
 
