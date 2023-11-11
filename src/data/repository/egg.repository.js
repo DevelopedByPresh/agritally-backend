@@ -47,14 +47,14 @@ export class EggRepository {
       },
     ]);
 
-    const stats = statistics[0];
+    const stats = statistics[0] || {};
+
+    const totalProduction =
+      (stats.totalEggCollection ) - (stats.totalCracks );
 
     return {
-      totalMortality: stats.totalMortality,
-      totalCulls: stats.totalCulls,
-      totalEggCollection: stats.totalEggCollection,
-      totalCracks: stats.totalCracks,
-      totalProduction: stats.totalEggCollection - stats.totalCracks,
+      stats,
+      totalProduction
     };
   }
 

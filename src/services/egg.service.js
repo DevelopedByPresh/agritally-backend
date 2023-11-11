@@ -23,7 +23,7 @@ export class EggService {
       throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Eggs"));
     }
 
-    console.log(foundEgg)
+    console.log(foundEgg);
     return {
       message: messages.COMMON.fn.FETCHED("Business"),
       data: EggResponseDto.fromMany(foundEgg),
@@ -68,7 +68,7 @@ export class EggService {
     console.log(statistics);
     return {
       message: messages.COMMON.fn.FETCHED("Egg"),
-      data:  statistics,
+      data: statistics,
     };
   }
 

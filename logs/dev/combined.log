@@ -7477,3 +7477,167 @@
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":"ETIMEOUT","hostname":"clusteragbe01.7nzef0r.mongodb.net","syscall":"queryTxt"}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalMortality')","meta":"TypeError: Cannot read properties of undefined (reading 'totalMortality')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalMortality')","meta":"TypeError: Cannot read properties of undefined (reading 'totalMortality')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalMortality')","meta":"TypeError: Cannot read properties of undefined (reading 'totalMortality')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":"ETIMEOUT","hostname":"clusteragbe01.7nzef0r.mongodb.net","syscall":"queryTxt"}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalCulls')","meta":"TypeError: Cannot read properties of undefined (reading 'totalCulls')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:54:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalEggCollection')","meta":"TypeError: Cannot read properties of undefined (reading 'totalEggCollection')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:55:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalMortality')","meta":"TypeError: Cannot read properties of undefined (reading 'totalMortality')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalMortality')","meta":"TypeError: Cannot read properties of undefined (reading 'totalMortality')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:54:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":"ETIMEOUT","hostname":"clusteragbe01.7nzef0r.mongodb.net","syscall":"queryTxt"}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalMortality')","meta":"TypeError: Cannot read properties of undefined (reading 'totalMortality')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:54:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalMortality')","meta":"TypeError: Cannot read properties of undefined (reading 'totalMortality')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:54:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"The $subtract accumulator is a unary operator","meta":"MongoServerError: The $subtract accumulator is a unary operator\n    at Connection.onMessage (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:517:28)\n    at processIncomingData (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at TLSSocket.ondata (node:internal/streams/readable:777:22)\n    at TLSSocket.emit (node:events:517:28)"}
+{"level":"error","message":"The $subtract accumulator is a unary operator","meta":"MongoServerError: The $subtract accumulator is a unary operator\n    at Connection.onMessage (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:517:28)\n    at processIncomingData (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at TLSSocket.ondata (node:internal/streams/readable:777:22)\n    at TLSSocket.emit (node:events:517:28)"}
+{"level":"error","message":"The $subtract accumulator is a unary operator","meta":"MongoServerError: The $subtract accumulator is a unary operator\n    at Connection.onMessage (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:517:28)\n    at processIncomingData (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at TLSSocket.ondata (node:internal/streams/readable:777:22)\n    at TLSSocket.emit (node:events:517:28)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"message":"getaddrinfo ENOTFOUND ac-orijfdx-shard-00-01.7nzef0r.mongodb.net","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":30,"maxElectionId":null,"maxSetVersion":null,"servers":{},"setName":"atlas-12917n-shard-0","stale":false,"type":"ReplicaSetNoPrimary"}}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"The $subtract accumulator is a unary operator","meta":"MongoServerError: The $subtract accumulator is a unary operator\n    at Connection.onMessage (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\connection.js:202:26)\n    at MessageStream.<anonymous> (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\connection.js:61:60)\n    at MessageStream.emit (node:events:517:28)\n    at processIncomingData (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)\n    at _write (node:internal/streams/writable:333:10)\n    at Writable.write (node:internal/streams/writable:337:10)\n    at TLSSocket.ondata (node:internal/streams/readable:777:22)\n    at TLSSocket.emit (node:events:517:28)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":"ETIMEOUT","hostname":"_mongodb._tcp.clusteragbe01.7nzef0r.mongodb.net","syscall":"querySrv"}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Operation `eggs.aggregate()` buffering timed out after 10000ms","meta":"MongooseError: Operation `eggs.aggregate()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\drivers\\node-mongodb-native\\collection.js:185:23)\n    at listOnTimeout (node:internal/timers:569:17)\n    at process.processTimers (node:internal/timers:512:7)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":"ETIMEOUT","hostname":"clusteragbe01.7nzef0r.mongodb.net","syscall":"queryTxt"}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"error","message":"Failed to connect to MongoDB","meta":{"code":"ETIMEOUT","hostname":"_mongodb._tcp.clusteragbe01.7nzef0r.mongodb.net","syscall":"querySrv"}}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'totalEggCollection')","meta":"TypeError: Cannot read properties of undefined (reading 'totalEggCollection')\n    at EggRepository.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/egg.repository.js:53:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async EggService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/egg.service.js:67:24)\n    at async statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/egg.controller.js:59:31)"}
