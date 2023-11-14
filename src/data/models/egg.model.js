@@ -4,11 +4,11 @@ const eggSchema = new Schema(
   {
     breed: {
       type: String,
-      require: true,
+      requiredd: true,
     },
     penNumber: {
       type: Number,
-      require: true,
+      required: true,
     },
     totalBirdHoused: {
       type: Number,
@@ -35,28 +35,28 @@ const eggSchema = new Schema(
     },
     waterConsumption: {
       type: Number,
-      require: true,
+      required: true,
     },
     feedConsumption: {
       type: Number,
-      require: true,
+      required: true,
     },
     eggCollection: {
       firstTray: {
         type: Number,
-        require: true,
+        required: true,
       },
       secondTray: {
         type: Number,
-        require: true,
+        required: true,
       },
       thirdTray: {
         type: Number,
-        require: true,
+        required: true,
       },
       cracks: {
         type: Number,
-        require: true,
+        required: true,
       },
       total: {
         type: Number,

@@ -73,6 +73,6 @@ export class EggController {
     const { message, data } = await EggService.delete(req.params.id);
     const response = BaseHttpResponse.success(message, data);
 
-    res.status(204).json(response);
+    res.status(201).json(response);
   };
 }
