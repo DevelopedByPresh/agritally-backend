@@ -59,8 +59,6 @@ export class EggController {
     const { message, data } = await EggService.getStatistics(req.query);
     const response = BaseHttpResponse.success(message, data);
 
-    console.log('Controller' , data)
-
     res.status(200).json(response);
   };
 

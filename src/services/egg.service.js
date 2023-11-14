@@ -65,7 +65,6 @@ export class EggService {
     const query = eggQuery(filter);
 
     const statistics = await EggRepository.getStatistics(query);
-    console.log(statistics);
     return {
       message: messages.COMMON.fn.FETCHED("Egg"),
       data: statistics,
