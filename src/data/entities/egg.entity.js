@@ -81,35 +81,23 @@ export class EggEntity {
       });
     }
 
-    if (!openingBalance) {
+    if (!culls) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        openingBalance: "Egg must specify the opening balance",
+        culls: 'Egg must specify the number of culls',
       });
     }
 
-    // if (!culls) {
-    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-    //     culls: 'Egg must specify the number of culls',
-    //   });
-    // }
+    if (!waterConsumption) {
+      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+        waterConsumption: 'Egg must specify water consumption',
+      });
+    }
 
-    // if (!closingBalance) {
-    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-    //     closingBalance: 'Egg must specify the closing balance',
-    //   });
-    // }
-
-    // if (!waterConsumption) {
-    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-    //     waterConsumption: 'Egg must specify water consumption',
-    //   });
-    // }
-
-    // if (!feedConsumption) {
-    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-    //     feedConsumption: 'Egg must specify feed consumption',
-    //   });
-    // }
+    if (!feedConsumption) {
+      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+        feedConsumption: 'Egg must specify feed consumption',
+      });
+    }
 
     if (!eggCollection) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
@@ -117,11 +105,11 @@ export class EggEntity {
       });
     }
 
-    // if (!remark) {
-    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-    //     remark: 'Egg must have a remark',
-    //   });
-    // }
+    if (!remark) {
+      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+        remark: 'Egg must have a remark',
+      });
+    }
 
     return this.#create({
       id: _id,
