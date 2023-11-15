@@ -27,13 +27,20 @@ const pigSchema = new Schema(
       required: true,
     },
 
+    quantity: {
+      type: Number,
+      required: true,
+    },
+
     mortality: {
       type: Number,
       default: 0,
-      required: true,
     },
   },
   {
     timestamps: true,
   }
 );
+
+
+export const Pig = model("Pig", pigSchema)
