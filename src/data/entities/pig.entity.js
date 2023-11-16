@@ -3,15 +3,16 @@ import { ValidationException } from "../../utils/exceptions/index.js";
 import { messages } from "../../utils/messages.utils.js";
 
 export class PigEntity {
-  constructor({ id, category, pen, room, mortality }) {
+  constructor({ id, category, pen, room, quantity, mortality }) {
     this.id = id;
     this.category = category;
     this.pen = pen;
     this.room = room;
+    this.quantity = quantity;
     this.mortality = mortality;
   }
 
-  static make({ _id, category, pen, room, mortality }) {
+  static make({ _id, category, pen, room, quantity, mortality }) {
     if (_id && !Id.isValidId(_id)) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         id: "Pig must have a valid id",
@@ -36,21 +37,36 @@ export class PigEntity {
       });
     }
 
+    if (!quantity) {
+      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+        quantity: "Pig must have a quantity",
+      });
+    }
+
     return this.#create({
       id: _id,
       category,
       pen,
       room,
+      quantity,
       mortality,
     });
   }
 
-  static #create({ category, pen, room, mortality, id = Id.makeId() }) {
+  static #create({
+    category,
+    pen,
+    room,
+    quantity,
+    mortality,
+    id = Id.makeId(),
+  }) {
     return new PigEntity({
       id,
       category,
       pen,
       room,
+      quantity,
       mortality,
     });
   }

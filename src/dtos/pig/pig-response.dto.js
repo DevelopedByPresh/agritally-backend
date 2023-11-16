@@ -1,8 +1,8 @@
 export class PigResponseDto {
   constructor({
     id,
-    category,
     pen,
+    category,
     room,
     quantity,
     mortality,
@@ -10,8 +10,8 @@ export class PigResponseDto {
     updatedAt,
   }) {
     this.id = id;
-    this.category = category;
     this.pen = pen;
+    this.category = category;
     this.room = room;
     this.quantity = quantity;
     this.mortality = mortality;
@@ -21,8 +21,8 @@ export class PigResponseDto {
 
   static from({
     id,
-    category,
     pen,
+    category,
     room,
     quantity,
     mortality,
@@ -31,8 +31,8 @@ export class PigResponseDto {
   }) {
     return new PigResponseDto({
       id,
-      category,
       pen,
+      category,
       room,
       quantity,
       mortality,

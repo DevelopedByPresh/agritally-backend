@@ -32,20 +32,20 @@ export class PigRepository {
         $group: {
           _id: null,
           totalMortality: { $sum: "$mortality" },
-          // Add more fields based on your Pig model attributes
-        },
+          totalPen1: { $sum: { $cond: [{ $eq: ["$pen", 1] }, "$quantity", 0] } },
+          totalPen2: { $sum: { $cond: [{ $eq: ["$pen", 2] }, "$quantity", 0] } },
+          totalPen3: { $sum: { $cond: [{ $eq: ["$pen", 3] }, "$quantity", 0] } },
+          totalPen4: { $sum: { $cond: [{ $eq: ["$pen", 4] }, "$quantity", 0] } },
+          },
       },
     ]);
 
-    const stats = statistics[0] || {};
-
-    // Calculate additional statistics based on your Pig model attributes
-    // For example, if you have a field 'totalWeight', you can calculate it like this:
-    const totalWeight = stats.totalWeight || 0;
+    const stats = statistics|| {};
+    console.log(statistics, "fgthe")
 
     return {
       stats,
-      totalWeight,
+
       // Add more calculated fields as needed
     };
   }
