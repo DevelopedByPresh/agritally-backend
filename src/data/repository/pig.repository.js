@@ -30,24 +30,40 @@ export class PigRepository {
       },
       {
         $group: {
-          _id: null,
+          _id: "$pen",
           totalMortality: { $sum: "$mortality" },
-          totalPen1: { $sum: { $cond: [{ $eq: ["$pen", 1] }, "$quantity", 0] } },
-          totalPen2: { $sum: { $cond: [{ $eq: ["$pen", 2] }, "$quantity", 0] } },
-          totalPen3: { $sum: { $cond: [{ $eq: ["$pen", 3] }, "$quantity", 0] } },
-          totalPen4: { $sum: { $cond: [{ $eq: ["$pen", 4] }, "$quantity", 0] } },
-          },
+          totalQuantity: { $sum: "$quantity" },
+        },
+      },
+      {
+        $sort: {
+          _id: 1, 
+        },
       },
     ]);
 
-    const stats = statistics|| {};
-    console.log(statistics, "fgthe")
+    const stats = {};
+    let totalMortality = 0;
+    let totalQuantity = 0;
 
-    return {
-      stats,
+    statistics.forEach((penStat) => {
+      const penNumber = penStat._id;
+      const penMortality = penStat.totalMortality;
+      const penQuantity = penStat.totalQuantity;
 
-      // Add more calculated fields as needed
-    };
+      stats[`pen${penNumber}`] = {
+        totalMortality: penMortality,
+        totalQuantity: penQuantity,
+      };
+
+      totalMortality += penMortality;
+      totalQuantity += penQuantity;
+    });
+
+    stats.totalMortality = totalMortality;
+    stats.totalQuantity = totalQuantity;
+
+    return stats;
   }
 
   static async deleteOne(pigId) {

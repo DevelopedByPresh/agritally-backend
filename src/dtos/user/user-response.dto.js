@@ -7,6 +7,7 @@ export class UserResponseDTO {
       password,
       date_of_birth,
       phone,
+      role,
       createdAt,
       updatedAt,
     }) {
@@ -17,6 +18,7 @@ export class UserResponseDTO {
       this.password = password;
       this.date_of_birth = date_of_birth;
       this.phone = phone;
+      this.role = role;
       this.createdAt = createdAt;
       this.updatedAt = updatedAt;
     }
@@ -29,6 +31,7 @@ export class UserResponseDTO {
       password,
       date_of_birth,
       phone,
+      role,
       createdAt,
       updatedAt,
     }) {
@@ -40,6 +43,7 @@ export class UserResponseDTO {
         password,
         date_of_birth,
         phone,
+        role,
         createdAt,
         updatedAt,
       });

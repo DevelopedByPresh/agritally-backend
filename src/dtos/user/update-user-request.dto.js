@@ -4,7 +4,6 @@ export class UpdateUserRequestDTO {
     firstName,
     lastName,
     password,
-    role,
     date_of_birth,
     phone,
   }) {
@@ -14,7 +13,6 @@ export class UpdateUserRequestDTO {
     this.password = password;
     this.date_of_birth = date_of_birth;
     this.phone = phone;
-    this.role = role;
     this.updatedAt = new Date();
   }
 
@@ -23,7 +21,6 @@ export class UpdateUserRequestDTO {
     firstName,
     lastName,
     password,
-    role,
     date_of_birth,
     phone,
   }) {
@@ -32,7 +29,6 @@ export class UpdateUserRequestDTO {
       firstName,
       lastName,
       password,
-      role,
       date_of_birth,
       phone,
     });

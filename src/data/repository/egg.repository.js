@@ -52,12 +52,12 @@ export class EggRepository {
     const stats = statistics[0] || {};
 
     const totalProduction = stats.totalEggCollection - stats.totalCracks || 0;
-    const closingBalance = stats.totalEggCollection ;
+    const closingBalance = stats.totalEggCollection;
 
     return {
       stats,
       totalProduction,
-      closingBalance
+      closingBalance,
     };
   }
 
