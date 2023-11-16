@@ -2,23 +2,22 @@ function formatErrorMessage(msg) {
   // Regex to locate the appropriate space for inserting commas in numbers.
   const regex = /(?<!.*ISO \d)\B(?=(\d{3})+(?!\d))/g;
 
-  // Remove quotation marks and insert comma to number if found.
+  // Remove quotation marks and insert commas into numbers if found.
   return `${msg.replaceAll('"', '').replace(regex, ',')}.`;
 }
 
 export function refineError(error) {
-  const reducer = (acc, value) => {
-    if (acc === '') return acc + value;
-    return `${acc}.${value}`;
-  };
-
   const err = {};
 
-  for (let i = 0; i < error.details.length; i += 1) {
-    const path = error.details[i].path.reduce(reducer, '');
+  error.details.forEach((detail) => {
+    // Remove the first element ("body") from the path
+    const pathWithoutBody = detail.path.slice(1);
 
-    err[path] = formatErrorMessage(error.details[i].message);
-  }
+    // Join the path elements without the "body." prefix
+    const path = pathWithoutBody.join('.');
+
+    err[path] = formatErrorMessage(detail.message);
+  });
 
   return err;
 }

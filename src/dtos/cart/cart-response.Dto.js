@@ -1,7 +1,17 @@
 export class CartResponseDto {
-  constructor({ id, user, active, cartItems, total, createdAt, updatedAt }) {
+  constructor({
+    id,
+    user,
+    productId,
+    active,
+    cartItems,
+    total,
+    createdAt,
+    updatedAt,
+  }) {
     this.id = id;
     this.user = user;
+    this.productId = productId;
     this.active = active;
     this.cartItems = cartItems;
     this.total = total;
@@ -9,10 +19,20 @@ export class CartResponseDto {
     this.updatedAt = updatedAt;
   }
 
-  static from({ id, user, active, cartItems, total, createdAt, updatedAt }) {
+  static from({
+    id,
+    user,
+    productId,
+    active,
+    cartItems,
+    total,
+    createdAt,
+    updatedAt,
+  }) {
     return new CartResponseDto({
       id,
       user,
+      productId,
       active,
       cartItems,
       total,

@@ -3,7 +3,9 @@ import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 
 export class CartService {
   static async createCart(newItems) {
-    const { productId, cartId, user, quantity } = newItems;
+    const { cartItems, cartId, user } = newItems;
+    const productId = cartItems[0].productId;
+    const quantity = cartItems[0].quantity;
 
     const foundProduct = await ProductRepository.findById(productId);
 
@@ -30,9 +32,11 @@ export class CartService {
       });
     }
 
+    
     const existingItemIndex = cart.cartItems.findIndex((item) =>
-      item.productId.equals(foundProduct._id)
+    item.productId[0].equals(foundProduct._id)
     );
+    console.log(cart);
 
     if (existingItemIndex !== -1) {
       // Updating existing item
