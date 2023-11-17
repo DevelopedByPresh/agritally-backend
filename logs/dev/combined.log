@@ -8620,3 +8620,103 @@
 {"level":"error","message":"quantity is not defined","meta":"ReferenceError: quantity is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:43:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}

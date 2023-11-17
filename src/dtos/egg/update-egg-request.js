@@ -13,6 +13,7 @@ export class UpdateEggRequestDto {
     feedConsumption,
     eggCollection,
     remark,
+    status,
   }) {
     this.breed = breed;
     this.penNumber = penNumber;
@@ -27,6 +28,7 @@ export class UpdateEggRequestDto {
     this.feedConsumption = feedConsumption;
     this.eggCollection = eggCollection;
     this.remark = remark;
+    this.status = status;
     this.updatedAt = new Date();
   }
 
@@ -43,6 +45,7 @@ export class UpdateEggRequestDto {
     feedConsumption,
     eggCollection,
     remark,
+    status,
   }) {
     return new UpdateEggRequestDto({
       breed,
@@ -57,6 +60,7 @@ export class UpdateEggRequestDto {
       feedConsumption,
       eggCollection,
       remark,
+      status,
     });
   }
 }

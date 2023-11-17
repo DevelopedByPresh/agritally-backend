@@ -18,6 +18,7 @@ export class EggResponseDto {
     thirdTray,
     cracks,
     remark,
+    status,
     createdAt,
     updatedAt,
   }) {
@@ -39,6 +40,7 @@ export class EggResponseDto {
     this.thirdTray = thirdTray;
     this.cracks = cracks;
     this.remark = remark;
+    this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
   }
@@ -62,6 +64,7 @@ export class EggResponseDto {
     thirdTray,
     cracks,
     remark,
+    status,
     createdAt,
     updatedAt,
   }) {
@@ -84,6 +87,7 @@ export class EggResponseDto {
       thirdTray,
       cracks,
       remark,
+      status,
       createdAt,
       updatedAt,
     });

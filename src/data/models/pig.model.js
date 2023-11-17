@@ -41,6 +41,12 @@ const pigSchema = new Schema(
       type: Date,
       default: new Date(),
     },
+
+    status: {
+      type: String,
+      enum: ["Approved", "Pending"],
+      default: "Pending",
+    },
   },
   {
     timestamps: true,

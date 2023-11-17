@@ -36,7 +36,6 @@ export class CartService {
     const existingItemIndex = cart.cartItems.findIndex((item) =>
     item.productId[0].equals(foundProduct._id)
     );
-    console.log(cart);
 
     if (existingItemIndex !== -1) {
       // Updating existing item
