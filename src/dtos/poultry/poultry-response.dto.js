@@ -1,9 +1,9 @@
-export class PigResponseDto {
+export class PoultryResponseDto {
   constructor({
     id,
-    pen,
+    user,
     category,
-    room,
+    date,
     quantity,
     mortality,
     status,
@@ -11,9 +11,9 @@ export class PigResponseDto {
     updatedAt,
   }) {
     this.id = id;
-    this.pen = pen;
+    this.user = user;
     this.category = category;
-    this.room = room;
+    this.date = date;
     this.quantity = quantity;
     this.mortality = mortality;
     this.status = status;
@@ -23,20 +23,20 @@ export class PigResponseDto {
 
   static from({
     id,
-    pen,
+    user,
     category,
-    room,
+    date,
     quantity,
     mortality,
     status,
     createdAt,
     updatedAt,
   }) {
-    return new PigResponseDto({
+    return new PoultryResponseDto({
       id,
-      pen,
+      user,
       category,
-      room,
+      date,
       quantity,
       mortality,
       status,
@@ -45,7 +45,7 @@ export class PigResponseDto {
     });
   }
 
-  static fromMany(pigs) {
-    return pigs.map((pig) => PigResponseDto.from(pig));
+  static fromMany(poultries) {
+    return poultries.map((poultry) => PoultryResponseDto.from(poultry));
   }
 }

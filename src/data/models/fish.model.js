@@ -1,36 +1,40 @@
 import { Schema, model } from "mongoose";
 
-const poultrySchema = new Schema(
+const fishSchema = new Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
 
     category: {
       type: String,
-      enum: ["Layers", "Broilers"],
+      enum: ["Fingerlings", "Mature"],
       required: true,
     },
 
     date: {
       type: Date,
       default: new Date(),
-      required: true,
     },
 
     quantity: {
       type: Number,
-      default: 0,
+      default: 1,
+      required: true
+    },
+
+    price: {
+      type: Number,
       required: true,
     },
 
-    mortality: {
-        type: Number,
-        required: true,
-      },
-    
+    weight: {
+      type: String,
+      default: "0 kg",
+    },
+  
     status: {
       type: String,
       enum: ["Approved", "Pending"],
@@ -42,4 +46,4 @@ const poultrySchema = new Schema(
   }
 );
 
-export const Poultry = model("Poultry", poultrySchema);
+export const Fish = model("Fish", fishSchema);

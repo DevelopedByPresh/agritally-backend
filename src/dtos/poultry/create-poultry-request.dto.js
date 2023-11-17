@@ -1,31 +1,35 @@
-export class CreatePigRequestDto {
+export class CreatePoultryRequestDto {
   constructor({
-    pen,
+    user,
     category,
-    room,
+    date,
     quantity,
     mortality,
+    status,
   }) {
-    this.pen = pen;
+    this.user = user;
     this.category = category;
-    this.room = room;
+    this.date = date.now();
     this.quantity = quantity;
     this.mortality = mortality;
+    this.status = status;
   }
 
   static from({
-    pen,
+    user,
     category,
-    room,
+    date,
     quantity,
     mortality,
+    status,
   }) {
-    return new CreatePigRequestDto({
-      pen,
+    return new CreatePoultryRequestDto({
+      user,
       category,
-      room,
+      date,
       quantity,
       mortality,
+      status,
     });
   }
 }
