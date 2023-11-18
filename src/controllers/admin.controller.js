@@ -93,9 +93,10 @@ export class AdminController {
    */
   static changeUserRole = async (req, res) => {
     const { message, data } = await AdminService.changeUserRole(
-      req.params,
+      req.params.id,
       req.body
     );
+    console.log(req.body, "fhdfghd")
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);

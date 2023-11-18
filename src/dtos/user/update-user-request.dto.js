@@ -3,16 +3,16 @@ export class UpdateUserRequestDTO {
     email,
     firstName,
     lastName,
-    password,
     date_of_birth,
     phone,
+    role
   }) {
     this.email = email;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.password = password;
     this.date_of_birth = date_of_birth;
     this.phone = phone;
+    this.role = role;
     this.updatedAt = new Date();
   }
 
@@ -20,17 +20,17 @@ export class UpdateUserRequestDTO {
     email,
     firstName,
     lastName,
-    password,
     date_of_birth,
     phone,
+    role,
   }) {
     return new UpdateUserRequestDTO({
       email,
       firstName,
       lastName,
-      password,
       date_of_birth,
       phone,
+      role,
     });
   }
 }

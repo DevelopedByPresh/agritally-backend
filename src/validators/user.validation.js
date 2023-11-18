@@ -23,6 +23,7 @@ export const updateUserRequestValidator = Joi.object({
     lastName: nameSchema,
     phone: phoneSchema,
     date_of_birth: Joi.string(),
+    role: Joi.string(),
   }),
   params: Joi.object({
     id: objectIdSchema.label("User ID").required(),

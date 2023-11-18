@@ -4,8 +4,9 @@ import { AdminController, UserController } from "../controllers/index.js";
 import {
   createAdminRequestValidator,
   updateAdminRequestValidator,
+  updateUserRequestValidator
 } from "../validators/index.js";
-import { CreateAdminRequestDto, UpdateAdminRequestDto } from "../dtos/index.js";
+import { CreateAdminRequestDto, UpdateAdminRequestDto, UpdateUserRequestDTO } from "../dtos/index.js";
 import { ADMIN_ROLE } from "../utils/helpers/admin.helpers.js";
 import { authorizeRoles, auth, ValidateRequest } from "../middleware/index.js";
 import { idValidator } from "../validators/lib/common-validators.js";
@@ -44,7 +45,7 @@ adminRouter.patch(
 adminRouter.patch(
   "/change-role/:id",
   auth,
-  ValidateRequest.with(idValidator),
+  ValidateRequest.with(updateUserRequestValidator, UpdateUserRequestDTO),
   AdminController.changeUserRole
 );
 

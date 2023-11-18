@@ -1,8 +1,8 @@
-import { AdminRepository } from "../data/repository/index.js";
+import { AdminRepository, UserRepository } from "../data/repository/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 import { BcryptHelper, jwtService } from "../lib/index.js";
-import { AdminResponseDTO } from "../dtos/admin/index.js";
-import { AdminEntity } from "../data/entities/index.js";
+import { AdminResponseDTO, UserResponseDTO } from "../dtos/index.js";
+import { AdminEntity, UserEntity } from "../data/entities/index.js";
 import { messages } from "../utils/messages.utils.js";
 
 export class AdminService {
@@ -79,6 +79,24 @@ export class AdminService {
     return {
       message: messages.COMMON.fn.FETCHED("Admins"),
       data: AdminResponseDTO.fromMany(admin),
+    };
+  }
+
+  static async changeUserRole(id, changes) {
+    const user = await UserRepository.findById(id);
+    if (!user) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("User"));
+    }
+
+    const userEntity = UserEntity.make({
+      ...user._doc,
+      ...changes,
+    });
+
+    const updateduser = await UserRepository.updateOne(id, userEntity);
+    return {
+      message: messages.COMMON.fn.UPDATED("User"),
+      data: UserResponseDTO.from(updateduser),
     };
   }
 
