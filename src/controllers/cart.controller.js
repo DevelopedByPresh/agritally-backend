@@ -62,6 +62,6 @@ export class CartController {
     const { message, data } = await CartService.delete(id);
     const response = BaseHttpResponse.success(message, data);
 
-    res.status(204).json(response);
+    res.status(201).json(response);
   };
 }

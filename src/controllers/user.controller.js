@@ -57,7 +57,10 @@ export class UserController {
    * @param {import('express').Response} res
    */
   static updateProfile = async (req, res) => {
-    const { message, data } = await UserService.updateOne(req.params.id, req.body);
+    const { message, data } = await UserService.updateOne(
+      req.params.id,
+      req.body
+    );
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
@@ -72,6 +75,6 @@ export class UserController {
     const { message, data } = await UserService.deleteUser(req.params.id);
     const response = BaseHttpResponse.success(message, data);
 
-    res.status(204).json(response);
+    res.status(201).json(response);
   };
 }

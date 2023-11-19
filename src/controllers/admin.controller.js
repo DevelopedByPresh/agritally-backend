@@ -96,7 +96,7 @@ export class AdminController {
       req.params.id,
       req.body
     );
-    console.log(req.body, "fhdfghd")
+    console.log(req.body, "fhdfghd");
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
@@ -111,6 +111,6 @@ export class AdminController {
     const { message, data } = await AdminService.deleteAdmin(req.params.id);
     const response = BaseHttpResponse.success(message, data);
 
-    res.status(204).json(response);
+    res.status(201).json(response);
   };
 }
