@@ -1,69 +1,77 @@
+import { CartEntity } from "../data/entities/index.js";
 import { CartRepository, ProductRepository } from "../data/repository/index.js";
+import { CartResponseDto } from "../dtos/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 
 export class CartService {
   static async createCart(newItems) {
-    const { cartItems, cartId, user } = newItems;
-    const productId = cartItems[0].productId;
-    const quantity = cartItems[0].quantity;
+    const { cartItems, user, quan } = newItems;
 
+    // Create a new cart entity
+    const cartEntity = CartEntity.make({ user, cartItems });
+
+    // Find the first product in cartItems
+    const { productId, quantity } = cartItems[0];
+    console.log(quantity);
     const foundProduct = await ProductRepository.findById(productId);
 
+    // Throw an exception if the product is not found
     if (!foundProduct) {
       throw new NotFoundException("Product not found.");
     }
 
-    // Check if a cart already exists for the user
+    // Find an active cart or create a new one
     let cart = await CartRepository.findOne({ user: user, active: true });
-
-    if (!cart) {
-      // If no active cart exists, create a new one
-      cart = await CartRepository.create({
-        user: user,
-        cartItems: [],
-        active: true,
-      });
-    } else if (!cart.active) {
-      // If cart exists but is not active, create a new one
-      cart = await CartRepository.create({
-        user: user,
-        cartItems: [],
-        active: true,
-      });
+    if (!cart || !cart.active) {
+      cart = await CartRepository.create(cartEntity);
     }
 
+    // // Iterate over new items and update the cart
+    // for (const newItem of cartEntity.cartItems) {
+    //   const { productId } = newItem;
+    //   const foundProduct = await ProductRepository.findById(productId);
+
+    //   // Throw an exception if the product is not found
+    //   if (!foundProduct) {
+    //     throw new NotFoundException(`Product with ID ${productId} not found.`);
+    //   }
+
+      const existingItemIndex = cart.cartItems.findIndex(
+        (item) =>
+          item.productId[0] && item.productId[0].equals(foundProduct._id)
+      );
+
+      if (existingItemIndex !== -1) {
+        // Update existing item
+        const existingItem = cart.cartItems[existingItemIndex];
+        existingItem.quantity += quantity; // Only increment quantity
+        // Correct the calculation of subtotal here
+        existingItem.subtotal = existingItem.quantity * existingItem.price;
+      } else {
+        // Add a new item to the cart
+        const newItemData = {
+          productId: foundProduct._id,
+          price: foundProduct.price,
+          quantity,
+          // Correct the calculation of subtotal here
+          subtotal: foundProduct.price * quantity,
+        };
+        cart.cartItems.push(newItemData);
+      }
     
-    const existingItemIndex = cart.cartItems.findIndex((item) =>
-    item.productId[0].equals(foundProduct._id)
-    );
 
-    if (existingItemIndex !== -1) {
-      // Updating existing item
-      const existingItem = cart.cartItems[existingItemIndex];
-      existingItem.quantity += quantity;
-      existingItem.subtotal += existingItem.quantity * existingItem.price;
-    } else {
-      // Add a new item to the cart
-      const newItemData = {
-        productId: foundProduct._id,
-        name: foundProduct.name,
-        price: foundProduct.price,
-        quantity,
-        subtotal: foundProduct.price * quantity,
-      };
-      cart.cartItems.push(newItemData);
-    }
-
-    // Calculate subtotal
-    cart.total = cart.cartItems.reduce(
+    // Calculate total, quantity, and subtotal
+     cart.total = cart.cartItems.reduce(
       (total, item) => total + item.subtotal,
       0
     );
     await cart.save();
+    // Set the total in the cart entity and return it
+    cartEntity.total = cartTotals.subtotal;
 
     return {
-      message: "Item added to cart",
-      data: cart,
+      message: "Item(s) added to cart",
+      data: cart
     };
   }
 

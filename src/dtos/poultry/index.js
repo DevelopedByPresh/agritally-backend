@@ -1,3 +1,3 @@
-export * from './create-pig-request.dto.js'
-export * from './pig-response.dto.js'
-export * from './update-pig-request.js'
+export * from './create-poultry-request.dto.js'
+export * from './poultry-response.dto.js'
+export * from './update-poultry-request.js'

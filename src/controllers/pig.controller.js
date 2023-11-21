@@ -71,6 +71,6 @@ export class PigController {
     const { message, data } = await PigService.delete(req.params.id);
     const response = BaseHttpResponse.success(message, data);
 
-    res.status(201).json(response);
+    res.status(200).json(response);
   };
 }

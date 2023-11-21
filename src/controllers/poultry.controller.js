@@ -1,15 +1,14 @@
-import { handleError } from "../middleware/errorHandler.middleware.js";
-import { UserService } from "../services/index.js";
+import { PoultryService } from "../services/index.js";
 import { BaseHttpResponse } from "../utils/base-http-response.utils.js";
 
-export class UserController {
+export class PoultryController {
   /**
    *
    * @param {import('express').Request} req
    * @param {import('express').Response} res
    */
-  static register = async (req, res) => {
-    const { message, data } = await UserService.register(req.body);
+  static create = async (req, res) => {
+    const { message, data } = await PoultryService.create(req.body);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(201).json(response);
@@ -20,8 +19,8 @@ export class UserController {
    * @param {import('express').Request} req
    * @param {import('express').Response} res
    */
-  static login = async (req, res) => {
-    const { message, data } = await UserService.login(req.body);
+  static showAll = async (req, res) => {
+    const { message, data } = await PoultryService.showAll(req.query);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
@@ -32,8 +31,8 @@ export class UserController {
    * @param {import('express').Request} req
    * @param {import('express').Response} res
    */
-  static getOne = async (req, res) => {
-    const { message, data } = await UserService.getOne(req.params.id);
+  static get = async (req, res) => {
+    const { message, data } = await PoultryService.get(req.params.id);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
@@ -44,8 +43,8 @@ export class UserController {
    * @param {import('express').Request} req
    * @param {import('express').Response} res
    */
-  static getAll = async (req, res) => {
-    const { message, data } = await UserService.getAll();
+  static update = async (req, res) => {
+    const { message, data } = await PoultryService.update(req.params.id, req.body);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
@@ -56,11 +55,8 @@ export class UserController {
    * @param {import('express').Request} req
    * @param {import('express').Response} res
    */
-  static updateProfile = async (req, res) => {
-    const { message, data } = await UserService.updateOne(
-      req.params.id,
-      req.body
-    );
+  static statistics = async (req, res) => {
+    const { message, data } = await PoultryService.getStatistics(req.params.id, req.body);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
@@ -71,8 +67,8 @@ export class UserController {
    * @param {import('express').Request} req
    * @param {import('express').Response} res
    */
-  static deleteUser = async (req, res) => {
-    const { message, data } = await UserService.deleteUser(req.params.id);
+  static delete = async (req, res) => {
+    const { message, data } = await PoultryService.delete(req.params.id);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);

@@ -63,8 +63,6 @@ export class PigService {
   static async getStatistics(filter) {
     const query = pigQuery(filter);
 
-    // Implement the logic for pig statistics aggregation here
-
     const statistics = await PigRepository.getStatistics(query);
     return {
       message: messages.COMMON.fn.FETCHED("Pig Statistics"),

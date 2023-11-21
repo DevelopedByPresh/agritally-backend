@@ -19,7 +19,7 @@ const { MANAGER, OWNER, SUPERADMIN } = ADMIN_ROLE;
 
 cartRouter.post(
   "/add",
-  auth,
+  // auth,
   ValidateRequest.with(createCartRequestValidator, CreateCartRequestDto),
   CartController.addToCart
 );

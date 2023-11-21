@@ -4,9 +4,10 @@ import { objectIdSchema } from './lib/common-schema.js';
 const cartItemSchema = Joi.object({
   productId: objectIdSchema.required().label('Product ID'),
   price: Joi.number().label('Price'),
-  quantity: Joi.number().default(1).label('Quantity'),
+  quantity: Joi.number().label('Quantity'),
   subtotal: Joi.number().label('Subtotal'),
 }).label('Cart Item');
+
 
 export const createCartRequestValidator = Joi.object({
   body: Joi.object({

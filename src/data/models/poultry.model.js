@@ -17,7 +17,6 @@ const poultrySchema = new Schema(
     date: {
       type: Date,
       default: new Date(),
-      required: true,
     },
 
     quantity: {

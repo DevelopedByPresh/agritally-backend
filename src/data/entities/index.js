@@ -1,4 +1,5 @@
 export * from './admin.entity.js'
+export * from './cart.entity.js'
 export * from './egg.entity.js'
 export * from './fish.entity.js'
 export * from './user.entity.js'

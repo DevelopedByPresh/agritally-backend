@@ -3,7 +3,7 @@ import { BaseHttpResponse } from "../utils/base-http-response.utils.js";
 
 export class CartController {
   static addToCart = async (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     const { message, data } = await CartService.createCart(req.body);
     const response = BaseHttpResponse.success(message, data);
 
@@ -62,6 +62,6 @@ export class CartController {
     const { message, data } = await CartService.delete(id);
     const response = BaseHttpResponse.success(message, data);
 
-    res.status(201).json(response);
+    res.status(200).json(response);
   };
 }

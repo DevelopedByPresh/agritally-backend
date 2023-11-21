@@ -1,18 +1,20 @@
-export class CreatePoultryRequestDto {
+export class CreateFishRequestDto {
   constructor({
     user,
     category,
     date,
     quantity,
-    mortality,
+    price,
+    weight,
     status,
   }) {
     this.user = user;
     this.category = category;
-    this.date = Date.now();
+    this.date = date || new Date();
     this.quantity = quantity;
-    this.mortality = mortality;
-    this.status = status;
+    this.price = price;
+    this.weight = weight || "0 kg";
+    this.status = status || "Pending";
   }
 
   static from({
@@ -20,15 +22,17 @@ export class CreatePoultryRequestDto {
     category,
     date,
     quantity,
-    mortality,
+    price,
+    weight,
     status,
   }) {
-    return new CreatePoultryRequestDto({
+    return new CreateFishRequestDto({
       user,
       category,
       date,
       quantity,
-      mortality,
+      price,
+      weight,
       status,
     });
   }

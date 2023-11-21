@@ -35,6 +35,6 @@ export class TransactionController {
         const { message, data} = await TransactionService.delete(req.params.id);
         const response = BaseHttpResponse.success(message, data);
         
-        res.status(201).json(response);
+        res.status(200).json(response);
     }
 }

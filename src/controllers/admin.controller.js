@@ -111,6 +111,6 @@ export class AdminController {
     const { message, data } = await AdminService.deleteAdmin(req.params.id);
     const response = BaseHttpResponse.success(message, data);
 
-    res.status(201).json(response);
+    res.status(200).json(response);
   };
 }

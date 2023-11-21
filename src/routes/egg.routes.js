@@ -22,7 +22,6 @@ eggRouter.get("/statistics", auth, authorizeRoles(MANAGER, OWNER, SUPERADMIN), E
 
 eggRouter.get("/:id", auth, ValidateRequest.with(idValidator), EggController.get);
 
-
 eggRouter.patch("/:id", auth, authorizeRoles(MANAGER, OWNER, SUPERADMIN), ValidateRequest.with(updateEggRequestValidator, UpdateEggRequestDto), EggController.update);
 
 eggRouter.delete("/:id", auth, authorizeRoles(MANAGER, OWNER, SUPERADMIN), EggController.delete);

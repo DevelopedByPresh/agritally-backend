@@ -24,29 +24,22 @@ export class PoultryRepository {
   }
 
   static async getStatistics(query) {
-    // Modify this method based on your specific requirements for poultry statistics
-    // You can use the aggregation framework similar to the EggRepository
+    const statistics = await Poultry.aggregate([
+      {
+        $match: query,
+      },
+      {
+        $group: {
+          _id: "$category",
+          totalLayerCategory: { $sum: "$quantity" },
+          totalMortality: { $sum: "$mortality" },
+        },
+      },
+    ]);
 
-    // Sample implementation:
-    // const statistics = await Poultry.aggregate([
-    //   {
-    //     $match: query,
-    //   },
-    //   {
-    //     $group: {
-    //       _id: null,
-    //       totalQuantity: { $sum: "$quantity" },
-    //       totalMortality: { $sum: "$mortality" },
-    //       // Add more aggregation stages as needed
-    //     },
-    //   },
-    // ]);
+    const stats = statistics || {};
+    return stats;
 
-    // // Process the statistics and return the result
-    // const stats = statistics[0] || {};
-    // return stats;
-
-    // Note: Modify the aggregation stages based on your specific use case.
   }
 
   static async deleteOne(poultryId) {

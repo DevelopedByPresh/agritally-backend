@@ -8900,3 +8900,777 @@
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'equals')","meta":"TypeError: Cannot read properties of undefined (reading 'equals')\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:37:23\n    at Proxy.findIndex (<anonymous>)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:36:46)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'equals')","meta":"TypeError: Cannot read properties of undefined (reading 'equals')\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:37:23\n    at Proxy.findIndex (<anonymous>)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:36:46)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'quantity')","meta":"TypeError: Cannot read properties of undefined (reading 'quantity')\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:8:35)\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:57:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'productId')","meta":"TypeError: Cannot read properties of undefined (reading 'productId')\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:7:33)\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:114:3)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'equals')","meta":"TypeError: Cannot read properties of undefined (reading 'equals')\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:38:23\n    at Proxy.findIndex (<anonymous>)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:37:46)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"item.productId.equals is not a function","meta":"TypeError: item.productId.equals is not a function\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:38:20\n    at Proxy.findIndex (<anonymous>)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:37:46)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"productId is not defined","meta":"ReferenceError: productId is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:10:59)\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:57:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"CartEntity.create is not a function","meta":"TypeError: CartEntity.create is not a function\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:9:35)\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:57:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"CartEntity.cr is not a function","meta":"TypeError: CartEntity.cr is not a function\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:9:35)\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:57:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'equals')","meta":"TypeError: Cannot read properties of undefined (reading 'equals')\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:42:27\n    at Proxy.findIndex (<anonymous>)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:41:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"item.productId.equals is not a function","meta":"TypeError: item.productId.equals is not a function\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:42:24\n    at Proxy.findIndex (<anonymous>)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:41:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at model.set [as total] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:65:16)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'productId' of 'cartItems[0]' as it is undefined.","meta":"TypeError: Cannot destructure property 'productId' of 'cartItems[0]' as it is undefined.\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:10:13)\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:57:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)"}
+{"level":"error","message":"Cannot destructure property 'productId' of 'cartItems[0]' as it is undefined.","meta":"TypeError: Cannot destructure property 'productId' of 'cartItems[0]' as it is undefined.\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:10:13)\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:57:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'productId' of 'cartItems[0]' as it is undefined.","meta":"TypeError: Cannot destructure property 'productId' of 'cartItems[0]' as it is undefined.\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:10:13)\n    at addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:57:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:51:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\", total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"","meta":"ValidationError: Cart validation failed: total: Cast to Number failed for value \"NaN\" (type number) at path \"total\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at model.set [as total] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:68:16)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"to is not defined","meta":"ReferenceError: to is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:64:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:53:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:56:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:97:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:97:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:97:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:94:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:83:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:83:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:83:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:81:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:46:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:48:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:48:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"quantity is not defined","meta":"ReferenceError: quantity is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:45:43)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"quantity is not defined","meta":"ReferenceError: quantity is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:46:43)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"quantity is not defined","meta":"ReferenceError: quantity is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:46:43)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"quantity is not defined","meta":"ReferenceError: quantity is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:46:43)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"quantity is not defined","meta":"ReferenceError: quantity is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:46:43)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"quantity is not defined","meta":"ReferenceError: quantity is not defined\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:47:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:49:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"","meta":"ValidationError: Cart validation failed: cartItems.0.subtotal: Cast to Number failed for value \"NaN\" (type number) at path \"subtotal\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at Subdocument.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\types\\subdocument.js:229:12)\n    at EmbeddedDocument.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at EmbeddedDocument.set [as subtotal] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\helpers\\document\\compile.js:205:19)\n    at CartService.createCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/cart.service.js:49:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async addToCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:7:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"date.now is not a function","meta":"TypeError: date.now is not a function\n    at new CreatePoultryRequestDto (file:///C:/Users/Purch/PROJECT/agritally-app/src/dtos/poultry/create-poultry-request.dto.js:12:22)\n    at CreatePoultryRequestDto.from (file:///C:/Users/Purch/PROJECT/agritally-app/src/dtos/poultry/create-poultry-request.dto.js:26:12)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:51:42)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'category' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'category' of 'filter' as it is undefined.\n    at poultryQuery (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/poultry.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"error","message":"Cannot destructure property 'category' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'category' of 'filter' as it is undefined.\n    at poultryQuery (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/poultry.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'category' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'category' of 'filter' as it is undefined.\n    at poultryQuery (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/poultry.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'category' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'category' of 'filter' as it is undefined.\n    at poultryQuery (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/poultry.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'category' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'category' of 'filter' as it is undefined.\n    at poultryQuery (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/poultry.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'category' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'category' of 'filter' as it is undefined.\n    at poultryQuery (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/poultry.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}

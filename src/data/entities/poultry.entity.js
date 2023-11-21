@@ -48,12 +48,6 @@ export class PoultryEntity {
       });
     }
 
-    if (!date) {
-      throw aValidationException(messages.EXCEPTIONS.VALIDATION, {
-        date: "Poultry must have a date",
-      });
-    }
-
     if (!quantity) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         quantity: "Poultry must have a quantity",

@@ -14,10 +14,11 @@ const cartItemSchema = {
   },
   quantity: {
     type: Number,
-    default: 1,
+    // default: 
   },
   subtotal: {
     type: Number,
+    // default: 0,
   },
 };
 
@@ -37,7 +38,7 @@ const cartSchema = new Schema(
     },
     total: {
       type: Number,
-      default: null,
+      default: 0,
     },
   },
   {
