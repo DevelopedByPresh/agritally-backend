@@ -1,6 +1,7 @@
 export class EggResponseDto {
   constructor({
     id,
+    user,
     breed,
     penNumber,
     totalBirdHoused,
@@ -23,6 +24,7 @@ export class EggResponseDto {
     updatedAt,
   }) {
     this.id = id;
+    this.user = user;
     this.breed = breed;
     this.penNumber = penNumber;
     this.totalBirdHoused = totalBirdHoused;
@@ -47,6 +49,7 @@ export class EggResponseDto {
 
   static from({
     id,
+    user,
     breed,
     penNumber,
     totalBirdHoused,
@@ -70,6 +73,7 @@ export class EggResponseDto {
   }) {
     return new EggResponseDto({
       id,
+      user,
       breed,
       penNumber,
       totalBirdHoused,

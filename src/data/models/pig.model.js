@@ -2,6 +2,11 @@ import { Schema, model } from "mongoose";
 
 const pigSchema = new Schema(
   {
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     pen: {
       type: Number,
       enum: [1, 2, 3, 4],

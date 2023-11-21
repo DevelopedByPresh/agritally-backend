@@ -60,8 +60,8 @@ export class PoultryService {
     };
   }
 
-  static async getStatistics(filter) {
-    const query = poultryQuery(filter);
+  static async getStatistics(filter, query) {
+    // const query = poultryQuery(filter);
 
     const statistics = await PoultryRepository.getStatistics(query);
     return {

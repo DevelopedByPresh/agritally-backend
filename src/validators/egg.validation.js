@@ -4,6 +4,7 @@ import { numberSchema, objectIdSchema } from "./lib/common-schema.js";
 
 export const createEggRequestValidator = Joi.object({
   body: Joi.object({
+    user: objectIdSchema.required().label("User ID"),
     breed: Joi.string().required().label("breed"),
     penNumber: numberSchema.required().label("Pen Number"),
     totalBirdHoused: numberSchema.label("Total Bird Housed"),

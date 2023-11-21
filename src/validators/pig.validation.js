@@ -13,6 +13,7 @@ const categorySchema = Joi.string().valid(
 
 export const createPigRequestValidator = Joi.object({
   body: Joi.object({
+    user: objectIdSchema.required().label("User ID"),
     category: categorySchema.required().label("Category"),
     pen: Joi.number().valid(1, 2, 3, 4).required().label("Pen"),
     room: Joi.number().required().label("Room"),

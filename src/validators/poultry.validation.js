@@ -14,7 +14,6 @@ export const createPoultryRequestValidator = Joi.object({
 
 export const updatePoultryRequestValidator = Joi.object({
   body: Joi.object({
-    user: objectIdSchema.label("User ID"),
     category: Joi.string().valid("Layers", "Broilers").label("Category"),
     date: Joi.date().label("Date"),
     quantity: numberSchema.label("Quantity"),

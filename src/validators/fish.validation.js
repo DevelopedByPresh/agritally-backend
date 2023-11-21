@@ -3,6 +3,7 @@ import { numberSchema, objectIdSchema } from "./lib/common-schema.js";
 
 export const createFishRequestValidator = Joi.object({
   body: Joi.object({
+    user: objectIdSchema.required().label("User ID"),
     breed: Joi.string().required().label("Breed"),
     quantity: numberSchema.required().label("Quantity"),
     price: numberSchema.required().label("Price"),

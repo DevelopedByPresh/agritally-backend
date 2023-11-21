@@ -2,6 +2,11 @@ import { Schema, model } from "mongoose";
 
 const eggSchema = new Schema(
   {
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
     breed: {
       type: String,
       requiredd: true,

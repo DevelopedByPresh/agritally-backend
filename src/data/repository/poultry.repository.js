@@ -35,6 +35,11 @@ export class PoultryRepository {
           totalMortality: { $sum: "$mortality" },
         },
       },
+     { $group: {
+        _id: null,
+        generalCategory: { $sum: "$quantity" },
+        generalMortality: { $sum: "$mortality" },
+      },}
     ]);
 
     const stats = statistics || {};

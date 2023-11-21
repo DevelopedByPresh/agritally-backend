@@ -1,11 +1,13 @@
 export class CreatePigRequestDto {
   constructor({
+    user,
     pen,
     category,
     room,
     quantity,
     mortality,
   }) {
+    this.user = user;
     this.pen = pen;
     this.category = category;
     this.room = room;
@@ -14,6 +16,7 @@ export class CreatePigRequestDto {
   }
 
   static from({
+    user,
     pen,
     category,
     room,
@@ -21,6 +24,7 @@ export class CreatePigRequestDto {
     mortality,
   }) {
     return new CreatePigRequestDto({
+      user,
       pen,
       category,
       room,

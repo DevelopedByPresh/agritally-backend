@@ -8,7 +8,8 @@ const productSchema = new Schema(
       ref: "User",
       autopopulate: {
         select: "firstName lastName",
-      }
+      },
+      required: true,
     },
     category: {
       type: String,
