@@ -39,7 +39,7 @@ const pigSchema = new Schema(
 
     mortality: {
       type: Number,
-      required: true,
+      default: 0,
     },
 
     date: {

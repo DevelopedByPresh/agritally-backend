@@ -1,15 +1,8 @@
 import Joi from "joi";
 import { objectIdSchema } from "./lib/common-schema.js";
+import { PIG_CATEGORIES_ENUM } from "../utils/helpers/pig.helper.js";
 
-const categorySchema = Joi.string().valid(
-  "Boar",
-  "Dry Sows",
-  "In-pigs",
-  "farrow-pigs",
-  "Growers",
-  "Weaners",
-  "Piglets"
-);
+const categorySchema = Joi.string().valid(...PIG_CATEGORIES_ENUM);
 
 export const createPigRequestValidator = Joi.object({
   body: Joi.object({

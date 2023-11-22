@@ -4,7 +4,6 @@ export class CreateFishRequestDto {
     category,
     date,
     quantity,
-    price,
     weight,
     status,
   }) {
@@ -12,7 +11,6 @@ export class CreateFishRequestDto {
     this.category = category;
     this.date = date || new Date();
     this.quantity = quantity;
-    this.price = price;
     this.weight = weight || "0 kg";
     this.status = status || "Pending";
   }
@@ -22,7 +20,6 @@ export class CreateFishRequestDto {
     category,
     date,
     quantity,
-    price,
     weight,
     status,
   }) {
@@ -31,7 +28,6 @@ export class CreateFishRequestDto {
       category,
       date,
       quantity,
-      price,
       weight,
       status,
     });

@@ -9,6 +9,7 @@ const eggSchema = new Schema(
     },
     breed: {
       type: String,
+      enum: ["Big", "Small"],
       requiredd: true,
     },
     penNumber: {

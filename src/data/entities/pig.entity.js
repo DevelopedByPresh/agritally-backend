@@ -3,8 +3,9 @@ import { ValidationException } from "../../utils/exceptions/index.js";
 import { messages } from "../../utils/messages.utils.js";
 
 export class PigEntity {
-  constructor({ id, category, pen, room, quantity, mortality }) {
+  constructor({ id, user, category, pen, room, quantity, mortality }) {
     this.id = id;
+    this.user = user;
     this.category = category;
     this.pen = pen;
     this.room = room;
@@ -12,13 +13,18 @@ export class PigEntity {
     this.mortality = mortality;
   }
 
-  static make({ _id, category, pen, room, quantity, mortality }) {
+  static make({ _id, user, category, pen, room, quantity, mortality }) {
     if (_id && !Id.isValidId(_id)) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         id: "Pig must have a valid id",
       });
     }
 
+    if (!user) {
+      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+        user: "Pig must have a user",
+      });
+    }
     if (!category) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         category: "Pig must have a category",
@@ -45,6 +51,7 @@ export class PigEntity {
 
     return this.#create({
       id: _id,
+      user,
       category,
       pen,
       room,
@@ -54,6 +61,7 @@ export class PigEntity {
   }
 
   static #create({
+    user,
     category,
     pen,
     room,
@@ -63,6 +71,7 @@ export class PigEntity {
   }) {
     return new PigEntity({
       id,
+      user,
       category,
       pen,
       room,

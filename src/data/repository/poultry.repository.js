@@ -17,9 +17,13 @@ export class PoultryRepository {
   }
 
   static async updateOne(poultryId, updateDto) {
-    const updatedPoultry = await Poultry.findByIdAndUpdate(poultryId, updateDto, {
-      new: true,
-    });
+    const updatedPoultry = await Poultry.findByIdAndUpdate(
+      poultryId,
+      updateDto,
+      {
+        new: true,
+      }
+    );
     return updatedPoultry;
   }
 
@@ -35,16 +39,16 @@ export class PoultryRepository {
           totalMortality: { $sum: "$mortality" },
         },
       },
-     { $group: {
-        _id: null,
-        generalCategory: { $sum: "$quantity" },
-        generalMortality: { $sum: "$mortality" },
-      },}
+      {
+        $sort: {
+          _id: 1,
+        },
+      },
     ]);
 
     const stats = statistics || {};
+    // console.log(stats.reduce(), "Stats");
     return stats;
-
   }
 
   static async deleteOne(poultryId) {

@@ -9,7 +9,6 @@ export class FishEntity {
     category,
     date,
     quantity,
-    price,
     weight,
     status,
   }) {
@@ -18,7 +17,6 @@ export class FishEntity {
     this.category = category;
     this.date = date;
     this.quantity = quantity;
-    this.price = price;
     this.weight = weight;
     this.status = status;
   }
@@ -29,7 +27,6 @@ export class FishEntity {
     category,
     date,
     quantity,
-    price,
     weight,
     status,
   }) {
@@ -63,12 +60,6 @@ export class FishEntity {
       });
     }
 
-    if (!price) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        price: "Fish must have a price",
-      });
-    }
-
     if (!status) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         status: "Fish must have a status",
@@ -81,7 +72,6 @@ export class FishEntity {
       category,
       date,
       quantity,
-      price,
       weight,
       status,
     });
@@ -92,7 +82,6 @@ export class FishEntity {
     category,
     date,
     quantity,
-    price,
     weight,
     status,
     id = Id.makeId(),
@@ -103,7 +92,6 @@ export class FishEntity {
       category,
       date,
       quantity,
-      price,
       weight,
       status,
     });

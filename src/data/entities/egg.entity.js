@@ -5,6 +5,7 @@ import { messages } from "../../utils/messages.utils.js";
 export class EggEntity {
   constructor({
     id,
+    user,
     breed,
     penNumber,
     totalBirdHoused,
@@ -20,6 +21,7 @@ export class EggEntity {
     remark,
   }) {
     this.id = id;
+    this.user = user;
     this.breed = breed;
     this.penNumber = penNumber;
     this.totalBirdHoused = totalBirdHoused;
@@ -37,6 +39,7 @@ export class EggEntity {
 
   static make({
     _id,
+    user,
     breed,
     penNumber,
     totalBirdHoused,
@@ -57,6 +60,12 @@ export class EggEntity {
       });
     }
 
+    if (!user) {
+      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+        user: "Egg must have a User",
+      });
+    }
+   
     if (!breed) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         breed: "Egg must have a breed",
@@ -113,6 +122,7 @@ export class EggEntity {
 
     return this.#create({
       id: _id,
+      user,
       breed,
       penNumber,
       totalBirdHoused,
@@ -130,6 +140,7 @@ export class EggEntity {
   }
 
   static #create({
+    user,
     breed,
     penNumber,
     totalBirdHoused,
@@ -147,6 +158,7 @@ export class EggEntity {
   }) {
     return new EggEntity({
       id,
+      user,
       breed,
       penNumber,
       totalBirdHoused,
