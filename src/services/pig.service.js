@@ -2,7 +2,7 @@ import { PigEntity } from "../data/entities/index.js";
 import { PigRepository } from "../data/repository/index.js";
 import { PigResponseDto } from "../dtos/pig/pig-response.dto.js";
 import { NotFoundException } from "../utils/exceptions/index.js";
-import { pigQuery } from "../utils/index.js";
+import { queryFilter } from "../utils/index.js";
 import { messages } from "../utils/messages.utils.js";
 
 export class PigService {
@@ -17,7 +17,7 @@ export class PigService {
   }
 
   static async showAll(filter) {
-    const query = pigQuery(filter);
+    const query = queryFilter(filter);
     const foundPigs = await PigRepository.getAll(query);
     if (foundPigs.length === 0) {
       throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Pigs"));
@@ -61,7 +61,7 @@ export class PigService {
   }
 
   static async getStatistics(filter) {
-    const query = pigQuery(filter);
+    const query = queryFilter(filter);
 
     const statistics = await PigRepository.getStatistics(query);
     return {

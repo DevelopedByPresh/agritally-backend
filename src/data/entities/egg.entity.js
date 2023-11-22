@@ -6,7 +6,7 @@ export class EggEntity {
   constructor({
     id,
     user,
-    breed,
+    category,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -22,7 +22,7 @@ export class EggEntity {
   }) {
     this.id = id;
     this.user = user;
-    this.breed = breed;
+    this.category = category;
     this.penNumber = penNumber;
     this.totalBirdHoused = totalBirdHoused;
     this.ageHoused = ageHoused;
@@ -40,7 +40,7 @@ export class EggEntity {
   static make({
     _id,
     user,
-    breed,
+    category,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -66,9 +66,9 @@ export class EggEntity {
       });
     }
    
-    if (!breed) {
+    if (!category) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        breed: "Egg must have a breed",
+        category: "Egg must have a category",
       });
     }
 
@@ -123,7 +123,7 @@ export class EggEntity {
     return this.#create({
       id: _id,
       user,
-      breed,
+      category,
       penNumber,
       totalBirdHoused,
       ageHoused,
@@ -141,7 +141,7 @@ export class EggEntity {
 
   static #create({
     user,
-    breed,
+    category,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -159,7 +159,7 @@ export class EggEntity {
     return new EggEntity({
       id,
       user,
-      breed,
+      category,
       penNumber,
       totalBirdHoused,
       ageHoused,

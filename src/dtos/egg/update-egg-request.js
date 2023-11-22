@@ -1,7 +1,7 @@
 export class UpdateEggRequestDto {
   constructor({
     user,
-    breed,
+    category,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -17,7 +17,7 @@ export class UpdateEggRequestDto {
     status,
   }) {
     this.user = user;
-    this.breed = breed;
+    this.category = category;
     this.penNumber = penNumber;
     this.totalBirdHoused = totalBirdHoused;
     this.ageHoused = ageHoused;
@@ -36,7 +36,7 @@ export class UpdateEggRequestDto {
 
   static from({
     user,
-    breed,
+    category,
     penNumber,
     totalBirdHoused,
     ageHoused,
@@ -52,7 +52,7 @@ export class UpdateEggRequestDto {
   }) {
     return new UpdateEggRequestDto({
       user,
-      breed,
+      category,
       penNumber,
       totalBirdHoused,
       ageHoused,

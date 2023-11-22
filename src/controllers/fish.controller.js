@@ -55,6 +55,18 @@ export class FishController {
    * @param {import('express').Request} req
    * @param {import('express').Response} res
    */
+  static statistics = async (req, res) => {
+    const { message, data } = await FishService.statistics(req.params.id, req.body);
+    const response = BaseHttpResponse.success(message, data);
+
+    res.status(200).json(response);
+  };
+
+  /**
+   *
+   * @param {import('express').Request} req
+   * @param {import('express').Response} res
+   */
   static delete = async (req, res) => {
     const { message, data } = await FishService.delete(req.params.id);
     const response = BaseHttpResponse.success(message, data);

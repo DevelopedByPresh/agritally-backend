@@ -22,12 +22,12 @@ fishRouter.post(
 
 fishRouter.get("/", auth, FishController.showAll);
 
-// fishRouter.get(
-//   "/statistics",
-//   auth,
-//   authorizeRoles(MANAGER, OWNER, SUPERADMIN),
-//   FishController.statistics
-// );
+fishRouter.get(
+  "/statistics",
+  auth,
+  authorizeRoles(MANAGER, OWNER, SUPERADMIN),
+  FishController.statistics
+);
 
 fishRouter.get("/:id", auth, ValidateRequest.with(idValidator), FishController.get);
 

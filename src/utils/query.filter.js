@@ -1,7 +1,26 @@
-export function poultryQuery(filter) {
-  const { year, month, date } = filter;
+export function queryFilter(filter) {
+  const { pen, section, status, year, month, date, category, type } = filter;
 
   const query = {};
+
+  if (category) {
+    query.category = category;
+  }
+  if (type) {
+    query.type = type;
+  }
+
+  if (pen) {
+    query.pen = pen;
+  }
+
+  if (section) {
+    query.section = section;
+  }
+
+  if (status) {
+    query.status = status;
+  }
 
   if (date && month && year) {
     const startDate = new Date(year, month - 1, date);
@@ -16,14 +35,5 @@ export function poultryQuery(filter) {
     const endDate = new Date(year, 11, 31);
     query.date = { $gte: startDate, $lte: endDate };
   }
-
-  // if (category) {
-  //   query.category = category;
-  // }
-
-  // if (status) {
-  //   query.status = status;
-  // }
-
   return query;
 }

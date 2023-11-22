@@ -3,14 +3,14 @@ import Joi from "joi";
 import { numberSchema, objectIdSchema } from "./lib/common-schema.js";
 import { EGG_CATEGORIES_ENUM } from "../utils/helpers/egg.helper.js";
 
-const breedSchema = Joi.string()
+const categorySchema = Joi.string()
   .valid(...EGG_CATEGORIES_ENUM)
   .required();
 
 export const createEggRequestValidator = Joi.object({
   body: Joi.object({
     user: objectIdSchema.required().label("User ID"),
-    breed: breedSchema.label("Breed"),
+    category: categorySchema.label("category"),
     penNumber: numberSchema.required().label("Pen Number"),
     totalBirdHoused: numberSchema.label("Total Bird Housed"),
     ageHoused: numberSchema.label("Age Housed"),
@@ -36,7 +36,7 @@ export const createEggRequestValidator = Joi.object({
 
 export const updateEggRequestValidator = Joi.object({
   body: Joi.object({
-    breed: breedSchema.label("Breed"),
+    category: categorySchema.label("category"),
     penNumber: numberSchema.label("Pen Number"),
     totalBirdHoused: numberSchema.label("Total Bird Housed"),
     ageHoused: numberSchema.label("Age Housed"),

@@ -2,7 +2,7 @@ import { FishEntity } from "../data/entities/index.js";
 import { FishRepository } from "../data/repository/index.js";
 import { FishResponseDto } from "../dtos/fish/fish-response.dto.js";
 import { NotFoundException } from "../utils/exceptions/index.js";
-import { eggQuery } from "../utils/index.js";
+import { queryFilter } from "../utils/index.js";
 import { messages } from "../utils/messages.utils.js";
 
 export class FishService {
@@ -17,7 +17,7 @@ export class FishService {
   }
 
   static async showAll(filter) {
-    const query = eggQuery(filter);
+    const query = queryFilter(filter);
     const foundFish = await FishRepository.getAll(query);
     if (foundFish.length === 0) {
       throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Fish"));
@@ -31,6 +31,19 @@ export class FishService {
 
   static async get(id) {
     const fish = await FishRepository.findById(id);
+    if (!fish) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Fish"));
+    }
+
+    return {
+      message: messages.COMMON.fn.FETCHED("Fish"),
+      data: FishResponseDto.from(fish),
+    };
+  }
+
+  static async statistics(filter) {
+    const fish = await FishRepository.getStatistics(filter);
+    
     if (!fish) {
       throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Fish"));
     }

@@ -2,7 +2,7 @@ import { PoultryEntity } from "../data/entities/index.js";
 import { PoultryRepository } from "../data/repository/index.js";
 import { PoultryResponseDto } from "../dtos/poultry/poultry-response.dto.js";
 import { NotFoundException } from "../utils/exceptions/index.js";
-import { poultryQuery } from "../utils/index.js";
+import { queryFilter } from "../utils/index.js";
 import { messages } from "../utils/messages.utils.js";
 
 export class PoultryService {
@@ -17,7 +17,7 @@ export class PoultryService {
   }
 
   static async showAll(filter) {
-    const query = poultryQuery(filter);
+    const query = queryFilter(filter);
     const foundPoultry = await PoultryRepository.getAll(query);
     if (foundPoultry.length === 0) {
       throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Poultry"));
@@ -61,7 +61,7 @@ export class PoultryService {
   }
 
   static async getStatistics(filter, query) {
-    // const query = poultryQuery(filter);
+    // const query = queryFilter(filter);
 
     const statistics = await PoultryRepository.getStatistics(query);
     return {

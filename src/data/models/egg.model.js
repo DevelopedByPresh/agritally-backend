@@ -7,7 +7,7 @@ const eggSchema = new Schema(
       ref: "User",
       required: true,
     },
-    breed: {
+    category: {
       type: String,
       enum: ["Big", "Small"],
       requiredd: true,

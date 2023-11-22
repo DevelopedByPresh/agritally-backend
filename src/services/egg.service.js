@@ -2,7 +2,7 @@ import { EggEntity } from "../data/entities/index.js";
 import { EggRepository } from "../data/repository/index.js";
 import { EggResponseDto } from "../dtos/egg/egg-response.dto.js";
 import { NotFoundException } from "../utils/exceptions/index.js";
-import { eggQuery } from "../utils/index.js";
+import { queryFilter } from "../utils/index.js";
 import { messages } from "../utils/messages.utils.js";
 
 export class EggService {
@@ -17,7 +17,7 @@ export class EggService {
   }
 
   static async showAll(filter) {
-    const query = eggQuery(filter);
+    const query = queryFilter(filter);
     const foundEgg = await EggRepository.getAll(query);
     if (foundEgg.length === 0) {
       throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Eggs"));
@@ -61,7 +61,7 @@ export class EggService {
   }
 
   static async getStatistics(filter) {
-    const query = eggQuery(filter);
+    const query = queryFilter(filter);
 
     const statistics = await EggRepository.getStatistics(query);
     return {

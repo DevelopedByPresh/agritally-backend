@@ -35,7 +35,7 @@ export class PoultryRepository {
       {
         $group: {
           _id: "$category",
-          totalLayerCategory: { $sum: "$quantity" },
+          totalQuantity: { $sum: "$quantity" },
           totalMortality: { $sum: "$mortality" },
         },
       },
@@ -46,8 +46,26 @@ export class PoultryRepository {
       },
     ]);
 
-    const stats = statistics || {};
-    // console.log(stats.reduce(), "Stats");
+    const stats = {};
+    let totalQuantity = 0;
+    let totalMortality = 0;
+
+    statistics.forEach((poultryStat) => {
+      const poultryCategory = poultryStat._id;
+      const poultryQuantity = poultryStat.totalQuantity;
+      const poultryMortality = poultryStat.totalMortality;
+
+      stats[`${poultryCategory}`] = {
+        totalQuantity: poultryQuantity,
+        totalMortality: poultryMortality,
+      };
+
+      totalQuantity += poultryQuantity;
+      totalMortality += poultryMortality;
+    });
+
+    stats.totalQuantity = totalQuantity;
+    stats.totalMortality = totalMortality;
     return stats;
   }
 

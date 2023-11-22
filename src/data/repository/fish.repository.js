@@ -16,6 +16,26 @@ export class FishRepository {
     return fish;
   }
 
+  static async getStatistics(query) {
+    const statistics = await Fish.aggregate([
+      {
+        $match: query,
+      },
+      {
+        $group: {
+          _id: "$category",
+          totalQuantity: { $sum: "$quantity" },
+          totalMortality: { $sum: "$mortality" },
+        },
+      },
+      {
+        $sort: {
+          _id: 1,
+        },
+      },
+    ]);
+  }
+
   static async updateOne(fishId, updateDto) {
     const updatedFish = await Fish.findByIdAndUpdate(fishId, updateDto, {
       new: true,
