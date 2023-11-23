@@ -2,14 +2,13 @@ export class CreatePoultryRequestDto {
   constructor({
     user,
     category,
-    date,
     quantity,
     mortality,
     status,
   }) {
     this.user = user;
     this.category = category;
-    this.date = Date.now();
+    this.date = new Date();
     this.quantity = quantity;
     this.mortality = mortality;
     this.status = status;

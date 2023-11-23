@@ -6,6 +6,7 @@ export class UpdateFishRequestDto {
     quantity,
     price,
     weight,
+    mortality,
     status,
   }) {
     this.user = user;
@@ -14,6 +15,7 @@ export class UpdateFishRequestDto {
     this.quantity = quantity;
     this.price = price;
     this.weight = weight;
+    this.mortality = mortality;
     this.status = status;
     this.updatedAt = new Date();
   }
@@ -25,6 +27,7 @@ export class UpdateFishRequestDto {
     quantity,
     price,
     weight,
+    mortality,
     status,
   }) {
     return new UpdateFishRequestDto({
@@ -34,6 +37,7 @@ export class UpdateFishRequestDto {
       quantity,
       price,
       weight,
+      mortality,
       status,
     });
   }

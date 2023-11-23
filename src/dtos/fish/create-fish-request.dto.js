@@ -1,34 +1,22 @@
 export class CreateFishRequestDto {
-  constructor({
-    user,
-    category,
-    date,
-    quantity,
-    weight,
-    status,
-  }) {
+  constructor({ user, category, date, quantity, mortality, weight, status }) {
     this.user = user;
     this.category = category;
-    this.date = date || new Date();
+    this.date = Date.now();
     this.quantity = quantity;
+    this.mortality = mortality;
     this.weight = weight || "0 kg";
-    this.status = status || "Pending";
+    this.status = "Pending";
   }
 
-  static from({
-    user,
-    category,
-    date,
-    quantity,
-    weight,
-    status,
-  }) {
+  static from({ user, category, date, quantity, weight, mortality, status }) {
     return new CreateFishRequestDto({
       user,
       category,
       date,
       quantity,
       weight,
+      mortality,
       status,
     });
   }

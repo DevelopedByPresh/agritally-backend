@@ -26,9 +26,9 @@ const eggSchema = new Schema(
       type: Date,
       default: new Date(),
     },
-    // openingBalance: {
-    //   type: Number,
-    // },
+    openingBalance: {
+      type: Number,
+    },
     mortality: {
       type: Number,
       default: 0,
@@ -36,9 +36,9 @@ const eggSchema = new Schema(
     culls: {
       type: Number,
     },
-    // closingBalance: {
-    //   type: Number,
-    // },
+    closingBalance: {
+      type: Number,
+    },
     waterConsumption: {
       type: Number,
       required: true,

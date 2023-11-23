@@ -5,7 +5,6 @@ export class CreateEggRequestDto {
     penNumber,
     totalBirdHoused,
     ageHoused,
-    date,
     openingBalance,
     mortality,
     culls,

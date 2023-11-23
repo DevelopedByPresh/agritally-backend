@@ -7,6 +7,7 @@ export class FishResponseDto {
     quantity,
     price,
     weight,
+    mortality,
     status,
     createdAt,
     updatedAt,
@@ -18,6 +19,7 @@ export class FishResponseDto {
     this.quantity = quantity;
     this.price = price;
     this.weight = weight;
+    this.mortality = mortality;
     this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
@@ -32,6 +34,7 @@ export class FishResponseDto {
     price,
     weight,
     status,
+    mortality,
     createdAt,
     updatedAt,
   }) {
@@ -43,6 +46,7 @@ export class FishResponseDto {
       quantity,
       price,
       weight,
+      mortality,
       status,
       createdAt,
       updatedAt,
