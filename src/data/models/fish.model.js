@@ -22,14 +22,14 @@ const fishSchema = new Schema(
     quantity: {
       type: Number,
       default: 1,
-      required: true
+      required: true,
     },
 
     weight: {
-      type: String,
-      default: "0 kg",
+      type: Number,
+      default: 0,
     },
-  
+
     mortality: {
       type: Number,
       default: 0,
@@ -38,7 +38,7 @@ const fishSchema = new Schema(
     status: {
       type: String,
       enum: ["Approved", "Pending"],
-      default: "Pending"
+      default: "Pending",
     },
   },
   {

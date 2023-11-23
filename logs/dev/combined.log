@@ -10721,3 +10721,104 @@
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'pen' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'pen' of 'filter' as it is undefined.\n    at queryFilter (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/query.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"error","message":"Cannot destructure property 'pen' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'pen' of 'filter' as it is undefined.\n    at queryFilter (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/query.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'pen' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'pen' of 'filter' as it is undefined.\n    at queryFilter (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/query.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Cannot destructure property 'pen' of 'filter' as it is undefined.","meta":"TypeError: Cannot destructure property 'pen' of 'filter' as it is undefined.\n    at queryFilter (file:///C:/Users/Purch/PROJECT/agritally-app/src/utils/query.filter.js:2:11)\n    at PoultryService.getStatistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/poultry.service.js:64:19)\n    at statistics (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/poultry.controller.js:59:52)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"","meta":"ValidationError: Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1113:16)\n    at model.Document (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:164:12)\n    at model.Model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:123:12)\n    at new model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:4689:15)\n    at FishRepository.save (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/fish.repository.js:5:21)\n    at FishService.create (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/fish.service.js:11:39)\n    at create (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/fish.controller.js:11:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"","meta":"ValidationError: Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1113:16)\n    at model.Document (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:164:12)\n    at model.Model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:123:12)\n    at new model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:4689:15)\n    at FishRepository.save (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/fish.repository.js:5:21)\n    at FishService.create (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/fish.service.js:11:39)\n    at create (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/fish.controller.js:11:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"error","message":"Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"","meta":"ValidationError: Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1113:16)\n    at model.Document (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:164:12)\n    at model.Model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:123:12)\n    at new model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:4689:15)\n    at FishRepository.save (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/fish.repository.js:5:21)\n    at FishService.create (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/fish.service.js:11:39)\n    at create (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/fish.controller.js:11:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"error","message":"Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"","meta":"ValidationError: Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1113:16)\n    at model.Document (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:164:12)\n    at model.Model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:123:12)\n    at new model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:4689:15)\n    at FishRepository.save (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/fish.repository.js:5:21)\n    at FishService.create (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/fish.service.js:11:39)\n    at create (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/fish.controller.js:11:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"error","message":"Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"","meta":"ValidationError: Fish validation failed: weight: Cast to Number failed for value \"0 kg\" (type string) at path \"weight\"\n    at Document.invalidate (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:3162:32)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1453:12)\n    at model.$set (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:1113:16)\n    at model.Document (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\document.js:164:12)\n    at model.Model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:123:12)\n    at new model (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\mongoose\\lib\\model.js:4689:15)\n    at FishRepository.save (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/repository/fish.repository.js:5:21)\n    at FishService.create (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/fish.service.js:11:39)\n    at create (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/fish.controller.js:11:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)"}

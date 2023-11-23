@@ -49,7 +49,7 @@ export class FishService {
     }
 
     return {
-      message: messages.COMMON.fn.FETCHED("Fish"),
+      message: messages.COMMON.fn.FETCHED("Fish stats"),
       data: FishResponseDto.from(fish),
     };
   }
@@ -68,7 +68,7 @@ export class FishService {
     const updateFish = await FishRepository.updateOne(id, fishEntity);
 
     return {
-      message: messages.COMMON.fn.FETCHED("Fish"),
+      message: messages.COMMON.fn.UPDATED("Fish"),
       data: FishResponseDto.from(updateFish),
     };
   }

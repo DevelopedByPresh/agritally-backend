@@ -1,5 +1,5 @@
 export function queryFilter(filter) {
-  const { pen, section, status, year, month, date, category, type } = filter;
+  const { pen, section, status, year, month, date, category, type } = filter || {};
 
   const query = {};
 

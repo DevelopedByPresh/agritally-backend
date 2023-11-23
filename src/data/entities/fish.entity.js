@@ -10,6 +10,7 @@ export class FishEntity {
     date,
     quantity,
     weight,
+    mortality,
     status,
   }) {
     this.id = id;
@@ -18,6 +19,7 @@ export class FishEntity {
     this.date = date;
     this.quantity = quantity;
     this.weight = weight;
+    this.mortality = mortality;
     this.status = status;
   }
 
@@ -28,6 +30,7 @@ export class FishEntity {
     date,
     quantity,
     weight,
+    mortality,
     status,
   }) {
     if (_id && !Id.isValidId(_id)) {
@@ -73,6 +76,7 @@ export class FishEntity {
       date,
       quantity,
       weight,
+      mortality,
       status,
     });
   }
@@ -83,6 +87,7 @@ export class FishEntity {
     date,
     quantity,
     weight,
+    mortality,
     status,
     id = Id.makeId(),
   }) {
@@ -93,6 +98,7 @@ export class FishEntity {
       date,
       quantity,
       weight,
+      mortality,
       status,
     });
   }

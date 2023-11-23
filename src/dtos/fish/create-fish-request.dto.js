@@ -5,7 +5,7 @@ export class CreateFishRequestDto {
     this.date = Date.now();
     this.quantity = quantity;
     this.mortality = mortality;
-    this.weight = weight || "0 kg";
+    this.weight = weight;
     this.status = "Pending";
   }
 

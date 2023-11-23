@@ -55,17 +55,17 @@ export class PoultryService {
     const updatePoultry = await PoultryRepository.updateOne(id, poultryEntity);
 
     return {
-      message: messages.COMMON.fn.FETCHED("Poultry"),
+      message: messages.COMMON.fn.UPDATED("Poultry"),
       data: PoultryResponseDto.from(updatePoultry),
     };
   }
 
-  static async getStatistics(filter, query) {
-    // const query = queryFilter(filter);
+  static async getStatistics(filter) {
+    const query = queryFilter(filter);
 
     const statistics = await PoultryRepository.getStatistics(query);
     return {
-      message: messages.COMMON.fn.FETCHED("Poultry"),
+      message: messages.COMMON.fn.FETCHED("Poultry Statistics"),
       data: statistics,
     };
   }

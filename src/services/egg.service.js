@@ -55,7 +55,7 @@ export class EggService {
     const updateEgg = await EggRepository.updateOne(id, eggEntity);
 
     return {
-      message: messages.COMMON.fn.FETCHED("Business"),
+      message: messages.COMMON.fn.UPDATED("Egg Stats"),
       data: EggResponseDto.from(updateEgg),
     };
   }

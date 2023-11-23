@@ -55,7 +55,7 @@ export class PigService {
     const updatedPig = await PigRepository.updateOne(id, pigEntity);
 
     return {
-      message: messages.COMMON.fn.FETCHED("Pig"),
+      message: messages.COMMON.fn.UPDATED("Pig"),
       data: PigResponseDto.from(updatedPig),
     };
   }
