@@ -3,15 +3,16 @@ import { ValidationException } from "../../utils/exceptions/index.js";
 import { messages } from "../../utils/messages.utils.js";
 
 export class CartEntity {
-  constructor({ id, user, cartItems, active, total }) {
+  constructor({ id, user, cartItems, productId, active, total }) {
     this.id = id;
     this.user = user;
-    this.cartItems = cartItems;
     this.active = active;
+    this.cartItems = cartItems;
+    this.productId = productId;
     this.total = total;
   }
 
-  static make({ _id, user, cartItems, active, total }) {
+  static make({ _id, user, cartItems, productId, active, total }) {
     if (_id && !Id.isValidId(_id)) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         id: "Cart must have a valid id",
@@ -24,17 +25,18 @@ export class CartEntity {
       });
     }
 
-    if (!Array.isArray(cartItems) || cartItems.length === 0) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        cartItems: "Cart must have at least one item",
-      });
-    }
+    // if (Array.isArray(cartItems) || cartItems.length === 0) {
+    //   throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
+    //     cartItems: "Cart must have at least one item",
+    //   });
+    // }
 
 
     return this.#create({
       id: _id,
       user,
       cartItems,
+      productId,
       active,
       total,
     });
@@ -44,6 +46,7 @@ export class CartEntity {
     user,
     cartItems = [],
     active = true,
+    productId,
     total,
     id = Id.makeId(),
   }) {
@@ -51,6 +54,7 @@ export class CartEntity {
       id,
       user,
       cartItems,
+      productId,
       active,
       total,
     });

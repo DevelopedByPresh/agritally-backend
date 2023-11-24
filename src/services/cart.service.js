@@ -5,73 +5,49 @@ import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
 
 export class CartService {
   static async createCart(newItems) {
-    const { cartItems, user, quan } = newItems;
-
-    // Create a new cart entity
-    const cartEntity = CartEntity.make({ user, cartItems });
-
-    // Find the first product in cartItems
+    const { cartItems, user } = newItems;
     const { productId, quantity } = cartItems[0];
-    console.log(quantity);
+
     const foundProduct = await ProductRepository.findById(productId);
 
-    // Throw an exception if the product is not found
     if (!foundProduct) {
       throw new NotFoundException("Product not found.");
     }
 
-    // Find an active cart or create a new one
     let cart = await CartRepository.findOne({ user: user, active: true });
     if (!cart || !cart.active) {
+      const cartEntity = CartEntity.make({ user, newItems });
+
       cart = await CartRepository.create(cartEntity);
     }
 
-    // // Iterate over new items and update the cart
-    // for (const newItem of cartEntity.cartItems) {
-    //   const { productId } = newItem;
-    //   const foundProduct = await ProductRepository.findById(productId);
+    const existingItemIndex = cart.cartItems.findIndex((item) =>
+      item.productId[0]._id.equals(foundProduct._id)
+    );
 
-    //   // Throw an exception if the product is not found
-    //   if (!foundProduct) {
-    //     throw new NotFoundException(`Product with ID ${productId} not found.`);
-    //   }
+    if (existingItemIndex !== -1) {
+      const existingItem = cart.cartItems[existingItemIndex];
+      existingItem.quantity += quantity;
+      existingItem.subtotal = existingItem.quantity * existingItem.price;
+    } else {
+      const newData = {
+        productId: foundProduct._id,
+        price: foundProduct.price,
+        quantity,
+        subtotal: foundProduct.price * quantity,
+      };
+      cart.cartItems.push(newData);
+    }
 
-      const existingItemIndex = cart.cartItems.findIndex(
-        (item) =>
-          item.productId[0] && item.productId[0].equals(foundProduct._id)
-      );
-
-      if (existingItemIndex !== -1) {
-        // Update existing item
-        const existingItem = cart.cartItems[existingItemIndex];
-        existingItem.quantity += quantity; // Only increment quantity
-        // Correct the calculation of subtotal here
-        existingItem.subtotal = existingItem.quantity * existingItem.price;
-      } else {
-        // Add a new item to the cart
-        const newItemData = {
-          productId: foundProduct._id,
-          price: foundProduct.price,
-          quantity,
-          // Correct the calculation of subtotal here
-          subtotal: foundProduct.price * quantity,
-        };
-        cart.cartItems.push(newItemData);
-      }
-    
-
-    // Calculate total, quantity, and subtotal
-     cart.total = cart.cartItems.reduce(
+    cart.total = cart.cartItems.reduce(
       (total, item) => total + item.subtotal,
       0
     );
     await cart.save();
-    // Set the total in the cart entity and return it
-    cartEntity.total = cartTotals.subtotal;
 
     return {
       message: "Item(s) added to cart",
-      data: cart
+      data: cart,
     };
   }
 
