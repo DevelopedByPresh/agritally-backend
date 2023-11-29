@@ -12,6 +12,7 @@ export const createPigRequestValidator = Joi.object({
     room: Joi.number().required().label("Room"),
     quantity: Joi.number().required().label("Quantity"),
     mortality: Joi.number().default(0).label("Mortality"),
+    status: Joi.string().valid('Approved', 'Pending').default('Pending').label('Status'),
   }),
 });
 
@@ -22,6 +23,7 @@ export const updatePigRequestValidator = Joi.object({
     room: Joi.number().label("Room"),
     quantity: Joi.number().label("Quantity"),
     mortality: Joi.number().label("Mortality"),
+    status: Joi.string().valid("Approved", "Pending").label("Status"),
   }),
   params: Joi.object({
     id: objectIdSchema.label("Pig ID").required(),

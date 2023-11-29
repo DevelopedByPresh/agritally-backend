@@ -6,6 +6,7 @@ export class UpdatePigRequestDto {
     room,
     quantity,
     mortality,
+    status
   }) {
     this.user = user;
     this.category = category;
@@ -13,6 +14,7 @@ export class UpdatePigRequestDto {
     this.room = room;
     this.quantity = quantity;
     this.mortality = mortality;
+    this.status = status;
     this.updatedAt = new Date();
   }
 
@@ -23,6 +25,7 @@ export class UpdatePigRequestDto {
     room,
     quantity,
     mortality,
+    status
   }) {
     return new UpdatePigRequestDto({
       user,
@@ -31,6 +34,7 @@ export class UpdatePigRequestDto {
       room,
       quantity,
       mortality,
+      status
     });
   }
 }

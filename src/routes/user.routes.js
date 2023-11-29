@@ -3,10 +3,12 @@ import { UserController } from "../controllers/index.js";
 
 import {
   createUserRequestValidator,
+  loginUserRequestValidator,
   updateUserRequestValidator,
 } from "../validators/index.js";
 import {
   CreateUserRequestDTO,
+  LoginUserRequestDto,
   UpdateUserRequestDTO,
 } from "../dtos/user/index.js";
 import { ADMIN_ROLE } from "../utils/helpers/admin.helpers.js";
@@ -21,7 +23,9 @@ userRouter.post(
   ValidateRequest.with(createUserRequestValidator, CreateUserRequestDTO),
   UserController.register
 );
-userRouter.post("/login", UserController.login);
+userRouter.post("/login", 
+ValidateRequest.with(loginUserRequestValidator, LoginUserRequestDto),
+UserController.login);
 userRouter.get(
   "/getAll",
   auth,

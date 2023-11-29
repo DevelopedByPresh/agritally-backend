@@ -22,6 +22,13 @@ export const createAdminRequestValidator = Joi.object({
   }),
 });
 
+export const loginAdminRequestValidator = Joi.object({
+  body: Joi.object({
+    email: emailSchema.required(),
+    password: Joi.string().min(6).required(),
+  }),
+});
+
 export const updateAdminRequestValidator = Joi.object({
   body: Joi.object({
     firstName: nameSchema,

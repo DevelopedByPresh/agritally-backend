@@ -3,10 +3,11 @@ import { Router } from "express";
 import { AdminController, UserController } from "../controllers/index.js";
 import {
   createAdminRequestValidator,
+  loginAdminRequestValidator,
   updateAdminRequestValidator,
   updateUserRequestValidator
 } from "../validators/index.js";
-import { CreateAdminRequestDto, UpdateAdminRequestDto, UpdateUserRequestDTO } from "../dtos/index.js";
+import { CreateAdminRequestDto, LoginAdminRequestDto, UpdateAdminRequestDto, UpdateUserRequestDTO } from "../dtos/index.js";
 import { ADMIN_ROLE } from "../utils/helpers/admin.helpers.js";
 import { authorizeRoles, auth, ValidateRequest } from "../middleware/index.js";
 import { idValidator } from "../validators/lib/common-validators.js";
@@ -21,7 +22,9 @@ adminRouter.post(
   AdminController.register
 );
 
-adminRouter.post("/login", AdminController.login);
+adminRouter.post("/login", 
+ValidateRequest.with(loginAdminRequestValidator, LoginAdminRequestDto),
+AdminController.login);
 
 adminRouter.get(
   "/getAll",

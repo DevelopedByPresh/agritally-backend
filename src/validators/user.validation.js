@@ -17,6 +17,13 @@ export const createUserRequestValidator = Joi.object({
   }),
 });
 
+export const loginUserRequestValidator = Joi.object({
+  body: Joi.object({
+    email: emailSchema.required(),
+    password: Joi.string().min(6).required(),
+  }),
+});
+
 export const updateUserRequestValidator = Joi.object({
   body: Joi.object({
     firstName: nameSchema,

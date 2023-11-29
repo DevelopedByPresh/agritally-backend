@@ -18,6 +18,7 @@ export class EggEntity {
     waterConsumption,
     feedConsumption,
     eggCollection,
+    status,
     remark,
   }) {
     this.id = id;
@@ -34,6 +35,7 @@ export class EggEntity {
     this.waterConsumption = waterConsumption;
     this.feedConsumption = feedConsumption;
     this.eggCollection = eggCollection;
+    this.status = status;
     this.remark = remark;
   }
 
@@ -52,6 +54,7 @@ export class EggEntity {
     waterConsumption,
     feedConsumption,
     eggCollection,
+    status,
     remark,
   }) {
     if (_id && !Id.isValidId(_id)) {
@@ -65,7 +68,7 @@ export class EggEntity {
         user: "Egg must have a User",
       });
     }
-   
+
     if (!category) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         category: "Egg must have a category",
@@ -92,19 +95,19 @@ export class EggEntity {
 
     if (!culls) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        culls: 'Egg must specify the number of culls',
+        culls: "Egg must specify the number of culls",
       });
     }
 
     if (!waterConsumption) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        waterConsumption: 'Egg must specify water consumption',
+        waterConsumption: "Egg must specify water consumption",
       });
     }
 
     if (!feedConsumption) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        feedConsumption: 'Egg must specify feed consumption',
+        feedConsumption: "Egg must specify feed consumption",
       });
     }
 
@@ -116,7 +119,7 @@ export class EggEntity {
 
     if (!remark) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        remark: 'Egg must have a remark',
+        remark: "Egg must have a remark",
       });
     }
 
@@ -135,6 +138,7 @@ export class EggEntity {
       waterConsumption,
       feedConsumption,
       eggCollection,
+      status,
       remark,
     });
   }
@@ -153,6 +157,7 @@ export class EggEntity {
     waterConsumption,
     feedConsumption,
     eggCollection,
+    status,
     remark,
     id = Id.makeId(),
   }) {
@@ -171,6 +176,7 @@ export class EggEntity {
       waterConsumption,
       feedConsumption,
       eggCollection,
+      status,
       remark,
     });
   }
