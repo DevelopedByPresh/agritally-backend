@@ -7,6 +7,8 @@ export class PoultryResponseDto {
     quantity,
     mortality,
     status,
+    openingBalance,
+    closingBalance,
     createdAt,
     updatedAt,
   }) {
@@ -16,6 +18,8 @@ export class PoultryResponseDto {
     this.date = date;
     this.quantity = quantity;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
     this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
@@ -28,6 +32,8 @@ export class PoultryResponseDto {
     date,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
     createdAt,
     updatedAt,
@@ -39,6 +45,8 @@ export class PoultryResponseDto {
       date,
       quantity,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
       createdAt,
       updatedAt,

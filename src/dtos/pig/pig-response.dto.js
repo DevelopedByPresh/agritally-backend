@@ -7,6 +7,8 @@ export class PigResponseDto {
     room,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
     createdAt,
     updatedAt,
@@ -18,6 +20,8 @@ export class PigResponseDto {
     this.room = room;
     this.quantity = quantity;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
     this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
@@ -31,6 +35,8 @@ export class PigResponseDto {
     room,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
     createdAt,
     updatedAt,
@@ -43,6 +49,8 @@ export class PigResponseDto {
       room,
       quantity,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
       createdAt,
       updatedAt,

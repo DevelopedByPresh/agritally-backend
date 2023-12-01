@@ -4,12 +4,16 @@ export class UpdatePoultryRequestDto {
     date,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     this.category = category;
     this.date = date;
     this.quantity = quantity;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
     this.status = status;
     this.updatedAt = new Date();
   }
@@ -19,6 +23,8 @@ export class UpdatePoultryRequestDto {
     date,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     return new UpdatePoultryRequestDto({
@@ -26,6 +32,8 @@ export class UpdatePoultryRequestDto {
       date,
       quantity,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
     });
   }

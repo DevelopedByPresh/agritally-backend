@@ -10,6 +10,8 @@ export class PoultryEntity {
     date,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     this.id = id;
@@ -18,6 +20,8 @@ export class PoultryEntity {
     this.date = date;
     this.quantity = quantity;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
     this.status = status;
   }
 
@@ -28,6 +32,8 @@ export class PoultryEntity {
     date,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     if (_id && !Id.isValidId(_id)) {
@@ -60,12 +66,6 @@ export class PoultryEntity {
       });
     }
 
-    if (!status) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        status: "Poultry must have a status",
-      });
-    }
-
     return this.#create({
       id: _id,
       user,
@@ -73,6 +73,8 @@ export class PoultryEntity {
       date,
       quantity,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
     });
   }
@@ -83,6 +85,8 @@ export class PoultryEntity {
     date,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
     id = Id.makeId(),
   }) {
@@ -93,6 +97,8 @@ export class PoultryEntity {
       date,
       quantity,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
     });
   }

@@ -21,7 +21,6 @@ const poultrySchema = new Schema(
 
     quantity: {
       type: Number,
-      default: 0,
       required: true,
     },
 
@@ -30,6 +29,16 @@ const poultrySchema = new Schema(
         required: true,
       },
     
+      openingBalance: {
+        type: Number,
+        default: 0,
+      },
+  
+      closingBalance: {
+        type: Number,
+        default: 0,
+      },
+
     status: {
       type: String,
       enum: ["Approved", "Pending"],

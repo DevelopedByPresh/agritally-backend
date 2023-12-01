@@ -11,6 +11,8 @@ export class FishEntity {
     quantity,
     weight,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     this.id = id;
@@ -20,6 +22,8 @@ export class FishEntity {
     this.quantity = quantity;
     this.weight = weight;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
     this.status = status;
   }
 
@@ -31,6 +35,8 @@ export class FishEntity {
     quantity,
     weight,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     if (_id && !Id.isValidId(_id)) {
@@ -63,12 +69,6 @@ export class FishEntity {
       });
     }
 
-    if (!status) {
-      throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
-        status: "Fish must have a status",
-      });
-    }
-
     return this.#create({
       id: _id,
       user,
@@ -77,6 +77,8 @@ export class FishEntity {
       quantity,
       weight,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
     });
   }
@@ -88,6 +90,8 @@ export class FishEntity {
     quantity,
     weight,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
     id = Id.makeId(),
   }) {
@@ -99,6 +103,8 @@ export class FishEntity {
       quantity,
       weight,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
     });
   }

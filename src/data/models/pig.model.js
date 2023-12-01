@@ -42,6 +42,16 @@ const pigSchema = new Schema(
       default: 0,
     },
 
+    openingBalance: {
+      type: Number,
+      default: 0,
+    },
+
+    closingBalance: {
+      type: Number,
+      default: 0,
+    },
+
     date: {
       type: Date,
       default: new Date(),

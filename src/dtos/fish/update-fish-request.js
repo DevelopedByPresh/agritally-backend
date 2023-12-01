@@ -7,6 +7,8 @@ export class UpdateFishRequestDto {
     price,
     weight,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     this.user = user;
@@ -16,6 +18,8 @@ export class UpdateFishRequestDto {
     this.price = price;
     this.weight = weight;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
     this.status = status;
     this.updatedAt = new Date();
   }
@@ -28,6 +32,8 @@ export class UpdateFishRequestDto {
     price,
     weight,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     return new UpdateFishRequestDto({
@@ -38,6 +44,8 @@ export class UpdateFishRequestDto {
       price,
       weight,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
     });
   }

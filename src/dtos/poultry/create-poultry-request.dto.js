@@ -4,6 +4,8 @@ export class CreatePoultryRequestDto {
     category,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     this.user = user;
@@ -11,6 +13,8 @@ export class CreatePoultryRequestDto {
     this.date = new Date();
     this.quantity = quantity;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
     this.status = status;
   }
 
@@ -20,6 +24,8 @@ export class CreatePoultryRequestDto {
     date,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
   }) {
     return new CreatePoultryRequestDto({
@@ -28,6 +34,8 @@ export class CreatePoultryRequestDto {
       date,
       quantity,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
     });
   }

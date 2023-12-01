@@ -8,6 +8,8 @@ export class FishResponseDto {
     price,
     weight,
     mortality,
+    openingBalance,
+    closingBalance,
     status,
     createdAt,
     updatedAt,
@@ -20,6 +22,8 @@ export class FishResponseDto {
     this.price = price;
     this.weight = weight;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
     this.status = status;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
@@ -35,6 +39,8 @@ export class FishResponseDto {
     weight,
     status,
     mortality,
+    openingBalance,
+    closingBalance,
     createdAt,
     updatedAt,
   }) {
@@ -47,6 +53,8 @@ export class FishResponseDto {
       price,
       weight,
       mortality,
+      openingBalance,
+      closingBalance,
       status,
       createdAt,
       updatedAt,

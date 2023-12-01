@@ -34,6 +34,15 @@ const fishSchema = new Schema(
       type: Number,
       default: 0,
     },
+    openingBalance: {
+      type: Number,
+      default: 0,
+    },
+
+    closingBalance: {
+      type: Number,
+      default: 0,
+    },
 
     status: {
       type: String,

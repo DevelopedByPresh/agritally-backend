@@ -3,7 +3,7 @@ import { ValidationException } from "../../utils/exceptions/index.js";
 import { messages } from "../../utils/messages.utils.js";
 
 export class PigEntity {
-  constructor({ id, user, category, pen, room, quantity, mortality }) {
+  constructor({ id, user, category, pen, room, quantity, mortality, openingBalance, closingBalance }) {
     this.id = id;
     this.user = user;
     this.category = category;
@@ -11,9 +11,11 @@ export class PigEntity {
     this.room = room;
     this.quantity = quantity;
     this.mortality = mortality;
+    this.openingBalance = openingBalance;
+    this.closingBalance = closingBalance;
   }
 
-  static make({ _id, user, category, pen, room, quantity, mortality }) {
+  static make({ _id, user, category, pen, room, quantity, mortality, openingBalance, closingBalance }) {
     if (_id && !Id.isValidId(_id)) {
       throw new ValidationException(messages.EXCEPTIONS.VALIDATION, {
         id: "Pig must have a valid id",
@@ -57,6 +59,8 @@ export class PigEntity {
       room,
       quantity,
       mortality,
+      openingBalance,
+      closingBalance,
     });
   }
 
@@ -67,6 +71,8 @@ export class PigEntity {
     room,
     quantity,
     mortality,
+    openingBalance,
+    closingBalance,
     id = Id.makeId(),
   }) {
     return new PigEntity({
@@ -77,6 +83,8 @@ export class PigEntity {
       room,
       quantity,
       mortality,
+      openingBalance,
+      closingBalance,
     });
   }
 }
