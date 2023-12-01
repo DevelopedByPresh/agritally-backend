@@ -31,7 +31,7 @@ cartRouter.get("/get/:id", auth, ValidateRequest.with(idValidator), CartControll
 cartRouter.get(
   "/:userId",
   auth, 
-  authorizeRoles(MANAGER, OWNER, SUPERADMIN),
+  // authorizeRoles(MANAGER, OWNER, SUPERADMIN),
   CartController.fetchUserCart
 );
 

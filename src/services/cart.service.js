@@ -74,6 +74,19 @@ export class CartService {
     };
   }
 
+  static async getUserCart(userId, filter) {
+    const cart = await CartRepository.findOne({user:userId, active: filter});
+
+    if (!cart) {
+      throw new NotFoundException("Cart not found");
+    }
+
+    return {
+      message: "Success",
+      data: cart,
+    };
+  }
+
   static async updateCartItem(cartId, updateCartDto) {
     const { productId, quantity } = updateCartDto;
 

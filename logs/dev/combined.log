@@ -11596,3 +11596,56 @@
 {"level":"info","message":"Server is running on port 5000"}
 {"level":"info","message":"Connected to MongoDB"}
 {"level":"error","message":"openingBalance is not defined","meta":"ReferenceError: openingBalance is not defined\n    at CreatePoultryRequestDto.from (file:///C:/Users/Purch/PROJECT/agritally-app/src/dtos/poultry/create-poultry-request.dto.js:35:7)\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:51:42)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:114:3)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"status is not defined","meta":"ReferenceError: status is not defined\n    at PigEntity.make (file:///C:/Users/Purch/PROJECT/agritally-app/src/data/entities/pig.entity.js:65:7)\n    at PigService.update (file:///C:/Users/Purch/PROJECT/agritally-app/src/services/pig.service.js:50:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async update (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/pig.controller.js:47:31)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"CartService.getUserCart is not a function","meta":"TypeError: CartService.getUserCart is not a function\n    at fetchUserCart (file:///C:/Users/Purch/PROJECT/agritally-app/src/controllers/cart.controller.js:24:49)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authorize-role.middleware.js:12:14\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"error","message":"A DtoClass is required","meta":"Error: A DtoClass is required\n    at ValidateRequest.execute (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/validate-request.middleware.js:28:13)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at auth (file:///C:/Users/Purch/PROJECT/agritally-app/src/middleware/authenticate-user.middles.js:31:5)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)\n    at Layer.handle [as handle_request] (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:144:13)\n    at Route.dispatch (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express\\lib\\router\\route.js:114:3)\n    at newFn (C:\\Users\\Purch\\PROJECT\\agritally-app\\node_modules\\express-async-errors\\index.js:16:20)"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}
+{"level":"info","message":"Server is running on port 5000"}
+{"level":"info","message":"Connected to MongoDB"}

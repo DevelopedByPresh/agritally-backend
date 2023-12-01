@@ -30,7 +30,7 @@ export const createEggRequestValidator = Joi.object({
     })
       .required()
       .label("Egg Collection"),
-      status: Joi.string().valid('Approved', 'Pending').default('Pending').label('Status'),
+    status: Joi.string().valid('Approved', 'Pending').default('Pending').label('Status'),
     remark: Joi.string().label("Remark"),
   }),
 });
