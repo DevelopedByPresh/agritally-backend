@@ -5,9 +5,11 @@ import { CartController } from "../controllers/index.js";
 import {
   createCartRequestValidator,
   updateCartRequestValidator,
+  updateCartItemsRequestValidator
 } from "../validators/index.js";
 import {
   CreateCartRequestDto,
+  UpdateCartItemsRequestDto,
   UpdateCartRequestDto,
 } from "../dtos/cart/index.js";
 import { ADMIN_ROLE } from "../utils/helpers/admin.helpers.js";
@@ -35,12 +37,12 @@ cartRouter.get(
   CartController.fetchUserCart
 );
 
-cartRouter.post("/active/:id", auth, ValidateRequest.with(idValidator), CartController.updateCart);
+cartRouter.patch("/update/:id", auth, ValidateRequest.with(updateCartRequestValidator, UpdateCartRequestDto ), CartController.updateCart);
 
 cartRouter.patch(
   "/update/:id",
   auth,
-  ValidateRequest.with(updateCartRequestValidator, UpdateCartRequestDto),
+  ValidateRequest.with(updateCartItemsRequestValidator, UpdateCartItemsRequestDto),
   CartController.updateCartItem
 );
 

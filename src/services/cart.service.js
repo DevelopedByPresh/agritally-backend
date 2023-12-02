@@ -89,12 +89,10 @@ export class CartService {
     };
   }
 
-  static async updateCartItem(cartId, updateCartDto) {
+  static async updateCartItem(id, updateCartDto) {
     const { productId, quantity } = updateCartDto;
 
-    console.log(updateCartDto)
-
-    const cart = await CartRepository.findById(cartId);
+    const cart = await CartRepository.findById(id);
 
     if (!cart) {
       throw new NotFoundException("Cart not found");
@@ -115,6 +113,21 @@ export class CartService {
       (total, item) => total + item.subtotal,
       0
     );
+
+    await cart.save();
+    return {
+      message: messages.COMMON.fn.UPDATED("Cart"),
+      data: CartResponseDto.from(cart),
+    };
+  }
+
+  static async updateCart(id, updateCartDto) {
+
+    const cart = await CartRepository.updateOne(id, updateCartDto);
+
+    if (!cart) {
+      throw new NotFoundException("Cart not found");
+    }
 
     await cart.save();
     return {
@@ -151,7 +164,7 @@ export class CartService {
     await cart.save();
     return {
       message: "Product removed from the cart",
-      data: cart,
+      data: CartResponseDto.from(cart),
     };
   }
 
