@@ -37,10 +37,10 @@ cartRouter.get(
   CartController.fetchUserCart
 );
 
-cartRouter.patch("/update/:id", auth, ValidateRequest.with(updateCartRequestValidator, UpdateCartRequestDto ), CartController.updateCart);
+cartRouter.patch("/:id", auth, ValidateRequest.with(updateCartRequestValidator, UpdateCartRequestDto ), CartController.updateCart);
 
 cartRouter.patch(
-  "/update/:id",
+  "/updateItem/:id",
   auth,
   ValidateRequest.with(updateCartItemsRequestValidator, UpdateCartItemsRequestDto),
   CartController.updateCartItem
