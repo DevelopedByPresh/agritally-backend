@@ -1,56 +1,59 @@
-import {
-  CartRepository,
-  ProductRepository,
-  OrderRepository,
-} from "../data/repository/index.js";
-import {
-  NotFoundException,
-  ValidationException,
-} from "../utils/exceptions/index.js";
+import { OrderEntity } from "../data/entities/index.js";
+import { OrderRepository, CartRepository, ProductRepository} from "../data/repository/index.js";
+import { OrderResponseDto } from "../dtos/index.js";
+import { NotFoundException } from "../utils/exceptions/index.js";
+import { queryFilter } from "../utils/index.js";
+import { messages } from "../utils/messages.utils.js";
 
 export class OrderService {
-  static async createOrder(orderDTO) {
+  static async createOrder({ cartId, user}) {
+    const [ cartOrder, cart ] = await Promise.all([
+      OrderRepository.findOne({cartId: cartId}),
+      CartRepository.findById(cartId),
+    ])
 
-    // Fetch the cart from the database
-    const { cartId, user, total } = orderDTO;
-    const cartOrder = await OrderRepository.findOne({ cartId: cartId });
-    if (cartOrder) {
-      throw new ValidationException("Order with this cart Id already created");
+    if (!cartOrder) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Cart order"))
     }
-
-    const cart = await CartRepository.findById(cartId);
+    
     if (!cart) {
-      throw new NotFoundException("Cart not found");
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Cart"))
     }
 
-    // Calculate the updated quantity for each product and update them
     for (const { productId, quantity } of cart.cartItems) {
       const product = await ProductRepository.findById(productId);
 
       if (!product) {
-        throw new NotFoundException("Product not found");
+        throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Cart"))
       }
 
-      // Calculate the updated quantity
       const updatedQuantity = product.quantity - quantity;
 
-      // Update the quantity in the database
-      await ProductRepository.updateOne(productId, {
+       await ProductRepository.updateOne(productId, {
         quantity: updatedQuantity,
       });
     }
 
-    // Create the order
-    const newOrder = await OrderRepository.create({
-      user,
-      cartId,
-      total: cart.total,
-    });
+    const orderEntity = OrderEntity.make({cartId, user, total: cart.total});
+    const order = await OrderRepository.save(orderEntity);
 
-    const order = OrderDto.from(newOrder);
     return {
-      message: "Order created",
-      data: newOrder,
+      message: messages.COMMON.fn.CREATED("Order"),
+      data: OrderResponseDto.from(order),
+    };
+  }
+
+  static async showAll(filter) {
+    const query = queryFilter(filter);
+    const orders = await OrderRepository.getAll(query);
+
+    if (orders.length === 0) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Orders"));
+    }
+
+    return {
+      message: messages.COMMON.fn.FETCHED("Orders"),
+      data: OrderResponseDto.fromMany(orders),
     };
   }
 
@@ -58,92 +61,56 @@ export class OrderService {
     const order = await OrderRepository.findById(id);
 
     if (!order) {
-      throw new NotFoundException("Order not found");
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Order"));
     }
 
-    const orderDto = OrderDto.from(order);
-
     return {
-      message: "Order items found",
-      data: orderDto,
+      message: messages.COMMON.fn.FETCHED("Order"),
+      data: OrderResponseDto.from(order),
     };
   }
 
-  static async getAllByUser(userId) {
-    // const {id} = userId
-    const orders = await OrderRepository.getAll({ user: userId });
+  static async getAllByUser(id) {
+    const order = await OrderRepository.getAll({user: id});
 
-    const orderDtos = OrderDto.fromMany(orders);
+    if (!order) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Order"));
+    }
 
     return {
-      message: "Orders found for the user",
-      count: orderDtos.length,
-      data: orderDtos,
+      message: messages.COMMON.fn.FETCHED("Order"),
+      data: OrderResponseDto.fromMany(order),
     };
   }
 
-  static async getAll(filter) {
-    const { section, year, month, date, category } = filter;
+  static async update(id, updateOrderDto) {
+    const order = await OrderRepository.findById(id);
 
-    let query = {};
-
-    if (date && month && year) {
-      const startDate = new Date(year, month - 1, date);
-      const endDate = new Date(year, month - 1, date + 1);
-      query.date = { $gte: startDate, $lt: endDate };
-    } else if (month && year) {
-      const startDate = new Date(year, month - 1, 1);
-      const endDate = new Date(year, month, 0);
-      query.date = { $gte: startDate, $lte: endDate };
-    } else if (year) {
-      const startDate = new Date(year, 0, 1);
-      const endDate = new Date(year, 11, 31);
-      query.date = { $gte: startDate, $lte: endDate };
+    if (!order) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Order"));
     }
 
-    if (section) {
-      query.section = section;
-    }
+    const updatedOrderEntity = OrderEntity.make({
+      ...order._doc,
+      ...updateOrderDto,
+    });
 
-    if (category) {
-      query.category = category;
-    }
-    const productItems = await OrderRepository.getAll(query);
-
-    const productDtos = OrderDto.fromMany(productItems);
+    const updatedOrder = await OrderRepository.updateOne(
+      id,
+      updatedOrderEntity
+    );
 
     return {
-      message: "Product items found",
-      count: productDtos.length,
-      data: productDtos,
-    };
-  }
-
-  static async updateOrder(itemId, updateDto) {
-    const { id } = itemId;
-    const updatedOrder = await OrderRepository.updateOne(id, updateDto);
-    console.log(updatedOrder);
-    if (!updatedOrder) {
-      throw new NotFoundException("Order not found");
-    }
-    const orderDto = OrderDto.from(updatedOrder);
-
-    return {
-      message: "Order Updated",
-      data: orderDto,
+      message: messages.COMMON.fn.UPDATED("Order"),
+      data: OrderResponseDto.from(updatedOrder),
     };
   }
 
   static async delete(id) {
-    const product = await OrderRepository.findById(id);
+    await OrderRepository.deleteOne(id);
 
-    if (!product) {
-      throw aNotFoundException("Product not found");
-    }
-
-    await product.deleteOne();
     return {
-      message: "Product items deleted",
+      message: messages.COMMON.fn.DELETED("Order"),
     };
   }
 }

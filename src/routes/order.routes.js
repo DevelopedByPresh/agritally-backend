@@ -24,7 +24,7 @@ orderRouter.get("/user", auth, OrderController.getAllUserOrder);
 
 orderRouter.get("/getAll", auth, OrderController.getAll);
 
-orderRouter.patch("/update/:id", auth, ValidateRequest.with(updateOrderRequestValidator, UpdateOrderRequestDTO), OrderController.updateOrder);
+orderRouter.patch("/update/:id", auth, ValidateRequest.with(updateOrderRequestValidator, UpdateOrderRequestDTO), OrderController.update);
 
 orderRouter.delete(
   "/delete/:id",

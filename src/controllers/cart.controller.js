@@ -55,6 +55,7 @@ export class CartController {
     const { id } = req.params;
     const { message, data } = await CartService.updateCart(id, req.body);
     const response = BaseHttpResponse.success(message, data);
+    
     res.status(200).json(response);
   };
 

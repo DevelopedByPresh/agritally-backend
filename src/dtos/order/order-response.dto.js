@@ -1,4 +1,4 @@
-export class OrderReponseDTO {
+export class OrderResponseDto {
   constructor({ id, user, cartId, total, status, updatedAt }) {
     this.id = id;
     this.user = user;
@@ -9,7 +9,7 @@ export class OrderReponseDTO {
   }
 
   static from({ id, user, cartId, total, status, updatedAt }) {
-    return new OrderReponseDTO({
+    return new OrderResponseDto({
       id,
       user,
       cartId,
@@ -20,6 +20,6 @@ export class OrderReponseDTO {
   }
 
   static fromMany(orders) {
-    return orders.map((order) => OrderReponseDTO.from(order));
+    return orders.map((order) => OrderResponseDto.from(order));
   }
 }

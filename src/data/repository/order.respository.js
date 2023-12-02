@@ -1,6 +1,6 @@
 import { Order } from "../models/index.js";
 export class OrderRepository {
-  static async create(orderDTO) {
+  static async save(orderDTO) {
     const newOrder = new Order(orderDTO);
     const savedOrder = await newOrder.save();
     return savedOrder;
