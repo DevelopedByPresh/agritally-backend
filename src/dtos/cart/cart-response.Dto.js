@@ -3,8 +3,8 @@ export class CartResponseDto {
     id,
     user,
     productId,
-    active,
     cartItems,
+    active,
     total,
     createdAt,
     updatedAt,
@@ -12,8 +12,8 @@ export class CartResponseDto {
     this.id = id;
     this.user = user;
     this.productId = productId;
-    this.active = active;
     this.cartItems = cartItems;
+    this.active = active;
     this.total = total;
     this.createdAt = createdAt;
     this.updatedAt = updatedAt;
@@ -23,8 +23,8 @@ export class CartResponseDto {
     id,
     user,
     productId,
-    active,
     cartItems,
+    active,
     total,
     createdAt,
     updatedAt,
@@ -33,8 +33,8 @@ export class CartResponseDto {
       id,
       user,
       productId,
-      active,
       cartItems,
+      active,
       total,
       createdAt,
       updatedAt,

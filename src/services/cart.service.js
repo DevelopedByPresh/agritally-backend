@@ -2,6 +2,7 @@ import { CartEntity } from "../data/entities/index.js";
 import { CartRepository, ProductRepository } from "../data/repository/index.js";
 import { CartResponseDto } from "../dtos/index.js";
 import { NotFoundException } from "../utils/exceptions/not-found.exception.js";
+import { messages } from "../utils/messages.utils.js";
 
 export class CartService {
   static async createCart(newItems) {
@@ -51,26 +52,27 @@ export class CartService {
     };
   }
 
-  static async getAll() {
+  static async showAll() {
     const carts = await CartRepository.getAll();
+    if (carts.length === 0) {
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Cart"));
+    }
 
-    return {
-      message: "Success",
-      count: carts.length,
-      data: carts,
+       return {
+      message: messages.COMMON.fn.FETCHED("Carts"),
+      data: CartResponseDto.fromMany(carts),
     };
   }
 
-  static async getOne(id) {
+  static async get(id) {
     const cart = await CartRepository.findById(id);
 
     if (!cart) {
-      throw new NotFoundException("Cart not found");
+      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Cart"));
     }
-
     return {
-      message: "Success",
-      data: cart,
+      message: messages.COMMON.fn.FETCHED("Cart"),
+      data: CartResponseDto.from(cart),
     };
   }
 
@@ -82,13 +84,15 @@ export class CartService {
     }
 
     return {
-      message: "Success",
-      data: cart,
+      message: messages.COMMON.fn.FETCHED("Cart"),
+      data: CartResponseDto.from(cart),
     };
   }
 
   static async updateCartItem(cartId, updateCartDto) {
     const { productId, quantity } = updateCartDto;
+
+    console.log(updateCartDto)
 
     const cart = await CartRepository.findById(cartId);
 
@@ -97,7 +101,7 @@ export class CartService {
     }
 
     const cartItem = cart.cartItems.find((item) =>
-      item.productId.equals(productId)
+      item.productId[0]._id.equals(productId)
     );
 
     if (!cartItem) {
@@ -114,15 +118,14 @@ export class CartService {
 
     await cart.save();
     return {
-      message: "Cart items updated",
-      data: cart,
+      message: messages.COMMON.fn.UPDATED("Cart"),
+      data: CartResponseDto.from(cart),
     };
   }
 
-  static async removeCartItem(cartDto) {
-    const { cartId, productId } = cartDto;
+  static async removeCartItem(id, productId) {
 
-    const cart = await CartRepository.findById(cartId);
+    const cart = await CartRepository.findById(id);
 
     if (!cart) {
       throw new NotFoundException("Cart not found");
@@ -130,7 +133,7 @@ export class CartService {
 
     // Find the cart item corresponding to the given productId
     const cartItem = cart.cartItems.find((item) =>
-      item.productId.equals(productId)
+    item.productId[0]._id.equals(productId)
     );
 
     if (!cartItem) {

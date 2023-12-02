@@ -12,7 +12,7 @@ export class CartController {
 
   static getOne = async (req, res) => {
     const { id } = req.params;
-    const { message, data } = await CartService.getOne(id);
+    const { message, data } = await CartService.get(id);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
@@ -28,7 +28,7 @@ export class CartController {
   };
 
   static getAll = async (req, res) => {
-    const { message, data } = await CartService.getAll(req.query);
+    const { message, data } = await CartService.showAll(req.query);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
@@ -43,8 +43,9 @@ export class CartController {
   };
 
   static removeCartItem = async (req, res) => {
-    const { cartId, productId } = req.query;
-    const { message, data } = await CartService.removeCartItem(req.query);
+    const id = req.params.id;
+    const productId = req.query.productId
+    const { message, data } = await CartService.removeCartItem(id, productId);
     const response = BaseHttpResponse.success(message, data);
 
     res.status(200).json(response);
