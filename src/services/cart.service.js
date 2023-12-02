@@ -163,7 +163,7 @@ export class CartService {
 
     await cart.save();
     return {
-      message: "Product removed from the cart",
+      message: messages.COMMON.fn.UPDATED("Cart product"),
       data: CartResponseDto.from(cart),
     };
   }
@@ -172,8 +172,7 @@ export class CartService {
     const deletedCart = await CartRepository.deleteOne(id);
 
     return {
-      message: "Cart deleted",
-      data: deletedCart,
+      message: messages.COMMON.fn.DELETED("Cart"),
     };
   }
 }

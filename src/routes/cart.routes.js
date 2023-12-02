@@ -46,7 +46,7 @@ cartRouter.patch(
   CartController.updateCartItem
 );
 
-cartRouter.patch("/remove/:id", auth, ValidateRequest.with(updateCartRequestValidator, UpdateCartRequestDto), CartController.removeCartItem);
+cartRouter.delete("/remove/:id", auth, ValidateRequest.with(updateCartRequestValidator, UpdateCartRequestDto), CartController.removeCartItem);
 
 cartRouter.delete("/delete/:id", auth, ValidateRequest.with(idValidator), CartController.delete);
 
