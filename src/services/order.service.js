@@ -1,7 +1,7 @@
 import { OrderEntity } from "../data/entities/index.js";
 import { OrderRepository, CartRepository, ProductRepository} from "../data/repository/index.js";
 import { OrderResponseDto } from "../dtos/index.js";
-import { NotFoundException } from "../utils/exceptions/index.js";
+import { ConflictException, NotFoundException } from "../utils/exceptions/index.js";
 import { queryFilter } from "../utils/index.js";
 import { messages } from "../utils/messages.utils.js";
 
@@ -12,12 +12,15 @@ export class OrderService {
       CartRepository.findById(cartId),
     ])
 
-    if (!cartOrder) {
-      throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Cart order"))
+    if (cartOrder) {
+      throw new ConflictException(messages.EXCEPTIONS.fn.ALREADY_EXIST("Cart Order"))
     }
     
     if (!cart) {
       throw new NotFoundException(messages.EXCEPTIONS.fn.NOT_FOUND("Cart"))
+    }else {
+      cart.active = false;
+      await cart.save();
     }
 
     for (const { productId, quantity } of cart.cartItems) {

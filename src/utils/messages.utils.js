@@ -30,6 +30,7 @@ export const messages = {
     VALIDATION: "One or more validation errors occurred",
     fn: {
       NOT_FOUND: (resource) => `${resource} Not Found`,
+      ALREADY_EXIST: (resource) => `${resource} Already Created`,
     },
   },
 

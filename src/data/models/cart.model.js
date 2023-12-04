@@ -32,10 +32,12 @@ const cartSchema = new Schema(
       },
     },
     cartItems: [cartItemSchema],
+
     active: {
       type: Boolean,
       default: true,
     },
+    
     total: {
       type: Number,
       default: 0,
